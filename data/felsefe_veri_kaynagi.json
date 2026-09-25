@@ -1,0 +1,1132 @@
+{
+  "dersAdi": "Felsefe",
+  "kodPrefix": "FEL",
+  "surumTarihi": "2026 - Türkiye Yüzyılı Maarif Modeli",
+  "seviyeler": [
+    {
+      "etiket": "10. Sınıf",
+      "cercevePlanMevcut": true,
+      "tatiller": [
+        "1. DÖNEM ARA TATİLİ: 16 - 20 Kasım 2026",
+        "YARIYIL TATİLİ: 25 Ocak - 5 Şubat 2027",
+        "2. DÖNEM ARA TATİLİ: 8-12 Mart 2027"
+      ],
+      "toplamDersSaatiYillik": 72,
+      "toplamOgrenmeCiktisiSayisi": 10,
+      "uniteler": [
+        {
+          "uniteNo": "1",
+          "uniteAdi": "Felsefenin Doğası",
+          "dersSaati": 10,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.10.1.1",
+              "baslik": "Felsefenin anlamını, gelişim sürecini ve işlevini sorgulayabilme",
+              "surec_bilesenleri": [
+                "Felsefenin anlamını merak eder ve felsefenin ortak tanımının imkânına yönelik şüphe duyar.",
+                "Felsefi düşüncenin genel özellikleri, ortaya çıkışı ve tarihsel gelişimi üzerine derinlemesine düşünür.",
+                "Felsefi soruların temel özelliklerini ifade ederek felsefi soru sorar.",
+                "Felsefenin bilim, din ve sanat alanlarıyla ilişkisine eleştirel yaklaşır.",
+                "Felsefenin bireysel ve toplumsal işlevlerini tartışır."
+              ],
+              "icerik_cercevesi": [
+                "Felsefenin Anlamı",
+                "Felsefi Düşüncenin Özellikleri",
+                "Felsefi Düşüncenin Gelişimi",
+                "Felsefi Sorunun Temel Özellikleri",
+                "Felsefenin Diğer Alanlarla İlişkisi",
+                "Felsefenin Bireysel ve Toplumsal İşlevi"
+              ],
+              "anahtar_kavramlar": [
+                "bilgelik",
+                "felsefe",
+                "filozof",
+                "refleksiyon",
+                "sorgulama"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "1. Hafta: 14-18 Eylül",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Felsefenin anlamını merak eder ve felsefenin ortak tanımının imkânına yönelik şüphe duyar.",
+                  "belirliGunHafta": "15 Temmuz Demokrasi ve Millî Birlik Günü"
+                },
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "2. Hafta: 21-25 Eylül",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Felsefi düşüncenin genel özellikleri, ortaya çıkışı ve tarihsel gelişimi üzerine derinlemesine düşünür.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "3. Hafta: 28 Eylül-2 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Felsefi soruların temel özelliklerini ifade ederek felsefi soru sorar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EKİM",
+                  "hafta": "4. Hafta: 5-9 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Felsefenin bilim, din ve sanat alanlarıyla ilişkisine eleştirel yaklaşır.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EKİM",
+                  "hafta": "5. Hafta: 12-16 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "d) Felsefenin bireysel ve toplumsal işlevlerini tartışır.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "2",
+          "uniteAdi": "Felsefe, Mantık ve Argümantasyon",
+          "dersSaati": 6,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.10.2.1",
+              "baslik": "Düşünme ve dil ilişkisini yapılandırabilme",
+              "surec_bilesenleri": [
+                "Düşünme ve dil ilişkisini inceleyerek nedensel ilişkiler ortaya koyar.",
+                "Tespit ettiği ilişkilerden hareketle uyumlu bir bütün oluşturur."
+              ],
+              "icerik_cercevesi": [
+                "Düşünme ve Dil İlişkisi",
+                "Mantık ve Argümantasyonun Temel Kavramları",
+                "Argümantasyonun Yapısı"
+              ],
+              "anahtar_kavramlar": [
+                "akıl yürütme",
+                "argüman",
+                "dil",
+                "düşünme",
+                "mantık",
+                "safsata",
+                "tutarlılık"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EKİM",
+                  "hafta": "6. Hafta: 19-23 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Düşünme ve dil ilişkisini inceleyerek nedensel ilişkiler ortaya koyar. b) Tespit ettiği ilişkilerden hareketle uyumlu bir bütün oluşturur.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "FEL.10.2.2",
+              "baslik": "Mantığın temel kavramlarını ve argümantasyon sürecini yorumlayabilme.",
+              "surec_bilesenleri": [
+                "Mantık ve argümantasyonla ilgili kavramları inceler.",
+                "İfadeleri bağlamından koparmadan mantıksal yapılarına göre öncül ve sonuç bileşenlerine ayırarak dönüştürür.",
+                "İfadeleri anlamını değiştirmeden, kendi cümleleriyle nesnel ve doğru biçimde yeniden ifade eder."
+              ],
+              "icerik_cercevesi": [
+                "Düşünme ve Dil İlişkisi",
+                "Mantık ve Argümantasyonun Temel Kavramları",
+                "Argümantasyonun Yapısı"
+              ],
+              "anahtar_kavramlar": [
+                "akıl yürütme",
+                "argüman",
+                "dil",
+                "düşünme",
+                "mantık",
+                "safsata",
+                "tutarlılık"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EKİM",
+                  "hafta": "7. Hafta: 26-30 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Mantık ve argümantasyonla ilgili kavramları inceler. b) İfadeleri bağlamından koparmadan mantıksal yapılarına göre öncül ve sonuç bileşenlerine ayırarak dönüştürür.",
+                  "belirliGunHafta": "Cumhuriyet Bayramı (29 Ekim)"
+                },
+                {
+                  "ay": "",
+                  "hafta": "8. Hafta: 2-6 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) İfadeleri anlamını değiştirmeden, kendi cümleleriyle nesnel ve doğru biçimde yeniden ifade eder.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "3",
+          "uniteAdi": "Varlık Felsefesi",
+          "dersSaati": 10,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.10.3.1",
+              "baslik": "Varlık felsefesinin konusunu, kavramlarını ve problemlerini muhakeme edebilme",
+              "surec_bilesenleri": [
+                "Varlık felsefesinin konusunu ve temel kavramlarını açıklar.",
+                "Varlık felsefesinin temel problemlerini açıklar.",
+                "Varlık felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                "Varlık felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler."
+              ],
+              "icerik_cercevesi": [
+                "Varlık Felsefesinin Konusu ve Temel Kavramları",
+                "Varlık Felsefesinin Temel Problemleri (Varlığın Var Olup Olmadığı, Varlığın Ne Olduğu)"
+              ],
+              "anahtar_kavramlar": [
+                "fenomen",
+                "idea",
+                "madde",
+                "oluş",
+                "öz",
+                "töz",
+                "varlık",
+                "varoluş"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "KASIM",
+                  "hafta": "9. Hafta: 9-13 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Varlık felsefesinin konusunu ve temel kavramlarını açıklar.",
+                  "belirliGunHafta": "Atatürk Haftası (10-16 Kasım)"
+                },
+                {
+                  "ay": "KASIM",
+                  "hafta": "10. Hafta: 23-27 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Varlık felsefesinin temel problemlerini açıklar.",
+                  "belirliGunHafta": "Öğretmenler Günü (24 Kasım)"
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "11. Hafta: 30 Kasım-4 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Varlık felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                  "belirliGunHafta": "Dünya Engelliler Günü (3 Aralık)"
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "12. Hafta: 7-11 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Varlık felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "13. Hafta: 14-18 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Varlık felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "4",
+          "uniteAdi": "Bilgi Felsefesi",
+          "dersSaati": 8,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.10.4.1",
+              "baslik": "Bilgi felsefesinin konusunu, kavramlarını ve problemlerini muhakeme edebilme",
+              "surec_bilesenleri": [
+                "Bilgi felsefesinin konusunu ve temel kavramlarını açıklar.",
+                "Bilgi felsefesinin temel problemlerini açıklar.",
+                "Bilgi felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                "Bilgi felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler."
+              ],
+              "icerik_cercevesi": [
+                "Bilgi Felsefesinin Konusu ve Temel Kavramları",
+                "Bilgi Felsefesinin Temel Problemleri (Bilginin İmkânı, Kaynağı ve Doğruluk Ölçütleri)"
+              ],
+              "anahtar_kavramlar": [
+                "bilgi",
+                "doğruluk",
+                "gerçeklik"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ARALIK",
+                  "hafta": "14. Hafta: 21-25 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Bilgi felsefesinin konusunu ve temel kavramlarını açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "15. Hafta: 28 Aralık -1Ocak",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Bilgi felsefesinin temel problemlerini açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "OCAK",
+                  "hafta": "16. Hafta: 4-8 Ocak",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Bilgi felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "OCAK",
+                  "hafta": "17. Hafta: 11-15 Ocak",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Bilgi felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "5",
+          "uniteAdi": "Ahlak Felsefesi",
+          "dersSaati": 8,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.10.5.1",
+              "baslik": "Ahlak felsefesinin konusunu, kavramlarını ve problemlerini muhakeme edebilme",
+              "surec_bilesenleri": [
+                "Ahlak felsefesinin konusunu ve temel kavramlarını açıklar.",
+                "Ahlak felsefesinin temel problemlerini açıklar.",
+                "Ahlak felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                "Ahlak felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler."
+              ],
+              "icerik_cercevesi": [
+                "Ahlak Felsefesinin Konusu ve Temel Kavramları",
+                "Ahlak Felsefesinin Temel Problemleri (Evrensel Ahlak Yasasının İmkânı, Özgürlük)"
+              ],
+              "anahtar_kavramlar": [
+                "ahlak",
+                "erdem",
+                "etik",
+                "iyi",
+                "kötü",
+                "özgürlük",
+                "sorumluluk",
+                "vicdan"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "19. Hafta: 8-12 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Ahlak felsefesinin konusunu ve temel kavramlarını açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "20. Hafta: 15-19 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Ahlak felsefesinin temel problemlerini açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "21. Hafta: 22-26 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Ahlak felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "22. Hafta: 1-5 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Ahlak felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler.",
+                  "belirliGunHafta": "İstiklâl Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma Günü (12 Mart)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "6",
+          "uniteAdi": "Estetik ve Sanat Felsefesi",
+          "dersSaati": 6,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.10.6.1",
+              "baslik": "Estetik ve sanat felsefesinin konusunu, kavramlarını ve problemlerini muhakeme",
+              "surec_bilesenleri": [
+                "Estetik ve sanat felsefesinin konusunu ve temel kavramlarını açıklar.",
+                "Estetik ve sanat felsefesinin temel problemlerini açıklar.",
+                "Estetik ve sanat felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                "Estetik ve sanat felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler."
+              ],
+              "icerik_cercevesi": [
+                "Estetik ve Sanat Felsefesinin Konusu ve Temel Kavramları",
+                "Estetik ve Sanat Felsefesinin Temel Problemleri (Sanatın Ne Olduğu, Güzellik ve Ortak Estetik",
+                "Yargıların İmkânı)"
+              ],
+              "anahtar_kavramlar": [
+                "estetik",
+                "hoş",
+                "güzellik",
+                "sanat",
+                "sanat eseri"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MART",
+                  "hafta": "23. Hafta: 15-19 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Estetik ve sanat felsefesinin konusunu ve temel kavramlarını açıklar. b) Estetik ve sanat felsefesinin temel problemlerini açıklar.",
+                  "belirliGunHafta": "Türk Dünyası ve Toplulukları Haftası (16-22 Mart) Çanakkale Zaferi ve Şehitleri Anma Günü (18 Mart)"
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "24. Hafta: 22-26 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Estetik ve sanat felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "25. Hafta: 29 Mart-2 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Estetik ve sanat felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "7",
+          "uniteAdi": "Siyaset Felsefesi",
+          "dersSaati": 8,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.10.7.1",
+              "baslik": "Siyaset felsefesinin konusunu, kavramlarını ve problemlerini muhakeme edebilme",
+              "surec_bilesenleri": [
+                "Siyaset felsefesinin konusunu ve temel kavramlarını açıklar.",
+                "Siyaset felsefesinin temel problemlerini açıklar.",
+                "Siyaset felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                "Siyaset felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler."
+              ],
+              "icerik_cercevesi": [
+                "Siyaset Felsefesinin Konusu ve Temel Kavramları",
+                "Siyaset Felsefesinin Temel Problemleri (Devletin Kökeni, İktidarın Kaynağı ve Meşruiyeti, İdeal",
+                "Düzen ve Ütopyalar)"
+              ],
+              "anahtar_kavramlar": [
+                "adalet",
+                "birey",
+                "devlet",
+                "eşitlik",
+                "iktidar",
+                "özgürlük",
+                "toplum",
+                "ütopya"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "NİSAN",
+                  "hafta": "26. Hafta: 5-9 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Siyaset felsefesinin konusunu ve temel kavramlarını açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "NİSAN",
+                  "hafta": "27. Hafta: 12-16 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Siyaset felsefesinin temel problemlerini açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "NİSAN",
+                  "hafta": "28. Hafta: 19-23 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Siyaset felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                  "belirliGunHafta": "Ulusal Egemenlik Çocuk Bayramı (23 Nisan)"
+                },
+                {
+                  "ay": "NİSAN",
+                  "hafta": "29. Hafta: 26-30 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Siyaset felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler.",
+                  "belirliGunHafta": "Kût'ül Amâre Zaferi (29 Nisan)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "8",
+          "uniteAdi": "Din Felsefesi",
+          "dersSaati": 6,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.10.8.1",
+              "baslik": "Din felsefesinin konusunu, kavramlarını ve problemlerini muhakeme edebil",
+              "surec_bilesenleri": [
+                "Din felsefesinin konusunu ve temel kavramlarını açıklar.",
+                "Din felsefesinin temel problemlerini açıklar.",
+                "Din felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                "Din felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler."
+              ],
+              "icerik_cercevesi": [
+                "Din Felsefesinin Konusu ve Temel Kavramları",
+                "Din Felsefesinin Temel Problemleri (Tanrı’nın Varlığına İlişkin Görüşler, Tanrı’nın Varlığına Yöne-",
+                "lik argüman, Evrenin Sonluluğu ve Sonsuzluğu, Ruhun Ölümsüzlüğü)"
+              ],
+              "anahtar_kavramlar": [
+                "din",
+                "ibadet",
+                "iman",
+                "inanç",
+                "kutsal",
+                "mucize",
+                "Tanrı",
+                "vahiy"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MAYIS",
+                  "hafta": "30. Hafta: 3-7 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Din felsefesinin konusunu ve temel kavramlarını açıklar. b) Din felsefesinin temel problemlerini açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MAYIS",
+                  "hafta": "31. Hafta: 10-14 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Din felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MAYIS",
+                  "hafta": "32. Hafta: 17-21 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Din felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler.",
+                  "belirliGunHafta": "Atatürkü Anma ve Gençlik ve Spor Bayramı (19 Mayıs)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "9",
+          "uniteAdi": "Bilim Felsefesi",
+          "dersSaati": 6,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.10.9.1",
+              "baslik": "Bilim felsefesinin konusunu, kavramlarını ve problemlerini muhakeme edebilme",
+              "surec_bilesenleri": [
+                "Bilim felsefesinin konusunu ve temel kavramlarını açıklar.",
+                "Bilim felsefesinin temel problemlerini açıklar.",
+                "Bilim felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                "Bilim felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler."
+              ],
+              "icerik_cercevesi": [
+                "Bilim Felsefesinin Konusu ve Temel Kavramları",
+                "Bilim Felsefesinin Temel Problemleri (Bilimin Ne Olduğu, Bilimi Oluşturan Unsurlar)"
+              ],
+              "anahtar_kavramlar": [
+                "bilim",
+                "bilimsel yöntem",
+                "gözlem",
+                "hipotez",
+                "kuram",
+                "paradigma",
+                "yasa"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MAYIS",
+                  "hafta": "33. Hafta: 24-28 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Bilim felsefesinin konusunu ve temel kavramlarını açıklar. b) Bilim felsefesinin temel problemlerini açıklar.",
+                  "belirliGunHafta": "İstanbulu'un Fethi (29 Mayıs)"
+                },
+                {
+                  "ay": "HAZİRAN",
+                  "hafta": "34. Hafta: 31 Mayıs-4 Haziran",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Bilim felsefesinin temel problemlerine yönelik düşünce ve argümanları değerlendirir.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "HAZİRAN",
+                  "hafta": "35. Hafta: 7-11 Haziran",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Bilim felsefesiyle ilgili metinlerde yer alan kavram, problem ve argümanları inceler.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "etiket": "11. Sınıf",
+      "cercevePlanMevcut": true,
+      "tatiller": [
+        "1. DÖNEM ARA TATİLİ: 16 - 20 Kasım 2026",
+        "YARIYIL TATİLİ: 25 Ocak - 5 Şubat 2027",
+        "2. DÖNEM ARA TATİLİ: 8-12 Mart 2027"
+      ],
+      "toplamDersSaatiYillik": 72,
+      "toplamOgrenmeCiktisiSayisi": 12,
+      "uniteler": [
+        {
+          "uniteNo": "1",
+          "uniteAdi": "Çevre Sorunları ve Felsefe",
+          "dersSaati": 12,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.11.1.1",
+              "baslik": "Çevre ile ilgili felsefi soru ve problemleri anlayabilme",
+              "surec_bilesenleri": [
+                "Çevre ile ilgili felsefi soru ve problemleri açıklar.",
+                "Çevre ile ilgili felsefi soru ve problemleri hayatla ilişkilendirerek değerlendirir."
+              ],
+              "icerik_cercevesi": [
+                "Çevre ve İnsan İlişkisi",
+                "Çevre Etiği (İnsan Merkezci Etik, Canlı Merkezci Etik, Çevre Merkezci Etik)"
+              ],
+              "anahtar_kavramlar": [
+                "çevre",
+                "çevre etiği",
+                "değer",
+                "doğa"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "1. Hafta: 14-18 Eylül",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Çevre ile ilgili felsefi soru ve problemleri açıklar.",
+                  "belirliGunHafta": "15 Temmuz Demokrasi ve Millî Birlik Günü"
+                },
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "2. Hafta: 21-25 Eylül",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Çevre ile ilgili felsefi soru ve problemleri hayatla ilişkilendirerek değerlendirir.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "FEL.11.1.2",
+              "baslik": "Çevre sorunlarıyla ilgili felsefi düşünce ortaya koyabilme",
+              "surec_bilesenleri": [
+                "Çevre sorunlarıyla ile ilgili felsefi argümanları çözümler.",
+                "Çevre sorunları ile ilgili görüş ve argüman oluşturur.",
+                "Çevre sorunları ile ilgili felsefi bir metin yazar."
+              ],
+              "icerik_cercevesi": [
+                "Çevre ve İnsan İlişkisi",
+                "Çevre Etiği (İnsan Merkezci Etik, Canlı Merkezci Etik, Çevre Merkezci Etik)"
+              ],
+              "anahtar_kavramlar": [
+                "çevre",
+                "çevre etiği",
+                "değer",
+                "doğa"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "3. Hafta: 28 Eylül-2 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Çevre sorunlarıyla ile ilgili felsefi argümanları çözümler.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EKİM",
+                  "hafta": "4. Hafta: 5-9 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Çevre sorunları ile ilgili görüş ve argüman oluşturur.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EKİM",
+                  "hafta": "5. Hafta: 12-16 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Çevre sorunları ile ilgili felsefi bir metin yazar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EKİM",
+                  "hafta": "6. Hafta: 19-23 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Çevre sorunları ile ilgili felsefi bir metin yazar.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "2",
+          "uniteAdi": "Teknoloji ve Hayat",
+          "dersSaati": 12,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.11.2.1",
+              "baslik": "Teknoloji ile ilgili felsefi soru ve problemleri anlayabilme",
+              "surec_bilesenleri": [
+                "Teknoloji ile ilgili felsefi soru ve problemleri açıklar.",
+                "Teknoloji ile ilgili felsefi soru ve problemleri hayatla ilişkilendirerek değerlendirir."
+              ],
+              "icerik_cercevesi": [
+                "Teknoloji ve İnsan Hayatı",
+                "Teknoloji Bağlamında Ontolojik Problemler (Ontolojik Anlam Kaybı, Yabancılaşma)",
+                "Teknoloji Bağlamında Aksiyolojik Problemler (Güvenlik Sorunları, Değerlerin Tahribatı, Ahlaki",
+                "Eylemin İmkânı)"
+              ],
+              "anahtar_kavramlar": [
+                "ontolojik anlam",
+                "tekhne",
+                "teknoloji karşıtlığı",
+                "teknoloji taraftarlığı",
+                "zaman ve mekân"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EKİM",
+                  "hafta": "7. Hafta: 26-30 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Teknoloji ile ilgili felsefi soru ve problemleri açıklar.",
+                  "belirliGunHafta": "Cumhuriyet Bayramı (29 Ekim)"
+                },
+                {
+                  "ay": "",
+                  "hafta": "8. Hafta: 2-6 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Teknoloji ile ilgili felsefi soru ve problemleri hayatla ilişkilendirerek değerlendirir.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "FEL.11.2.2",
+              "baslik": "Teknoloji ve hayat ilişkisiyle ilgili felsefi düşünce ortaya koyabilme",
+              "surec_bilesenleri": [
+                "Teknoloji ve hayat ilişkisiyle ilgili felsefi argümanları çözümler.",
+                "Teknoloji ve hayat ilişkisiyle ilgili görüş ve argüman oluşturur.",
+                "Teknoloji ve hayat ilişkisiyle ilgili felsefi metin yazar."
+              ],
+              "icerik_cercevesi": [
+                "Teknoloji ve İnsan Hayatı",
+                "Teknoloji Bağlamında Ontolojik Problemler (Ontolojik Anlam Kaybı, Yabancılaşma)",
+                "Teknoloji Bağlamında Aksiyolojik Problemler (Güvenlik Sorunları, Değerlerin Tahribatı, Ahlaki",
+                "Eylemin İmkânı)"
+              ],
+              "anahtar_kavramlar": [
+                "ontolojik anlam",
+                "tekhne",
+                "teknoloji karşıtlığı",
+                "teknoloji taraftarlığı",
+                "zaman ve mekân"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "KASIM",
+                  "hafta": "9. Hafta: 9-13 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Teknoloji ve hayat ilişkisiyle ilgili felsefi argümanları çözümler.",
+                  "belirliGunHafta": "Atatürk Haftası (10-16 Kasım)"
+                },
+                {
+                  "ay": "KASIM",
+                  "hafta": "10. Hafta: 23-27 Kasım",
+                  "dersSaati": "",
+                  "surecBileseniIsaretlenen": "b) Teknoloji ve hayat ilişkisiyle ilgili görüş ve argüman oluşturur.",
+                  "belirliGunHafta": "Öğretmenler Günü (24 Kasım)"
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "11. Hafta: 30 Kasım-4 Aralık",
+                  "dersSaati": "",
+                  "surecBileseniIsaretlenen": "c) Teknoloji ve hayat ilişkisiyle ilgili felsefi metin yazar.",
+                  "belirliGunHafta": "Dünya Engelliler Günü (3 Aralık)"
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "12. Hafta: 7-11 Aralık",
+                  "dersSaati": "",
+                  "surecBileseniIsaretlenen": "c) Teknoloji ve hayat ilişkisiyle ilgili felsefi metin yazar.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "3",
+          "uniteAdi": "Akıl ve İnanç",
+          "dersSaati": 10,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.11.3.1",
+              "baslik": "Akıl-inanç ilişkisiyle ilgili felsefi soru ve problemleri anlayabilme",
+              "surec_bilesenleri": [
+                "Akıl-inanç ilişkisiyle ilgili felsefi soru ve problemleri açıklar.",
+                "Akıl-inanç ilişkisiyle ilgili felsefi soru ve problemleri hayatla ilişkilendirerek değerlendirir."
+              ],
+              "icerik_cercevesi": [
+                "Akıl-İnanç İlişkisine Yönelik Felsefi Sorular ve Problemler",
+                "Akıl-İnanç İlişkisine Yönelik Felsefi Görüş ve Argümanlar"
+              ],
+              "anahtar_kavramlar": [
+                "akıl",
+                "gönül",
+                "inanç"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ARALIK",
+                  "hafta": "13. Hafta: 14-18 Aralık",
+                  "dersSaati": "",
+                  "surecBileseniIsaretlenen": "a) Akıl-inanç ilişkisiyle ilgili felsefi soru ve problemleri açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "14. Hafta: 21-25 Aralık",
+                  "dersSaati": "",
+                  "surecBileseniIsaretlenen": "b) Akıl-inanç ilişkisiyle ilgili felsefi soru ve problemleri hayatla ilişkilendirerek değerlendirir.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "FEL.11.3.2",
+              "baslik": "Akıl-inanç ilişkisiyle ilgili felsefi düşünce ortaya koyabilme",
+              "surec_bilesenleri": [
+                "Akıl-inanç ilişkisiyle ilgili felsefi argümanları çözümler.",
+                "Akıl-inanç ilişkisiyle ilgili görüş ve argüman oluşturur.",
+                "Akıl-inanç ilişkisiyle ilgili felsefi metin yazar."
+              ],
+              "icerik_cercevesi": [
+                "Akıl-İnanç İlişkisine Yönelik Felsefi Sorular ve Problemler",
+                "Akıl-İnanç İlişkisine Yönelik Felsefi Görüş ve Argümanlar"
+              ],
+              "anahtar_kavramlar": [
+                "akıl",
+                "gönül",
+                "inanç"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ARALIK",
+                  "hafta": "15. Hafta: 28 Aralık -1Ocak",
+                  "dersSaati": "",
+                  "surecBileseniIsaretlenen": "a) Akıl-inanç ilişkisiyle ilgili felsefi argümanları çözümler.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "OCAK",
+                  "hafta": "16. Hafta: 4-8 Ocak",
+                  "dersSaati": "",
+                  "surecBileseniIsaretlenen": "b) Akıl-inanç ilişkisiyle ilgili görüş ve argüman oluşturur.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "OCAK",
+                  "hafta": "17. Hafta: 11-15 Ocak",
+                  "dersSaati": "",
+                  "surecBileseniIsaretlenen": "c) Akıl-inanç ilişkisiyle ilgili felsefi metin yazar.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "4",
+          "uniteAdi": "Edebiyat ve Felsefe",
+          "dersSaati": 12,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.11.4.1",
+              "baslik": "Edebiyat felsefe ilişkisi ile ilgili soru ve problemleri anlayabilme",
+              "surec_bilesenleri": [
+                "Edebiyat felsefe ilişkisi ile ilgili felsefi soru ve problemleri açıklar.",
+                "Edebiyat felsefe ilişkisi temelinde oluşan soru ve problemlerin hayatla ilişkisini değerlendirir."
+              ],
+              "icerik_cercevesi": [
+                "Edebiyat Felsefe İlişkisi",
+                "Edebiyat Felsefe İlişkisi Problemleri (Edebî Unsurlara Felsefi Bakış, Edebî Unsurlarla Fel-",
+                "sefe Yapma)"
+              ],
+              "anahtar_kavramlar": [
+                "edebiyat",
+                "felsefi roman",
+                "felsefi şiir"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "19. Hafta: 8-12 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Edebiyat felsefe ilişkisi ile ilgili felsefi soru ve problemleri açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "20. Hafta: 15-19 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Edebiyat felsefe ilişkisi temelinde oluşan soru ve problemlerin hayatla ilişkisini değerlendirir.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "FEL.11.4.2",
+              "baslik": "Edebiyat felsefe ilişkisi ile ilgili felsefi düşünce ortaya koyabilme",
+              "surec_bilesenleri": [
+                "Edebiyat felsefe ilişkisi ile ilgili felsefi argümanları çözümler.",
+                "Edebiyat felsefe ilişkisi ile ilgili felsefi görüş ve argüman oluşturur.",
+                "Edebiyat felsefe ilişkisi ile ilgili felsefi metin yazar."
+              ],
+              "icerik_cercevesi": [
+                "Edebiyat Felsefe İlişkisi",
+                "Edebiyat Felsefe İlişkisi Problemleri (Edebî Unsurlara Felsefi Bakış, Edebî Unsurlarla Fel-",
+                "sefe Yapma)"
+              ],
+              "anahtar_kavramlar": [
+                "edebiyat",
+                "felsefi roman",
+                "felsefi şiir"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "21. Hafta: 22-26 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Edebiyat felsefe ilişkisi ile ilgili felsefi argümanları çözümler.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "22. Hafta: 1-5 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Edebiyat felsefe ilişkisi ile ilgili felsefi görüş ve argüman oluşturur.",
+                  "belirliGunHafta": "İstiklâl Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma Günü (12 Mart)"
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "23. Hafta: 15-19 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Edebiyat felsefe ilişkisi ile ilgili felsefi metin yazar.",
+                  "belirliGunHafta": "Türk Dünyası ve Toplulukları Haftası (16-22 Mart) Çanakkale Zaferi ve Şehitleri Anma Günü (18 Mart)"
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "24. Hafta: 22-26 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Edebiyat felsefe ilişkisi ile ilgili felsefi metin yazar.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "5",
+          "uniteAdi": "Hayatın Anlamı",
+          "dersSaati": 12,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.11.5.1",
+              "baslik": "Hayatın anlamına ilişkin felsefi soru ve problemleri anlayabilme",
+              "surec_bilesenleri": [
+                "Hayatın anlamına ilişkin felsefi soru ve problemleri açıklar.",
+                "Hayatın anlamına ilişkin felsefi soru ve problemleri hayatıyla ilişkilendirerek değerlendirir."
+              ],
+              "icerik_cercevesi": [
+                "Hayatın Anlamına Yönelik Felsefi Sorular ve Problemler (Mutluluk ve Hayat İlişkisi, Varoluş",
+                "ve Kendi Olma)",
+                "Hayatın Anlamına Yönelik Felsefi Görüş ve Argümanlar"
+              ],
+              "anahtar_kavramlar": [
+                "kaygı",
+                "kendi olma",
+                "mutluluk",
+                "ölüm",
+                "saçma",
+                "umutsuzluk",
+                "varoluş",
+                "yabancılaşma"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MART",
+                  "hafta": "25. Hafta: 29 Mart-2 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Hayatın anlamına ilişkin felsefi soru ve problemleri açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "NİSAN",
+                  "hafta": "26. Hafta: 5-9 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Hayatın anlamına ilişkin felsefi soru ve problemleri hayatıyla ilişkilendirerek değerlendirir.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "FEL.11.5.2",
+              "baslik": "Hayatın anlamına ilişkin felsefi düşünce ortaya koyabilme",
+              "surec_bilesenleri": [
+                "Hayatın anlamına ilişkin felsefi argümanları çözümler.",
+                "Hayatın anlamına ilişkin felsefi görüş ve argüman oluşturur.",
+                "Hayatın anlamına ilişkin felsefi metin yazar."
+              ],
+              "icerik_cercevesi": [
+                "Hayatın Anlamına Yönelik Felsefi Sorular ve Problemler (Mutluluk ve Hayat İlişkisi, Varoluş",
+                "ve Kendi Olma)",
+                "Hayatın Anlamına Yönelik Felsefi Görüş ve Argümanlar"
+              ],
+              "anahtar_kavramlar": [
+                "kaygı",
+                "kendi olma",
+                "mutluluk",
+                "ölüm",
+                "saçma",
+                "umutsuzluk",
+                "varoluş",
+                "yabancılaşma"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "NİSAN",
+                  "hafta": "27. Hafta: 12-16 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Hayatın anlamına ilişkin felsefi argümanları çözümler.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "NİSAN",
+                  "hafta": "28. Hafta: 19-23 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Hayatın anlamına ilişkin felsefi görüş ve argüman oluşturur.",
+                  "belirliGunHafta": "Ulusal Egemenlik Çocuk Bayramı (23 Nisan)"
+                },
+                {
+                  "ay": "NİSAN",
+                  "hafta": "29. Hafta: 26-30 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Hayatın anlamına ilişkin felsefi metin yazar.",
+                  "belirliGunHafta": "Kût'ül Amâre Zaferi (29 Nisan)"
+                },
+                {
+                  "ay": "MAYIS",
+                  "hafta": "30. Hafta: 3-7 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Hayatın anlamına ilişkin felsefi metin yazar.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "6",
+          "uniteAdi": "Hukuk ve Felsefe",
+          "dersSaati": 10,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "FEL.11.6.1",
+              "baslik": "Hukukun doğasına yönelik soru ve felsefi problemleri anlayabilme",
+              "surec_bilesenleri": [
+                "Hukukun doğasına yönelik felsefi soru ve problemleri açıklar.",
+                "Hukukun doğasına yönelik felsefi soru ve problemleri toplumsal hayat ile ilişkilendirerek değerlendirir."
+              ],
+              "icerik_cercevesi": [
+                "Hukuk ve İnsan",
+                "Hukukun Doğasına Yönelik Felsefi Problemler [Hukukun Gereği ve Önemi, Hukukun Kay-",
+                "nağı (Doğal Hukuk, Pozitif Hukuk), Ahlak-Hukuk İlişkisi]"
+              ],
+              "anahtar_kavramlar": [
+                "ceza",
+                "hakkaniyet",
+                "hukuk",
+                "suç",
+                "yasa"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MAYIS",
+                  "hafta": "31. Hafta: 10-14 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Hukukun doğasına yönelik felsefi soru ve problemleri açıklar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MAYIS",
+                  "hafta": "32. Hafta: 17-21 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Hukukun doğasına yönelik felsefi soru ve problemleri toplumsal hayat ile ilişkilendirerek değerlendirir.",
+                  "belirliGunHafta": "Atatürkü Anma ve Gençlik ve Spor Bayramı (19 Mayıs)"
+                }
+              ]
+            },
+            {
+              "kod": "FEL.11.6.2",
+              "baslik": "Hukuk sorunları üzerine felsefi düşünce ortaya koyabilme",
+              "surec_bilesenleri": [
+                "Hak ve özgürlüklerin hukuksal temellerini çözümler.",
+                "Temel hukuk sorunlarına yönelik görüş ve argüman oluşturur.",
+                "Hukuk sorunlarına ilişkin felsefi bir metin yazar."
+              ],
+              "icerik_cercevesi": [
+                "Hukuk ve İnsan",
+                "Hukukun Doğasına Yönelik Felsefi Problemler [Hukukun Gereği ve Önemi, Hukukun Kay-",
+                "nağı (Doğal Hukuk, Pozitif Hukuk), Ahlak-Hukuk İlişkisi]"
+              ],
+              "anahtar_kavramlar": [
+                "ceza",
+                "hakkaniyet",
+                "hukuk",
+                "suç",
+                "yasa"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MAYIS",
+                  "hafta": "33. Hafta: 24-28 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Hak ve özgürlüklerin hukuksal temellerini çözümler.",
+                  "belirliGunHafta": "İstanbulu'un Fethi (29 Mayıs)"
+                },
+                {
+                  "ay": "HAZİRAN",
+                  "hafta": "34. Hafta: 31 Mayıs-4 Haziran",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Temel hukuk sorunlarına yönelik görüş ve argüman oluşturur.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "HAZİRAN",
+                  "hafta": "35. Hafta: 7-11 Haziran",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Hukuk sorunlarına ilişkin felsefi bir metin yazar.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dogrulamaNotu": "Kazanım kodları/metinleri MEB TYMM 2026 öğretim programından, haftalık dağılım MEB 2026-2027 çerçeve yıllık planından alınmış ve iki kaynak birbiriyle çapraz doğrulanmıştır. cercevePlanMevcut=false olan seviyeler için sitede 'resmi çerçeve plan henüz yok' uyarısı gösterilmeli, haftalık plan üretilmemelidir. Eğilimler, SDB, değerler, okuryazarlık becerileri, farklılaştırma ve örnek etkinlik metinleri bu dosyada yok."
+}

@@ -1,0 +1,843 @@
+{
+  "dersAdi": "Sosyoloji",
+  "kodPrefix": "SOS",
+  "surumTarihi": "2026 - Türkiye Yüzyılı Maarif Modeli",
+  "seviyeler": [
+    {
+      "etiket": "Sosyoloji Dersi 1 (11. Sınıf)",
+      "cercevePlanMevcut": true,
+      "tatiller": [
+        "1. DÖNEM ARA TATİLİ: 16 - 20 Kasım 2026",
+        "YARIYIL TATİLİ: 25 Ocak - 5 Şubat 2027",
+        "2. DÖNEM ARA TATİLİ: 8-12 Mart 2027"
+      ],
+      "toplamDersSaatiYillik": 72,
+      "toplamOgrenmeCiktisiSayisi": 18,
+      "uniteler": [
+        {
+          "uniteNo": "1",
+          "uniteAdi": "Sosyolojinin Doğuşu",
+          "dersSaati": 16,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "SOS.11.1.1",
+              "baslik": "Sosyolojinin doğuş sürecini tarihsel bağlamda anlamlandırabilme",
+              "surec_bilesenleri": [
+                "Sosyolojinin doğuşuna etki eden düşünürlerin görüşlerini analiz eder.",
+                "Sosyolojinin doğduğu dönemin sosyal, ekonomik ve siyasal koşullarını fark eder.",
+                "Sosyolojinin doğduğu tarihsel koşullar ile günümüz toplumlarının koşullarını karşılaştırır.",
+                "Sosyolojinin kurucu isimlerinin sosyoloji anlayışlarını açıklar."
+              ],
+              "icerik_cercevesi": [
+                "Sosyolojinin Doğuşu",
+                "Sosyolojik Düşünme Biçimi",
+                "Sosyolojide Kullanılan Farklı Yöntemler"
+              ],
+              "anahtar_kavramlar": [
+                "anomi",
+                "ilerleme",
+                "kentleşme",
+                "modernite",
+                "toplumsal düzen"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "1. Hafta: 14-18 Eylül",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Sosyolojinin doğuşuna etki eden düşünürlerin görüşlerini analiz eder.",
+                  "belirliGunHafta": "15 Temmuz Demokrasi ve Millî Birlik Günü"
+                },
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "2. Hafta: 21-25 Eylül",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Sosyolojinin doğduğu dönemin sosyal, ekonomik ve siyasal koşullarını fark eder. c) Sosyolojinin doğduğu tarihsel koşullar ile günümüz toplumlarının koşullarını karşılaştırır.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "3. Hafta: 28 Eylül-2 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Sosyolojinin kurucu isimlerinin sosyoloji anlayışlarını açıklar",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.1.2",
+              "baslik": "Sosyolojik düşünme biçimini sorgulayabilme",
+              "surec_bilesenleri": [
+                "Sosyolojik düşünme biçimi ile ilgili merak ettiği konuyu tanımlar.",
+                "Sosyolojik düşünme biçimi ile ilgili merak ettiği konu hakkında sorular sorar.",
+                "Sosyolojik düşünme biçimi ile ilgili merak ettiği konu hakkında bilgi toplar.",
+                "Toplanan bilgilerin doğruluğunu değerlendirir.",
+                "Doğrulanmış bilgilerden hareketle sosyolojik düşünme biçimine uygun çıkarımlar yapar."
+              ],
+              "icerik_cercevesi": [
+                "Sosyolojinin Doğuşu",
+                "Sosyolojik Düşünme Biçimi",
+                "Sosyolojide Kullanılan Farklı Yöntemler"
+              ],
+              "anahtar_kavramlar": [
+                "anomi",
+                "ilerleme",
+                "kentleşme",
+                "modernite",
+                "toplumsal düzen"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EKİM",
+                  "hafta": "4. Hafta: 5-9 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Sosyolojik düşünme biçimi ile ilgili merak ettiği konuyu tanımlar. b) Sosyolojik düşünme biçimi ile ilgili merak ettiği konu hakkında sorular sorar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EKİM",
+                  "hafta": "5. Hafta: 12-16 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Sosyolojik düşünme biçimi ile ilgili merak ettiği konu hakkında bilgi toplar. ç) Toplanan bilgilerin doğruluğunu değerlendirir.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EKİM",
+                  "hafta": "6. Hafta: 19-23 Ekim",
+                  "dersSaati": "1",
+                  "surecBileseniIsaretlenen": "d) Doğrulanmış bilgilerden hareketle sosyolojik düşünme biçimine uygun çıkarımlar yapar",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.1.3",
+              "baslik": "Sosyolojide kullanılan farklı yöntemleri karşılaştırabilme",
+              "surec_bilesenleri": [
+                "Nicel ve nitel araştırma yöntemleri ile bu yöntemlerin dayandığı görüşlerin temel özelliklerini belirler.",
+                "Nicel ve nitel araştırma yöntemlerinin benzerliklerini listeler.",
+                "Nicel ve nitel araştırma yöntemlerinin farklılıklarını listeler."
+              ],
+              "icerik_cercevesi": [
+                "Sosyolojinin Doğuşu",
+                "Sosyolojik Düşünme Biçimi",
+                "Sosyolojide Kullanılan Farklı Yöntemler"
+              ],
+              "anahtar_kavramlar": [
+                "anomi",
+                "ilerleme",
+                "kentleşme",
+                "modernite",
+                "toplumsal düzen"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EKİM",
+                  "hafta": "6. Hafta: 19-23 Ekim",
+                  "dersSaati": "1",
+                  "surecBileseniIsaretlenen": "a) Nicel ve nitel araştırma yöntemleri ile bu yöntemlerin dayandığı görüşlerin temel özelliklerini belirler.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EKİM",
+                  "hafta": "7. Hafta: 26-30 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Nicel ve nitel araştırma yöntemlerinin benzerliklerini listeler.",
+                  "belirliGunHafta": "Cumhuriyet Bayramı (29 Ekim)"
+                },
+                {
+                  "ay": "",
+                  "hafta": "8. Hafta: 2-6 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Nicel ve nitel araştırma yöntemlerinin farklılıklarını listeler.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "2",
+          "uniteAdi": "Türkiye'de Modernleşme ve Sosyoloji",
+          "dersSaati": 14,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "SOS.11.2.1",
+              "baslik": "Osmanlı’dan Cumhuriyet’e modernleşmenin neden ve sonuçlarını yorumla",
+              "surec_bilesenleri": [
+                "Osmanlı’da başlayıp Cumhuriyet Dönemi’nde derinleşerek devam eden modernleşmenin nedenlerini inceler.",
+                "Osmanlı’da başlayıp Cumhuriyet Dönemi’nde derinleşerek devam eden modernleşmenin sonuçlarını inceler.",
+                "Modernleşmenin sonuçlarını tarihsel bağlamda sorgular.",
+                "Modernleşmenin nedenlerini ve sonuçlarını tarihsel bağlamda yeniden ifade eder."
+              ],
+              "icerik_cercevesi": [
+                "Osmanlı’dan Cumhuriyet’e Modernleşme Süreci",
+                "Tarihsel Bağlamda Türkiye’de Sosyolojinin Doğuşu ve Gelişimi",
+                "Türkiye’de Sosyoloji-Edebiyat İlişkisi"
+              ],
+              "anahtar_kavramlar": [
+                "adem-i merkeziyet",
+                "edebiyat",
+                "hars",
+                "kültür",
+                "medeniyet",
+                "modernleşme"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "KASIM",
+                  "hafta": "9. Hafta: 9-13 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Osmanlı’da başlayıp Cumhuriyet Dönemi’nde derinleşerek devam eden modernleşmenin nedenlerini inceler. b) Osmanlı’da başlayıp Cumhuriyet Dönemi’nde derinleşerek devam eden modernleşmenin sonuçlarını inceler.",
+                  "belirliGunHafta": "Atatürk Haftası (10-16 Kasım)"
+                },
+                {
+                  "ay": "KASIM",
+                  "hafta": "10. Hafta: 23-27 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Modernleşmenin sonuçlarını tarihsel bağlamda sorgular.",
+                  "belirliGunHafta": "Öğretmenler Günü (24 Kasım)"
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "11. Hafta: 30 Kasım-4 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Modernleşmenin nedenlerini ve sonuçlarını tarihsel bağlamda yeniden ifade eder.",
+                  "belirliGunHafta": "Dünya Engelliler Günü (3 Aralık)"
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.2.2",
+              "baslik": "Türkiye’de sosyolojinin doğuşu ve gelişim sürecini tarihsel bir kurgu içinde",
+              "surec_bilesenleri": [
+                "Türkiye’de sosyolojinin gelişim sürecine ilişkin olay, olgu ve düşünsel yönelimleri inceleyerek nedensel ilişkiler ortaya koyar.",
+                "Ortaya koyduğu ilişkileri tarihsel bağlamda bütünleştirerek uyumlu bir bütün oluşturur."
+              ],
+              "icerik_cercevesi": [
+                "Osmanlı’dan Cumhuriyet’e Modernleşme Süreci",
+                "Tarihsel Bağlamda Türkiye’de Sosyolojinin Doğuşu ve Gelişimi",
+                "Türkiye’de Sosyoloji-Edebiyat İlişkisi"
+              ],
+              "anahtar_kavramlar": [
+                "adem-i merkeziyet",
+                "edebiyat",
+                "hars",
+                "kültür",
+                "medeniyet",
+                "modernleşme"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ARALIK",
+                  "hafta": "12. Hafta: 7-11 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Türkiye’de sosyolojinin gelişim sürecine ilişkin olay, olgu ve düşünsel yönelimleri inceleyerek nedensel ilişkiler ortaya koyar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "13. Hafta: 14-18 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Ortaya koyduğu ilişkileri tarihsel bağlamda bütünleştirerek uyumlu bir bütün oluşturur.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.2.3",
+              "baslik": "Türk modernleşmesinin Türk edebiyatına yansımasını yorumlayabilme",
+              "surec_bilesenleri": [
+                "Edebî eserlerde modernleşme konusunu inceler.",
+                "İncelediği konuyu sosyoloji ile ilişkisi içinde bağlamdan kopmadan yazılı/sözlü metne dönüştürür.",
+                "Eserlerdeki ilgili düşünceleri anlamı değiştirmeden kendi cümleleriyle ifade eder."
+              ],
+              "icerik_cercevesi": [
+                "Osmanlı’dan Cumhuriyet’e Modernleşme Süreci",
+                "Tarihsel Bağlamda Türkiye’de Sosyolojinin Doğuşu ve Gelişimi",
+                "Türkiye’de Sosyoloji-Edebiyat İlişkisi"
+              ],
+              "anahtar_kavramlar": [
+                "adem-i merkeziyet",
+                "edebiyat",
+                "hars",
+                "kültür",
+                "medeniyet",
+                "modernleşme"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ARALIK",
+                  "hafta": "14. Hafta: 21-25 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Edebî eserlerde modernleşme konusunu inceler. b) İncelediği konuyu sosyoloji ile ilişkisi içinde bağlamdan kopmadan yazılı/sözlü metne dönüştürür.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "15. Hafta: 28 Aralık -1Ocak",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Eserlerdeki ilgili düşünceleri anlamı değiştirmeden kendi cümleleriyle ifade eder",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "3",
+          "uniteAdi": "Kültür ve Toplumsal Yapı",
+          "dersSaati": 12,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "SOS.11.3.1",
+              "baslik": "Kültürün işlevlerini yapılandırabilme",
+              "surec_bilesenleri": [
+                "Kültürün işlevlerini inceleyerek toplumla ilişkisini ortaya koyar.",
+                "Bu ilişkiye dayanarak tutarlı ve uyumlu bir bütün oluşturur."
+              ],
+              "icerik_cercevesi": [],
+              "anahtar_kavramlar": [],
+              "haftalikDagilim": [
+                {
+                  "ay": "OCAK",
+                  "hafta": "16. Hafta: 4-8 Ocak",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Kültürün işlevlerini inceleyerek toplumla ilişkisini ortaya koyar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "OCAK",
+                  "hafta": "17. Hafta: 11-15 Ocak",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Bu ilişkiye dayanarak tutarlı ve uyumlu bir bütün oluşturur.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.3.2",
+              "baslik": "Toplumsal yapının unsurlarını ve bu unsurlar arasındaki ilişkileri çözümleyebilme",
+              "surec_bilesenleri": [
+                "Toplumsal yapıyı oluşturan unsurları belirler.",
+                "Toplumsal yapıyı oluşturan unsurlar arasındaki ilişkileri belirler."
+              ],
+              "icerik_cercevesi": [
+                "Kültür",
+                "Toplumsal Yapı",
+                "Toplumsal Tabakalaşma ve Toplumsal Hareketlilik"
+              ],
+              "anahtar_kavramlar": [
+                "Avrupamerkezcilik",
+                "değer",
+                "etnosentrizm",
+                "norm",
+                "prekarya",
+                "rol",
+                "statü"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "19. Hafta: 8-12 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Toplumsal yapıyı oluşturan unsurları belirler.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "20. Hafta: 15-19 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Toplumsal yapıyı oluşturan unsurlar arasındaki ilişkileri belirler.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.3.3",
+              "baslik": "Toplumsal tabakalaşmayı ve toplumsal hareketliliği özetleyebilme",
+              "surec_bilesenleri": [
+                "Toplumsal tabakalaşmayı ve toplumsal hareketliliği çözümler.",
+                "Toplumsal tabakalaşma ve toplumsal hareketlilik türlerini sınıflandırır.",
+                "Toplumsal tabakalaşmanın ve toplumsal hareketliliğin etkilerini yorumlar."
+              ],
+              "icerik_cercevesi": [
+                "Kültür",
+                "Toplumsal Yapı",
+                "Toplumsal Tabakalaşma ve Toplumsal Hareketlilik"
+              ],
+              "anahtar_kavramlar": [
+                "Avrupamerkezcilik",
+                "değer",
+                "etnosentrizm",
+                "norm",
+                "prekarya",
+                "rol",
+                "statü"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "21. Hafta: 22-26 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Toplumsal tabakalaşmayı ve toplumsal hareketliliği çözümler. b) Toplumsal tabakalaşma ve toplumsal hareketlilik türlerini sınıflandırır.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "22. Hafta: 1-5 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Toplumsal tabakalaşmanın ve toplumsal hareketliliğin etkilerini yorumlar.",
+                  "belirliGunHafta": "İstiklâl Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma Günü (12 Mart)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "4",
+          "uniteAdi": "Toplumsal Kurumlar",
+          "dersSaati": 16,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "SOS.11.4.1",
+              "baslik": "Aile kurumunun işlevi ve yapısı ile evlilik türleri üzerine eleştirel düşünebilme",
+              "surec_bilesenleri": [
+                "Aile kurumunun işlevinin ne olduğunu, aile tiplerini ve evlilik türlerini sorgular.",
+                "Aile kurumunun işlevi, aile tipleri ve evlilik türleri ile ilgili akıl yürütür.",
+                "Akıl yürütme ile ulaştığı çıkarımı yansıtır."
+              ],
+              "icerik_cercevesi": [
+                "Aile",
+                "Eğitim",
+                "Din",
+                "Ekonomi",
+                "Siyaset",
+                "Toplumsal Kurumların Aralarındaki İlişkiler"
+              ],
+              "anahtar_kavramlar": [
+                "meşruiyet",
+                "müfredat",
+                "otorite",
+                "sosyalizasyon",
+                "sosyal kontrol",
+                "üretim biçimi"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MART",
+                  "hafta": "23. Hafta: 15-19 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Aile kurumunun işlevinin ne olduğunu, aile tiplerini ve evlilik türlerini sorgular. b) Aile kurumunun işlevi, aile tipleri ve evlilik türleri ile ilgili akıl yürütür.",
+                  "belirliGunHafta": "Türk Dünyası ve Toplulukları Haftası (16-22 Mart) Çanakkale Zaferi ve Şehitleri Anma Günü (18 Mart)"
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "24. Hafta: 22-26 Mart",
+                  "dersSaati": "1",
+                  "surecBileseniIsaretlenen": "c) Akıl yürütme ile ulaştığı çıkarımı yansıtır.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.4.2",
+              "baslik": "Eğitim kurumunun işlevi ve toplumsal yaşamdaki önemi ve değeri üzerine",
+              "surec_bilesenleri": [
+                "Eğitim kurumunun işlevinin ne olduğunu, toplumsal yaşam için önemini ve değerini sorgular.",
+                "Sorgulanan problem ve durumla ilgili akıl yürütür.",
+                "Akıl yürütme ile ulaştığı çıkarımı yansıtır."
+              ],
+              "icerik_cercevesi": [
+                "Aile",
+                "Eğitim",
+                "Din",
+                "Ekonomi",
+                "Siyaset",
+                "Toplumsal Kurumların Aralarındaki İlişkiler"
+              ],
+              "anahtar_kavramlar": [
+                "meşruiyet",
+                "müfredat",
+                "otorite",
+                "sosyalizasyon",
+                "sosyal kontrol",
+                "üretim biçimi"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MART",
+                  "hafta": "24. Hafta: 22-26 Mart",
+                  "dersSaati": "1",
+                  "surecBileseniIsaretlenen": "a) Eğitim kurumunun işlevinin ne olduğunu, toplumsal yaşam için önemini ve değerini sorgular. b) Sorgulanan problem ve durumla ilgili akıl yürütür.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "25. Hafta: 29 Mart-2 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Akıl yürütme ile ulaştığı çıkarımı yansıtır.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.4.3",
+              "baslik": "Din kurumunun işlevlerini yapılandırabilme",
+              "surec_bilesenleri": [
+                "Din kurumunun işlevlerini inceleyerek mantıksal ilişkiler ortaya koyar.",
+                "Tespitlerine dayanarak tutarlı ve uyumlu bir bütün oluşturur."
+              ],
+              "icerik_cercevesi": [
+                "Aile",
+                "Eğitim",
+                "Din",
+                "Ekonomi",
+                "Siyaset",
+                "Toplumsal Kurumların Aralarındaki İlişkiler"
+              ],
+              "anahtar_kavramlar": [
+                "meşruiyet",
+                "müfredat",
+                "otorite",
+                "sosyalizasyon",
+                "sosyal kontrol",
+                "üretim biçimi"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "NİSAN",
+                  "hafta": "26. Hafta: 5-9 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Din kurumunun işlevlerini inceleyerek mantıksal ilişkiler ortaya koyar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "NİSAN",
+                  "hafta": "27. Hafta: 12-16 Nisan",
+                  "dersSaati": "1",
+                  "surecBileseniIsaretlenen": "b) Tespitlerine dayanarak tutarlı ve uyumlu bir bütün oluşturur.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.4.4",
+              "baslik": "Ekonomi kurumunun işlevi ve toplumsal yaşam açısından önemi hakkında çı",
+              "surec_bilesenleri": [
+                "Ekonomi kurumunun işlevi hakkında varsayımda bulunur.",
+                "Ekonomik işleyişte tekrar eden yapısal unsurları listeler.",
+                "Ekonomik sistemleri karşılaştırır.",
+                "Devletin ekonomiye müdahalesi hakkında önerme sunar.",
+                "Önermeleri değerlendirir."
+              ],
+              "icerik_cercevesi": [
+                "Aile",
+                "Eğitim",
+                "Din",
+                "Ekonomi",
+                "Siyaset",
+                "Toplumsal Kurumların Aralarındaki İlişkiler"
+              ],
+              "anahtar_kavramlar": [
+                "meşruiyet",
+                "müfredat",
+                "otorite",
+                "sosyalizasyon",
+                "sosyal kontrol",
+                "üretim biçimi"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "NİSAN",
+                  "hafta": "27. Hafta: 12-16 Nisan",
+                  "dersSaati": "1",
+                  "surecBileseniIsaretlenen": "a) Ekonomi kurumunun işlevi hakkında varsayımda bulunur. b) Ekonomik işleyişte tekrar eden yapısal unsurları listeler. c) Ekonomik sistemleri karşılaştırır.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "NİSAN",
+                  "hafta": "28. Hafta: 19-23 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "ç) Devletin ekonomiye müdahalesi hakkında önerme sunar. d) Önermeleri değerlendirir.",
+                  "belirliGunHafta": "Ulusal Egemenlik Çocuk Bayramı (23 Nisan)"
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.4.5",
+              "baslik": "Siyaset kurumunun işlevi ve önemi hakkında eleştirel düşünebilme",
+              "surec_bilesenleri": [
+                "Siyaset kurumunun işlevinin ne olduğu ile toplumsal yaşamdaki yeri ve önemini sorgular.",
+                "Sorgulanan durumla ilgili akıl yürütür.",
+                "Akıl yürütme ile ulaştığı çıkarımı yansıtır."
+              ],
+              "icerik_cercevesi": [
+                "Aile",
+                "Eğitim",
+                "Din",
+                "Ekonomi",
+                "Siyaset",
+                "Toplumsal Kurumların Aralarındaki İlişkiler"
+              ],
+              "anahtar_kavramlar": [
+                "meşruiyet",
+                "müfredat",
+                "otorite",
+                "sosyalizasyon",
+                "sosyal kontrol",
+                "üretim biçimi"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "NİSAN",
+                  "hafta": "29. Hafta: 26-30 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Siyaset kurumunun işlevinin ne olduğu ile toplumsal yaşamdaki yeri ve önemini sorgular. b) Sorgulanan durumla ilgili akıl yürütür. c) Akıl yürütme ile ulaştığı çıkarımı yansıtır",
+                  "belirliGunHafta": "Kût'ül Amâre Zaferi (29 Nisan)"
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.4.6",
+              "baslik": "Toplumsal kurumların işlevlerini birbirleriyle ilişkisi içinde inceleyerek toplu",
+              "surec_bilesenleri": [
+                "Toplumsal kurumların işlevlerini inceleyerek mantıksal ilişkiler ortaya koyar.",
+                "Bu ilişkilere dayanarak tutarlı ve uyumlu bir bütün oluşturur. 29 SOSYOLOJİ DERSİ ÖĞRETİM PROGRAMI"
+              ],
+              "icerik_cercevesi": [
+                "Aile",
+                "Eğitim",
+                "Din",
+                "Ekonomi",
+                "Siyaset",
+                "Toplumsal Kurumların Aralarındaki İlişkiler"
+              ],
+              "anahtar_kavramlar": [
+                "meşruiyet",
+                "müfredat",
+                "otorite",
+                "sosyalizasyon",
+                "sosyal kontrol",
+                "üretim biçimi"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MAYIS",
+                  "hafta": "30. Hafta: 3-7 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Toplumsal kurumların işlevlerini inceleyerek mantıksal ilişkiler ortaya koyar. b) Bu ilişkilere dayanarak tutarlı ve uyumlu bir bütün oluşturur",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "5",
+          "uniteAdi": "Güncel Sosyolojik Meseleler",
+          "dersSaati": 10,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "SOS.11.5.1",
+              "baslik": "İslam karşıtlığı problemi ile ilgili eleştirel düşünebilme",
+              "surec_bilesenleri": [
+                "İslam karşıtlığı problemini sorgular.",
+                "İslam karşıtlığı problemi ile ilgili akıl yürütür.",
+                "Akıl yürütmeyle ulaştığı çıkarımları yansıtır."
+              ],
+              "icerik_cercevesi": [
+                "İslam Karşıtlığı",
+                "Küreselleşmenin Toplumsal Etkileri",
+                "Yapay Zekâ Kaynaklı Toplumsal Sorunlar"
+              ],
+              "anahtar_kavramlar": [
+                "algoritma",
+                "ayrımcılık",
+                "hegemonya",
+                "öteki",
+                "stereotip"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MAYIS",
+                  "hafta": "31. Hafta: 10-14 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) İslam karşıtlığı problemini sorgular. b) İslam karşıtlığı problemi ile ilgili akıl yürütür.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MAYIS",
+                  "hafta": "32. Hafta: 17-21 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Akıl yürütmeyle ulaştığı çıkarımları yansıtır.",
+                  "belirliGunHafta": "Atatürkü Anma ve Gençlik ve Spor Bayramı (19 Mayıs)"
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.5.2",
+              "baslik": "Küreselleşme olgusunun toplumsal etkilerini çözümleme",
+              "surec_bilesenleri": [
+                "Küreselleşme olgusunu meydana getiren unsurları belirler.",
+                "Küreselleşme olgusunu meydana getiren unsurlar arasındaki ilişkileri belirler."
+              ],
+              "icerik_cercevesi": [
+                "İslam Karşıtlığı",
+                "Küreselleşmenin Toplumsal Etkileri",
+                "Yapay Zekâ Kaynaklı Toplumsal Sorunlar"
+              ],
+              "anahtar_kavramlar": [
+                "algoritma",
+                "ayrımcılık",
+                "hegemonya",
+                "öteki",
+                "stereotip"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MAYIS",
+                  "hafta": "33. Hafta: 24-28 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Küreselleşme olgusunu meydana getiren unsurları belirler.",
+                  "belirliGunHafta": "İstanbulu'un Fethi (29 Mayıs)"
+                },
+                {
+                  "ay": "",
+                  "hafta": "34. Hafta: 31 Mayıs-4 Haziran",
+                  "dersSaati": "1",
+                  "surecBileseniIsaretlenen": "b) Küreselleşme olgusunu meydana getiren unsurlar arasındaki ilişkileri belirler.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "SOS.11.5.3",
+              "baslik": "Yapay zekâ teknolojileri kaynaklı toplumsal sorunlar hakkında eleştirel düşü",
+              "surec_bilesenleri": [
+                "Yapay zekâ teknolojileri kaynaklı toplumsal sorunları sorgular.",
+                "Sorgulanan durumla ilgili akıl yürütür.",
+                "Akıl yürütme ile ulaştığı çıkarımı yansıtır"
+              ],
+              "icerik_cercevesi": [
+                "İslam Karşıtlığı",
+                "Küreselleşmenin Toplumsal Etkileri",
+                "Yapay Zekâ Kaynaklı Toplumsal Sorunlar"
+              ],
+              "anahtar_kavramlar": [
+                "algoritma",
+                "ayrımcılık",
+                "hegemonya",
+                "öteki",
+                "stereotip"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "HAZİRAN",
+                  "hafta": "34. Hafta: 31 Mayıs-4 Haziran",
+                  "dersSaati": "1",
+                  "surecBileseniIsaretlenen": "a) Yapay zekâ teknolojileri kaynaklı toplumsal sorunları sorgular. b) Sorgulanan durumla ilgili akıl yürütür.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "HAZİRAN",
+                  "hafta": "35. Hafta: 7-11 Haziran",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Akıl yürütme ile ulaştığı çıkarımı yansıtır.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "etiket": "Sosyoloji Dersi 2 (12. Sınıf)",
+      "cercevePlanMevcut": false,
+      "tatiller": [],
+      "toplamDersSaatiYillik": 72,
+      "toplamOgrenmeCiktisiSayisi": 3,
+      "uniteler": [
+        {
+          "uniteNo": "1",
+          "uniteAdi": "Bilim Sosyolojisi",
+          "dersSaati": 20,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "SOS.12.1.1",
+              "baslik": "Bilim ve toplum ilişkisini çözümleyebilme",
+              "surec_bilesenleri": [
+                "Bilim ve toplum ilişkisini oluşturan unsurları belirler.",
+                "Bu unsurlar arasındaki ilişkileri belirler."
+              ],
+              "icerik_cercevesi": [
+                "Bilim ve Toplum İlişkisi",
+                "Bilim ve Toplum İlişkisine Eleştirel Yaklaşım"
+              ],
+              "anahtar_kavramlar": [
+                "bilimsel topluluk",
+                "güç",
+                "paradigma",
+                "pozitivizm"
+              ],
+              "haftalikDagilim": []
+            },
+            {
+              "kod": "SOS.12.1.2",
+              "baslik": "Bilim ve toplum ilişkisi üzerine eleştirel düşünebilme",
+              "surec_bilesenleri": [
+                "Bilim ve güç ilişkisini sorgular.",
+                "Bilim ve güç ilişkisiyle ilgili akıl yürütür.",
+                "Akıl yürütmeyle ulaştığı çıkarımları yansıtır."
+              ],
+              "icerik_cercevesi": [
+                "Bilim ve Toplum İlişkisi",
+                "Bilim ve Toplum İlişkisine Eleştirel Yaklaşım"
+              ],
+              "anahtar_kavramlar": [
+                "bilimsel topluluk",
+                "güç",
+                "paradigma",
+                "pozitivizm"
+              ],
+              "haftalikDagilim": []
+            }
+          ]
+        },
+        {
+          "uniteNo": "2",
+          "uniteAdi": "Örnek Sosyolojik Uygulamalar",
+          "dersSaati": 48,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "SOS.12.2.1",
+              "baslik": "Güncel toplumsal meseleler hakkında eleştirel düşünebilme",
+              "surec_bilesenleri": [
+                "Güncel toplumsal meselelerle ilgili akıl yürütür.",
+                "Akıl yürütme ile elde ettiği çıkarımları yansıtır.",
+                "Aile, Sosyalizasyon ve Suç İlişkisi",
+                "Okul Kültürü",
+                "Akran Nezaketine Aykırı Davranışlar",
+                "Dezavantajlı Gruplar",
+                "Afetler ve Toplum",
+                "Dikkat Ekonomisi"
+              ],
+              "icerik_cercevesi": [
+                "Güncel Toplumsal Meseleler"
+              ],
+              "anahtar_kavramlar": [
+                "dikkat ekonomisi",
+                "okul kültürü",
+                "sosyalizasyon",
+                "suç"
+              ],
+              "haftalikDagilim": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dogrulamaNotu": "Kazanım kodları/metinleri MEB TYMM 2026 öğretim programından, haftalık dağılım MEB 2026-2027 çerçeve yıllık planından alınmış ve iki kaynak birbiriyle çapraz doğrulanmıştır. cercevePlanMevcut=false olan seviyeler için sitede 'resmi çerçeve plan henüz yok' uyarısı gösterilmeli, haftalık plan üretilmemelidir. Eğilimler, SDB, değerler, okuryazarlık becerileri, farklılaştırma ve örnek etkinlik metinleri bu dosyada yok."
+}
