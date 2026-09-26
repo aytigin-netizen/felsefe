@@ -62,8 +62,11 @@ devre dışı, diğer modüller etkilenmez.
 
 - [x] Veri katmanı: kazanım + yıllık plan verisi birleştirildi, doğrulandı
 - [x] Site iskeleti: dosya yapısı, veri yükleme katmanı, menü, modül grid'i
-- [ ] Modüller: Ünite Planı, Çalışma Kâğıdı, Değerlendirme/Rubrik, Sunum,
-      Zümre Tutanağı, Yıllık Plan — henüz yazılmadı
+- [x] Yıllık Plan modülü (`js/modules/yillik-plan.js`) — dersten bağımsız,
+      tamamen veri güdümlü; haftalık dağılımı ve tatilleri tablo hâlinde gösterir,
+      yazdırma/PDF çıktısı destekler
+- [ ] Ünite Planı, Çalışma Kâğıdı, Değerlendirme/Rubrik, Sunum,
+      Zümre Tutanağı — henüz yazılmadı
 
 ## Yayına alma
 
