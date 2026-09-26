@@ -89,6 +89,12 @@ const DataLoader = (() => {
     return sonuc;
   }
 
+  // Bir seviyenin üniteler listesini döner (Ünite Planı gibi ünite bazlı
+  // çalışan modüller için).
+  function getUniteler(seviye) {
+    return (seviye && seviye.uniteler) || [];
+  }
+
   function clearCache() {
     Object.keys(cache).forEach((k) => delete cache[k]);
   }
@@ -101,6 +107,7 @@ const DataLoader = (() => {
     cercevePlanVarMi,
     tumOgrenmeCiktilari,
     tumHaftalikSatirlar,
+    getUniteler,
     clearCache,
   };
 })();
