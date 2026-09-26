@@ -177,6 +177,63 @@ button:focus-visible {
   margin-bottom: 0.4rem;
 }
 
+.modul-icerik {
+  margin-bottom: 2rem;
+}
+
+.modul-icerik h2 {
+  margin-bottom: 0.25rem;
+}
+
+.modul-ozet {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.yillik-plan-tablosu {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.yillik-plan-tablosu th,
+.yillik-plan-tablosu td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.yillik-plan-tablosu thead {
+  background: var(--card-bg);
+}
+
+.eylem-buton {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.eylem-buton:hover {
+  opacity: 0.9;
+}
+
+@media print {
+  .site-header,
+  .secim-alani,
+  .modul-grid,
+  #kazanim-onizleme,
+  .site-footer,
+  .eylem-buton {
+    display: none;
+  }
+}
+
 .site-footer {
   max-width: 900px;
   margin: 2rem auto 1rem;

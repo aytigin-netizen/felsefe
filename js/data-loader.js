@@ -68,6 +68,27 @@ const DataLoader = (() => {
     return sonuc;
   }
 
+  // Bir seviyenin tüm haftalık plan satırlarını (ünite ve kazanım bilgisiyle) düz bir
+  // listeye çevirir. Veri kaynağında satırlar zaten kronolojik sırada olduğu için
+  // burada yeniden sıralama yapılmaz.
+  function tumHaftalikSatirlar(seviye) {
+    const sonuc = [];
+    for (const unite of seviye.uniteler || []) {
+      for (const cikti of unite.ogrenmeCiktilari || []) {
+        for (const hafta of cikti.haftalikDagilim || []) {
+          sonuc.push({
+            ...hafta,
+            kazanimKodu: cikti.kod,
+            kazanimBaslik: cikti.baslik,
+            uniteNo: unite.uniteNo,
+            uniteAdi: unite.uniteAdi,
+          });
+        }
+      }
+    }
+    return sonuc;
+  }
+
   function clearCache() {
     Object.keys(cache).forEach((k) => delete cache[k]);
   }
@@ -79,6 +100,7 @@ const DataLoader = (() => {
     getSeviyeler,
     cercevePlanVarMi,
     tumOgrenmeCiktilari,
+    tumHaftalikSatirlar,
     clearCache,
   };
 })();

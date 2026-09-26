@@ -12,13 +12,19 @@ const App = (() => {
   };
 
   const MODULES = [
-    { id: "yillik-plan", label: "Yıllık Plan", hazir: false },
+    { id: "yillik-plan", label: "Yıllık Plan", hazir: true },
     { id: "unite-plani", label: "Ünite Planı", hazir: false },
     { id: "calisma-kagidi", label: "Çalışma Kâğıdı", hazir: false },
     { id: "degerlendirme", label: "Değerlendirme / Rubrik", hazir: false },
     { id: "sunum", label: "Sunum", hazir: false },
     { id: "zumre-tutanagi", label: "Zümre Tutanağı", hazir: false },
   ];
+
+  // Modül id'sinden render fonksiyonuna kayıt defteri. Yeni bir modül
+  // js/modules/ altına eklendiğinde sadece burada bir satır eklenmesi yeterli.
+  const MODULE_RENDERERS = {
+    "yillik-plan": (container) => YillikPlanModule.render(container, state.subjectData, state.seviye),
+  };
 
   function el(id) {
     return document.getElementById(id);
@@ -96,6 +102,9 @@ const App = (() => {
         !state.seviye || !mod.hazir || (mod.id === "yillik-plan" && yillikPlanEngelli);
       card.disabled = engelli;
       card.setAttribute("aria-disabled", String(engelli));
+      if (!engelli) {
+        card.addEventListener("click", () => renderModulIcerik(mod.id));
+      }
 
       const baslik = document.createElement("span");
       baslik.className = "modul-baslik";
@@ -113,6 +122,21 @@ const App = (() => {
 
       grid.appendChild(card);
     }
+  }
+
+  function renderModulIcerik(modulId) {
+    const container = el("modul-icerik");
+    const renderer = MODULE_RENDERERS[modulId];
+    if (!renderer) {
+      container.innerHTML = "";
+      return;
+    }
+    renderer(container);
+    container.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function temizleModulIcerik() {
+    el("modul-icerik").innerHTML = "";
   }
 
   function renderKazanimOnizleme() {
@@ -145,6 +169,7 @@ const App = (() => {
     state.subjectData = null;
     state.seviye = null;
     el("hata-alani").hidden = true;
+    temizleModulIcerik();
 
     if (!code) {
       el("seviye-secim").hidden = true;
@@ -175,6 +200,7 @@ const App = (() => {
     const idx = event.target.value;
     state.seviye = idx === "" ? null : DataLoader.getSeviyeler(state.subjectData)[Number(idx)];
     state.seviyeEtiket = state.seviye ? state.seviye.etiket : null;
+    temizleModulIcerik();
     renderCercevePlanUyarisi();
     renderModuller();
     renderKazanimOnizleme();
