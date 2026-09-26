@@ -15,7 +15,7 @@ const App = (() => {
     { id: "yillik-plan", label: "Yıllık Plan", hazir: true },
     { id: "unite-plani", label: "Ünite Planı", hazir: true },
     { id: "calisma-kagidi", label: "Çalışma Kâğıdı", hazir: true },
-    { id: "degerlendirme", label: "Değerlendirme / Rubrik", hazir: false },
+    { id: "degerlendirme", label: "Değerlendirme / Rubrik", hazir: true },
     { id: "sunum", label: "Sunum", hazir: false },
     { id: "zumre-tutanagi", label: "Zümre Tutanağı", hazir: false },
   ];
@@ -26,6 +26,7 @@ const App = (() => {
     "yillik-plan": (container) => YillikPlanModule.render(container, state.subjectData, state.seviye),
     "unite-plani": (container) => UnitePlaniModule.render(container, state.subjectData, state.seviye),
     "calisma-kagidi": (container) => CalismaKagidiModule.render(container, state.subjectData, state.seviye),
+    "degerlendirme": (container) => DegerlendirmeModule.render(container, state.subjectData, state.seviye),
   };
 
   function el(id) {
