@@ -111,6 +111,14 @@ const DataLoader = (() => {
     return haftalar.size;
   }
 
+  // Bir seviyenin, hiçbir kazanıma bağlı olmayan (Okul Temelli Planlama,
+  // Sosyal Etkinlik gibi) özel haftalarını döner. Bu haftalar çerçeve planda
+  // yer alır ama saatleri okul/zümre kararıyla belirlenir; bu yüzden ders
+  // saati toplamına dahil edilmez.
+  function getOzelPlanlamaHaftalari(seviye) {
+    return (seviye && seviye.ozelPlanlamaHaftalari) || [];
+  }
+
   function clearCache() {
     Object.keys(cache).forEach((k) => delete cache[k]);
   }
@@ -125,6 +133,7 @@ const DataLoader = (() => {
     tumHaftalikSatirlar,
     getUniteler,
     planliHaftaSayisi,
+    getOzelPlanlamaHaftalari,
     clearCache,
   };
 })();

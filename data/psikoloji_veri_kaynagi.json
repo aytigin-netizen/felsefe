@@ -11,7 +11,7 @@
         "YARIYIL TATİLİ: 25 Ocak - 5 Şubat 2027",
         "2. DÖNEM ARA TATİLİ: 8-12 Mart 2027"
       ],
-      "toplamDersSaatiYillik": 72,
+      "toplamDersSaatiYillik": null,
       "toplamOgrenmeCiktisiSayisi": 13,
       "uniteler": [
         {
@@ -610,6 +610,23 @@
               ]
             }
           ]
+        }
+      ],
+      "ozelPlanlamaHaftalari": [
+        {
+          "ay": "OCAK",
+          "hafta": "18. Hafta: 18-22 Ocak",
+          "tur": "Okul Temelli Planlama"
+        },
+        {
+          "ay": "HAZİRAN",
+          "hafta": "36. Hafta: 14-18 Haziran",
+          "tur": "Okul Temelli Planlama"
+        },
+        {
+          "ay": "HAZİRAN",
+          "hafta": "37. Hafta: 21-25 Haziran",
+          "tur": "Sosyal Etkinlik"
         }
       ]
     }

@@ -31,28 +31,55 @@ const YillikPlanModule = (() => {
       (toplam, s) => toplam + (parseInt(s.dersSaati, 10) || 0),
       0
     );
-    const bosSaatSayisi = satirlar.filter((s) => !s.dersSaati).length;
+    const bosSaatliHaftalar = satirlar.filter((s) => !s.dersSaati);
+    const ozelHaftalar = DataLoader.getOzelPlanlamaHaftalari(seviye);
+    const resmiToplamVarMi =
+      seviye.toplamDersSaatiYillik !== null && seviye.toplamDersSaatiYillik !== undefined;
 
     const ozet = document.createElement("p");
     ozet.className = "modul-ozet";
-    ozet.textContent =
-      `Çerçeve plana göre toplam ${seviye.toplamDersSaatiYillik} ders saati, ` +
-      `${seviye.toplamOgrenmeCiktisiSayisi} öğrenme çıktısı, ${haftaSayisi} planlı hafta ` +
-      `(bazı haftalar birden fazla kazanıma bölündüğü için tabloda ${satirlar.length} satır görünür).`;
+    ozet.textContent = resmiToplamVarMi
+      ? `Çerçeve plana göre toplam ${seviye.toplamDersSaatiYillik} ders saati, ` +
+        `${seviye.toplamOgrenmeCiktisiSayisi} öğrenme çıktısı, ${haftaSayisi} planlı hafta ` +
+        `(bazı haftalar birden fazla kazanıma bölündüğü için tabloda ${satirlar.length} satır görünür).`
+      : `${seviye.toplamOgrenmeCiktisiSayisi} öğrenme çıktısı, ${haftaSayisi} planlı hafta ` +
+        `(bazı haftalar birden fazla kazanıma bölündüğü için tabloda ${satirlar.length} satır görünür). ` +
+        `Kaynak çerçeve yıllık plan (taslak) bazı haftalarda ders saatini belirtmediği için ` +
+        `tek bir resmî yıllık toplam verilemiyor; aşağıdaki ${hesaplananSaat} saat yalnızca ` +
+        `kaynakta sayısı belirtilmiş haftaların toplamıdır.`;
     container.appendChild(ozet);
 
-    if (hesaplananSaat !== Number(seviye.toplamDersSaatiYillik) || bosSaatSayisi > 0) {
+    if (resmiToplamVarMi && hesaplananSaat !== Number(seviye.toplamDersSaatiYillik)) {
       const uyari = document.createElement("p");
       uyari.className = "uyari";
       uyari.textContent =
-        `Uyuşmazlık uyarısı: tablodaki satırların ders saati toplamı ${hesaplananSaat} ` +
-        (bosSaatSayisi
-          ? `(${bosSaatSayisi} satırda ders saati boş, 0 sayıldı), `
-          : ", ") +
-        `üstteki resmî toplam ise ${seviye.toplamDersSaatiYillik}. Aradaki fark, veri ` +
-        `kaynağının çerçeve yıllık plan dosyasından çıkarılması sırasında oluşmuş olabilir; ` +
-        `resmî çerçeve plan dosyasıyla karşılaştırılıp düzeltilmesi gerekir.`;
+        `Uyuşmazlık uyarısı: tablodaki satırların ders saati toplamı ${hesaplananSaat}, ` +
+        `üstteki resmî toplam ise ${seviye.toplamDersSaatiYillik}. Kaynak çerçeve plan dosyasıyla ` +
+        `yeniden karşılaştırılıp düzeltilmesi gerekir.`;
       container.appendChild(uyari);
+    }
+
+    if (bosSaatliHaftalar.length) {
+      const uyari = document.createElement("p");
+      uyari.className = "uyari";
+      uyari.textContent =
+        `Kaynak çerçeve yıllık plan (taslak), ${bosSaatliHaftalar.length} haftada ders saatini ` +
+        `boş bırakmış — bu bir aktarım hatası değil, taslağın kendisinde eksik: ` +
+        bosSaatliHaftalar.map((s) => s.hafta).join("; ") +
+        `. Ders saati bu haftalar için zümre/okul kararıyla belirlenmeli.`;
+      container.appendChild(uyari);
+    }
+
+    if (ozelHaftalar.length) {
+      const notu = document.createElement("p");
+      notu.className = "modul-ozet";
+      notu.textContent =
+        `Ayrıca ${ozelHaftalar.length} hafta (Okul Temelli Planlama / Sosyal Etkinlik) çerçeve ` +
+        `planda ayrılmıştır; bu haftaların saati ve içeriği okul/zümre kararıyla belirlenir, ` +
+        `yukarıdaki toplamlara dahil değildir: ` +
+        ozelHaftalar.map((h) => `${h.hafta} (${h.tur})`).join("; ") +
+        ".";
+      container.appendChild(notu);
     }
 
     if ((seviye.tatiller || []).length) {
@@ -85,7 +112,7 @@ const YillikPlanModule = (() => {
       const hucreler = [
         s.hafta || "",
         s.ay || "",
-        s.dersSaati || "",
+        s.dersSaati || "—",
         `${s.uniteNo}. ${s.uniteAdi}`,
       ];
       for (const metin of hucreler) {

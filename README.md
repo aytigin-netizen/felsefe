@@ -29,7 +29,9 @@ Her `data/<ders>_veri_kaynagi.json` dosyası şu yapıdadır:
       etiket,                     // "10. Sınıf", "Sosyoloji Dersi 1 (11. Sınıf)" vb.
       cercevePlanMevcut,          // false ise Yıllık Plan modülü bu seviye için kapalı
       tatiller: [...],
-      toplamDersSaatiYillik, toplamOgrenmeCiktisiSayisi,
+      toplamDersSaatiYillik,      // sayı, veya kaynak taslakta net toplam yoksa null
+      toplamOgrenmeCiktisiSayisi,
+      ozelPlanlamaHaftalari: [ { ay, hafta, tur } ],  // Okul Temelli Planlama / Sosyal Etkinlik — kazanıma bağlı değil
       uniteler: [
         {
           uniteNo, uniteAdi, dersSaati,
@@ -48,20 +50,27 @@ Her `data/<ders>_veri_kaynagi.json` dosyası şu yapıdadır:
 ```
 
 Kaynak: MEB Türkiye Yüzyılı Maarif Modeli 2026 resmi öğretim programları +
-2026-2027 çerçeve yıllık planları. Kazanım kodları/metinleri iki bağımsız MEB
-kaynağından çapraz doğrulanmıştır.
+2026-2027 çerçeve yıllık planları (taslak). Kazanım kodları/metinleri iki
+bağımsız MEB kaynağından çapraz doğrulanmıştır.
 
 **Henüz dahil edilmedi:** eğilimler, sosyal-duygusal öğrenme becerileri, değerler,
 okuryazarlık becerileri, farklılaştırma (zenginleştirme/destekleme) ve örnek
 etkinlik metinleri. Bunlar ihtiyaç oldukça aynı şemaya eklenecek.
 
-**Bilinen veri sorunu:** Felsefe 11. Sınıf ve Psikoloji'de bazı haftalık
-satırların `dersSaati` alanı boş; ayrıca her iki seviyede de satırlardaki ders
-saati toplamı, üst bilgideki resmî `toplamDersSaatiYillik` değeriyle tam
-örtüşmüyor. Yıllık Plan modülü bu uyuşmazlığı ekranda otomatik olarak
-uyarı şeklinde gösterir. Düzeltme, ilgili MEB çerçeve yıllık plan xlsx
-dosyasıyla satır satır karşılaştırma gerektiriyor; bu depoda o karşılaştırma
-henüz yapılmadı.
+**Doğrulanmış veri notu (Felsefe 11. Sınıf ve Psikoloji):** Yüklenen resmî
+"taslak" çerçeve yıllık plan xlsx dosyalarıyla satır satır karşılaştırıldı.
+Felsefe 11'de 8, Psikoloji'de 7 haftanın `dersSaati` alanı **kaynağın kendisinde
+de boş** — aktarım sırasında oluşmuş bir hata değil, taslağın tamamlanmamış
+kısımları. Bu yüzden bu iki seviyede `toplamDersSaatiYillik: null` — tek bir
+resmî yıllık toplam yok; Yıllık Plan modülü bunun yerine kaynakta sayısı
+belirtilmiş haftaların toplamını ve hangi haftaların boş bırakıldığını
+gösterir. Felsefe 10. Sınıf'ta tüm haftalar doludur ve doğrulanmış toplam 68
+saattir (önceki sürümde hatalı biçimde 72 yazıyordu). Üç dersin üçünde de
+(Felsefe 10, Felsefe 11, Psikoloji) çerçeve planda kazanıma bağlı olmayan 3
+hafta (2× Okul Temelli Planlama, 1× Sosyal Etkinlik) var; bunlar
+`ozelPlanlamaHaftalari` alanında ayrıca tutuluyor ve ders saati toplamlarına
+dahil edilmiyor. Sosyoloji ve Mantık için aynı satır satır doğrulama henüz
+yapılmadı (kaynak xlsx dosyaları bu depoda yeniden karşılaştırılmadı).
 
 **Sosyoloji Dersi 2 (12. sınıf)** için resmi çerçeve yıllık plan henüz
 yayımlanmadığından `cercevePlanMevcut: false` — Yıllık Plan modülü bu seviyede
