@@ -11,7 +11,7 @@
         "YARIYIL TATİLİ: 25 Ocak - 5 Şubat 2027",
         "2. DÖNEM ARA TATİLİ: 8-12 Mart 2027"
       ],
-      "toplamDersSaatiYillik": null,
+      "toplamDersSaatiYillik": 68,
       "toplamOgrenmeCiktisiSayisi": 13,
       "uniteler": [
         {
@@ -324,7 +324,7 @@
                 {
                   "ay": "OCAK",
                   "hafta": "17. Hafta: 11-15 Ocak",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "b) Öğrenmeyi etkileyen etmenleri sınıflandırır.",
                   "belirliGunHafta": ""
                 },
@@ -514,14 +514,14 @@
                 {
                   "ay": "MAYIS",
                   "hafta": "30. Hafta: 3-7 Mayıs",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "b) Belirlediği ilişkiler ve uyum sağlamada kullanılan farklı yöntemler arasında uyumlu bir bütün oluşturur",
                   "belirliGunHafta": ""
                 },
                 {
                   "ay": "MAYIS",
                   "hafta": "31. Hafta: 10-14 Mayıs",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "b) Belirlediği ilişkiler ve uyum sağlamada kullanılan farklı yöntemler arasında uyumlu bir bütün oluşturur",
                   "belirliGunHafta": ""
                 }
@@ -555,14 +555,14 @@
                 {
                   "ay": "MAYIS",
                   "hafta": "32. Hafta: 17-21 Mayıs",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "a) Maruz bırakma yönteminde sanal gerçeklik ve artırılmış gerçeklik uygulamalarının yeri ve önemini sorgular.",
                   "belirliGunHafta": "Atatürkü Anma ve Gençlik ve Spor Bayramı (19 Mayıs)"
                 },
                 {
                   "ay": "MAYIS",
                   "hafta": "33. Hafta: 24-28 Mayıs",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "b) Yaşantısal olarak maruz bırakmanın mümkün olmadığı (afet, savaş vb.) durumlarda sanal gerçeklik ve artırılmış gerçekliğin kullanımına ilişkin akıl yürütür. c) Sanal gerçeklik ve artırılmış gerçekliğin psikoloji alanındaki kullanımında sınırlılıklara ilişkin çıkarımda bulunur",
                   "belirliGunHafta": "İstanbulu'un Fethi (29 Mayıs)"
                 }
@@ -596,14 +596,14 @@
                 {
                   "ay": "HAZİRAN",
                   "hafta": "34. Hafta: 31 Mayıs-4 Haziran",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "a) Sunulan örnek olaylardaki tutum ve olumlu-olumsuz sosyal davranışları gözlemlemenin amacını ve ölçütünü belirler.",
                   "belirliGunHafta": ""
                 },
                 {
                   "ay": "HAZİRAN",
                   "hafta": "35. Hafta: 7-11 Haziran",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "b) Uygun yöntemi kullanarak veri toplar. c) Verilerden hareketle örnek olaylardaki sosyal davranışları çatışma, kalıp yargı, önyargı ve ayrımcılık açısından sınıflar ve ulaştığı sonuçları kaydeder",
                   "belirliGunHafta": ""
                 }

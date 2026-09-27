@@ -57,20 +57,17 @@ bağımsız MEB kaynağından çapraz doğrulanmıştır.
 okuryazarlık becerileri, farklılaştırma (zenginleştirme/destekleme) ve örnek
 etkinlik metinleri. Bunlar ihtiyaç oldukça aynı şemaya eklenecek.
 
-**Doğrulanmış veri notu (Felsefe 11. Sınıf ve Psikoloji):** Yüklenen resmî
-"taslak" çerçeve yıllık plan xlsx dosyalarıyla satır satır karşılaştırıldı.
-Felsefe 11'de 8, Psikoloji'de 7 haftanın `dersSaati` alanı **kaynağın kendisinde
-de boş** — aktarım sırasında oluşmuş bir hata değil, taslağın tamamlanmamış
-kısımları. Bu yüzden bu iki seviyede `toplamDersSaatiYillik: null` — tek bir
-resmî yıllık toplam yok; Yıllık Plan modülü bunun yerine kaynakta sayısı
-belirtilmiş haftaların toplamını ve hangi haftaların boş bırakıldığını
-gösterir. Felsefe 10. Sınıf'ta tüm haftalar doludur ve doğrulanmış toplam 68
-saattir (önceki sürümde hatalı biçimde 72 yazıyordu). Üç dersin üçünde de
-(Felsefe 10, Felsefe 11, Psikoloji) çerçeve planda kazanıma bağlı olmayan 3
-hafta (2× Okul Temelli Planlama, 1× Sosyal Etkinlik) var; bunlar
-`ozelPlanlamaHaftalari` alanında ayrıca tutuluyor ve ders saati toplamlarına
-dahil edilmiyor. Sosyoloji ve Mantık için aynı satır satır doğrulama henüz
-yapılmadı (kaynak xlsx dosyaları bu depoda yeniden karşılaştırılmadı).
+**Doğrulanmış ve düzeltilmiş veri (Felsefe 11. Sınıf ve Psikoloji):** Bu iki
+seviyede bazı haftaların `dersSaati` alanı, kaynak "taslak" çerçeve yıllık
+planında gerçekten boştu (aktarım hatası değil). Ankara Kız Anadolu İmam Hatip
+Lisesi'nin 2026-2027 **uygulanmış** ünitelendirilmiş yıllık planlarıyla (PDF)
+ve aynı okulun uygulanmış Psikoloji planıyla (Word) satır satır karşılaştırıldı:
+boş bırakılan haftaların tamamı gerçekte **2 ders saati**. Veri buna göre
+dolduruldu; Felsefe 10, Felsefe 11 ve Psikoloji'nin üçü de artık net ve
+tutarlı bir yıllık toplama sahip: **68 ders saati** (34 hafta × 2 saat).
+Farklı bir okulun (Ankara Şehit Oğuzhan Yaşar Anadolu Lisesi) uygulanmış
+Felsefe 10. Sınıf planıyla da çapraz kontrol edildi; aynı örüntüyü doğruluyor.
+Sosyoloji ve Mantık için aynı satır satır doğrulama henüz yapılmadı.
 
 **Sosyoloji Dersi 2 (12. sınıf)** için resmi çerçeve yıllık plan henüz
 yayımlanmadığından `cercevePlanMevcut: false` — Yıllık Plan modülü bu seviyede

@@ -595,7 +595,7 @@
         "YARIYIL TATİLİ: 25 Ocak - 5 Şubat 2027",
         "2. DÖNEM ARA TATİLİ: 8-12 Mart 2027"
       ],
-      "toplamDersSaatiYillik": null,
+      "toplamDersSaatiYillik": 68,
       "toplamOgrenmeCiktisiSayisi": 12,
       "uniteler": [
         {
@@ -762,21 +762,21 @@
                 {
                   "ay": "KASIM",
                   "hafta": "10. Hafta: 23-27 Kasım",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "b) Teknoloji ve hayat ilişkisiyle ilgili görüş ve argüman oluşturur.",
                   "belirliGunHafta": "Öğretmenler Günü (24 Kasım)"
                 },
                 {
                   "ay": "ARALIK",
                   "hafta": "11. Hafta: 30 Kasım-4 Aralık",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "c) Teknoloji ve hayat ilişkisiyle ilgili felsefi metin yazar.",
                   "belirliGunHafta": "Dünya Engelliler Günü (3 Aralık)"
                 },
                 {
                   "ay": "ARALIK",
                   "hafta": "12. Hafta: 7-11 Aralık",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "c) Teknoloji ve hayat ilişkisiyle ilgili felsefi metin yazar.",
                   "belirliGunHafta": ""
                 }
@@ -809,14 +809,14 @@
                 {
                   "ay": "ARALIK",
                   "hafta": "13. Hafta: 14-18 Aralık",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "a) Akıl-inanç ilişkisiyle ilgili felsefi soru ve problemleri açıklar.",
                   "belirliGunHafta": ""
                 },
                 {
                   "ay": "ARALIK",
                   "hafta": "14. Hafta: 21-25 Aralık",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "b) Akıl-inanç ilişkisiyle ilgili felsefi soru ve problemleri hayatla ilişkilendirerek değerlendirir.",
                   "belirliGunHafta": ""
                 }
@@ -843,21 +843,21 @@
                 {
                   "ay": "ARALIK",
                   "hafta": "15. Hafta: 28 Aralık -1Ocak",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "a) Akıl-inanç ilişkisiyle ilgili felsefi argümanları çözümler.",
                   "belirliGunHafta": ""
                 },
                 {
                   "ay": "OCAK",
                   "hafta": "16. Hafta: 4-8 Ocak",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "b) Akıl-inanç ilişkisiyle ilgili görüş ve argüman oluşturur.",
                   "belirliGunHafta": ""
                 },
                 {
                   "ay": "OCAK",
                   "hafta": "17. Hafta: 11-15 Ocak",
-                  "dersSaati": "",
+                  "dersSaati": "2",
                   "surecBileseniIsaretlenen": "c) Akıl-inanç ilişkisiyle ilgili felsefi metin yazar.",
                   "belirliGunHafta": ""
                 }
