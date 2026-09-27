@@ -19,10 +19,22 @@ const ModulePage = (() => {
     try {
       const subjectData = await DataLoader.loadSubject(sel.dersKodu);
       const seviyeler = DataLoader.getSeviyeler(subjectData);
-      const seviye =
-        sel.seviyeIndex === null || sel.seviyeIndex === undefined
-          ? seviyeler[0]
-          : seviyeler[sel.seviyeIndex];
+
+      let seviye;
+      if (seviyeler.length <= 1) {
+        // Tek seviyeli ders: app.js da seçim istemeden aynı şekilde otomatik
+        // atıyor, burada da tutarlı davranmak için ilk (ve tek) seviye kullanılır.
+        seviye = seviyeler[0];
+      } else if (sel.seviyeIndex === null || sel.seviyeIndex === undefined) {
+        // Birden fazla seviye var ama henüz seçilmemiş: sessizce ilkini
+        // göstermek yerine ana sayfadaki "seçim zorunlu" davranışıyla tutarlı ol
+        // (sidebar'daki "sınıf seçilmedi" etiketiyle içerik burada çelişmesin).
+        container.innerHTML =
+          '<p class="secim-yok">Önce <a href="index.html">ana sayfadan</a> sınıf/ders düzeyi seçin.</p>';
+        return;
+      } else {
+        seviye = seviyeler[sel.seviyeIndex];
+      }
 
       if (!seviye) {
         container.innerHTML =
