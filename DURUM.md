@@ -1,3 +1,15 @@
+## 28 Eylül 2026 — Yayın tamamlandı
+
+- Kullanıcı canlıya almayı onayladı. PR #1 squash merge edildi: `ed7e9a21ac2ef3a9f754fb4068e797ea8f376228`.
+- GitHub Pages build/deploy başarılı: https://github.com/aytigin-netizen/felsefe/actions/runs/36350546852
+- Canlı js/app.js SHA-256, test edilen dosyayla birebir eşleşti: `849ca7342db40724bf1ae0d59257c0e5fd75d22d2199dd315ce705a163cf13ae`.
+- Gerçek canlı tarayıcı kontrolü: Psikoloji → Mantık seçimi sonrası Mantık yıllık planı açıldı. Felsefe sınıfsız seçiminde kartlar kapalı ve yan menüden girişte sınıf seçimi uyarısı korundu.
+- Canlı ağ hızlı olduğundan yükleme aralığı zorlanmadı; gecikmiş/ters sıralı yanıt kontrollerinin kanıtı test-selection.js yerel regresyonudur.
+- Kod canlıda; bu kayıt yalnız yayın/devir bilgisini günceller. Önceki 'henüz yayınlanmadı' ifadeleri tarihsel kayıttır.
+- Yeni özellik başlatılmadı. Bekleyen ürün işleri: README eşitleme, Sosyoloji/Mantık kaynak karşılaştırması, Günlük Plan ve Sunum kapsamı.
+
+---
+
 ## 28 Eylül 2026 — ChatGPT güncel kayıt
 
 - Başlangıç: uzak main `ddd79824df04fb779921124a3e9b02e3983d720d`.
