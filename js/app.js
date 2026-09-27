@@ -1,16 +1,27 @@
-// app.js
-// Menü/seçim mantığı ve modül alanının iskeleti.
-// Modüllerin kendisi (Ünite Planı, Sunum vb.) js/modules/ altında ayrı dosyalar olarak
-// eklenecek; bu dosya yalnızca hangi modülün aktif olduğunu yönetir ve ortak state'i tutar.
+// js/app.js
+// Ana sayfa (index.html): ders/seviye seçimi, modül ızgarası ve kazanım
+// önizlemesi. Seçim artık State (localStorage) üzerinden tutuluyor; modüllere
+// tıklamak bu sayfada içerik render etmek yerine ilgili modülün kendi
+// sayfasına yönlendiriyor (yillik-plan.html, unite-plani.html, vb.).
+
+const PAGE_HREF = {
+  "yillik-plan": "yillik-plan.html",
+  "unite-plani": "unite-plani.html",
+  "calisma-kagidi": "calisma-kagidi.html",
+  "degerlendirme": "degerlendirme.html",
+  sunum: "sunum.html",
+  "zumre-tutanagi": "zumre-tutanagi.html",
+};
 
 const App = (() => {
   const state = {
     dersKodu: null,
     subjectData: null,
-    seviyeEtiket: null,
     seviye: null,
+    seviyeIndex: null,
   };
 
+  // Sidebar'daki NAV listesiyle aynı sırada tutulur.
   const MODULES = [
     { id: "yillik-plan", label: "Yıllık Plan", hazir: true },
     { id: "unite-plani", label: "Ünite Planı", hazir: true },
@@ -19,15 +30,6 @@ const App = (() => {
     { id: "sunum", label: "Sunum", hazir: false },
     { id: "zumre-tutanagi", label: "Zümre Tutanağı", hazir: false },
   ];
-
-  // Modül id'sinden render fonksiyonuna kayıt defteri. Yeni bir modül
-  // js/modules/ altına eklendiğinde sadece burada bir satır eklenmesi yeterli.
-  const MODULE_RENDERERS = {
-    "yillik-plan": (container) => YillikPlanModule.render(container, state.subjectData, state.seviye),
-    "unite-plani": (container) => UnitePlaniModule.render(container, state.subjectData, state.seviye),
-    "calisma-kagidi": (container) => CalismaKagidiModule.render(container, state.subjectData, state.seviye),
-    "degerlendirme": (container) => DegerlendirmeModule.render(container, state.subjectData, state.seviye),
-  };
 
   function el(id) {
     return document.getElementById(id);
@@ -48,19 +50,22 @@ const App = (() => {
     }
   }
 
-  function populateSeviyeMenu(subjectData) {
+  // onceki: sayfa açılışında localStorage'dan gelen önceki seviyeIndex (varsa)
+  function populateSeviyeMenu(subjectData, onceki) {
     const select = el("seviye-secim");
     select.innerHTML = "";
     const seviyeler = DataLoader.getSeviyeler(subjectData);
+
     if (seviyeler.length <= 1) {
       select.hidden = true;
       el("seviye-secim-label").hidden = true;
       if (seviyeler.length === 1) {
         state.seviye = seviyeler[0];
-        state.seviyeEtiket = seviyeler[0].etiket;
+        state.seviyeIndex = 0;
       }
       return;
     }
+
     select.hidden = false;
     el("seviye-secim-label").hidden = false;
     const placeholder = document.createElement("option");
@@ -73,6 +78,12 @@ const App = (() => {
       opt.textContent = sev.etiket;
       select.appendChild(opt);
     });
+
+    if (onceki !== null && onceki !== undefined && seviyeler[onceki]) {
+      select.value = String(onceki);
+      state.seviye = seviyeler[onceki];
+      state.seviyeIndex = onceki;
+    }
   }
 
   function renderCercevePlanUyarisi() {
@@ -106,7 +117,9 @@ const App = (() => {
       card.disabled = engelli;
       card.setAttribute("aria-disabled", String(engelli));
       if (!engelli) {
-        card.addEventListener("click", () => renderModulIcerik(mod.id));
+        card.addEventListener("click", () => {
+          window.location.href = PAGE_HREF[mod.id];
+        });
       }
 
       const baslik = document.createElement("span");
@@ -125,21 +138,6 @@ const App = (() => {
 
       grid.appendChild(card);
     }
-  }
-
-  function renderModulIcerik(modulId) {
-    const container = el("modul-icerik");
-    const renderer = MODULE_RENDERERS[modulId];
-    if (!renderer) {
-      container.innerHTML = "";
-      return;
-    }
-    renderer(container);
-    container.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
-  function temizleModulIcerik() {
-    el("modul-icerik").innerHTML = "";
   }
 
   function renderKazanimOnizleme() {
@@ -166,17 +164,23 @@ const App = (() => {
     container.appendChild(liste);
   }
 
-  async function onDersDegisti(event) {
-    const code = event.target.value;
+  function stateKaydet() {
+    State.set(state.dersKodu, state.seviyeIndex, state.seviye ? state.seviye.etiket : null);
+    Sidebar.guncelleSecimEtiketi();
+  }
+
+  async function dersYukleVeUygula(code, seviyeIndex) {
     state.dersKodu = code || null;
     state.subjectData = null;
     state.seviye = null;
+    state.seviyeIndex = null;
     el("hata-alani").hidden = true;
-    temizleModulIcerik();
 
     if (!code) {
       el("seviye-secim").hidden = true;
       el("seviye-secim-label").hidden = true;
+      State.clear();
+      Sidebar.guncelleSecimEtiketi();
       renderCercevePlanUyarisi();
       renderModuller();
       renderKazanimOnizleme();
@@ -187,7 +191,8 @@ const App = (() => {
       el("yukleniyor").hidden = false;
       const data = await DataLoader.loadSubject(code);
       state.subjectData = data;
-      populateSeviyeMenu(data);
+      populateSeviyeMenu(data, seviyeIndex);
+      stateKaydet();
       renderCercevePlanUyarisi();
       renderModuller();
       renderKazanimOnizleme();
@@ -199,21 +204,33 @@ const App = (() => {
     }
   }
 
+  function onDersDegisti(event) {
+    dersYukleVeUygula(event.target.value, null);
+  }
+
   function onSeviyeDegisti(event) {
     const idx = event.target.value;
     state.seviye = idx === "" ? null : DataLoader.getSeviyeler(state.subjectData)[Number(idx)];
-    state.seviyeEtiket = state.seviye ? state.seviye.etiket : null;
-    temizleModulIcerik();
+    state.seviyeIndex = idx === "" ? null : Number(idx);
+    stateKaydet();
     renderCercevePlanUyarisi();
     renderModuller();
     renderKazanimOnizleme();
   }
 
   function init() {
+    Sidebar.init("home");
     populateDersMenu();
     el("ders-secim").addEventListener("change", onDersDegisti);
     el("seviye-secim").addEventListener("change", onSeviyeDegisti);
-    renderModuller();
+
+    const kayitli = State.get();
+    if (kayitli && kayitli.dersKodu) {
+      el("ders-secim").value = kayitli.dersKodu;
+      dersYukleVeUygula(kayitli.dersKodu, kayitli.seviyeIndex);
+    } else {
+      renderModuller();
+    }
   }
 
   return { init, state, MODULES };
