@@ -95,6 +95,22 @@ const DataLoader = (() => {
     return (seviye && seviye.uniteler) || [];
   }
 
+  // Bir seviyedeki GERÇEK planlı hafta sayısını döner. tumHaftalikSatirlar()
+  // bazı haftalarda (aynı haftaya iki öğrenme çıktısı bölündüğünde) birden
+  // fazla satır üretir; bu yüzden satır sayısı hafta sayısına eşit değildir.
+  // Burada "hafta" alanı tekilleştirilerek gerçek hafta sayısı hesaplanır.
+  function planliHaftaSayisi(seviye) {
+    const haftalar = new Set();
+    for (const unite of seviye.uniteler || []) {
+      for (const cikti of unite.ogrenmeCiktilari || []) {
+        for (const hafta of cikti.haftalikDagilim || []) {
+          if (hafta.hafta) haftalar.add(hafta.hafta);
+        }
+      }
+    }
+    return haftalar.size;
+  }
+
   function clearCache() {
     Object.keys(cache).forEach((k) => delete cache[k]);
   }
@@ -108,6 +124,7 @@ const DataLoader = (() => {
     tumOgrenmeCiktilari,
     tumHaftalikSatirlar,
     getUniteler,
+    planliHaftaSayisi,
     clearCache,
   };
 })();

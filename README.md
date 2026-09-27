@@ -7,13 +7,14 @@ FOPOS'tan bağımsız, ayrı bir proje.
 ## Dosya yapısı
 
 ```
-index.html              Ana sayfa: ders/seviye seçimi + modül menüsü
-css/style.css            Tüm stiller (erişilebilirlik, karanlık mod, reduced-motion destekli)
-js/data-loader.js        Veri yükleme katmanı: data/*.json dosyalarını fetch eder, önbelleğe alır
-js/app.js                Menü/seçim mantığı, modül grid'i, kazanım önizleme
-js/modules/               Çıktı üreticileri buraya eklenecek (henüz boş)
-data/*_veri_kaynagi.json  Her ders için kanonik veri (kazanım + haftalık plan birleşik)
-docs/                     Ek notlar
+index.html                Ana sayfa: ders/seviye seçimi + modül menüsü
+css/style.css              Tüm stiller (erişilebilirlik, karanlık mod, reduced-motion destekli)
+js/data-loader.js          Veri yükleme katmanı: data/*.json dosyalarını fetch eder, önbelleğe alır
+js/belge-bilgisi.js        Okul/Öğretmen/Eğitim Yılı üst bilgisi + imza alanı (tüm modüllerde ortak)
+js/app.js                  Menü/seçim mantığı, modül grid'i, kazanım önizleme
+js/modules/                Çıktı üreticileri: yillik-plan.js, unite-plani.js, calisma-kagidi.js, degerlendirme.js
+data/*_veri_kaynagi.json   Her ders için kanonik veri (kazanım + haftalık plan birleşik)
+test-run.js                jsdom ile tüm modülleri her ders/seviye kombinasyonunda render edip hata arayan basit regresyon testi (`npm test`)
 ```
 
 ## Veri şeması
@@ -54,21 +55,49 @@ kaynağından çapraz doğrulanmıştır.
 okuryazarlık becerileri, farklılaştırma (zenginleştirme/destekleme) ve örnek
 etkinlik metinleri. Bunlar ihtiyaç oldukça aynı şemaya eklenecek.
 
+**Bilinen veri sorunu:** Felsefe 11. Sınıf ve Psikoloji'de bazı haftalık
+satırların `dersSaati` alanı boş; ayrıca her iki seviyede de satırlardaki ders
+saati toplamı, üst bilgideki resmî `toplamDersSaatiYillik` değeriyle tam
+örtüşmüyor. Yıllık Plan modülü bu uyuşmazlığı ekranda otomatik olarak
+uyarı şeklinde gösterir. Düzeltme, ilgili MEB çerçeve yıllık plan xlsx
+dosyasıyla satır satır karşılaştırma gerektiriyor; bu depoda o karşılaştırma
+henüz yapılmadı.
+
 **Sosyoloji Dersi 2 (12. sınıf)** için resmi çerçeve yıllık plan henüz
 yayımlanmadığından `cercevePlanMevcut: false` — Yıllık Plan modülü bu seviyede
 devre dışı, diğer modüller etkilenmez.
+
+## Veri saklama
+
+Ünite notları, çalışma kâğıdı/rubrik seçenekleri, rubrik seviye açıklamaları ve
+okul/öğretmen/eğitim yılı üst bilgisi yalnızca kullanılan tarayıcının
+`localStorage`'ında saklanır. Farklı bir tarayıcı veya cihazdan girildiğinde bu
+bilgiler görünmez; paylaşılan bir hesap/backend yoktur (proje kararı böyle).
 
 ## Şu ana kadar yapılanlar
 
 - [x] Veri katmanı: kazanım + yıllık plan verisi birleştirildi, doğrulandı
 - [x] Site iskeleti: dosya yapısı, veri yükleme katmanı, menü, modül grid'i
 - [x] Yıllık Plan modülü (`js/modules/yillik-plan.js`) — dersten bağımsız,
-      tamamen veri güdümlü; haftalık dağılımı ve tatilleri tablo hâlinde gösterir,
-      yazdırma/PDF çıktısı destekler
-- [ ] Ünite Planı, Çalışma Kâğıdı, Değerlendirme/Rubrik, Sunum,
-      Zümre Tutanağı — henüz yazılmadı
+      tamamen veri güdümlü; haftalık dağılımı ve tatilleri tablo hâlinde
+      gösterir, hafta sayısı/ders saati tutarlılığını kontrol edip uyarır,
+      okul/öğretmen/imza alanları içerir, yazdırma/PDF çıktısı destekler
+- [x] Ünite Planı modülü (`js/modules/unite-plani.js`) — ünite bazlı öğrenme
+      çıktısı kartları, öğretmen notları (localStorage), yazdırma
+- [x] Çalışma Kâğıdı modülü (`js/modules/calisma-kagidi.js`) — kavram, içerik
+      çerçevesi ve süreç bileşenlerinden seçmeli bölümlerle soru üretir
+- [x] Değerlendirme/Rubrik modülü (`js/modules/degerlendirme.js`) — 4 seviyeli,
+      düzenlenebilir (localStorage'a kaydedilen) rubrik üretir
+- [x] Temel regresyon testi (`test-run.js`, `npm test`) — dört dersin tüm
+      seviyelerinde dört modülü de hatasız render ettiğini doğrular
+- [ ] Sunum, Zümre Tutanağı — henüz yazılmadı
+- [ ] Word/PowerPoint çıktısı — şu an yalnızca tarayıcı üzerinden yazdır/PDF var
+- [ ] Çalışma kâğıdı ve rubrik içerikleri hâlâ genel şablon düzeyinde; konuya
+      özgü örnek/görev metinleri zamanla eklenecek
 
 ## Yayına alma
 
 Statik dosyalardır; Netlify (ya da benzeri) üzerinde ek yapılandırma
-gerektirmeden yayınlanabilir. `index.html` giriş noktasıdır.
+gerektirmeden yayınlanabilir. `index.html` giriş noktasıdır. Yayınlamadan önce
+`npm install && npm test` ile regresyon testini çalıştırmak, modüllerden
+birinde veri şemasıyla uyuşmayan bir hata olup olmadığını hızlıca gösterir.

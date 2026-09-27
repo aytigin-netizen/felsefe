@@ -152,6 +152,8 @@ const UnitePlaniModule = (() => {
     detay.className = "unite-detay";
     detay.setAttribute("aria-live", "polite");
 
+    detay.appendChild(BelgeBilgisiModule.ustBilgiOlustur(seviye.etiket));
+
     const ozet = document.createElement("p");
     ozet.className = "modul-ozet";
     ozet.textContent =

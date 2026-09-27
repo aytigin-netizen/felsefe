@@ -16,12 +16,31 @@ const DegerlendirmeModule = (() => {
     { anahtar: "4", etiket: "İleri Düzey" },
   ];
 
+  // Ölçüt kaynağına (kavram / içerik / süreç) göre biraz farklılaşan
+  // varsayılan seviye açıklamaları; her satır aynı dört cümleyi tekrar etmek
+  // yerine ölçütün türüne uygun bir ifadeyle başlar. Öğretmen yine de her
+  // hücreyi doğrudan düzenleyebilir.
   const VARSAYILAN_ACIKLAMA = {
-    1: "Tanımlayamaz veya temel düzeyde hata içeren biçimde açıklar.",
-    2: "Kısmen doğru, eksik ya da yüzeysel biçimde açıklar.",
-    3: "Doğru ve tutarlı biçimde açıklar, örnekle destekler.",
-    4: "Derinlemesine analiz eder, farklı bakış açılarıyla ilişkilendirir ve özgün örneklerle destekler.",
+    kavramlar: {
+      1: "Kavramı tanımlayamaz veya tanımında temel bir hata vardır.",
+      2: "Kavramı kısmen doğru ama eksik ya da yüzeysel tanımlar.",
+      3: "Kavramı doğru ve tutarlı tanımlar, bir örnekle destekler.",
+      4: "Kavramı özgün örneklerle açıklar, ilişkili diğer kavramlarla bağlantı kurar.",
+    },
+    icerik: {
+      1: "Konuyla ilgili görüş bildirmez veya temel düzeyde hata içeren bir görüş bildirir.",
+      2: "Konuyla ilgili kısmen doğru ama eksik ya da yüzeysel bir görüş bildirir.",
+      3: "Konuyla ilgili doğru ve tutarlı bir görüş bildirir, gerekçelendirir.",
+      4: "Konuyu derinlemesine değerlendirir, farklı bakış açılarını karşılaştırarak özgün bir görüş oluşturur.",
+    },
+    surec: {
+      1: "İfadeyi açıklayamaz veya temel düzeyde hata içeren biçimde açıklar.",
+      2: "İfadeyi kısmen doğru ama eksik ya da yüzeysel biçimde açıklar.",
+      3: "İfadeyi doğru ve tutarlı biçimde açıklar, bir örnekle destekler.",
+      4: "İfadeyi derinlemesine analiz eder, farklı bakış açılarıyla ilişkilendirir ve özgün örneklerle destekler.",
+    },
   };
+  const GENEL_VARSAYILAN_ACIKLAMA = VARSAYILAN_ACIKLAMA.surec;
 
   function depoyuOku() {
     try {
@@ -43,10 +62,11 @@ const DegerlendirmeModule = (() => {
     return [subjectData.dersAdi, seviye.etiket, cikti.kod, kaynak, index].join("|");
   }
 
-  function hucreMetniOku(depo, hucreKey, seviyeNo) {
+  function hucreMetniOku(depo, hucreKey, seviyeNo, kaynak) {
     const kayit = depo[hucreKey];
     if (kayit && typeof kayit[seviyeNo] === "string") return kayit[seviyeNo];
-    return VARSAYILAN_ACIKLAMA[seviyeNo];
+    const acaklamaSeti = VARSAYILAN_ACIKLAMA[kaynak] || GENEL_VARSAYILAN_ACIKLAMA;
+    return acaklamaSeti[seviyeNo];
   }
 
   function ogrenciBilgiAlaniOlustur() {
@@ -85,7 +105,7 @@ const DegerlendirmeModule = (() => {
       icerik.setAttribute("role", "textbox");
       icerik.setAttribute("aria-label", `${baslikMetni} — ${sv.etiket} açıklaması`);
       const hucreKey = olcutAnahtari(subjectData, seviye, cikti, kaynak, index);
-      icerik.textContent = hucreMetniOku(depo, hucreKey, sv.anahtar);
+      icerik.textContent = hucreMetniOku(depo, hucreKey, sv.anahtar, kaynak);
       icerik.addEventListener("input", () => {
         const guncelDepo = depoyuOku();
         if (!guncelDepo[hucreKey]) guncelDepo[hucreKey] = {};
@@ -152,6 +172,7 @@ const DegerlendirmeModule = (() => {
     altBaslik.textContent = `${unite.uniteNo}. Ünite: ${unite.uniteAdi} — ${cikti.kod}: ${cikti.baslik}`;
     kagit.appendChild(altBaslik);
 
+    kagit.appendChild(BelgeBilgisiModule.ustBilgiOlustur(unite.__seviyeRef && unite.__seviyeRef.etiket));
     kagit.appendChild(ogrenciBilgiAlaniOlustur());
 
     const { tablo, satirVarMi } = rubrikTablosuOlustur(subjectData, unite.__seviyeRef, cikti, secenekler);

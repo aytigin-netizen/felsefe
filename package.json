@@ -1,0 +1,24 @@
+{
+  "name": "sosyal-bilimler-ogretmen-araclari",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Felsefe, Sosyoloji, Psikoloji ve Mantık öğretmenleri için içerik-üretim araçları. Tek dosya/localStorage mantığıyla çalışan, backend'i olmayan bir statik site — FOPOS'tan bağımsız, ayrı bir proje.",
+  "scripts": {
+    "test": "node test-run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aytigin-netizen/felsefe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aytigin-netizen/felsefe/issues"
+  },
+  "homepage": "https://github.com/aytigin-netizen/felsefe#readme",
+  "devDependencies": {
+    "jsdom": "^30.1.1"
+  }
+}
+

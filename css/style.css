@@ -312,13 +312,198 @@ button:focus-visible {
 
 @media print {
   .cg-secici-alani,
-  .cg-secenekler {
+  .cg-secenekler,
+  .dg-secici-alani,
+  .dg-secenekler {
     display: none;
   }
 
-  .calisma-kagidi-kagit {
+  .calisma-kagidi-kagit,
+  .rubrik-kagit {
     border: none;
     padding: 0;
+  }
+}
+
+/* Değerlendirme / Rubrik modülü (dg-*) — çalışma kâğıdındaki (cg-*) düzenin
+   rubrik tablosuna uyarlanmış hâli. */
+
+.rubrik-kagit {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  background: var(--card-bg);
+}
+
+.dg-kazanim-basligi {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.dg-secici-alani {
+  margin-bottom: 1rem;
+}
+
+.dg-secenekler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.dg-secenekler legend {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 0 0.3rem;
+}
+
+.dg-secenek-kutusu {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--fg);
+}
+
+.dg-ogrenci-bilgi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.dg-alan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 160px;
+  flex: 1;
+}
+
+.dg-alan-etiket {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.dg-rubrik-tablosu {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.dg-rubrik-tablosu th,
+.dg-rubrik-tablosu td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.dg-rubrik-tablosu tr:first-child {
+  background: var(--card-bg);
+}
+
+.dg-olcut-baslik {
+  width: 22%;
+  font-weight: 600;
+}
+
+.dg-seviye-hucre {
+  width: 19.5%;
+}
+
+.dg-seviye-icerik {
+  min-height: 3.5em;
+  outline: none;
+}
+
+.dg-seviye-icerik:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.dg-duzenleme-notu {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+/* Belge üst bilgisi (okul/öğretmen/eğitim yılı) ve imza alanı — Yıllık Plan,
+   Ünite Planı, Çalışma Kâğıdı ve Rubrik'te ortak kullanılır. */
+
+.belge-ust-bilgi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  margin: 0.75rem 0 1.25rem;
+  font-size: 0.9rem;
+}
+
+.belge-alan {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.belge-alan-etiket {
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.belge-alan-deger {
+  min-width: 70px;
+  border-bottom: 1px dashed var(--border);
+  padding: 0 0.15rem;
+  outline: none;
+}
+
+.belge-alan-deger:empty::before {
+  content: "—";
+  color: var(--muted);
+}
+
+.belge-alan-deger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.belge-alan-sabit {
+  font-weight: 600;
+}
+
+.imza-alani {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 2rem;
+}
+
+.imza-kutusu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 200px;
+  flex: 1;
+}
+
+.imza-etiket {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+@media print {
+  .belge-alan-deger {
+    border-bottom: none;
+  }
+
+  .belge-alan-deger:empty::before {
+    content: "";
   }
 }
 

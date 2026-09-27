@@ -58,6 +58,15 @@ const CalismaKagidiModule = (() => {
     return bolum;
   }
 
+  // Aynı kalıbı ("... ile ilgili düşüncelerinizi yazınız") her maddede tekrar
+  // etmemek için birkaç farklı görev çerçevesi arasında dönüşümlü geçilir.
+  const ICERIK_GOREV_KALIPLARI = [
+    (madde) => `"${madde}" kavramını/konusunu kendi cümlelerinizle açıklayınız.`,
+    (madde) => `"${madde}" ile ilgili günlük hayattan bir örnek veriniz ve nedenini açıklayınız.`,
+    (madde) => `"${madde}" konusuna dair kendi düşüncenizi bir gerekçeyle birlikte savunuşunuz.`,
+    (madde) => `"${madde}" konusunu, bu üniteden başka bir kavramla ilişkilendiriniz.`,
+  ];
+
   function icerikBolumuOlustur(icerikMaddeleri, baslangicNo) {
     const bolum = document.createElement("div");
     bolum.className = "cg-bolum";
@@ -68,14 +77,16 @@ const CalismaKagidiModule = (() => {
 
     const yonerge = document.createElement("p");
     yonerge.className = "cg-yonerge";
-    yonerge.textContent = "Aşağıdaki konu başlıklarıyla ilgili düşüncelerinizi kısaca yazınız.";
+    yonerge.textContent =
+      "Aşağıdaki konu başlıklarıyla ilgili görevleri yerine getiriniz.";
     bolum.appendChild(yonerge);
 
     (icerikMaddeleri || []).forEach((madde, idx) => {
       const soru = document.createElement("div");
       soru.className = "cg-soru";
       const metin = document.createElement("p");
-      metin.textContent = `${baslangicNo + idx}. ${madde} konusuyla ilgili düşüncelerinizi yazınız.`;
+      const kalip = ICERIK_GOREV_KALIPLARI[idx % ICERIK_GOREV_KALIPLARI.length];
+      metin.textContent = `${baslangicNo + idx}. ${kalip(madde)}`;
       soru.appendChild(metin);
       soru.appendChild(cizgiOlustur(2));
       bolum.appendChild(soru);
@@ -113,7 +124,7 @@ const CalismaKagidiModule = (() => {
     return bolum;
   }
 
-  function worksheetIcerigiOlustur(subjectData, unite, cikti, secenekler) {
+  function worksheetIcerigiOlustur(subjectData, unite, cikti, secenekler, seviyeEtiketi) {
     const kagit = document.createElement("div");
     kagit.className = "calisma-kagidi-kagit";
 
@@ -126,6 +137,7 @@ const CalismaKagidiModule = (() => {
     altBaslik.textContent = `${unite.uniteNo}. Ünite: ${unite.uniteAdi} — ${cikti.kod}: ${cikti.baslik}`;
     kagit.appendChild(altBaslik);
 
+    kagit.appendChild(BelgeBilgisiModule.ustBilgiOlustur(seviyeEtiketi));
     kagit.appendChild(ogrenciBilgiAlaniOlustur());
 
     let sonNo = 1;
@@ -248,7 +260,7 @@ const CalismaKagidiModule = (() => {
         icerik: secenekKutulari.icerik.checked,
         surec: secenekKutulari.surec.checked,
       };
-      onizleme.appendChild(worksheetIcerigiOlustur(subjectData, unite, cikti, secenekler));
+      onizleme.appendChild(worksheetIcerigiOlustur(subjectData, unite, cikti, secenekler, seviye.etiket));
     }
 
     function ciktiSeciciDoldur() {

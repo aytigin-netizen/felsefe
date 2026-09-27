@@ -19,17 +19,41 @@ const YillikPlanModule = (() => {
     }
 
     const satirlar = DataLoader.tumHaftalikSatirlar(seviye);
+    const haftaSayisi = DataLoader.planliHaftaSayisi(seviye);
 
     const baslik = document.createElement("h2");
     baslik.textContent = `${subjectData.dersAdi} — ${seviye.etiket} Yıllık Planı`;
     container.appendChild(baslik);
 
+    container.appendChild(BelgeBilgisiModule.ustBilgiOlustur(seviye.etiket));
+
+    const hesaplananSaat = satirlar.reduce(
+      (toplam, s) => toplam + (parseInt(s.dersSaati, 10) || 0),
+      0
+    );
+    const bosSaatSayisi = satirlar.filter((s) => !s.dersSaati).length;
+
     const ozet = document.createElement("p");
     ozet.className = "modul-ozet";
     ozet.textContent =
-      `Toplam ${seviye.toplamDersSaatiYillik} ders saati, ` +
-      `${seviye.toplamOgrenmeCiktisiSayisi} öğrenme çıktısı, ${satirlar.length} planlı hafta.`;
+      `Çerçeve plana göre toplam ${seviye.toplamDersSaatiYillik} ders saati, ` +
+      `${seviye.toplamOgrenmeCiktisiSayisi} öğrenme çıktısı, ${haftaSayisi} planlı hafta ` +
+      `(bazı haftalar birden fazla kazanıma bölündüğü için tabloda ${satirlar.length} satır görünür).`;
     container.appendChild(ozet);
+
+    if (hesaplananSaat !== Number(seviye.toplamDersSaatiYillik) || bosSaatSayisi > 0) {
+      const uyari = document.createElement("p");
+      uyari.className = "uyari";
+      uyari.textContent =
+        `Uyuşmazlık uyarısı: tablodaki satırların ders saati toplamı ${hesaplananSaat} ` +
+        (bosSaatSayisi
+          ? `(${bosSaatSayisi} satırda ders saati boş, 0 sayıldı), `
+          : ", ") +
+        `üstteki resmî toplam ise ${seviye.toplamDersSaatiYillik}. Aradaki fark, veri ` +
+        `kaynağının çerçeve yıllık plan dosyasından çıkarılması sırasında oluşmuş olabilir; ` +
+        `resmî çerçeve plan dosyasıyla karşılaştırılıp düzeltilmesi gerekir.`;
+      container.appendChild(uyari);
+    }
 
     if ((seviye.tatiller || []).length) {
       const tatilBaslik = document.createElement("h3");
@@ -74,6 +98,10 @@ const YillikPlanModule = (() => {
       const kod = document.createElement("strong");
       kod.textContent = s.kazanimKodu;
       tdKazanim.appendChild(kod);
+      if (s.kazanimBaslik) {
+        tdKazanim.appendChild(document.createElement("br"));
+        tdKazanim.appendChild(document.createTextNode(s.kazanimBaslik));
+      }
       tr.appendChild(tdKazanim);
 
       const tdSurec = document.createElement("td");
@@ -88,6 +116,8 @@ const YillikPlanModule = (() => {
     }
     table.appendChild(tbody);
     container.appendChild(table);
+
+    container.appendChild(BelgeBilgisiModule.imzaAlaniOlustur(["Öğretmen İmza", "Zümre Başkanı İmza"]));
 
     const yazdirBtn = document.createElement("button");
     yazdirBtn.type = "button";
