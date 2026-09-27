@@ -169,27 +169,33 @@ const App = (() => {
     Sidebar.guncelleSecimEtiketi();
   }
 
+  let yuklemeSirasi = 0;
+
   async function dersYukleVeUygula(code, seviyeIndex) {
+    const istek = ++yuklemeSirasi;
     state.dersKodu = code || null;
     state.subjectData = null;
     state.seviye = null;
     state.seviyeIndex = null;
     el("hata-alani").hidden = true;
 
-    if (!code) {
-      el("seviye-secim").hidden = true;
-      el("seviye-secim-label").hidden = true;
-      State.clear();
-      Sidebar.guncelleSecimEtiketi();
-      renderCercevePlanUyarisi();
-      renderModuller();
-      renderKazanimOnizleme();
-      return;
-    }
+    // Yeni veri gelene kadar kartlar ve doğrudan modül girişleri eski
+    // ders seçimini kullanmamalı; önce kayıt ve görünümü birlikte temizle.
+    State.clear();
+    Sidebar.guncelleSecimEtiketi();
+    el("seviye-secim").innerHTML = "";
+    el("seviye-secim").hidden = true;
+    el("seviye-secim-label").hidden = true;
+    renderCercevePlanUyarisi();
+    renderModuller();
+    renderKazanimOnizleme();
+    el("yukleniyor").hidden = !code;
+    if (!code) return;
 
     try {
       el("yukleniyor").hidden = false;
       const data = await DataLoader.loadSubject(code);
+      if (istek !== yuklemeSirasi) return;
       state.subjectData = data;
       populateSeviyeMenu(data, seviyeIndex);
       stateKaydet();
@@ -197,10 +203,11 @@ const App = (() => {
       renderModuller();
       renderKazanimOnizleme();
     } catch (err) {
+      if (istek !== yuklemeSirasi) return;
       el("hata-alani").hidden = false;
       el("hata-alani").textContent = err.message;
     } finally {
-      el("yukleniyor").hidden = true;
+      if (istek === yuklemeSirasi) el("yukleniyor").hidden = true;
     }
   }
 

@@ -1,3 +1,19 @@
+## 28 Eylül 2026 — ChatGPT güncel kayıt
+
+- Başlangıç: uzak main `ddd79824df04fb779921124a3e9b02e3983d720d`.
+- Önceki kayıttaki `5298f7a push edilmedi` bilgisi artık geçersiz: commit main geçmişinde ve sınıfsız giriş düzeltmesi canlıda doğrulandı.
+- Canlı kontrol: Felsefe/Sosyoloji için dört modülde sınıf seçimi uyarısı; yenilemede korunması; Psikoloji/Mantık otomatik seviye açılışı doğrulandı.
+- Yeni sorun: ders değişiminde yükleme bitmeden modüle tıklanınca önceki ders açılabiliyordu.
+- Düzeltme: js/app.js yükleme başında kayıtlı seçimi, eski sınıf seçeneklerini ve önizlemeyi temizler; kartları kapatır. İstek sırası kontrolü, gecikmiş yanıt/hataların güncel seçimi değiştirmesini önler.
+- test-selection.js: kontrollü gecikmeyle kart kilidi, doğrudan modül girişi, ters yanıt sırası, eski hata, güncel hata ve seçim temizleme senaryoları geçti. npm test yeni testi ve mevcut dört modül render testini çalıştırır; ikisi de başarı çıktısı verdi.
+- Yeni düzeltmenin gerçek tarayıcı/canlı testi henüz yapılmadı. Önceki canlı kontrol yeni düzeltmenin testi değildir.
+- Çalışma dalı: fix/subject-loading-race. Bu kayıt, kod ve test aynı inceleme paketindedir; main birleştirmesi ve yayın henüz yapılmadı. Uzak aktarım/PR sonucu oturum sonunda ayrıca bildirilir.
+- Sıradaki iş: bu paketin incelenmesi ve yayın sonrası ders değiştirme senaryosunun canlı doğrulanması.
+
+---
+
+## Önceki oturum kaydı (tarihsel)
+
 # Oturum devri
 
 Tarih: 27 Eylül 2026 (Europe/Istanbul).
