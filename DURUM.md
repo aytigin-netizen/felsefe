@@ -1,3 +1,13 @@
+## 28 Eylül 2026 — PR #3 birleştirme ve canlı yayın tamamlandı
+
+- Kullanıcı ana dala birleştirmeyi ve canlı yayını onayladı. PR #3, doğrulanan `61f4f267b5cd2b3384442ee2767601f3e7f8aae1` başına sabitlenerek squash birleştirildi. main kod commit'i: `f310b392322cb8be3fe47e9046229d30bb279125`.
+- GitHub Pages build/deploy başarılı: https://github.com/aytigin-netizen/felsefe/actions/runs/36431686717 .
+- Canlı HTTP kontrolünde index.html, js/modules/calisma-kagidi.js, js/modules/degerlendirme.js, js/sidebar.js ve data/mantik_veri_kaynagi.json dosyaları test edilen yerel dosyalarla bayt düzeyinde eşleşti. Mantık yıllık toplamı 72 saat olarak korundu.
+- Bu kontrol gerçek tarayıcı etkileşimi veya mobil/baskı görsel kabulü değildir. Önceki oturumun npm test ve hedefli jsdom sonuçları geçerlidir; merge ağacı test edilen ağaçla aynıdır.
+- Bu belge güncellemesi yalnız yayın/devir kaydıdır; uygulama kodunu değiştirmez. PR #3 kapanmıştır. Sıradaki ürün işi: Günlük Plan'ı yeni haftalara genişletmek; Mantık ünite dağılımındaki 4 saatin kaynakla eşlenmesi ayrı açık içerik işidir.
+
+---
+
 ## 28 Eylül 2026 — PR #3 bölünmüş kod/metin onarımı
 
 - Kullanıcı PR #3 düzeltmesini ve mevcut testlerle doğrulamayı istedi. Mantık yıllık ders saati kararı: **72 saat**; toplam 68'e indirilmeyecek. Ünitelerdeki 68 saat toplamının kalan 4 saati kaynak planla ayrıca eşlenecek; bu pakette veri dağılımı değiştirilmedi.
