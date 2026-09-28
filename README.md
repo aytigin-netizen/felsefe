@@ -11,7 +11,7 @@ Canlı site: <https://aytigin-netizen.github.io/felsefe/>
 | Modül | Durum | Ne yapar |
 | --- | --- | --- |
 | Yıllık Plan | ✅ | Seçili ders/seviye için haftalık dağılımlı, yazdırılabilir yıllık plan |
-| Günlük Plan | ✅ (ilk örnek) | Felsefe 11. sınıf, Anadolu Lisesi, 3. hafta örneği; düzenlenebilir akış |
+| Günlük Plan | ✅ (ilk örnek) | Anadolu Lisesi Felsefe 10: 1. hafta; Felsefe 11: 1. ve 3. hafta; hafta seçimi ve düzenlenebilir akış |
 | Ünite Planı | ✅ | Ünite bazlı öğrenme çıktısı kartları + öğretmen notları |
 | Çalışma Kâğıdı | ✅ | Kazanımdan seçmeli bölümlü, yazdırılabilir çalışma kâğıdı |
 | Değerlendirme / Rubrik | ✅ | 4 seviyeli, düzenlenebilir rubrik |
@@ -139,3 +139,20 @@ Yayınlamadan önce `npm test` ile regresyon testini çalıştırmak önerilir.
 ## Lisans
 
 [ISC](LICENSE) © 2026 Aytekin YILMAZ
+
+## Günlük Plan içerik paketleri
+
+Metinler `data/gunluk-plan/felsefe-10.json` ve `felsefe-11.json` dosyalarındadır.
+`js/gunluk-plan-data.js` ders/sınıf kataloğundan uygun dosyayı yükler;
+`js/modules/gunluk-plan.js` haftayı seçtirir ve planı gösterir.
+Yeni ders/sınıf için aynı biçimde içerik dosyası ve katalog kaydı eklenebilir.
+Listede yalnız hazırlanmış haftalar görünür. Her planın sabit `id` değeri,
+`cds-gunluk-plan:v1:<id>` kayıt anahtarını belirler; yayımlanmış kimlikler değiştirilmemelidir.
+11. sınıfta önceki üçüncü hafta varsayılanı ve kayıtları korunur; son seçilen hafta
+sınıfa göre ayrıca saklanır. Diğer derslerin içerikleri henüz eklenmedi.
+
+Yeni birinci hafta planları öğretmenin sağladığı DOCX örneklerinden, mevcut haftalık
+veriden ve TYMM ünite sayfalarından uyarlanmıştır. Ünite geneli yerine yalnız
+birinci haftanın (a) süreç bileşeni ele alınır. Etkinlikler ve süreler öğretmen
+uyarlamasıdır. Bu pakette yıllık plan çalışma kitabı yeniden satır satır doğrulanmadı.
+Her plan 2 × 40 dakikadır. Mantık veri dosyası değişmedi; yıllık toplam 72 saattir.

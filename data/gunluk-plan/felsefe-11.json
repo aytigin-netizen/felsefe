@@ -1,0 +1,298 @@
+[
+  {
+    "id": "fel-11-al-2026-h1",
+    "ders": "Felsefe",
+    "seviye": "11. Sınıf",
+    "kod": "FEL.11.1.1",
+    "hafta": "1. Hafta: 14-18 Eylül",
+    "haftaNo": 1,
+    "okulTuru": "Anadolu Lisesi",
+    "egitimYili": "2026–2027",
+    "yil": 2026,
+    "dersSayisi": 2,
+    "dersDakika": 40,
+    "akisAciklama": "1. ders: ilk dört aşama (40 dk). 2. ders: son üç aşama (40 dk). Teneffüs süreye dahil değildir.",
+    "alanlar": [
+      [
+        "tarih",
+        "Ders tarihi",
+        "14.09.2026"
+      ],
+      [
+        "sinif",
+        "Sınıf / şube",
+        "11. Sınıf"
+      ],
+      [
+        "konu",
+        "Konu",
+        "Çevre ve insan ilişkisini felsefi soru ve problemlerle açıklama"
+      ],
+      [
+        "materyal",
+        "Materyaller ve yöntemler",
+        "Aşağıdaki kurmaca göl örneği, soru kartları, tahta ve kâğıt. Soru-cevap, eşli çalışma ve kavram açıklama."
+      ],
+      [
+        "kabul",
+        "Temel kabuller",
+        "Öğrencilerin çevre sorunlarına örnek verebildiği kabul edilir. Değer ve sorumluluk kavramlarına ilişkin ön bilgileri kısa cevaplarla yoklanır."
+      ],
+      [
+        "on",
+        "Ön değerlendirme",
+        "“Yakın çevrenizde fark ettiğiniz bir çevre sorunu nedir; kimleri etkiler?” Öğrencinin gözlemi ile değer yargısını ayırmasına yardımcı olun."
+      ],
+      [
+        "kopru",
+        "Köprü kurma",
+        "Bir göl kıyısına tesis yapılması hem iş imkânı hem doğal yaşam üzerinde etki doğurabilir. Yalnız teknik bilgiyle cevaplanabilecek sorular ve değerlerle ilgili sorular neler olabilir?"
+      ],
+      [
+        "bilesen",
+        "Bu derste ilişkilendirilen beceri ve değerler",
+        "SBAB14: Felsefi muhakeme. KB2.8: Sorgulama. E1.6: Seçicilik. SDB2.1: İletişim; SDB2.2: İş birliği. D5: Duyarlılık. Öğrenci çevre problemindeki farklı tarafları fark eder, sorusunu açıklar ve arkadaşının açıklamasını dinler. Liste bu dersin uyarlamasıdır."
+      ],
+      [
+        "kartlar",
+        "Örnek olay ve soru kartları — öğretmen uyarlaması",
+        "Kurmaca olay: Bir ilçede göl kıyısına turizm tesisi yapılması öneriliyor. Tesis iş imkânı sağlayabilir; gölde yaşayan canlıların yaşam alanı daralabilir. Karar öncesinde farklı görüşler dinleniyor.\n\nA — Gölün su seviyesi geçen yıla göre ne kadar değişti?\nB — Doğanın insanlara yararından bağımsız bir değeri var mıdır?\nC — Henüz doğmamış insanlara karşı çevresel sorumluluğumuz var mıdır?\nD — Tesiste kaç kişinin çalışması bekleniyor?\n\nHer soru için: Hangi kavramı açıklamamız gerekir? Gözlem ve ölçüm yeterli mi; değer veya sorumluluk üzerine düşünmek de gerekiyor mu? B ya da C sorusunu seçerek hangi felsefi problemi dile getirdiğini kendi cümlelerinizle açıklayın."
+      ],
+      [
+        "kanit",
+        "Öğrenme kanıtları ve değerlendirme",
+        "Ürün: Soru, temel kavram ve felsefi problem açıklamasından oluşan tablo.\nÇıkış sorusu: “İnsanın doğaya karşı sorumluluğu var mıdır?” sorusundaki temel kavramları ve tartışılan problemi iki-üç cümleyle açıklayın. Yalnız evet/hayır cevabı vermeyin.\nKontrol: (1) Felsefi soruyu ayırt eder. (2) Değer veya sorumluluk kavramını açıklar. (3) Sorunun hangi problemi tartışmaya açtığını belirtir. (4) Açıklamasını anlaşılır bir örnekle destekler. Her ölçüt: bağımsız yaptı / destekle yaptı / henüz yapamadı."
+      ],
+      [
+        "destek",
+        "Destekleme",
+        "“Bu soru … kavramını ele alıyor; tartışılan problem …” cümle başlangıcını verin. Değer, doğa ve sorumluluk sözcüklerini örneklerle açıklayın. Öğrenci açıklamasını eşine sözlü olarak prova edebilir."
+      ],
+      [
+        "zengin",
+        "Zenginleştirme",
+        "“Hiçbir insanın ulaşamadığı bir yerdeki doğanın korunması gerekir mi?” sorusunun hangi değer varsayımını tartışmaya açtığını açıklayın. Ayrıntılı etik kuram karşılaştırması bu dersin kapsamı değildir."
+      ],
+      [
+        "sonraki",
+        "Sonraki derse hazırlık",
+        "Bir çevre haberini seçin; kaynak ve tarihini not edin. Haberin uyandırdığı bir felsefi soruyu yazın. Hayatla ilişkilendirerek değerlendirme ikinci haftada; argüman çözümleme üçüncü haftada ele alınacaktır."
+      ],
+      [
+        "not",
+        "Ders sonrası öğretmen notu",
+        ""
+      ]
+    ],
+    "akis": [
+      [
+        5,
+        "Ön değerlendirme",
+        "Yakın çevre sorusuyla ön bilgileri yoklar.",
+        "Bir sorun ve etkilenenleri belirtir.",
+        "Kısa başlangıç cevabı"
+      ],
+      [
+        5,
+        "Köprü kurma",
+        "Kurmaca göl örneğini okur; kararın farklı yönlerini sorar.",
+        "Olaydaki tarafları ve merak ettiği noktayı söyler.",
+        "Soru listesi"
+      ],
+      [
+        10,
+        "Kavramları açıklama",
+        "Doğa, çevre, değer ve sorumluluğu örneklerle açıklar.",
+        "Kavramları olayla eşleştirir.",
+        "Kavram notları"
+      ],
+      [
+        20,
+        "Soru kartlarını inceleme",
+        "Kartlardaki soruların ne tür cevaplar gerektirdiğini tartıştırır.",
+        "Eşiyle soruları inceler; felsefi problemleri belirler.",
+        "Soru ve kavram tablosu"
+      ],
+      [
+        15,
+        "Problemi açıklama",
+        "İkinci derste B veya C sorusunun seçilmesini ister; açıklamaları sorularla geliştirir.",
+        "Seçtiği sorunun neyi tartışmaya açtığını yazar.",
+        "Felsefi problem açıklaması"
+      ],
+      [
+        15,
+        "Paylaşım ve geri bildirim",
+        "Evet/hayır cevabı ile problemi açıklama arasındaki farkı gösterir.",
+        "Açıklamasını paylaşır, gelen sorularla düzeltir.",
+        "Düzeltilmiş açıklama"
+      ],
+      [
+        10,
+        "Bireysel değerlendirme",
+        "Çıkış sorusunu uygular; dört ölçütle dönüt verir.",
+        "Sorudaki kavramları ve problemi bağımsız açıklar.",
+        "Çıkış yanıtı"
+      ]
+    ],
+    "kaynakAciklama": "Biçim ve içerik referansı: öğretmenin sağladığı felsefe-al-11-1-hafta-gunluk-plan.docx. Öğrenme çıktısı ve haftalık süreç: uygulamadaki Felsefe veri kaynağının birinci hafta kaydı; öğrenme çıktısı TYMM ünite sayfasıyla karşılaştırıldı. Bu pakette resmî yıllık plan çalışma kitabı yeniden satır satır doğrulanmadı. Örnek belgedeki ünite geneline ait içerik ilk haftanın (a) süreç bileşenine daraltıldı. Aşağıdaki kartlar, süre dağılımı ve kontrol ölçütleri öğretmen uyarlamasıdır; resmî plan metni değildir.",
+    "kaynaklar": [
+      [
+        "TYMM — Çevre Sorunları ve Felsefe",
+        "https://tymm.meb.gov.tr/felsefe-dersi/unite/66"
+      ],
+      [
+        "MEB — Taslak yıllık planlar",
+        "https://tymm.meb.gov.tr/taslak-cerceve-planlari/ortaogretim"
+      ]
+    ]
+  },
+  {
+    "id": "fel-11-al-2026-h3",
+    "ders": "Felsefe",
+    "seviye": "11. Sınıf",
+    "kod": "FEL.11.1.2",
+    "hafta": "3. Hafta: 28 Eylül-2 Ekim",
+    "alanlar": [
+      [
+        "tarih",
+        "Ders tarihi",
+        "28.09.2026"
+      ],
+      [
+        "sinif",
+        "Sınıf / şube",
+        "11. Sınıf"
+      ],
+      [
+        "konu",
+        "Konu",
+        "Çevre etiğinde insan, canlı ve çevre merkezli argümanların çözümlenmesi"
+      ],
+      [
+        "materyal",
+        "Materyaller ve yöntemler",
+        "Aşağıdaki üç argüman kartı, tahta, karşılaştırma tablosu. Soru-cevap, eşli çalışma, argüman çözümleme ve karşılaştırma."
+      ],
+      [
+        "kabul",
+        "Temel kabuller",
+        "Öğrencilerin çevre sorunlarını örneklendirebildiği varsayılır. İddia ve gerekçe ayrımı başlangıçta kontrol edilir."
+      ],
+      [
+        "on",
+        "Ön değerlendirme",
+        "“Bir akarsuyu neden korumalıyız?” sorusuna birer gerekçe alınır. Öğrenciden gerekçenin kimi veya neyi koruduğunu belirtmesi istenir."
+      ],
+      [
+        "kopru",
+        "Köprü kurma",
+        "Yakın çevredeki bir su kaynağını düşünün. İnsanların su ihtiyacı, balıkların yaşamı ve ekosistemin dengesi aynı kararı farklı gerekçelerle destekleyebilir mi?"
+      ],
+      [
+        "bilesen",
+        "Bu derste ilişkilendirilen beceri ve değerler",
+        "SBAB14: Felsefi muhakeme; KB2.4: Çözümleme; KB2.7: Karşılaştırma. SDB2.1: İletişim; SDB2.2: İş birliği. OB1: Bilgi okuryazarlığı. D5: Duyarlılık. E3.6: Analitiklik. Bu liste ders uyarlamasıdır; ünitenin bütün bileşenlerinin her derste işlendiği anlamına gelmez."
+      ],
+      [
+        "kartlar",
+        "Argüman kartları — öğretmen uyarlaması",
+        "A — Akarsudaki kirlilik insanların sağlığını ve geçim kaynaklarını tehdit eder. İnsanların sağlığını ve geçimini korumalıyız. Bu nedenle akarsuyu kirletmemeliyiz.\n\nB — Akarsudaki canlıların yaşamı, insanlara yararlı olup olmamalarından bağımsız olarak değerlidir. Değerli olan canlı yaşamını korumalıyız. Bu nedenle akarsuyu kirletmemeliyiz.\n\nC — Akarsu, canlı ve cansız unsurlarıyla birbirine bağlı bir ekosistemdir. Ekosistemin bütünlüğünü korumalıyız. Bu nedenle akarsuyu kirletmemeliyiz.\n\nHer kart için: Sonuç nedir? Hangi gerekçelere dayanır? Değerin merkezinde ne vardır? Gerekçenin güçlü yanı ve tartışmaya açık varsayımı nedir?"
+      ],
+      [
+        "kanit",
+        "Öğrenme kanıtları ve değerlendirme",
+        "Ürün: Üç yaklaşımı sonuç, gerekçe, değer odağı ve tartışmaya açık varsayım bakımından karşılaştıran tablo.\nÇıkış sorusu: “Bir orman, insanların dinlenmesini sağladığı için korunmalıdır.” argümanının sonucunu, gerekçesini ve etik yaklaşımını belirtin; bir örtük varsayımını açıklayın.\nKontrol: (1) Sonucu ayırır. (2) Gerekçeyi belirler. (3) Yaklaşımı gerekçesiyle eşleştirir. (4) Bir varsayımı veya sınırlılığı açıklar. Her ölçüt: bağımsız yaptı / destekle yaptı / henüz yapamadı."
+      ],
+      [
+        "destek",
+        "Destekleme",
+        "İddia ve gerekçeleri iki renkle işaretletin. “Bu görüş … için korumayı savunuyor; çünkü …” cümle başlangıcını verin. Metni eşli okutun; gerekirse aynı çözümlemeyi sözlü kabul edin."
+      ],
+      [
+        "zengin",
+        "Zenginleştirme",
+        "Erken tamamlayanlar “İnsanlara hiçbir yararı olmayan bir türü korumalı mıyız?” örneğinde A ve B kartlarının varsayımlarını karşılaştırsın. Yeni bir metin yazmak yerine verilen argümanların hangi durumda ayrıştığını açıklasın. Bu etkinlik, öğrencinin ihtiyacına göre kullanılabilecek bir öğretmen uyarlamasıdır."
+      ],
+      [
+        "sonraki",
+        "Sonraki derse hazırlık",
+        "Günlük hayattan bir çevre görüşü bulun; iddiasını ve gerekçesini işaretleyin. Görüş ve argüman oluşturma sonraki haftanın, kapsamlı felsefi metin yazma ise sonraki süreç bileşenlerinin konusudur."
+      ],
+      [
+        "not",
+        "Ders sonrası öğretmen notu",
+        ""
+      ]
+    ],
+    "akis": [
+      [
+        5,
+        "Ön değerlendirme",
+        "Akarsuyu koruma sorusunu yöneltir; iddia ve gerekçeyi ayırt etmeyi yoklar.",
+        "Kısa cevap verir; gerekçesini belirtir.",
+        "Başlangıç cevapları"
+      ],
+      [
+        5,
+        "Köprü kurma",
+        "Aynı çevre kararının farklı değer kabullerine dayanabileceğini örnekler.",
+        "İnsan, canlı ve ekosistem odağını ayırır.",
+        "Üç odaklı tahta notu"
+      ],
+      [
+        10,
+        "Model çözümleme",
+        "A kartında sonuç, gerekçe ve örtük varsayımı sesli düşünerek gösterir.",
+        "İddia ve gerekçeyi farklı işaretlerle ayırır.",
+        "İşaretlenmiş A kartı"
+      ],
+      [
+        20,
+        "Eşli çözümleme",
+        "B ve C kartlarını dağıtır; doğrudan cevap vermeden yönlendirici sorular sorar.",
+        "Kartların sonucunu, gerekçesini ve değer odağını eşli belirler.",
+        "İki argüman çözümlemesi"
+      ],
+      [
+        15,
+        "Karşılaştırma",
+        "İkinci ders başında üç yaklaşımı karşılaştıracak tabloyu kurar.",
+        "Üç kartı karşılaştırır; bir güçlü yan ve bir sınırlılık yazar.",
+        "Karşılaştırma tablosu"
+      ],
+      [
+        15,
+        "Paylaşım ve geri bildirim",
+        "Etik yaklaşımı yalnız sonuca bakarak belirleme yanılgısını tartışmaya açar.",
+        "Çözümlemesini açıklar; arkadaşının gerekçesine göre tablosunu düzeltir.",
+        "Düzeltilmiş tablo"
+      ],
+      [
+        10,
+        "Bireysel değerlendirme",
+        "Çıkış sorusunu uygular; dört ölçütle öğrenme kanıtını inceler.",
+        "Argümanı bağımsız çözümler ve ihtiyaç duyduğu desteği belirtir.",
+        "Çıkış yanıtı"
+      ]
+    ],
+    "okulTuru": "Anadolu Lisesi",
+    "egitimYili": "2026–2027",
+    "yil": 2026,
+    "haftaNo": 3,
+    "dersSayisi": 2,
+    "dersDakika": 40,
+    "akisAciklama": "1. ders: ilk dört aşama (40 dk). 2. ders: son üç aşama (40 dk). Teneffüs süreye dahil değildir.",
+    "kaynakAciklama": "Öğrenme çıktısı ve haftalık eşleme: MEB 2026–2027 Anadolu Lisesi Felsefe taslak yıllık planı, 11. SINIF sayfası, B6:G6; uygulamanın felsefe veri kaynağıyla karşılaştırıldı. Biçim örneği: öğretmenin sağladığı günlük plan dosyası. Okul türü: Anadolu Lisesi. Ders akışı, argüman kartları ve kontrol ölçütleri: bu örnek için hazırlanmış uyarlama.",
+    "kaynaklar": [
+      [
+        "TYMM — Çevre Sorunları ve Felsefe",
+        "https://tymm.meb.gov.tr/felsefe-dersi/unite/66"
+      ],
+      [
+        "MEB — 2026–2027 taslak yıllık planlar",
+        "https://tymm.meb.gov.tr/taslak-cerceve-planlari/ortaogretim"
+      ]
+    ]
+  }
+]

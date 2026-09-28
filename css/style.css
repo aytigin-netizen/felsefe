@@ -868,3 +868,10 @@ button:focus-visible {
   .gp section { margin-block: .7rem; }
   .gp .imza-alani { break-inside: avoid; }
 }
+
+/* Günlük plan hafta seçimi */
+.gp-secim { margin-block: 1rem 1.5rem; }
+.gp-secim label { display: block; font-weight: 600; margin-bottom: .5rem; }
+.gp-secim select { box-sizing: border-box; width: 100%; max-width: 36rem; padding: .75rem; font: inherit; color: var(--fg); background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; }
+.gp-kaynak { display: block; overflow-wrap: anywhere; margin-block: .4rem; }
+@media print { .gp-secim { display: none !important; } }

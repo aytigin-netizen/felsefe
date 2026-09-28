@@ -1,3 +1,16 @@
+## 28 Eylül 2026 — Günlük Plan hafta seçimi ve ilk hafta paketleri
+
+- Kullanıcı onayı: Felsefe 10/11 birinci hafta planları, ayrı içerik dosyaları ve hafta seçimi; mevcut 11. sınıf üçüncü hafta ve Mantık 72 saat korunacak.
+- Başlangıç main: `be886a14bef040baa45d864fef1e318a707d54db`; çalışma dalı: `feat/daily-plan-weeks`.
+- İçerik: data/gunluk-plan/felsefe-10.json (1. hafta), felsefe-11.json (1. ve 3. hafta). Yeni planlar verilen DOCX örnekleri ve mevcut haftalık kayıtların (a) süreç bileşenlerine göre 2 × 40 dakika olarak uyarlandı. TYMM /felsefe-dersi/unite/30 ve /66 kaynakları kullanıldı. Yıllık plan çalışma kitabı bu pakette yeniden satır satır doğrulanmadı.
+- gunluk-plan-data.js içerikleri yükler; modül hafta seçimini ve sınıfa göre son seçimi saklar. Her planın düzenlemeleri kendi kimliğiyle saklanır. Eski fel-11-al-2026-h3 kimliği, metinleri ve akışı başlangıç koduyla birebir karşılaştırılarak korundu. 11. sınıf ilk açılışında üçüncü hafta varsayılanı korunur.
+- npm test üç aşamasıyla geçti: seçim, günlük plan ve tüm ders/seviye modül render kontrolleri. Günlük plan testi hafta/sınıf kayıt ayrımı, eski kayıt, 80 dk, yükleme/JSON hataları, gecikmiş yanıt, kapsam ve saat eşlemesini kapsar. git diff --check temiz. Mantık veri dosyası değişmedi; 72 saat testi geçti.
+- Görsel doğrulama tamamlanmadı: geçici @sparticuz/chromium kurulumu yapıldı, ancak başlatma EINVAL chown hatasıyla durdu. Mobil/baskı ekranı test edilmiş sayılmaz. Paketler ve geçici tarayıcı scripti repoya eklenmedi. jsdom testinde yerel CSS yükleme uyarısı var; çıkış kodu 0.
+- Bu paket inceleme dalına/taslak PR'a aktarılmak üzere hazırlandı. Main birleştirmesi ve canlı yayın yapılmadı. Son uzak commit ve PR numarası GitHub kaydından okunmalıdır.
+- Sonraki adım: erişilebilir önizlemede 10/11 ilk hafta ile 11 üçüncü hafta görünümü ve baskının incelenmesi, ardından birleştirme/yayın kararı.
+
+---
+
 ## 28 Eylül 2026 — PR #3 birleştirme ve canlı yayın tamamlandı
 
 - Kullanıcı ana dala birleştirmeyi ve canlı yayını onayladı. PR #3, doğrulanan `61f4f267b5cd2b3384442ee2767601f3e7f8aae1` başına sabitlenerek squash birleştirildi. main kod commit'i: `f310b392322cb8be3fe47e9046229d30bb279125`.

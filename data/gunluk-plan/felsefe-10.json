@@ -1,0 +1,150 @@
+[
+  {
+    "id": "fel-10-al-2026-h1",
+    "ders": "Felsefe",
+    "seviye": "10. Sınıf",
+    "kod": "FEL.10.1.1",
+    "hafta": "1. Hafta: 14-18 Eylül",
+    "haftaNo": 1,
+    "okulTuru": "Anadolu Lisesi",
+    "egitimYili": "2026–2027",
+    "yil": 2026,
+    "dersSayisi": 2,
+    "dersDakika": 40,
+    "akisAciklama": "1. ders: ilk dört aşama (40 dk). 2. ders: son üç aşama (40 dk). Teneffüs süreye dahil değildir.",
+    "alanlar": [
+      [
+        "tarih",
+        "Ders tarihi",
+        "14.09.2026"
+      ],
+      [
+        "sinif",
+        "Sınıf / şube",
+        "10. Sınıf"
+      ],
+      [
+        "konu",
+        "Konu",
+        "Felsefenin anlamı ve ortak bir tanımının mümkün olup olmadığı"
+      ],
+      [
+        "materyal",
+        "Materyaller ve yöntemler",
+        "Aşağıdaki üç yaklaşım kartı, kâğıt ve tahta. Bireysel düşünme, eşli karşılaştırma ve gerekçeli tartışma."
+      ],
+      [
+        "kabul",
+        "Temel kabuller",
+        "Öğrencilerin günlük yaşamda düşünme ve soru sorma deneyimleri olduğu kabul edilir. Felsefe kavramını nasıl kullandıkları başlangıçta yoklanır."
+      ],
+      [
+        "on",
+        "Ön değerlendirme",
+        "“Felsefe deyince aklınıza hangi üç sözcük geliyor?” Her öğrenci sözcüklerini ve birini seçme nedenini yazar. Cevaplar başlangıç görüşü olarak saklanır."
+      ],
+      [
+        "kopru",
+        "Köprü kurma",
+        "“Felsefe yapma!” sözü ile “Bu konuyu neden böyle kabul ediyoruz?” sorusunu karşılaştırın. Günlük dilde felsefeye yüklenen anlamlar ne kadar örtüşüyor?"
+      ],
+      [
+        "bilesen",
+        "Bu derste ilişkilendirilen beceri ve değerler",
+        "SBAB13: Felsefi sorgulama. E1.1: Merak; E3.9: Şüphe duyma. SDB2.2: İş birliği. OB1: Bilgi okuryazarlığı. D6: Dürüstlük; D14: Saygı. Öğrenci kendi düşüncesini açıkça söyler, farklı görüşü dinler ve tanımını gerekçeyle yeniden düşünür. Liste bu dersin uyarlamasıdır."
+      ],
+      [
+        "kartlar",
+        "Yaklaşım kartları — öğretmen uyarlaması",
+        "Bu kartlar filozof alıntısı değildir. Felsefenin farklı yönlerini tartışmaya açan kısa öğretmen metinleridir.\n\nA — Felsefe, bildiğimizi düşündüğümüz şeylerin gerekçelerini sorarak bilgeliği aramaktır.\nB — Felsefe, insanın kendisi ve dünya hakkındaki temel soruları kavramlarla düşünmesidir.\nC — Felsefe, bir görüşün varsayımlarını ve tutarlılığını sorgulamaktır.\n\nHer kartta: Hangi sözcükler öne çıkıyor? Diğer kartlarla ortak yönü nedir? Tek başına yeterli bir tanım mı? Bir örnekle açıklayın."
+      ],
+      [
+        "kanit",
+        "Öğrenme kanıtları ve değerlendirme",
+        "Ürün: Üç kartın odak ve ortak yönlerini gösteren karşılaştırma tablosu; öğrencinin ilk ve son felsefe tanımı.\nÇıkış sorusu: “Felsefenin tek bir tanımı olmak zorunda mıdır?” Bir görüş ve gerekçe yazın; karşı görüşte dikkate değer bulduğunuz bir noktayı belirtin.\nKontrol: (1) Felsefenin anlamını kendi cümlesiyle ifade eder. (2) İki yaklaşımın ortak ve farklı yönünü gösterir. (3) Ortak tanımın imkânına yönelik bir soru sorar. (4) Görüşünü gerekçelendirir. Her ölçüt: bağımsız yaptı / destekle yaptı / henüz yapamadı."
+      ],
+      [
+        "destek",
+        "Destekleme",
+        "Kartları eşli okuyun. “A kartı … üzerinde duruyor; B kartıyla ortak yanı …” cümle başlangıçlarını verin. Yazılı cevap yerine kısa sözlü açıklamaya da imkân tanıyın."
+      ],
+      [
+        "zengin",
+        "Zenginleştirme",
+        "Bir öğrencinin önerdiği tanıma sınır durum bulun: Her soru sormak felsefe yapmak mıdır? Tanımın hangi durumda yetersiz kaldığını gerekçelendirin."
+      ],
+      [
+        "sonraki",
+        "Sonraki derse hazırlık",
+        "Günlük yaşamda duyduğunuz bir görüşü ve ona sorabileceğiniz bir “neden?” sorusunu not edin. Felsefi düşüncenin özellikleri ve tarihsel gelişimi sonraki haftanın odağıdır."
+      ],
+      [
+        "not",
+        "Ders sonrası öğretmen notu",
+        ""
+      ]
+    ],
+    "akis": [
+      [
+        5,
+        "Ön değerlendirme",
+        "Üç sözcük sorusunu sorar; başlangıç cevaplarını toplar.",
+        "Sözcüklerini seçer ve birinin nedenini açıklar.",
+        "Başlangıç kartı"
+      ],
+      [
+        5,
+        "Köprü kurma",
+        "Günlük dildeki iki ifadeyi karşılaştırmaya açar.",
+        "Felsefeye ilişkin ön kabulünü belirtir.",
+        "İlk tanım"
+      ],
+      [
+        10,
+        "Kavramları açıklama",
+        "Bilgelik sevgisi, arayış ve sorgulama ilişkisini günlük bir örnekle açıklar.",
+        "Kavramları kendi cümleleriyle ilişkilendirir.",
+        "Kısa kavram notu"
+      ],
+      [
+        20,
+        "Eşli kart inceleme",
+        "Üç yaklaşım kartını verir; ortak yönleri sorgulatan sorular yöneltir.",
+        "Kartları karşılaştırır; her biri için örnek ve soru yazar.",
+        "Karşılaştırma tablosu"
+      ],
+      [
+        15,
+        "Ortak tanımı tartışma",
+        "İkinci derste ortak bir tanım önerisi ister; farklı cevapları gerekçeleriyle dinletir.",
+        "Bir tanım önerir ve başka bir tanımın sınırını tartışır.",
+        "Gerekçeli tanım önerileri"
+      ],
+      [
+        15,
+        "Tanımı gözden geçirme",
+        "İlk tanımlar ile kartları yeniden karşılaştırmaya yönlendirir.",
+        "Tanımını düzeltir veya korur; nedenini açıklar.",
+        "İlk ve son tanım karşılaştırması"
+      ],
+      [
+        10,
+        "Bireysel değerlendirme",
+        "Çıkış sorusunu uygular; dört ölçütle geri bildirim verir.",
+        "Görüşünü, gerekçesini ve karşı görüşteki bir noktayı yazar.",
+        "Çıkış yanıtı"
+      ]
+    ],
+    "kaynakAciklama": "Biçim ve içerik referansı: öğretmenin sağladığı felsefe-al-10-1-hafta-gunluk-plan.docx. Öğrenme çıktısı ve haftalık süreç: uygulamadaki Felsefe veri kaynağının birinci hafta kaydı; öğrenme çıktısı TYMM ünite sayfasıyla karşılaştırıldı. Bu pakette resmî yıllık plan çalışma kitabı yeniden satır satır doğrulanmadı. Örnek belgedeki ünite geneline ait içerik ilk haftanın (a) süreç bileşenine daraltıldı. Aşağıdaki kartlar, süre dağılımı ve kontrol ölçütleri öğretmen uyarlamasıdır; resmî plan metni değildir.",
+    "kaynaklar": [
+      [
+        "TYMM — Felsefenin Doğası",
+        "https://tymm.meb.gov.tr/felsefe-dersi/unite/30"
+      ],
+      [
+        "MEB — Taslak yıllık planlar",
+        "https://tymm.meb.gov.tr/taslak-cerceve-planlari/ortaogretim"
+      ]
+    ]
+  }
+]

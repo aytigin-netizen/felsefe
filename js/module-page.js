@@ -43,7 +43,7 @@ const ModulePage = (() => {
         return;
       }
 
-      renderFn(container, subjectData, seviye);
+      await renderFn(container, subjectData, seviye);
     } catch (err) {
       container.innerHTML = `<p class="hata">${err.message}</p>`;
     }
