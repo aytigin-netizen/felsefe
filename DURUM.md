@@ -1,3 +1,13 @@
+## 28 Eylül 2026 — PR #2 birleştirme öncesi inceleme ve test düzeltmesi
+
+- Dal: feat/daily-plan-pilot (başlangıç `3d37ec6`). main o sırada `d6de318` idi (yalnız `onizleme/pr-2/` eklemişti); yerel deneme birleştirmesinde çakışma çıkmadı ve `npm test` üç aşamasıyla geçti.
+- Değişiklik: `test-daily-plan.js` seviyeyi `data.seviyeler[1]` indeksiyle değil `etiket` ('10. Sınıf' / '11. Sınıf') ile buluyor; bulunamazsa test açıkça düşer. Seviye sırası ters çevrilmiş Felsefe verisiyle test yeniden çalıştırıldı, geçti. Uygulama kodu değişmedi.
+- Yapılmadı: PR birleştirilmedi, yayın yapılmadı. Mobil görünüm ve yazdırma sayfalaması hâlâ gerçek ekranda kontrol edilmedi. MEB çalışma kitabındaki B6:G6 eşlemesi ve pedagojik içerik bu oturumda bağımsız doğrulanmadı; önceki kayda dayanır.
+- Birleştirme sonrası yapılacaklar: `onizleme/pr-2/` klasörünün kaldırılması (tam site kopyası; Pages'te yayında kalır), yayın/deploy kaydının eklenmesi, canlı kontrol.
+- Bekleyen tasarım borcu: günlük plan içeriği `gunluk-plan.js` içindeki `PILOT` nesnesinde; ikinci hafta/ders eklenmeden önce veri dosyasına taşınması değerlendirilmeli (öneri, karar değil).
+
+---
+
 ## 28 Eylül 2026 — Anadolu Lisesi kapsam düzeltmesi
 
 - Kullanıcı başlangıcın Anadolu Lisesi olmasını istedi. PR #2 / feat/daily-plan-pilot üzerinde uygulandı; önceki Fen Lisesi kapsamı geçersizdir.
