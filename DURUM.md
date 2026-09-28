@@ -1,3 +1,17 @@
+## 28 Eylül 2026 — Günlük Plan ilk örneği
+
+- Kullanıcı öneriyi onayladı ve devam edilmesini istedi. Başlangıç: main `5b57e4ca1c597b7c17819bf32d750179f9e5bfa3`.
+- Dal: feat/daily-plan-pilot. Yeni sayfa/modül, ana sayfa kartı, yan menü, baskı stilleri ve davranış testi eklendi.
+- Kapsam: Felsefe 11 / Fen Lisesi / 3. hafta / FEL.11.1.2(a). 2 × 40 dakika, düzenlenebilir öğretmen-öğrenci akışı, argüman kartları, değerlendirme, farklılaştırma, notlar ve imzalar. Diğer ders/sınıflarda örnek gösterilmez.
+- Kaynak: kullanıcının felsefe-fl-11-3-hafta-gunluk-plan.docx örneği; https://tymm.meb.gov.tr/felsefe-dersi/unite/66 ve mevcut ders JSON'u. Etkinlikler öğretmen uyarlaması olarak etiketlendi; SDB ve OB karışıklığı taşınmadı.
+- Sınır: FL yıldızlı zenginleştirme eşlemesi henüz tamamlanmadı. Bu paket bütün haftalar/dersler için üretici veya tam FL uyum onayı değildir.
+- npm test: seçim regresyonu, günlük plan davranışları ve mevcut modül render testleri başarı çıktısı verdi. git diff --check temiz.
+- Gerçek ekran kontrolü denendi; cloud browser yerel http://127.0.0.1:8765 adresini ERR_BLOCKED_BY_CLIENT ile açmadı. Mobil ekran ve baskı sayfalaması doğrulanmadı. Yazdırma düğmesinin çağrısı test edildi; görsel çıktı testi yapılmış sayılmaz.
+- Kod inceleme dalına/taslak PR'a aktarılmak üzere hazırlandı; main ve canlı site bu geliştirmeyle değiştirilmedi. Uzak commit/PR sonucu oturum kapanışında bildirilir.
+- Sıradaki iş: ilk örneğin içerik incelemesi ve erişilebilir önizlemede masaüstü/mobil/baskı kontrolü. Yeni dağıtım onayı verilmedi.
+
+---
+
 ## 28 Eylül 2026 — Yayın tamamlandı
 
 - Kullanıcı canlıya almayı onayladı. PR #1 squash merge edildi: `ed7e9a21ac2ef3a9f754fb4068e797ea8f376228`.
