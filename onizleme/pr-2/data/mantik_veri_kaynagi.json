@@ -1,0 +1,663 @@
+{
+  "dersAdi": "Mantık",
+  "kodPrefix": "MAN",
+  "surumTarihi": "2026 - Türkiye Yüzyılı Maarif Modeli",
+  "seviyeler": [
+    {
+      "etiket": "Seçmeli (tek sınıf düzeyi)",
+      "cercevePlanMevcut": true,
+      "tatiller": [
+        "1. DÖNEM ARA TATİLİ: 16 - 20 Kasım 2026",
+        "YARIYIL TATİLİ: 25 Ocak - 5 Şubat 2027",
+        "2. DÖNEM ARA TATİLİ: 8-12 Mart 2027"
+      ],
+      "toplamDersSaatiYillik": 72,
+      "toplamOgrenmeCiktisiSayisi": 17,
+      "uniteler": [
+        {
+          "uniteNo": "1",
+          "uniteAdi": "Mantığın Doğası",
+          "dersSaati": 10,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "MAN.1.1",
+              "baslik": "Mantığı formel bir bilim olarak sorgulayabilme",
+              "surec_bilesenleri": [
+                "Mantığı formel bir bilim dalı olarak tanımlar.",
+                "Mantıklı olmanın koşulları ve mantık hakkında sorular sorar.",
+                "Mantıklı olmanın koşulları ve mantık hakkında bilgi toplar.",
+                "Topladığı bilgilerin doğruluğunu değerlendirir.",
+                "Topladığı bilgiler üzerinde çıkarım yapar."
+              ],
+              "icerik_cercevesi": [
+                "Bilim Olarak Mantığın Neliği",
+                "Mantığın Tarihsel Gelişiminin Temel Evreleri",
+                "Mantığın Temel Kavramsal Çerçevesi"
+              ],
+              "anahtar_kavramlar": [
+                "formel",
+                "formelleştirme",
+                "informel mantık",
+                "mantık sistemleri",
+                "önerme",
+                "tümce",
+                "yargı"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "1. Hafta: 14-18 Eylül",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Mantığı formel bir bilim dalı olarak tanımlar. b) Mantıklı olmanın koşulları ve mantık hakkında sorular sorar.",
+                  "belirliGunHafta": "15 Temmuz Demokrasi ve Millî Birlik Günü"
+                },
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "2. Hafta: 21-25 Eylül",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Mantıklı olmanın koşulları ve mantık hakkında bilgi toplar. ç) Topladığı bilgilerin doğruluğunu değerlendirir. d) Topladığı bilgiler üzerinde çıkarım yapar.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "MAN.1.2",
+              "baslik": "Mantığın tarihsel gelişim sürecini özetleyebilme",
+              "surec_bilesenleri": [
+                "Mantığın tarihsel gelişimini ilgili olduğu alanlarla sebep-sonuç ilişkisi içerisinde çözümler.",
+                "Tarihsel dönemler dikkate alarak mantığın gelişimini sınıflandırır.",
+                "Mantığın tarihsel gelişimine etki eden unsurları sonuçları ile birlikte yorumlar."
+              ],
+              "icerik_cercevesi": [
+                "Bilim Olarak Mantığın Neliği",
+                "Mantığın Tarihsel Gelişiminin Temel Evreleri",
+                "Mantığın Temel Kavramsal Çerçevesi"
+              ],
+              "anahtar_kavramlar": [
+                "formel",
+                "formelleştirme",
+                "informel mantık",
+                "mantık sistemleri",
+                "önerme",
+                "tümce",
+                "yargı"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EYLÜL",
+                  "hafta": "3. Hafta: 28 Eylül-2 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Mantığın tarihsel gelişimini ilgili olduğu alanlarla sebep-sonuç ilişkisi içerisinde çözümler. b) Tarihsel dönemler dikkate alarak mantığın gelişimini sınıflandırır. c) Mantığın tarihsel gelişimine etki eden unsurları sonuçları ile birlikte yorumlar.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "MAN.1.3",
+              "baslik": "Mantığın temel kavramsal çerçevesini yapılandırabilme",
+              "surec_bilesenleri": [
+                "Tümce, önerme, yargı ve çıkarım kavramlarını inceleyerek aralarındaki mantıksal ilişkileri ortaya koyar.",
+                "Mantığın temel kavramsal çerçevesini bir bütün olarak ortaya koyar."
+              ],
+              "icerik_cercevesi": [
+                "Bilim Olarak Mantığın Neliği",
+                "Mantığın Tarihsel Gelişiminin Temel Evreleri",
+                "Mantığın Temel Kavramsal Çerçevesi"
+              ],
+              "anahtar_kavramlar": [
+                "formel",
+                "formelleştirme",
+                "informel mantık",
+                "mantık sistemleri",
+                "önerme",
+                "tümce",
+                "yargı"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EKİM",
+                  "hafta": "4. Hafta: 5-9 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Tümce, önerme, yargı ve çıkarım kavramlarını inceleyerek aralarındaki mantıksal ilişkileri ortaya koyar.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EKİM",
+                  "hafta": "5. Hafta: 12-16 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Mantığın temel kavramsal çerçevesini bir bütün olarak ortaya koyar.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "2",
+          "uniteAdi": "Aristotelesçi Mantık",
+          "dersSaati": 16,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "MAN.2.1",
+              "baslik": "Aristotelesçi mantıkta terimlere ilişkin özellikleri özetleyebilme",
+              "surec_bilesenleri": [
+                "Terimin anlamını çözümler.",
+                "Terim çeşitlerini sınıflandırır.",
+                "Terimleri içlem-kaplam özellikleri açısından yorumlar."
+              ],
+              "icerik_cercevesi": [
+                "Aristotelesçi Mantıkta Kavram ve Terim",
+                "Aristotelesçi Mantıkta Önerme",
+                "Aristotelesçi Mantıkta Çıkarım"
+              ],
+              "anahtar_kavramlar": [
+                "çıkarım",
+                "kavram",
+                "kıyas",
+                "önerme",
+                "terim"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "EKİM",
+                  "hafta": "6. Hafta: 19-23 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Terimin anlamını çözümler.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "EKİM",
+                  "hafta": "7. Hafta: 26-30 Ekim",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Terim çeşitlerini sınıflandırır. c) Terimleri içlem-kaplam özellikleri açısından yorumlar.",
+                  "belirliGunHafta": "Cumhuriyet Bayramı (29 Ekim)"
+                }
+              ]
+            },
+            {
+              "kod": "MAN.2.2",
+              "baslik": "Önermeleri çözümleyebilme",
+              "surec_bilesenleri": [
+                "Önermelerin nitelik ve niceliklerini belirler.",
+                "Karşı olum/Aristoteles karesi aracılığı ile basit önermelerin parçaları arasındaki ilişkileri belirler."
+              ],
+              "icerik_cercevesi": [
+                "Aristotelesçi Mantıkta Kavram ve Terim",
+                "Aristotelesçi Mantıkta Önerme",
+                "Aristotelesçi Mantıkta Çıkarım"
+              ],
+              "anahtar_kavramlar": [
+                "çıkarım",
+                "kavram",
+                "kıyas",
+                "önerme",
+                "terim"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "",
+                  "hafta": "8. Hafta: 2-6 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Önermelerin nitelik ve niceliklerini belirler.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "KASIM",
+                  "hafta": "9. Hafta: 9-13 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Karşı olum/Aristoteles karesi aracılığı ile basit önermelerin parçaları arasındaki ilişkileri belirler.",
+                  "belirliGunHafta": "Atatürk Haftası (10-16 Kasım)"
+                },
+                {
+                  "ay": "KASIM",
+                  "hafta": "10. Hafta: 23-27 Kasım",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Karşı olum/Aristoteles karesi aracılığı ile basit önermelerin parçaları arasındaki ilişkileri belirler.",
+                  "belirliGunHafta": "Öğretmenler Günü (24 Kasım)"
+                }
+              ]
+            },
+            {
+              "kod": "MAN.2.3",
+              "baslik": "Çıkarım çeşitlerini özetleyebilme",
+              "surec_bilesenleri": [
+                "Çıkarımın yapısını çözümler.",
+                "Çıkarım çeşitlerini sınıflandırır.",
+                "Çıkarımları geçerlilikleri açısından yorumlar."
+              ],
+              "icerik_cercevesi": [
+                "Aristotelesçi Mantıkta Kavram ve Terim",
+                "Aristotelesçi Mantıkta Önerme",
+                "Aristotelesçi Mantıkta Çıkarım"
+              ],
+              "anahtar_kavramlar": [
+                "çıkarım",
+                "kavram",
+                "kıyas",
+                "önerme",
+                "terim"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ARALIK",
+                  "hafta": "11. Hafta: 30 Kasım-4 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Çıkarımın yapısını çözümler.",
+                  "belirliGunHafta": "Dünya Engelliler Günü (3 Aralık)"
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "12. Hafta: 7-11 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Çıkarım çeşitlerini sınıflandırır.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ARALIK",
+                  "hafta": "13. Hafta: 14-18 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Çıkarımları geçerlilikleri açısından yorumlar.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "3",
+          "uniteAdi": "Sembolik Mantık",
+          "dersSaati": 16,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "MAN.3.1",
+              "baslik": "Aristotelesçi mantık ile sembolik mantığı temel özellikleri açısından karşılaştırabilme",
+              "surec_bilesenleri": [
+                "Aristotelesçi mantık ile sembolik mantığa ilişkin temel özellikleri belirler.",
+                "Aristotelesçi mantık ile sembolik mantığın benzer özelliklerini listeler.",
+                "Aristotelesçi mantık ile sembolik mantığın farklı özelliklerini listeler."
+              ],
+              "icerik_cercevesi": [
+                "Sembolik Mantığın Ayırt Edici Özellikleri ve Önemi",
+                "Eklemler Mantığı",
+                "Niceleme/Yüklemler Mantığı"
+              ],
+              "anahtar_kavramlar": [
+                "denetleme",
+                "eşdeğerlik",
+                "geçerlilik",
+                "tutarlılık"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ARALIK",
+                  "hafta": "14. Hafta: 21-25 Aralık",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Aristotelesçi mantık ile sembolik mantığa ilişkin temel özellikleri belirler. b) Aristotelesçi mantık ile sembolik mantığın benzer özelliklerini listeler. c) Aristotelesçi mantık ile sembolik mantığın farklı özelliklerini listeler.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "MAN.3.2",
+              "baslik": "Doğruluk değeri tablosunu çözümleyebilme",
+              "surec_bilesenleri": [
+                "Doğruluk değerleri tablosunun temel unsurlarını belirler.",
+                "Önermelerin doğruluk değerlerini doğruluk değeri tablosuyla belirler."
+              ],
+              "icerik_cercevesi": [
+                "Sembolik Mantığın Ayırt Edici Özellikleri ve Önemi",
+                "Eklemler Mantığı",
+                "Niceleme/Yüklemler Mantığı"
+              ],
+              "anahtar_kavramlar": [
+                "denetleme",
+                "eşdeğerlik",
+                "geçerlilik",
+                "tutarlılık"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ARALIK",
+                  "hafta": "15. Hafta: 28 Aralık -1Ocak",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Doğruluk değerleri tablosunun temel unsurlarını belirler. b) Önermelerin doğruluk değerlerini doğruluk değeri tablosuyla belirler.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "MAN.3.3",
+              "baslik": "Önermelerin tutarlılığını, geçerliliğini ve eşdeğerliğini doğruluk değeri tablosu ile denetleyebilme",
+              "surec_bilesenleri": [
+                "Önermeleri doğruluk değeri tablosuna dönüştürür.",
+                "Tutarlılık, geçerlilik ve eşdeğerlik kurallarını uygular.",
+                "Önermelerin tutarlılığı, geçerliliği ve eşdeğerliği hakkında yargıda bulunur."
+              ],
+              "icerik_cercevesi": [
+                "Sembolik Mantığın Ayırt Edici Özellikleri ve Önemi",
+                "Eklemler Mantığı",
+                "Niceleme/Yüklemler Mantığı"
+              ],
+              "anahtar_kavramlar": [
+                "denetleme",
+                "eşdeğerlik",
+                "geçerlilik",
+                "tutarlılık"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "OCAK",
+                  "hafta": "16. Hafta: 4-8 Ocak",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Önermeleri doğruluk değeri tablosuna dönüştürür.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "OCAK",
+                  "hafta": "17. Hafta: 11-15 Ocak",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Tutarlılık, geçerlilik ve eşdeğerlik kurallarını uygular. c) Önermelerin tutarlılığı, geçerliliği ve eşdeğerliği hakkında yargıda bulunur.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "MAN.3.4",
+              "baslik": "Çıkarımların geçerliliğini doğruluk değeri tablosu ile denetleyebilme",
+              "surec_bilesenleri": [
+                "Çıkarımları doğruluk değeri tablosuna dönüştürür.",
+                "Çıkarım kurallarını uygular.",
+                "Çıkarımların geçerliliği hakkında yargıda bulunur."
+              ],
+              "icerik_cercevesi": [
+                "Sembolik Mantığın Ayırt Edici Özellikleri ve Önemi",
+                "Eklemler Mantığı",
+                "Niceleme/Yüklemler Mantığı"
+              ],
+              "anahtar_kavramlar": [
+                "denetleme",
+                "eşdeğerlik",
+                "geçerlilik",
+                "tutarlılık"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "19. Hafta: 8-12 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Çıkarımları doğruluk değeri tablosuna dönüştürür.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "20. Hafta: 15-19 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Çıkarım kurallarını uygular. c) Çıkarımların geçerliliği hakkında yargıda bulunur.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "MAN.3.5",
+              "baslik": "Niceleme mantığını yorumlayabilme",
+              "surec_bilesenleri": [
+                "Niceleme mantığının sembolik ögelerini inceler.",
+                "Günlük dil ifadesini niceleme mantığının formel diline dönüştürür.",
+                "Niceleme mantığının formel dilinde verilen ifadeleri günlük dilde anlamlı bir biçimde yeniden ifade eder."
+              ],
+              "icerik_cercevesi": [
+                "Sembolik Mantığın Ayırt Edici Özellikleri ve Önemi",
+                "Eklemler Mantığı",
+                "Niceleme/Yüklemler Mantığı"
+              ],
+              "anahtar_kavramlar": [
+                "denetleme",
+                "eşdeğerlik",
+                "geçerlilik",
+                "tutarlılık"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "ŞUBAT",
+                  "hafta": "21. Hafta: 22-26 Şubat",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Niceleme mantığının sembolik ögelerini inceler. b) Günlük dil ifadesini niceleme mantığının formel diline dönüştürür.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "22. Hafta: 1-5 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Niceleme mantığının formel dilinde verilen ifadeleri günlük dilde anlamlı bir biçimde yeniden ifade eder.",
+                  "belirliGunHafta": "İstiklâl Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma Günü (12 Mart)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uniteNo": "4",
+          "uniteAdi": "Mantık Çeşitleri ve Uygulamaları",
+          "dersSaati": 26,
+          "ogrenmeCiktilari": [
+            {
+              "kod": "MAN.4.1",
+              "baslik": "Mantık ve bilgi alanları arasındaki ilişkiyi yapılandırabilme",
+              "surec_bilesenleri": [
+                "Felsefe, matematik, bilim ve teknolojinin konularını ve özelliklerini inceleyerek mantık ile ilişkisini ortaya koyar.",
+                "Mantığın bilgi alanları ile ilişkisini bir bütün olarak ortaya koyar."
+              ],
+              "icerik_cercevesi": [
+                "Mantığın Uygulamalı Alanları",
+                "Mantık Çeşitleri",
+                "Mantığın Günlük Hayattaki Yeri"
+              ],
+              "anahtar_kavramlar": [
+                "paradoks",
+                "safsata"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MART",
+                  "hafta": "23. Hafta: 15-19 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Felsefe, matematik, bilim ve teknolojinin konularını ve özelliklerini inceleyerek mantık ile ilişkisini ortaya koyar. b) Mantığın bilgi alanları ile ilişkisini bir bütün olarak ortaya koyar.",
+                  "belirliGunHafta": "Türk Dünyası ve Toplulukları Haftası (16-22 Mart) Çanakkale Zaferi ve Şehitleri Anma Günü (18 Mart)"
+                }
+              ]
+            },
+            {
+              "kod": "MAN.4.2",
+              "baslik": "Mantık çeşitlerini karşılaştırabilme",
+              "surec_bilesenleri": [
+                "Mantık çeşitlerinin özelliklerini belirler.",
+                "Mantık çeşitlerinin belirlenen özellikleri üzerinden benzerliklerini listeler.",
+                "Mantık çeşitlerinin belirlenen özellikleri üzerinden farklılıklarını listeler."
+              ],
+              "icerik_cercevesi": [
+                "Mantığın Uygulamalı Alanları",
+                "Mantık Çeşitleri",
+                "Mantığın Günlük Hayattaki Yeri"
+              ],
+              "anahtar_kavramlar": [
+                "paradoks",
+                "safsata"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MART",
+                  "hafta": "24. Hafta: 22-26 Mart",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Mantık çeşitlerinin özelliklerini belirler.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MART",
+                  "hafta": "25. Hafta: 29 Mart-2 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "b) Mantık çeşitlerinin belirlenen özellikleri üzerinden benzerliklerini listeler. c) Mantık çeşitlerinin belirlenen özellikleri üzerinden farklılıklarını listeler.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "MAN.4.3",
+              "baslik": "Verilen bir görüşü mantıksal açıdan tartışabilme",
+              "surec_bilesenleri": [
+                "Verilen görüş hakkında mantıksal temellendirme yapar.",
+                "Verilen görüşteki çelişkileri/tutarsızlıkları ve/veya geçersizlikleri tespit eder.",
+                "Verilen görüşleri çürütür veya kabul eder."
+              ],
+              "icerik_cercevesi": [
+                "Mantığın Uygulamalı Alanları",
+                "Mantık Çeşitleri",
+                "Mantığın Günlük Hayattaki Yeri"
+              ],
+              "anahtar_kavramlar": [
+                "paradoks",
+                "safsata"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "NİSAN",
+                  "hafta": "26. Hafta: 5-9 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Verilen görüş hakkında mantıksal temellendirme yapar. b) Verilen görüşteki çelişkileri/tutarsızlıkları ve/veya geçersizlikleri tespit eder. c) Verilen görüşleri çürütür veya kabul eder.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "NİSAN",
+                  "hafta": "27. Hafta: 12-16 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Verilen görüş hakkında mantıksal temellendirme yapar. b) Verilen görüşteki çelişkileri/tutarsızlıkları ve/veya geçersizlikleri tespit eder. c) Verilen görüşleri çürütür veya kabul eder.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "MAN.4.4",
+              "baslik": "İhtiyaçların karşılanmasında ve sorunların çözümünde mantıksal açıdan karar verebilme",
+              "surec_bilesenleri": [
+                "İhtiyaçların karşılanmasında ve sorunların çözümünde mantıksal açıdan karar vermeyi amaç olarak belirler.",
+                "Karar verme sürecinde bilgi toplar.",
+                "Edindiği bilgilerden hareketle alternatif önermeler oluşturur.",
+                "Oluşturduğu önermeleri mantıksal açıdan denetler.",
+                "Denetlemeler sonucunda ulaştığı yapıya dayalı seçim yapar.",
+                "Kararının sonuçlarını yansıtır."
+              ],
+              "icerik_cercevesi": [
+                "Mantığın Uygulamalı Alanları",
+                "Mantık Çeşitleri",
+                "Mantığın Günlük Hayattaki Yeri"
+              ],
+              "anahtar_kavramlar": [
+                "paradoks",
+                "safsata"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "NİSAN",
+                  "hafta": "28. Hafta: 19-23 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) İhtiyaçların karşılanmasında ve sorunların çözümünde mantıksal açıdan karar vermeyi amaç olarak belirler. b) Karar verme sürecinde bilgi toplar. c) Edindiği bilgilerden hareketle alternatif önermeler oluşturur. ç) Oluşturduğu önermeleri mantıksal açıdan denetler. d) Denetlemeler sonucunda ulaştığı yapıya dayalı seçim yapar. e) Kararının sonuçlarını yansıtır.",
+                  "belirliGunHafta": "Ulusal Egemenlik Çocuk Bayramı (23 Nisan)"
+                },
+                {
+                  "ay": "NİSAN",
+                  "hafta": "29. Hafta: 26-30 Nisan",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) İhtiyaçların karşılanmasında ve sorunların çözümünde mantıksal açıdan karar vermeyi amaç olarak belirler. b) Karar verme sürecinde bilgi toplar. c) Edindiği bilgilerden hareketle alternatif önermeler oluşturur. ç) Oluşturduğu önermeleri mantıksal açıdan denetler. d) Denetlemeler sonucunda ulaştığı yapıya dayalı seçim yapar. e) Kararının sonuçlarını yansıtır.",
+                  "belirliGunHafta": "Kût'ül Amâre Zaferi (29 Nisan)"
+                }
+              ]
+            },
+            {
+              "kod": "MAN.4.5",
+              "baslik": "Akıl yürütme biçimlerini verilen günlük hayat durumlarında uygulayabilme",
+              "surec_bilesenleri": [
+                "Parçadan bütüne ilişki kurarak sonuca varır.",
+                "Genelden genele ilişki kurarak akıl yürütür.",
+                "Genelden özele ilişki kurarak akıl yürütür.",
+                "Özelden özele ilişki kurarak akıl yürütür."
+              ],
+              "icerik_cercevesi": [
+                "Mantığın Uygulamalı Alanları",
+                "Mantık Çeşitleri",
+                "Mantığın Günlük Hayattaki Yeri"
+              ],
+              "anahtar_kavramlar": [
+                "paradoks",
+                "safsata"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MAYIS",
+                  "hafta": "30. Hafta: 3-7 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Parçadan bütüne ilişki kurarak sonuca varır. b) Genelden genele ilişki kurarak akıl yürütür.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "MAYIS",
+                  "hafta": "31. Hafta: 10-14 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "c) Genelden özele ilişki kurarak akıl yürütür. ç) Özelden özele ilişki kurarak akıl yürütür.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            },
+            {
+              "kod": "MAN.4.6",
+              "baslik": "Örnek metinleri mantıksal açıdan denetleyebilme",
+              "surec_bilesenleri": [
+                "Örnek metinlerde geçen yargıları önermelere dönüştürerek ifade eder.",
+                "Örnek metinlerden elde ettiği önermelere tutarlılık ve geçerlilik kurallarını uygular.",
+                "Tutarlılık ve geçerlilik kuralları bağlamında örnek metinler hakkında yargıda bulunur."
+              ],
+              "icerik_cercevesi": [
+                "Mantığın Uygulamalı Alanları",
+                "Mantık Çeşitleri",
+                "Mantığın Günlük Hayattaki Yeri"
+              ],
+              "anahtar_kavramlar": [
+                "paradoks",
+                "safsata"
+              ],
+              "haftalikDagilim": [
+                {
+                  "ay": "MAYIS",
+                  "hafta": "32. Hafta: 17-21 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Örnek metinlerde geçen yargıları önermelere dönüştürerek ifade eder. b) Örnek metinlerden elde ettiği önermelere tutarlılık ve geçerlilik kurallarını uygular. c) Tutarlılık ve geçerlilik kuralları bağlamında örnek metinler hakkında yargıda bulunur.",
+                  "belirliGunHafta": "Atatürkü Anma ve Gençlik ve Spor Bayramı (19 Mayıs)"
+                },
+                {
+                  "ay": "MAYIS",
+                  "hafta": "33. Hafta: 24-28 Mayıs",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Örnek metinlerde geçen yargıları önermelere dönüştürerek ifade eder. b) Örnek metinlerden elde ettiği önermelere tutarlılık ve geçerlilik kurallarını uygular. c) Tutarlılık ve geçerlilik kuralları bağlamında örnek metinler hakkında yargıda bulunur.",
+                  "belirliGunHafta": "İstanbulu'un Fethi (29 Mayıs)"
+                },
+                {
+                  "ay": "HAZİRAN",
+                  "hafta": "34. Hafta: 31 Mayıs-4 Haziran",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Örnek metinlerde geçen yargıları önermelere dönüştürerek ifade eder. b) Örnek metinlerden elde ettiği önermelere tutarlılık ve geçerlilik kurallarını uygular. c) Tutarlılık ve geçerlilik kuralları bağlamında örnek metinler hakkında yargıda bulunur.",
+                  "belirliGunHafta": ""
+                },
+                {
+                  "ay": "HAZİRAN",
+                  "hafta": "35. Hafta: 7-11 Haziran",
+                  "dersSaati": "2",
+                  "surecBileseniIsaretlenen": "a) Örnek metinlerde geçen yargıları önermelere dönüştürerek ifade eder. b) Örnek metinlerden elde ettiği önermelere tutarlılık ve geçerlilik kurallarını uygular. c) Tutarlılık ve geçerlilik kuralları bağlamında örnek metinler hakkında yargıda bulunur.",
+                  "belirliGunHafta": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dogrulamaNotu": "Kazanım kodları/metinleri MEB TYMM 2026 öğretim programından, haftalık dağılım MEB 2026-2027 çerçeve yıllık planından alınmış ve iki kaynak birbiriyle çapraz doğrulanmıştır. cercevePlanMevcut=false olan seviyeler için sitede 'resmi çerçeve plan henüz yok' uyarısı gösterilmeli, haftalık plan üretilmemelidir. Eğilimler, SDB, değerler, okuryazarlık becerileri, farklılaştırma ve örnek etkinlik metinleri bu dosyada yok."
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Değerlendirme / Rubrik — Sosyal Bilimler Öğretmen Araçları</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside id="sidebar" aria-label="Modül gezinmesi"></aside>
+    <div class="app-main">
+      <main id="sayfa-icerik" class="sayfa-icerik"></main>
+    </div>
+  </div>
+
+  <script src="js/state.js"></script>
+  <script src="js/data-loader.js"></script>
+  <script src="js/belge-bilgisi.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/module-page.js"></script>
+  <script src="js/modules/degerlendirme.js"></script>
+  <script>
+    Sidebar.init("degerlendirme");
+    ModulePage.baslat(DegerlendirmeModule.render);
+  </script>
+</body>
+</html>
