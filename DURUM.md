@@ -1,3 +1,38 @@
+## 28 Eylül 2026 — PR #2 birleştirme öncesi inceleme ve test düzeltmesi
+
+- Dal: feat/daily-plan-pilot (başlangıç `3d37ec6`). main o sırada `d6de318` idi (yalnız `onizleme/pr-2/` eklemişti); yerel deneme birleştirmesinde çakışma çıkmadı ve `npm test` üç aşamasıyla geçti.
+- Değişiklik: `test-daily-plan.js` seviyeyi `data.seviyeler[1]` indeksiyle değil `etiket` ('10. Sınıf' / '11. Sınıf') ile buluyor; bulunamazsa test açıkça düşer. Seviye sırası ters çevrilmiş Felsefe verisiyle test yeniden çalıştırıldı, geçti. Uygulama kodu değişmedi.
+- Yapılmadı: PR birleştirilmedi, yayın yapılmadı. Mobil görünüm ve yazdırma sayfalaması hâlâ gerçek ekranda kontrol edilmedi. MEB çalışma kitabındaki B6:G6 eşlemesi ve pedagojik içerik bu oturumda bağımsız doğrulanmadı; önceki kayda dayanır.
+- Birleştirme sonrası yapılacaklar: `onizleme/pr-2/` klasörünün kaldırılması (tam site kopyası; Pages'te yayında kalır), yayın/deploy kaydının eklenmesi, canlı kontrol.
+- Bekleyen tasarım borcu: günlük plan içeriği `gunluk-plan.js` içindeki `PILOT` nesnesinde; ikinci hafta/ders eklenmeden önce veri dosyasına taşınması değerlendirilmeli (öneri, karar değil).
+
+---
+
+## 28 Eylül 2026 — Anadolu Lisesi kapsam düzeltmesi
+
+- Kullanıcı başlangıcın Anadolu Lisesi olmasını istedi. PR #2 / feat/daily-plan-pilot üzerinde uygulandı; önceki Fen Lisesi kapsamı geçersizdir.
+- Görünür okul türü, açıklamalar, README ve yerel kayıt anahtarı AL olarak güncellendi. FL yıldızlı zenginleştirme uyarıları çıkarıldı; eski FL taslak kayıtları AL planına otomatik taşınmaz.
+- Resmî kaynak: https://tymm.meb.gov.tr/assets/file/felsefe-dersi-taslak-yillik-planlar_20260827_123428_620.zip içindeki ANADOLU LİSESİ FELSEFE 10,11. SINIF TASLAK YILLIK PLAN çalışma kitabı.
+- 11. SINIF, B6:G6: 3. hafta 28 Eylül–2 Ekim, 2 saat, Çevre Sorunları ve Felsefe, FEL.11.1.2 ve (a) argüman çözümleme. Uygulamadaki eşleme bu satırla örtüşüyor; çıktı ve süreyi değiştirmek gerekmedi. Kontrol yalnız bu haftayla sınırlıdır.
+- Günlük plan davranış testi AL etiketi ve FL ifadelerinin yokluğunu da kontrol eder. Mevcut ekran/baskı görsel kontrolü eksikliği sürüyor.
+- Ana dal ve canlı yayın değiştirilmedi. Bu not ve kod aynı PR güncellemesine dahildir.
+
+---
+
+## 28 Eylül 2026 — Günlük Plan ilk örneği
+
+- Kullanıcı öneriyi onayladı ve devam edilmesini istedi. Başlangıç: main `5b57e4ca1c597b7c17819bf32d750179f9e5bfa3`.
+- Dal: feat/daily-plan-pilot. Yeni sayfa/modül, ana sayfa kartı, yan menü, baskı stilleri ve davranış testi eklendi.
+- Kapsam: Felsefe 11 / Fen Lisesi / 3. hafta / FEL.11.1.2(a). 2 × 40 dakika, düzenlenebilir öğretmen-öğrenci akışı, argüman kartları, değerlendirme, farklılaştırma, notlar ve imzalar. Diğer ders/sınıflarda örnek gösterilmez.
+- Kaynak: kullanıcının felsefe-fl-11-3-hafta-gunluk-plan.docx örneği; https://tymm.meb.gov.tr/felsefe-dersi/unite/66 ve mevcut ders JSON'u. Etkinlikler öğretmen uyarlaması olarak etiketlendi; SDB ve OB karışıklığı taşınmadı.
+- Sınır: FL yıldızlı zenginleştirme eşlemesi henüz tamamlanmadı. Bu paket bütün haftalar/dersler için üretici veya tam FL uyum onayı değildir.
+- npm test: seçim regresyonu, günlük plan davranışları ve mevcut modül render testleri başarı çıktısı verdi. git diff --check temiz.
+- Gerçek ekran kontrolü denendi; cloud browser yerel http://127.0.0.1:8765 adresini ERR_BLOCKED_BY_CLIENT ile açmadı. Mobil ekran ve baskı sayfalaması doğrulanmadı. Yazdırma düğmesinin çağrısı test edildi; görsel çıktı testi yapılmış sayılmaz.
+- Kod inceleme dalına/taslak PR'a aktarılmak üzere hazırlandı; main ve canlı site bu geliştirmeyle değiştirilmedi. Uzak commit/PR sonucu oturum kapanışında bildirilir.
+- Sıradaki iş: ilk örneğin içerik incelemesi ve erişilebilir önizlemede masaüstü/mobil/baskı kontrolü. Yeni dağıtım onayı verilmedi.
+
+---
+
 ## 28 Eylül 2026 — Yayın tamamlandı
 
 - Kullanıcı canlıya almayı onayladı. PR #1 squash merge edildi: `ed7e9a21ac2ef3a9f754fb4068e797ea8f376228`.

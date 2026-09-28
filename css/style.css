@@ -849,3 +849,22 @@ button:focus-visible {
 .serif {
   font-family: var(--font-serif);
 }
+
+/* Günlük plan: düzenlenebilir belge, mobilde tek sütun. */
+.gp { max-width: 1000px; overflow-wrap: anywhere; }
+.gp-kapsam { color: var(--accent); font-weight: 600; }
+.gp section { margin-block: 1.3rem; }
+.gp-edit { white-space: pre-wrap; min-height: 2.5em; border: 1px solid var(--border); border-radius: 6px; padding: .7rem; line-height: 1.65; }
+.gp-edit:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+.gp-asama { border-top: 1px solid var(--border); padding-top: .8rem; }
+.gp-asama strong { display: block; margin-top: .7rem; }
+.gp-yardim { color: var(--muted); font-size: .9rem; }
+.gp-print { padding: .8rem 1.2rem; margin-block: 1rem; }
+@media print {
+  .gp { max-width: none; font-size: 10pt; }
+  .gp-yardim, .gp-print { display: none !important; }
+  .gp-edit { border: none; padding: 0; min-height: 1em; color: #000; }
+  .gp h2, .gp h3, .gp strong { break-after: avoid; }
+  .gp section { margin-block: .7rem; }
+  .gp .imza-alani { break-inside: avoid; }
+}

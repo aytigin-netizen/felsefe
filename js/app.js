@@ -6,6 +6,7 @@
 
 const PAGE_HREF = {
   "yillik-plan": "yillik-plan.html",
+  "gunluk-plan": "gunluk-plan.html",
   "unite-plani": "unite-plani.html",
   "calisma-kagidi": "calisma-kagidi.html",
   "degerlendirme": "degerlendirme.html",
@@ -24,6 +25,7 @@ const App = (() => {
   // Sidebar'daki NAV listesiyle aynı sırada tutulur.
   const MODULES = [
     { id: "yillik-plan", label: "Yıllık Plan", hazir: true },
+    { id: "gunluk-plan", label: "Günlük Plan", hazir: true },
     { id: "unite-plani", label: "Ünite Planı", hazir: true },
     { id: "calisma-kagidi", label: "Çalışma Kâğıdı", hazir: true },
     { id: "degerlendirme", label: "Değerlendirme / Rubrik", hazir: true },

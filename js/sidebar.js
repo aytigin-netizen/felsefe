@@ -7,6 +7,7 @@ const Sidebar = (() => {
   const NAV = [
     { key: "home", href: "index.html", label: "Ana Sayfa" },
     { key: "yillik-plan", href: "yillik-plan.html", label: "Yıllık Plan", hazir: true },
+    { key: "gunluk-plan", href: "gunluk-plan.html", label: "Günlük Plan", hazir: true },
     { key: "unite-plani", href: "unite-plani.html", label: "Ünite Planı", hazir: true },
     { key: "calisma-kagidi", href: "calisma-kagidi.html", label: "Çalışma Kâğıdı", hazir: true },
     { key: "degerlendirme", href: "degerlendirme.html", label: "Değerlendirme / Rubrik", hazir: true },
