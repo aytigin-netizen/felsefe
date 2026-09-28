@@ -1,8 +1,8 @@
-// İlk içerik paketi: Felsefe 11 / Fen Lisesi / 3. hafta.
+// İlk içerik paketi: Felsefe 11 / Anadolu Lisesi / 3. hafta.
 // Yeni dersler aynı render yapısına bağımsız içerik paketleriyle eklenebilir.
 const GunlukPlanModule = (() => {
   const PILOT = {
-    id: 'fel-11-fl-2026-h3', ders: 'Felsefe', seviye: '11. Sınıf',
+    id: 'fel-11-al-2026-h3', ders: 'Felsefe', seviye: '11. Sınıf',
     kod: 'FEL.11.1.2', hafta: '3. Hafta: 28 Eylül-2 Ekim',
     alanlar: [
       ['tarih', 'Ders tarihi', '28.09.2026'],
@@ -16,7 +16,7 @@ const GunlukPlanModule = (() => {
       ['kartlar', 'Argüman kartları — öğretmen uyarlaması', 'A — Akarsudaki kirlilik insanların sağlığını ve geçim kaynaklarını tehdit eder. İnsanların sağlığını ve geçimini korumalıyız. Bu nedenle akarsuyu kirletmemeliyiz.\n\nB — Akarsudaki canlıların yaşamı, insanlara yararlı olup olmamalarından bağımsız olarak değerlidir. Değerli olan canlı yaşamını korumalıyız. Bu nedenle akarsuyu kirletmemeliyiz.\n\nC — Akarsu, canlı ve cansız unsurlarıyla birbirine bağlı bir ekosistemdir. Ekosistemin bütünlüğünü korumalıyız. Bu nedenle akarsuyu kirletmemeliyiz.\n\nHer kart için: Sonuç nedir? Hangi gerekçelere dayanır? Değerin merkezinde ne vardır? Gerekçenin güçlü yanı ve tartışmaya açık varsayımı nedir?'],
       ['kanit', 'Öğrenme kanıtları ve değerlendirme', 'Ürün: Üç yaklaşımı sonuç, gerekçe, değer odağı ve tartışmaya açık varsayım bakımından karşılaştıran tablo.\nÇıkış sorusu: “Bir orman, insanların dinlenmesini sağladığı için korunmalıdır.” argümanının sonucunu, gerekçesini ve etik yaklaşımını belirtin; bir örtük varsayımını açıklayın.\nKontrol: (1) Sonucu ayırır. (2) Gerekçeyi belirler. (3) Yaklaşımı gerekçesiyle eşleştirir. (4) Bir varsayımı veya sınırlılığı açıklar. Her ölçüt: bağımsız yaptı / destekle yaptı / henüz yapamadı.'],
       ['destek', 'Destekleme', 'İddia ve gerekçeleri iki renkle işaretletin. “Bu görüş … için korumayı savunuyor; çünkü …” cümle başlangıcını verin. Metni eşli okutun; gerekirse aynı çözümlemeyi sözlü kabul edin.'],
-      ['zengin', 'Zenginleştirme', 'Erken tamamlayanlar “İnsanlara hiçbir yararı olmayan bir türü korumalı mıyız?” örneğinde A ve B kartlarının varsayımlarını karşılaştırsın. Yeni bir metin yazmak yerine verilen argümanların hangi durumda ayrıştığını açıklasın. Bu etkinlik öğretmen uyarlamasıdır; FL için yıldızlı resmî etkinliklerin tamamlandığı iddiası taşımaz.'],
+      ['zengin', 'Zenginleştirme', 'Erken tamamlayanlar “İnsanlara hiçbir yararı olmayan bir türü korumalı mıyız?” örneğinde A ve B kartlarının varsayımlarını karşılaştırsın. Yeni bir metin yazmak yerine verilen argümanların hangi durumda ayrıştığını açıklasın. Bu etkinlik, öğrencinin ihtiyacına göre kullanılabilecek bir öğretmen uyarlamasıdır.'],
       ['sonraki', 'Sonraki derse hazırlık', 'Günlük hayattan bir çevre görüşü bulun; iddiasını ve gerekçesini işaretleyin. Görüş ve argüman oluşturma sonraki haftanın, kapsamlı felsefi metin yazma ise sonraki süreç bileşenlerinin konusudur.'],
       ['not', 'Ders sonrası öğretmen notu', ''],
     ],
@@ -36,12 +36,12 @@ const GunlukPlanModule = (() => {
     const add = (tag,text,parent=container) => {const n=document.createElement(tag); n.textContent=text; parent.append(n); return n;};
     add('h1','Günlük Plan');
     const p=paketler.find(p=>p.ders===subjectData.dersAdi && p.seviye===seviye.etiket);
-    if(!p){add('p','İlk örnek Felsefe 11. sınıf, Fen Lisesi, 3. hafta için hazırlandı. Diğer ders ve sınıfların içerikleri henüz eklenmedi.'); const a=add('a','Ders ve sınıf seçimine dön');a.href='index.html';return;}
+    if(!p){add('p','İlk örnek Felsefe 11. sınıf, Anadolu Lisesi, 3. hafta için hazırlandı. Diğer ders ve sınıfların içerikleri henüz eklenmedi.'); const a=add('a','Ders ve sınıf seçimine dön');a.href='index.html';return;}
     const unite=seviye.uniteler.find(u=>u.ogrenmeCiktilari.some(c=>c.kod===p.kod));
     const cikti=unite?.ogrenmeCiktilari.find(c=>c.kod===p.kod);
     const hafta=cikti?.haftalikDagilim.find(h=>h.hafta===p.hafta);
     if(!hafta){add('p','Örnek planın öğrenme çıktısı veya haftası mevcut kaynakla eşleşmiyor. Plan oluşturulmadı.');return;}
-    add('p','İlk örnek • Fen Lisesi • 2026–2027 • 3. hafta').className='gp-kapsam';
+    add('p','İlk örnek • Anadolu Lisesi • 2026–2027 • 3. hafta').className='gp-kapsam';
     add('p','Bu ders akışı öğretmen uyarlaması olarak hazırlanmıştır. Metinleri sınıfınıza göre düzenleyebilirsiniz. Değişiklikler yalnız bu tarayıcıda saklanır.').className='gp-yardim';
     container.append(BelgeBilgisiModule.ustBilgiOlustur(seviye.etiket));
     add('h2',unite.uniteAdi);
@@ -71,9 +71,9 @@ const GunlukPlanModule = (() => {
       }
     }
     add('h3','Kaynak ve kapsam');
-    add('p','Öğrenme çıktısı ve haftalık eşleme: uygulamanın felsefe veri kaynağı. Biçim ve FL/3. hafta bağlamı: öğretmenin sağladığı felsefe-fl-11-3-hafta-gunluk-plan.docx. Ders akışı, argüman kartları ve kontrol ölçütleri: bu örnek için hazırlanmış uyarlama.');
+    add('p','Öğrenme çıktısı ve haftalık eşleme: MEB 2026–2027 Anadolu Lisesi Felsefe taslak yıllık planı, 11. SINIF sayfası, B6:G6; uygulamanın felsefe veri kaynağıyla karşılaştırıldı. Biçim örneği: öğretmenin sağladığı günlük plan dosyası. Okul türü: Anadolu Lisesi. Ders akışı, argüman kartları ve kontrol ölçütleri: bu örnek için hazırlanmış uyarlama.');
     const a=add('a','TYMM — Çevre Sorunları ve Felsefe');a.href='https://tymm.meb.gov.tr/felsefe-dersi/unite/66';
-    add('p','Okul türüne özgü yıldızlı zenginleştirme eşlemesi bu pilotta tamamlanmamıştır; fen liselerine ilişkin bütün gerekliliklerin karşılandığı kabul edilmemelidir.');
+    const planKaynak=add('a','MEB — 2026–2027 taslak yıllık planlar');planKaynak.href='https://tymm.meb.gov.tr/taslak-cerceve-planlari/ortaogretim';
     container.append(BelgeBilgisiModule.imzaAlaniOlustur(['Ders Öğretmeni','Uygundur — Okul Müdürü']));
     const print=add('button','Yazdır / PDF olarak kaydet');print.type='button';print.className='gp-print';print.addEventListener('click',()=>window.print());
   }

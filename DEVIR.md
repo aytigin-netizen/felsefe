@@ -1,3 +1,14 @@
+## 28 Eylül 2026 — Anadolu Lisesi kapsam düzeltmesi
+
+- Kullanıcı başlangıcın Anadolu Lisesi olmasını istedi. PR #2 / feat/daily-plan-pilot üzerinde uygulandı; önceki Fen Lisesi kapsamı geçersizdir.
+- Görünür okul türü, açıklamalar, README ve yerel kayıt anahtarı AL olarak güncellendi. FL yıldızlı zenginleştirme uyarıları çıkarıldı; eski FL taslak kayıtları AL planına otomatik taşınmaz.
+- Resmî kaynak: https://tymm.meb.gov.tr/assets/file/felsefe-dersi-taslak-yillik-planlar_20260827_123428_620.zip içindeki ANADOLU LİSESİ FELSEFE 10,11. SINIF TASLAK YILLIK PLAN çalışma kitabı.
+- 11. SINIF, B6:G6: 3. hafta 28 Eylül–2 Ekim, 2 saat, Çevre Sorunları ve Felsefe, FEL.11.1.2 ve (a) argüman çözümleme. Uygulamadaki eşleme bu satırla örtüşüyor; çıktı ve süreyi değiştirmek gerekmedi. Kontrol yalnız bu haftayla sınırlıdır.
+- Günlük plan davranış testi AL etiketi ve FL ifadelerinin yokluğunu da kontrol eder. Mevcut ekran/baskı görsel kontrolü eksikliği sürüyor.
+- Ana dal ve canlı yayın değiştirilmedi. Bu not ve kod aynı PR güncellemesine dahildir.
+
+---
+
 ## 28 Eylül 2026 — Günlük Plan ilk örneği
 
 - Kullanıcı öneriyi onayladı ve devam edilmesini istedi. Başlangıç: main `5b57e4ca1c597b7c17819bf32d750179f9e5bfa3`.

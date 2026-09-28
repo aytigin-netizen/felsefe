@@ -5,7 +5,7 @@ const w=dom.window;let prints=0;w.print=()=>prints++;
 for(const [p,n] of [['js/belge-bilgisi.js','BelgeBilgisiModule'],['js/modules/gunluk-plan.js','GunlukPlanModule']])w.eval(fs.readFileSync(p,'utf8')+`\nwindow.${n}=${n};`);
 const data=JSON.parse(fs.readFileSync('data/felsefe_veri_kaynagi.json','utf8'));const root=w.document.getElementById('root');
 const render=()=>w.GunlukPlanModule.render(root,data,data.seviyeler[1]);render();
-assert.match(root.textContent,/FEL.11.1.2/);assert.match(root.textContent,/a\) Çevre/);
+assert.match(root.textContent,/Anadolu Lisesi/);assert.doesNotMatch(root.textContent,/Fen Lisesi|FL için|yıldızlı/);assert.match(root.textContent,/FEL.11.1.2/);assert.match(root.textContent,/a\) Çevre/);
 assert.equal([...root.querySelectorAll('.gp-asama h3')].reduce((sum,h)=>sum+Number(h.textContent.match(/· (\d+)/)[1]),0),80);
 assert.equal(root.querySelectorAll('.gp-asama').length,7);
 const note=root.querySelector('[aria-label="Ders sonrası öğretmen notu"]');note.textContent='<img src=x onerror=alert(1)>\nÖğretmen notu';note.dispatchEvent(new w.Event('input'));render();
@@ -14,5 +14,5 @@ root.querySelector('.gp-print').click();assert.equal(prints,1);
 w.GunlukPlanModule.render(root,data,data.seviyeler[0]);assert.equal(root.querySelectorAll('[contenteditable]').length,0);assert.match(root.textContent,/henüz eklenmedi/);
 for(const name of ['mantik','psikoloji','sosyoloji']){const d=JSON.parse(fs.readFileSync(`data/${name}_veri_kaynagi.json`));w.GunlukPlanModule.render(root,d,d.seviyeler[0]);assert.equal(root.querySelectorAll('.gp-print').length,0);}
 const missing=JSON.parse(JSON.stringify(data.seviyeler[1]));missing.uniteler=[];w.GunlukPlanModule.render(root,data,missing);assert.match(root.textContent,/eşleşmiyor/);
-w.localStorage.setItem('cds-gunluk-plan:v1:fel-11-fl-2026-h3','null');render();assert.ok(root.querySelector('.gp-print'));
+w.localStorage.setItem('cds-gunluk-plan:v1:fel-11-al-2026-h3','null');render();assert.ok(root.querySelector('.gp-print'));
 dom.window.close();console.log('Günlük Plan: hedef/hafta, 80 dk, kayıt, güvenli metin, yazdırma ve kapsam kontrolleri başarılı.');

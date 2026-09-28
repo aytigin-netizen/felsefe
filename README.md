@@ -110,8 +110,8 @@ birinde veri şemasıyla uyuşmayan bir hata olup olmadığını hızlıca göst
 
 ## Günlük Plan ilk örneği
 
-`gunluk-plan.html` ve `js/modules/gunluk-plan.js`: Felsefe 11. sınıf, Fen Lisesi, 2026–2027 üçüncü hafta. Ortak ders/sınıf seçimi kullanılır. Şimdilik yalnız bu içerik paketi vardır; diğer seçimler açık kapsam mesajı gösterir. Alanlar düzenlenebilir ve bu tarayıcıda saklanır. Yazdır/PDF düğmesi bulunur; DOCX üretimi yoktur.
+`gunluk-plan.html` ve `js/modules/gunluk-plan.js`: Felsefe 11. sınıf, Anadolu Lisesi, 2026–2027 üçüncü hafta. Ortak ders/sınıf seçimi kullanılır. Şimdilik yalnız bu içerik paketi vardır; diğer seçimler açık kapsam mesajı gösterir. Alanlar düzenlenebilir ve bu tarayıcıda saklanır. Yazdır/PDF düğmesi bulunur; DOCX üretimi yoktur.
 
-80 dakikalık akış yalnız FEL.11.1.2(a) argüman çözümlemeye odaklanır. Öğrenme çıktısı/hafta mevcut JSON'dan, plan biçimi kullanıcının örneğinden gelir. Etkinlik ve değerlendirmeler öğretmen uyarlamasıdır. Fen Lisesi için yıldızlı zenginleştirme eşlemesi tamamlanmadan tam okul türü uyumu iddia edilmez.
+80 dakikalık akış yalnız FEL.11.1.2(a) argüman çözümlemeye odaklanır. Öğrenme çıktısı/hafta mevcut JSON'dan, plan biçimi kullanıcının örneğinden gelir. Etkinlik ve değerlendirmeler öğretmen uyarlamasıdır. MEB 2026–2027 Anadolu Lisesi taslak yıllık planının 11. SINIF sayfası B6:G6 aralığıyla 3. hafta, 2 saat, FEL.11.1.2 ve (a) süreç bileşeni doğrulandı. Fen ve sosyal bilimler liseleri bu ilk örneğin kapsamında değildir.
 
 `test-daily-plan.js`, hedef/hafta, süre toplamı, not saklama, metnin güvenli gösterimi, yazdırma çağrısı ve desteklenmeyen seçimleri kontrol eder. Gerçek ekran/baskı kontrolünün yerine geçmez.
