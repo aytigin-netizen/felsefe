@@ -10,8 +10,22 @@
     "type": "git",
     "url": "git+https://github.com/aytigin-netizen/felsefe.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "felsefe",
+    "sosyoloji",
+    "psikoloji",
+    "mantik",
+    "ogretmen",
+    "egitim",
+    "maarif-modeli",
+    "meb",
+    "yillik-plan",
+    "gunluk-plan",
+    "unite-plani",
+    "calisma-kagidi",
+    "rubrik"
+  ],
+  "author": "Aytekin YILMAZ",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/aytigin-netizen/felsefe/issues"

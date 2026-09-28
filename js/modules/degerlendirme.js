@@ -123,6 +123,7 @@ const DegerlendirmeModule = (() => {
     const tablo = document.createElement("table");
     tablo.className = "dg-rubrik-tablosu";
 
+    const thead = document.createElement("thead");
     const baslikSatiri = document.createElement("tr");
     const bosBaslik = document.createElement("th");
     bosBaslik.textContent = "Ölçüt";
@@ -132,29 +133,33 @@ const DegerlendirmeModule = (() => {
       th.textContent = `${sv.etiket} (${sv.anahtar})`;
       baslikSatiri.appendChild(th);
     }
-    tablo.appendChild(baslikSatiri);
+    thead.appendChild(baslikSatiri);
+    tablo.appendChild(thead);
 
+    const tbody = document.createElement("tbody");
     let satirVarMi = false;
 
     if (secenekler.kavramlar && (cikti.anahtar_kavramlar || []).length) {
       const baslik = `Kavram Hâkimiyeti: ${cikti.anahtar_kavramlar.join(", ")}`;
-      tablo.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "kavramlar", baslik, 0));
+      tbody.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "kavramlar", baslik, 0));
       satirVarMi = true;
     }
 
     if (secenekler.icerik) {
       (cikti.icerik_cercevesi || []).forEach((madde, idx) => {
-        tablo.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "icerik", madde, idx));
+        tbody.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "icerik", madde, idx));
         satirVarMi = true;
       });
     }
 
     if (secenekler.surec) {
       (cikti.surec_bilesenleri || []).forEach((ifade, idx) => {
-        tablo.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "surec", ifade, idx));
+        tbody.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "surec", ifade, idx));
         satirVarMi = true;
       });
     }
+
+    tablo.appendChild(tbody);
 
     return { tablo, satirVarMi };
   }

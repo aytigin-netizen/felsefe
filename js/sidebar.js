@@ -33,10 +33,12 @@ const Sidebar = (() => {
       const siniflar = ["sidebar-link"];
       if (aktif) siniflar.push("active");
       if (yakindaMi) siniflar.push("yakinda");
-      const durum = yakindaMi ? '<span class="sidebar-durum">Yakında</span>' : "";
-      const href = yakindaMi ? "#" : n.href;
       const aria = aktif ? ' aria-current="page"' : "";
-      return `<a href="${href}" class="${siniflar.join(" ")}"${aria}>${n.label}${durum}</a>`;
+      if (yakindaMi) {
+        const durum = '<span class="sidebar-durum">Yakında</span>';
+        return `<span class="${siniflar.join(" ")}" aria-disabled="true">${n.label}${durum}</span>`;
+      }
+      return `<a href="${n.href}" class="${siniflar.join(" ")}"${aria}>${n.label}</a>`;
     }).join("");
 
     mount.innerHTML =
