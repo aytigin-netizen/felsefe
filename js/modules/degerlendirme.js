@@ -35,7 +35,8 @@ const DegerlendirmeModule = (() => {
     },
     surec: {
       1: "İfadeyi açıklayamaz veya temel düzeyde hata içeren biçimde açıklar.",
-      2: "İfadeyi kısmen doğru ama eksik ya da yüzeysel biçimde açıklar.",
+      2: "İfadeyi kısmen d
+oğru ama eksik ya da yüzeysel biçimde açıklar.",
       3: "İfadeyi doğru ve tutarlı biçimde açıklar, bir örnekle destekler.",
       4: "İfadeyi derinlemesine analiz eder, farklı bakış açılarıyla ilişkilendirir ve özgün örneklerle destekler.",
     },
@@ -92,7 +93,8 @@ const DegerlendirmeModule = (() => {
 
     const baslikHucre = document.createElement("th");
     baslikHucre.scope = "row";
-    baslikHucre.className = "dg-olcut-baslik";
+    baslikHucre.className = "dg-
+olcut-baslik";
     baslikHucre.textContent = baslikMetni;
     satir.appendChild(baslikHucre);
 
@@ -123,6 +125,7 @@ const DegerlendirmeModule = (() => {
     const tablo = document.createElement("table");
     tablo.className = "dg-rubrik-tablosu";
 
+    const thead = document.createElement("thead");
     const baslikSatiri = document.createElement("tr");
     const bosBaslik = document.createElement("th");
     bosBaslik.textContent = "Ölçüt";
@@ -132,29 +135,34 @@ const DegerlendirmeModule = (() => {
       th.textContent = `${sv.etiket} (${sv.anahtar})`;
       baslikSatiri.appendChild(th);
     }
-    tablo.appendChild(baslikSatiri);
+    thead.appendChild(baslikSatiri);
+    tablo.appendChild(thead);
 
+    const tbody = document.createElement("tbody");
     let satirVarMi = false;
 
     if (secenekler.kavramlar && (cikti.anahtar_kavramlar || []).length) {
       const baslik = `Kavram Hâkimiyeti: ${cikti.anahtar_kavramlar.join(", ")}`;
-      tablo.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "kavramlar", baslik, 0));
+      tbody.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "kavramlar", baslik, 0));
       satirVarMi = true;
     }
 
     if (secenekler.icerik) {
-      (cikti.icerik_cercevesi || []).forEach((madde, idx) => {
-        tablo.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "icerik", madde, idx));
+      (cikti.icerik_cercevesi || []).forEach((madde, idx)
+ => {
+        tbody.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "icerik", madde, idx));
         satirVarMi = true;
       });
     }
 
     if (secenekler.surec) {
       (cikti.surec_bilesenleri || []).forEach((ifade, idx) => {
-        tablo.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "surec", ifade, idx));
+        tbody.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "surec", ifade, idx));
         satirVarMi = true;
       });
     }
+
+    tablo.appendChild(tbody);
 
     return { tablo, satirVarMi };
   }
@@ -200,7 +208,8 @@ const DegerlendirmeModule = (() => {
     container.innerHTML = "";
     const uniteler = DataLoader.getUniteler(seviye);
     if (!uniteler.length) {
-      const uyari = document.createElement("p");
+      const uyari = document.createE
+lement("p");
       uyari.className = "uyari";
       uyari.textContent = "Bu ders/sınıf düzeyi için tanımlı ünite bulunamadı.";
       container.appendChild(uyari);
@@ -248,7 +257,8 @@ const DegerlendirmeModule = (() => {
     container.appendChild(seciciAlani);
 
     const fieldset = document.createElement("fieldset");
-    fieldset.className = "dg-secenekler";
+    fieldset.className =
+ "dg-secenekler";
     const legend = document.createElement("legend");
     legend.textContent = "Rubriğe eklenecek ölçüt kaynakları";
     fieldset.appendChild(legend);
@@ -296,7 +306,8 @@ const DegerlendirmeModule = (() => {
         icerik: secenekKutulari.icerik.checked,
         surec: secenekKutulari.surec.checked,
       };
-      onizleme.appendChild(rubrikIcerigiOlustur(subjectData, unite, cikti, secenekler));
+      onizleme.appendChild(rubrikIcerigiOlustur(sub
+jectData, unite, cikti, secenekler));
     }
 
     function ciktiSeciciDoldur() {

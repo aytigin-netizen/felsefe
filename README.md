@@ -4,17 +4,46 @@ Felsefe, Sosyoloji, Psikoloji ve Mantık öğretmenleri için içerik-üretim ar
 Ortak menülü, çok sayfalı ve localStorage kullanan, backend'i olmayan bir statik site —
 FOPOS'tan bağımsız, ayrı bir proje.
 
+Canlı site: <https://aytigin-netizen.github.io/felsefe/>
+
+## Modüller
+
+| Modül | Durum | Ne yapar |
+| --- | --- | --- |
+| Yıllık Plan | ✅ | Seçili ders/seviye için haftalık dağılımlı, yazdırılabilir yıllık plan |
+| Günlük Plan | ✅ (ilk örnek) | Felsefe 11. sınıf, Anadolu Lisesi, 3. hafta örneği; düzenlenebilir akış |
+| Ünite Planı | ✅ | Ünite bazlı öğrenme çıktısı kartları + öğretmen notları |
+| Çalışma Kâğıdı | ✅ | Kazanımdan seçmeli bölümlü, yazdırılabilir çalışma kâğıdı |
+| Değerlendirme / Rubrik | ✅ | 4 seviyeli, düzenlenebilir rubrik |
+| Sunum | 🚧 | Geliştirme aşamasında |
+| Zümre Tutanağı | 🚧 | Geliştirme aşamasında |
+
 ## Dosya yapısı
 
 ```
 index.html                Ana sayfa: ders/seviye seçimi + modül menüsü
-css/style.css              Tüm stiller (erişilebilirlik, karanlık mod, reduced-motion destekli)
-js/data-loader.js          Veri yükleme katmanı: data/*.json dosyalarını fetch eder, önbelleğe alır
-js/belge-bilgisi.js        Okul/Öğretmen/Eğitim Yılı üst bilgisi + imza alanı (tüm modüllerde ortak)
-js/app.js                  Menü/seçim mantığı, modül grid'i, kazanım önizleme
-js/modules/                Çıktı üreticileri: yillik-plan.js, unite-plani.js, calisma-kagidi.js, degerlendirme.js
-data/*_veri_kaynagi.json   Her ders için kanonik veri (kazanım + haftalık plan birleşik)
-test-run.js                jsdom ile tüm modülleri her ders/seviye kombinasyonunda render edip hata arayan basit regresyon testi (`npm test`)
+yillik-plan.html          Yıllık Plan modülü
+gunluk-plan.html          Günlük Plan modülü
+unite-plani.html          Ünite Planı modülü
+calisma-kagidi.html       Çalışma Kâğıdı modülü
+degerlendirme.html        Değerlendirme / Rubrik modülü
+sunum.html                Sunum (yakında)
+zumre-tutanagi.html       Zümre Tutanağı (yakında)
+favicon.svg               Site simgesi
+css/style.css             Tüm stiller (erişilebilirlik, karanlık mod, reduced-motion destekli)
+js/state.js               Ders/seviye seçiminin localStorage tabanlı durumu
+js/data-loader.js         Veri yükleme katmanı: data/*.json dosyalarını fetch eder, önbelleğe alır
+js/sidebar.js             Her sayfada ortak yan menü
+js/belge-bilgisi.js       Okul/Öğretmen/Eğitim Yılı üst bilgisi + imza alanı
+js/app.js                 Ana sayfa: menü/seçim mantığı, modül grid'i, kazanım önizleme
+js/module-page.js         Modül sayfalarının ortak yükleme mantığı
+js/modules/               Çıktı üreticileri: yillik-plan.js, gunluk-plan.js, unite-plani.js,
+                          calisma-kagidi.js, degerlendirme.js
+data/*_veri_kaynagi.json  Her ders için kanonik veri (kazanım + haftalık plan birleşik)
+test-selection.js         Ders/seviye seçim davranışı regresyon testi
+test-daily-plan.js        Günlük plan davranış testi
+test-run.js               jsdom ile tüm modülleri her ders/seviye kombinasyonunda render edip
+                          hata arayan basit regresyon testi (npm test)
 ```
 
 ## Veri şeması
@@ -31,7 +60,7 @@ Her `data/<ders>_veri_kaynagi.json` dosyası şu yapıdadır:
       tatiller: [...],
       toplamDersSaatiYillik,      // sayı, veya kaynak taslakta net toplam yoksa null
       toplamOgrenmeCiktisiSayisi,
-      ozelPlanlamaHaftalari: [ { ay, hafta, tur } ],  // Okul Temelli Planlama / Sosyal Etkinlik — kazanıma bağlı değil
+      ozelPlanlamaHaftalari: [ { ay, hafta, tur } ],  // Okul Temelli Planlama / Sosyal Etkinlik
       uniteler: [
         {
           uniteNo, uniteAdi, dersSaati,
@@ -57,21 +86,23 @@ bağımsız MEB kaynağından çapraz doğrulanmıştır.
 okuryazarlık becerileri, farklılaştırma (zenginleştirme/destekleme) ve örnek
 etkinlik metinleri. Bunlar ihtiyaç oldukça aynı şemaya eklenecek.
 
-**Doğrulanmış ve düzeltilmiş veri (Felsefe 11. Sınıf ve Psikoloji):** Bu iki
-seviyede bazı haftaların `dersSaati` alanı, kaynak "taslak" çerçeve yıllık
-planında gerçekten boştu (aktarım hatası değil). Ankara Kız Anadolu İmam Hatip
-Lisesi'nin 2026-2027 **uygulanmış** ünitelendirilmiş yıllık planlarıyla (PDF)
-ve aynı okulun uygulanmış Psikoloji planıyla (Word) satır satır karşılaştırıldı:
-boş bırakılan haftaların tamamı gerçekte **2 ders saati**. Veri buna göre
-dolduruldu; Felsefe 10, Felsefe 11 ve Psikoloji'nin üçü de artık net ve
-tutarlı bir yıllık toplama sahip: **68 ders saati** (34 hafta × 2 saat).
-Farklı bir okulun (Ankara Şehit Oğuzhan Yaşar Anadolu Lisesi) uygulanmış
-Felsefe 10. Sınıf planıyla da çapraz kontrol edildi; aynı örüntüyü doğruluyor.
-Sosyoloji ve Mantık için aynı satır satır doğrulama henüz yapılmadı.
+## Veri doğrulama durumu ve bilinen uyumsuzluklar
 
-**Sosyoloji Dersi 2 (12. sınıf)** için resmi çerçeve yıllık plan henüz
-yayımlanmadığından `cercevePlanMevcut: false` — Yıllık Plan modülü bu seviyede
-devre dışı, diğer modüller etkilenmez.
+- **Felsefe 10/11 ve Psikoloji:** kaynak taslak planda gerçekten boş olan haftalar,
+  Ankara Kız Anadolu İmam Hatip Lisesi'nin 2026-2027 uygulanmış ünitelendirilmiş
+  yıllık planlarıyla satır satır karşılaştırılarak **2 ders saati** olarak dolduruldu.
+  Üç seviye de artık net ve tutarlı bir yıllık toplama sahip: **68 ders saati**
+  (34 hafta × 2 saat).
+- **Sosyoloji Dersi 2 (12. sınıf):** resmi çerçeve yıllık plan henüz yayımlanmadığından
+  `cercevePlanMevcut: false` — Yıllık Plan modülü bu seviyede devre dışı, diğer
+  modüller etkilenmez.
+- **⚠️ Mantık — bilinen 72/68 uyumsuzluğu:** `mantik_veri_kaynagi.json` dosyasında
+  `toplamDersSaatiYillik: 72` yazılıdır; ancak ünitelerin `dersSaati` alanları toplamı
+  **68**'dir (10 + 16 + 16 + 26). Bu 4 saatlik fark henüz çözülmedi: kaynak taslak
+  plandaki toplam mı, ünite dağılımı mı doğru bilinmiyor. Mantık verisi için de
+  Felsefe/Psikoloji'deki gibi satır satır kaynak karşılaştırması henüz yapılmadı.
+  Yıllık plan modülü bu uyumsuzluk nedeniyle Mantık'ta hafta/saat tutarlılık uyarısı
+  gösterebilir; veri düzeltilene kadar bilinen bir durumdur.
 
 ## Veri saklama
 
@@ -80,38 +111,29 @@ okul/öğretmen/eğitim yılı üst bilgisi yalnızca kullanılan tarayıcının
 `localStorage`'ında saklanır. Farklı bir tarayıcı veya cihazdan girildiğinde bu
 bilgiler görünmez; paylaşılan bir hesap/backend yoktur (proje kararı böyle).
 
-## Şu ana kadar yapılanlar
+## Test ve yayına alma
+
+```bash
+npm install && npm test
+```
+
+Statik dosyalardır; GitHub Pages ya da Netlify gibi herhangi bir statik yayın
+ortamında ek yapılandırma gerektirmeden çalışır. `index.html` giriş noktasıdır.
+Yayınlamadan önce `npm test` ile regresyon testini çalıştırmak önerilir.
+
+## Geliştirme durumu
 
 - [x] Veri katmanı: kazanım + yıllık plan verisi birleştirildi, doğrulandı
-- [x] Site iskeleti: dosya yapısı, veri yükleme katmanı, menü, modül grid'i
-- [x] Yıllık Plan modülü (`js/modules/yillik-plan.js`) — dersten bağımsız,
-      tamamen veri güdümlü; haftalık dağılımı ve tatilleri tablo hâlinde
-      gösterir, hafta sayısı/ders saati tutarlılığını kontrol edip uyarır,
-      okul/öğretmen/imza alanları içerir, yazdırma/PDF çıktısı destekler
-- [x] Ünite Planı modülü (`js/modules/unite-plani.js`) — ünite bazlı öğrenme
-      çıktısı kartları, öğretmen notları (localStorage), yazdırma
-- [x] Çalışma Kâğıdı modülü (`js/modules/calisma-kagidi.js`) — kavram, içerik
-      çerçevesi ve süreç bileşenlerinden seçmeli bölümlerle soru üretir
-- [x] Değerlendirme/Rubrik modülü (`js/modules/degerlendirme.js`) — 4 seviyeli,
-      düzenlenebilir (localStorage'a kaydedilen) rubrik üretir
-- [x] Temel regresyon testi (`test-run.js`, `npm test`) — dört dersin tüm
-      seviyelerinde dört modülü de hatasız render ettiğini doğrular
-- [ ] Sunum, Zümre Tutanağı — henüz yazılmadı
+- [x] Yıllık Plan, Ünite Planı, Çalışma Kâğıdı, Değerlendirme/Rubrik modülleri
+- [x] Günlük Plan ilk örneği (Felsefe 11 — Anadolu Lisesi, 3. hafta)
+- [x] Temel regresyon testleri (`npm test`)
+- [ ] Sunum, Zümre Tutanağı modülleri
 - [ ] Word/PowerPoint çıktısı — şu an yalnızca tarayıcı üzerinden yazdır/PDF var
-- [ ] Çalışma kâğıdı ve rubrik içerikleri hâlâ genel şablon düzeyinde; konuya
-      özgü örnek/görev metinleri zamanla eklenecek
+- [ ] Çalışma kâğıdı ve rubrik içerikleri genel şablon düzeyinde; konuya özgü
+      örnek/görev metinleri zamanla eklenecek
+- [ ] Mantık 72/68 ders saati uyumsuzluğunun kaynakla çözülmesi
+- [ ] Sosyoloji ve Mantık verilerinin satır satır kaynak karşılaştırması
 
-## Yayına alma
+## Lisans
 
-Statik dosyalardır; Netlify (ya da benzeri) üzerinde ek yapılandırma
-gerektirmeden yayınlanabilir. `index.html` giriş noktasıdır. Yayınlamadan önce
-`npm install && npm test` ile regresyon testini çalıştırmak, modüllerden
-birinde veri şemasıyla uyuşmayan bir hata olup olmadığını hızlıca gösterir.
-
-## Günlük Plan ilk örneği
-
-`gunluk-plan.html` ve `js/modules/gunluk-plan.js`: Felsefe 11. sınıf, Anadolu Lisesi, 2026–2027 üçüncü hafta. Ortak ders/sınıf seçimi kullanılır. Şimdilik yalnız bu içerik paketi vardır; diğer seçimler açık kapsam mesajı gösterir. Alanlar düzenlenebilir ve bu tarayıcıda saklanır. Yazdır/PDF düğmesi bulunur; DOCX üretimi yoktur.
-
-80 dakikalık akış yalnız FEL.11.1.2(a) argüman çözümlemeye odaklanır. Öğrenme çıktısı/hafta mevcut JSON'dan, plan biçimi kullanıcının örneğinden gelir. Etkinlik ve değerlendirmeler öğretmen uyarlamasıdır. MEB 2026–2027 Anadolu Lisesi taslak yıllık planının 11. SINIF sayfası B6:G6 aralığıyla 3. hafta, 2 saat, FEL.11.1.2 ve (a) süreç bileşeni doğrulandı. Fen ve sosyal bilimler liseleri bu ilk örneğin kapsamında değildir.
-
-`test-daily-plan.js`, hedef/hafta, süre toplamı, not saklama, metnin güvenli gösterimi, yazdırma çağrısı ve desteklenmeyen seçimleri kontrol eder. Gerçek ekran/baskı kontrolünün yerine geçmez.
+[ISC](LICENSE) © 2026 Aytekin YILMAZ

@@ -6,6 +6,10 @@
 // içermez; tamamen DataLoader'ın döndürdüğü kanonik veriye göre çalışır.
 
 const CalismaKagidiModule = (() => {
+  // Çalışma kâğıdına eklenen bölümler seçime göre sıralandığından başlık
+  // harfleri (A, B, C…) sabit değil, dahil edilen bölümlere göre atanır.
+  const BOLUM_HARFLERI = "ABCDEFGH";
+
   function cizgiOlustur(sayi) {
     const parca = document.createDocumentFragment();
     for (let i = 0; i < sayi; i++) {
@@ -33,12 +37,12 @@ const CalismaKagidiModule = (() => {
     return satir;
   }
 
-  function kavramlarBolumuOlustur(kavramlar) {
+  function kavramlarBolumuOlustur(kavramlar, harf) {
     const bolum = document.createElement("div");
     bolum.className = "cg-bolum";
 
     const baslik = document.createElement("h3");
-    baslik.textContent = "A) Kavramlar";
+    baslik.textContent = `${harf}) Kavramlar`;
     bolum.appendChild(baslik);
 
     const yonerge = document.createElement("p");
@@ -52,7 +56,8 @@ const CalismaKagidiModule = (() => {
       const terim = document.createElement("strong");
       terim.textContent = kavram;
       satir.appendChild(terim);
-      satir.appendChild(cizgiOlustur(1));
+      satir.
+appendChild(cizgiOlustur(1));
       bolum.appendChild(satir);
     }
     return bolum;
@@ -67,12 +72,12 @@ const CalismaKagidiModule = (() => {
     (madde) => `"${madde}" konusunu, bu üniteden başka bir kavramla ilişkilendiriniz.`,
   ];
 
-  function icerikBolumuOlustur(icerikMaddeleri, baslangicNo) {
+  function icerikBolumuOlustur(icerikMaddeleri, baslangicNo, harf) {
     const bolum = document.createElement("div");
     bolum.className = "cg-bolum";
 
     const baslik = document.createElement("h3");
-    baslik.textContent = "B) Konu Başlıkları";
+    baslik.textContent = `${harf}) Konu Başlıkları`;
     bolum.appendChild(baslik);
 
     const yonerge = document.createElement("p");
@@ -94,17 +99,18 @@ const CalismaKagidiModule = (() => {
     return bolum;
   }
 
-  function surecBolumuOlustur(surecMaddeleri, baslangicNo) {
+  function surecBolumuOlustur(surecMaddeleri, baslangicNo, harf) {
     const bolum = document.createElement("div");
     bolum.className = "cg-bolum";
 
     const baslik = document.createElement("h3");
-    baslik.textContent = "C) Açıklama ve Yorumlama";
+    baslik.textContent = `${harf}) Açıklama ve Yorumlama`;
     bolum.appendChild(baslik);
 
     const yonerge = document.createElement("p");
     yonerge.className = "cg-yonerge";
-    yonerge.textContent =
+    yonerge.textC
+ontent =
       "Aşağıdaki ifadeleri kendi cümlelerinizle açıklayıp birer örnekle destekleyiniz.";
     bolum.appendChild(yonerge);
 
@@ -141,19 +147,21 @@ const CalismaKagidiModule = (() => {
     kagit.appendChild(ogrenciBilgiAlaniOlustur());
 
     let sonNo = 1;
+    let harfIndex = 0;
     if (secenekler.kavramlar && (cikti.anahtar_kavramlar || []).length) {
-      kagit.appendChild(kavramlarBolumuOlustur(cikti.anahtar_kavramlar));
+      kagit.appendChild(kavramlarBolumuOlustur(cikti.anahtar_kavramlar, BOLUM_HARFLERI[harfIndex++]));
     }
     if (secenekler.icerik && (cikti.icerik_cercevesi || []).length) {
-      kagit.appendChild(icerikBolumuOlustur(cikti.icerik_cercevesi, sonNo));
+      kagit.appendChild(icerikBolumuOlustur(cikti.icerik_cercevesi, sonNo, BOLUM_HARFLERI[harfIndex++]));
       sonNo += cikti.icerik_cercevesi.length;
     }
     if (secenekler.surec && (cikti.surec_bilesenleri || []).length) {
-      kagit.appendChild(surecBolumuOlustur(cikti.surec_bilesenleri, sonNo));
+      kagit.appendChild(surecBolumuOlustur(cikti.surec_bilesenleri, sonNo, BOLUM_HARFLERI[harfIndex++]));
     }
 
     if (!secenekler.kavramlar && !secenekler.icerik && !secenekler.surec) {
-      const uyari = document.createElement("p");
+      const uyari = docu
+ment.createElement("p");
       uyari.className = "uyari";
       uyari.textContent = "Çalışma kâğıdına eklemek için en az bir bölüm seçin.";
       kagit.appendChild(uyari);
@@ -206,7 +214,8 @@ const CalismaKagidiModule = (() => {
     ciktiSatir.appendChild(ciktiLabel);
     const ciktiSelect = document.createElement("select");
     ciktiSelect.id = "cg-cikti-secici";
-    ciktiSatir.appendChild(ciktiSelect);
+    ciktiSatir.appendChild(
+ciktiSelect);
     seciciAlani.appendChild(ciktiSatir);
 
     container.appendChild(seciciAlani);
@@ -218,9 +227,9 @@ const CalismaKagidiModule = (() => {
     fieldset.appendChild(legend);
 
     const secenekTanimlari = [
-      { anahtar: "kavramlar", etiket: "A) Kavramlar" },
-      { anahtar: "icerik", etiket: "B) Konu Başlıkları" },
-      { anahtar: "surec", etiket: "C) Açıklama ve Yorumlama" },
+      { anahtar: "kavramlar", etiket: "Kavramlar" },
+      { anahtar: "icerik", etiket: "Konu Başlıkları" },
+      { anahtar: "surec", etiket: "Açıklama ve Yorumlama" },
     ];
     const secenekKutulari = {};
     for (const { anahtar, etiket } of secenekTanimlari) {
@@ -257,7 +266,8 @@ const CalismaKagidiModule = (() => {
       if (!cikti) return;
       const secenekler = {
         kavramlar: secenekKutulari.kavramlar.checked,
-        icerik: secenekKutulari.icerik.checked,
+        icerik: secenekKutulari.icerik.checke
+d,
         surec: secenekKutulari.surec.checked,
       };
       onizleme.appendChild(worksheetIcerigiOlustur(subjectData, unite, cikti, secenekler, seviye.etiket));
