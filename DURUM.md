@@ -1,3 +1,13 @@
+## 28 Eylül 2026 — PR #2 birleştirildi, önizleme temizlendi
+
+- PR #2 squash merge ile `main`'e alındı: `3852bae` ("Günlük Plan: Anadolu Lisesi Felsefe 11 üçüncü hafta (#2)"). Merge, incelenen son commit `867ba17`'ye sabitlenerek yapıldı; PR merge öncesi taslaktan çıkarıldı.
+- GitHub Pages `3852bae` için "built" durumuna geçti (hata yok). Canlı sayfaların içeriği bu kayıtta bağımsız olarak doğrulanmadı; ortam `github.io`'ya erişemiyor. Canlı kontrol: gunluk-plan.html, Felsefe → 11. Sınıf → Günlük Plan.
+- Temizlik: `onizleme/pr-2/` (25 dosya, tam site kopyası) kaldırıldı. Kodda `onizleme` geçen diğer yerler (`kazanim-onizleme`, `rubrik-onizleme`, `calisma-kagidi-onizleme`) ayrı arayüz öğeleridir, dokunulmadı.
+- Kalan: uzak dal `feat/daily-plan-pilot` silinmedi. Mobil/yazdırma incelemesi kullanıcı tarafından yapıldı; sonucu bu kayıtta yok.
+- Sıradaki iş: Günlük Plan ikinci hafta; içeriğin `PILOT` nesnesinden veri dosyasına taşınması (öneri, karar değil). README hâlâ çok sayfalı yapıyı yansıtmıyor.
+
+---
+
 ## 28 Eylül 2026 — PR #2 birleştirme öncesi inceleme ve test düzeltmesi
 
 - Dal: feat/daily-plan-pilot (başlangıç `3d37ec6`). main o sırada `d6de318` idi (yalnız `onizleme/pr-2/` eklemişti); yerel deneme birleştirmesinde çakışma çıkmadı ve `npm test` üç aşamasıyla geçti.
