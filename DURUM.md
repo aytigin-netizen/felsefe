@@ -1,3 +1,13 @@
+## 28 Eylül 2026 — PR #4 tarayıcı doğrulaması
+
+- Chromium ortamı çalışır duruma getirildi. Geçici @sparticuz/chromium arşivleri Brotli ile açılıp tar --no-same-owner ile çıkarıldı; fonts.conf gerçek font dizinine ve /usr/share/fonts yoluna yönlendirildi. FONTCONFIG_PATH ve LD_LIBRARY_PATH yerel Chromium dizinlerine ayarlanarak Playwright başlatıldı. Kullanıcı cihazında kurulum gerekmedi; geçici bağımlılıklar repoya eklenmedi.
+- PR #4 uygulama başı: 8fb4e737a78f9c9582f43c3d7fb360a78c524183. Chromium kontrolünde 11. sınıf üçüncü hafta varsayılanı, birinci haftaya geçiş, notun ve hafta seçiminin yenilemede korunması, 10. sınıf birinci haftaya geçiş başarılı. JavaScript sayfa hatası yok.
+- 1280 px masaüstü ve 390 px mobil ekranlar incelendi; yatay taşma yok. 11. sınıf birinci hafta A4 PDF çıktısı incelendi; hafta seçici baskıda gizli. Ders adımlarının sayfalar arasında bölünmesini önleyen küçük baskı CSS düzeltmesi yapıldı ve PDF yeniden kontrol edildi.
+- npm test üç aşamasıyla geçti; Mantık yıllık toplamı 72 saat olarak korundu. Bu kayıt önceki tarayıcı engeli notunu günceller. Yıllık kaynak çalışma kitabının satır satır içerik denetimi bu kontrolün kapsamı değildir.
+- PR: https://github.com/aytigin-netizen/felsefe/pull/4 . Birleştirme ve canlı yayın bu adımda yapılmadı.
+
+---
+
 ## 28 Eylül 2026 — Günlük Plan hafta seçimi ve ilk hafta paketleri
 
 - Kullanıcı onayı: Felsefe 10/11 birinci hafta planları, ayrı içerik dosyaları ve hafta seçimi; mevcut 11. sınıf üçüncü hafta ve Mantık 72 saat korunacak.

@@ -866,7 +866,7 @@ button:focus-visible {
   .gp-edit { border: none; padding: 0; min-height: 1em; color: #000; }
   .gp h2, .gp h3, .gp strong { break-after: avoid; }
   .gp section { margin-block: .7rem; }
-  .gp .imza-alani { break-inside: avoid; }
+  .gp .imza-alani, .gp-asama { break-inside: avoid; }
 }
 
 /* Günlük plan hafta seçimi */
