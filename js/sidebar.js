@@ -41,8 +41,7 @@ const Sidebar = (() => {
       return `<a href="${n.href}" class="${siniflar.join(" ")}"${aria}>${n.label}</a>`;
     }).join("");
 
-    mount
-.innerHTML =
+    mount.innerHTML =
       '<div class="sidebar-brand">' +
       '<span class="sidebar-mark" aria-hidden="true">◆</span>' +
       "<div>" +

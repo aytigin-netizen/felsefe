@@ -56,8 +56,7 @@ const CalismaKagidiModule = (() => {
       const terim = document.createElement("strong");
       terim.textContent = kavram;
       satir.appendChild(terim);
-      satir.
-appendChild(cizgiOlustur(1));
+      satir.appendChild(cizgiOlustur(1));
       bolum.appendChild(satir);
     }
     return bolum;
@@ -109,8 +108,7 @@ appendChild(cizgiOlustur(1));
 
     const yonerge = document.createElement("p");
     yonerge.className = "cg-yonerge";
-    yonerge.textC
-ontent =
+    yonerge.textContent =
       "Aşağıdaki ifadeleri kendi cümlelerinizle açıklayıp birer örnekle destekleyiniz.";
     bolum.appendChild(yonerge);
 
@@ -160,8 +158,7 @@ ontent =
     }
 
     if (!secenekler.kavramlar && !secenekler.icerik && !secenekler.surec) {
-      const uyari = docu
-ment.createElement("p");
+      const uyari = document.createElement("p");
       uyari.className = "uyari";
       uyari.textContent = "Çalışma kâğıdına eklemek için en az bir bölüm seçin.";
       kagit.appendChild(uyari);
@@ -214,8 +211,7 @@ ment.createElement("p");
     ciktiSatir.appendChild(ciktiLabel);
     const ciktiSelect = document.createElement("select");
     ciktiSelect.id = "cg-cikti-secici";
-    ciktiSatir.appendChild(
-ciktiSelect);
+    ciktiSatir.appendChild(ciktiSelect);
     seciciAlani.appendChild(ciktiSatir);
 
     container.appendChild(seciciAlani);
@@ -266,8 +262,7 @@ ciktiSelect);
       if (!cikti) return;
       const secenekler = {
         kavramlar: secenekKutulari.kavramlar.checked,
-        icerik: secenekKutulari.icerik.checke
-d,
+        icerik: secenekKutulari.icerik.checked,
         surec: secenekKutulari.surec.checked,
       };
       onizleme.appendChild(worksheetIcerigiOlustur(subjectData, unite, cikti, secenekler, seviye.etiket));

@@ -98,8 +98,10 @@ etkinlik metinleri. Bunlar ihtiyaç oldukça aynı şemaya eklenecek.
   modüller etkilenmez.
 - **⚠️ Mantık — bilinen 72/68 uyumsuzluğu:** `mantik_veri_kaynagi.json` dosyasında
   `toplamDersSaatiYillik: 72` yazılıdır; ancak ünitelerin `dersSaati` alanları toplamı
-  **68**'dir (10 + 16 + 16 + 26). Bu 4 saatlik fark henüz çözülmedi: kaynak taslak
-  plandaki toplam mı, ünite dağılımı mı doğru bilinmiyor. Mantık verisi için de
+  **68**'dir (10 + 16 + 16 + 26). Kullanıcının 28 Eylül 2026 kararıyla yıllık toplam **72 ders saati** olarak korunacaktır.
+  Ünite toplamındaki 4 saatlik farkın hangi haftalara/etkinliklere ait olduğu
+  kaynak planla doğrulanmalıdır; farkı kapatmak için yıllık toplam 68 saate indirilmez
+  ve ünite saatleri tahminle değiştirilmez. Mantık verisi için de
   Felsefe/Psikoloji'deki gibi satır satır kaynak karşılaştırması henüz yapılmadı.
   Yıllık plan modülü bu uyumsuzluk nedeniyle Mantık'ta hafta/saat tutarlılık uyarısı
   gösterebilir; veri düzeltilene kadar bilinen bir durumdur.

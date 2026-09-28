@@ -1,3 +1,16 @@
+## 28 Eylül 2026 — PR #3 bölünmüş kod/metin onarımı
+
+- Kullanıcı PR #3 düzeltmesini ve mevcut testlerle doğrulamayı istedi. Mantık yıllık ders saati kararı: **72 saat**; toplam 68'e indirilmeyecek. Ünitelerdeki 68 saat toplamının kalan 4 saati kaynak planla ayrıca eşlenecek; bu pakette veri dağılımı değiştirilmedi.
+- Başlangıç: `fix/inceleme-duzeltmeleri` / `1438d0916f2813daadbfe5823c8cd04b98909b1c`. PR #3 üzerinde devam edildi.
+- Çalışma kâğıdı, rubrik ve sidebar dosyalarındaki bölünmüş ifadeler, index.html kapanış etiketi ve DURUM.md içindeki bölünmüş tarihsel metinler onarıldı. PR'ın erişilebilirlik, tablo ve dinamik bölüm harfi değişiklikleri korundu. README'ye 72 saat kararı eklendi.
+- Doğrulama: 14 JavaScript dosyasının sözdizimi kontrolü; npm test'in seçim regresyonu, günlük plan ve tüm ders/seviye modül render aşamaları geçti. Ek geçici jsdom kontrolünde 8 çalışma kâğıdı bölüm seçimi, yönerge, rubrik thead/tbody, boş ünite mesajı ve HTML kapanışı doğrulandı. git diff --check temiz.
+- Test-run.js yerel HTTP sunucusu olmadan css/style.css yükleme uyarısı verdi; test çıkış kodu 0. Gerçek tarayıcı, mobil görünüm ve baskı sayfalaması bu oturumda kontrol edilmedi.
+- Mantık JSON'u başlangıç commit'iyle birebir aynı; toplamDersSaatiYillik = 72 doğrulandı.
+- Bu kayıt, onarım commit'iyle PR #3 dalına aktarılacak paketin parçasıdır; main birleştirmesi ve canlı yayın yapılmadı. Aktarım sonucu commit kaydından doğrulanmalıdır.
+- Sıradaki iş: PR #3'ün düzeltilmiş paketini değerlendirmek; ardından Günlük Plan'ı yeni haftalara genişletmek. Henüz yeni hafta eklenmedi.
+
+---
+
 ## 28 Eylül 2026 — PR #2 birleştirildi, önizleme temizlendi
 
 - PR #2 squash merge ile `main`'e alındı: `3852bae` ("Günlük Plan: Anadolu Lisesi Felsefe 11 üçüncü hafta (#2)"). Merge, incelenen son commit `867ba17`'ye sabitlenerek yapıldı; PR merge öncesi taslaktan çıkarıldı.

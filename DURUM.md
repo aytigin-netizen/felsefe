@@ -1,3 +1,16 @@
+## 28 Eylül 2026 — PR #3 bölünmüş kod/metin onarımı
+
+- Kullanıcı PR #3 düzeltmesini ve mevcut testlerle doğrulamayı istedi. Mantık yıllık ders saati kararı: **72 saat**; toplam 68'e indirilmeyecek. Ünitelerdeki 68 saat toplamının kalan 4 saati kaynak planla ayrıca eşlenecek; bu pakette veri dağılımı değiştirilmedi.
+- Başlangıç: `fix/inceleme-duzeltmeleri` / `1438d0916f2813daadbfe5823c8cd04b98909b1c`. PR #3 üzerinde devam edildi.
+- Çalışma kâğıdı, rubrik ve sidebar dosyalarındaki bölünmüş ifadeler, index.html kapanış etiketi ve DURUM.md içindeki bölünmüş tarihsel metinler onarıldı. PR'ın erişilebilirlik, tablo ve dinamik bölüm harfi değişiklikleri korundu. README'ye 72 saat kararı eklendi.
+- Doğrulama: 14 JavaScript dosyasının sözdizimi kontrolü; npm test'in seçim regresyonu, günlük plan ve tüm ders/seviye modül render aşamaları geçti. Ek geçici jsdom kontrolünde 8 çalışma kâğıdı bölüm seçimi, yönerge, rubrik thead/tbody, boş ünite mesajı ve HTML kapanışı doğrulandı. git diff --check temiz.
+- Test-run.js yerel HTTP sunucusu olmadan css/style.css yükleme uyarısı verdi; test çıkış kodu 0. Gerçek tarayıcı, mobil görünüm ve baskı sayfalaması bu oturumda kontrol edilmedi.
+- Mantık JSON'u başlangıç commit'iyle birebir aynı; toplamDersSaatiYillik = 72 doğrulandı.
+- Bu kayıt, onarım commit'iyle PR #3 dalına aktarılacak paketin parçasıdır; main birleştirmesi ve canlı yayın yapılmadı. Aktarım sonucu commit kaydından doğrulanmalıdır.
+- Sıradaki iş: PR #3'ün düzeltilmiş paketini değerlendirmek; ardından Günlük Plan'ı yeni haftalara genişletmek. Henüz yeni hafta eklenmedi.
+
+---
+
 ## 28 Eylül 2026 — İnceleme düzeltmeleri dalı (fix/inceleme-duzeltmeleri)
 
 - GitHub App'e yazma yetkisi verildi; `fix/inceleme-duzeltmeleri` dalı `main` üzerinden açıldı. Bu dal, önceki oturumda yerelde hazırlanan ancak yazma yetkisi eksikliği nedeniyle push edilemeyen inceleme düzeltmelerini içerir.
@@ -27,8 +40,7 @@
 - Değişiklik: `test-daily-plan.js` seviyeyi `data.seviyeler[1]` indeksiyle değil `etiket` ('10. Sınıf' / '11. Sınıf') ile buluyor; bulunamazsa test açıkça düşer. Seviye sırası ters çevrilmiş Felsefe verisiyle test yeniden çalıştırıldı, geçti. Uygulama kodu değişmedi.
 - Yapılmadı: PR birleştirilmedi, yayın yapılmadı. Mobil görünüm ve yazdırma sayfalaması hâlâ gerçek ekranda kontrol edilmedi. MEB çalışma kitabındaki B6:G6 eşlemesi ve pedagojik içerik bu oturumda bağımsız doğrulanmadı; önceki kayda dayanır.
 - Birleştirme sonrası yapılacaklar: `onizleme/pr-2/` klasörünün kaldırılması (tam site kopyası; Pages'te yayında kalır), yayın/deploy kaydının eklenmesi, canlı kontrol.
-- Bekleyen tasarım borcu: günlük p
-lan içeriği `gunluk-plan.js` içindeki `PILOT` nesnesinde; ikinci hafta/ders eklenmeden önce veri dosyasına taşınması değerlendirilmeli (öneri, karar değil).
+- Bekleyen tasarım borcu: günlük plan içeriği `gunluk-plan.js` içindeki `PILOT` nesnesinde; ikinci hafta/ders eklenmeden önce veri dosyasına taşınması değerlendirilmeli (öneri, karar değil).
 
 ---
 
@@ -49,8 +61,7 @@ lan içeriği `gunluk-plan.js` içindeki `PILOT` nesnesinde; ikinci hafta/ders e
 - Dal: feat/daily-plan-pilot. Yeni sayfa/modül, ana sayfa kartı, yan menü, baskı stilleri ve davranış testi eklendi.
 - Kapsam: Felsefe 11 / Fen Lisesi / 3. hafta / FEL.11.1.2(a). 2 × 40 dakika, düzenlenebilir öğretmen-öğrenci akışı, argüman kartları, değerlendirme, farklılaştırma, notlar ve imzalar. Diğer ders/sınıflarda örnek gösterilmez.
 - Kaynak: kullanıcının felsefe-fl-11-3-hafta-gunluk-plan.docx örneği; https://tymm.meb.gov.tr/felsefe-dersi/unite/66 ve mevcut ders JSON'u. Etkinlikler öğretmen uyarlaması olarak etiketlendi; SDB ve OB karışıklığı taşınmadı.
-- Sınır: FL yıldızlı zenginleştirme eşlemesi henüz tamam
-lanmadı. Bu paket bütün haftalar/dersler için üretici veya tam FL uyum onayı değildir.
+- Sınır: FL yıldızlı zenginleştirme eşlemesi henüz tamamlanmadı. Bu paket bütün haftalar/dersler için üretici veya tam FL uyum onayı değildir.
 - npm test: seçim regresyonu, günlük plan davranışları ve mevcut modül render testleri başarı çıktısı verdi. git diff --check temiz.
 - Gerçek ekran kontrolü denendi; cloud browser yerel http://127.0.0.1:8765 adresini ERR_BLOCKED_BY_CLIENT ile açmadı. Mobil ekran ve baskı sayfalaması doğrulanmadı. Yazdırma düğmesinin çağrısı test edildi; görsel çıktı testi yapılmış sayılmaz.
 - Kod inceleme dalına/taslak PR'a aktarılmak üzere hazırlandı; main ve canlı site bu geliştirmeyle değiştirilmedi. Uzak commit/PR sonucu oturum kapanışında bildirilir.
@@ -73,8 +84,7 @@ lanmadı. Bu paket bütün haftalar/dersler için üretici veya tam FL uyum onay
 ## 28 Eylül 2026 — ChatGPT güncel kayıt
 
 - Başlangıç: uzak main `ddd79824df04fb779921124a3e9b02e3983d720d`.
-- Önceki kayıttaki `5298f7a push edilmedi` bilgisi artık geçersiz: commit main geçmişinde ve sınıfsız giriş düzeltmesi canlıda doğruland
-ı.
+- Önceki kayıttaki `5298f7a push edilmedi` bilgisi artık geçersiz: commit main geçmişinde ve sınıfsız giriş düzeltmesi canlıda doğrulandı.
 - Canlı kontrol: Felsefe/Sosyoloji için dört modülde sınıf seçimi uyarısı; yenilemede korunması; Psikoloji/Mantık otomatik seviye açılışı doğrulandı.
 - Yeni sorun: ders değişiminde yükleme bitmeden modüle tıklanınca önceki ders açılabiliyordu.
 - Düzeltme: js/app.js yükleme başında kayıtlı seçimi, eski sınıf seçeneklerini ve önizlemeyi temizler; kartları kapatır. İstek sırası kontrolü, gecikmiş yanıt/hataların güncel seçimi değiştirmesini önler.
@@ -95,8 +105,7 @@ Hazırlayan: Claude. Sonraki oturumda uzak dal yeniden okunmalı, yerel 5298f7a'
 
 ## Bu oturumda yapılan gerçek ekran doğrulaması
 
-- Yöntem: repo yerel olarak klonlandı, `python3 -m http.server` ile yerelde sunuldu; @sparticuz/chromium + puppeteer-core (npm registry üzerinden inen, harici bir CDN indirmesi gerektirmeyen Chromium ikili paketi) ile headless Chromium başlatıldı. Not: standart `npx playwright install` bu ortamın ağ izin listesinde olmayan `cdn.playwright.dev`'den indirme yapmaya çalıştığı için başarısız oldu; bu yöntem bunun yerine kullanıldı. Bu araçlar (`@sparticuz/chromium`, `puppeteer-core`, test scr
-iptleri) yalnızca doğrulama sırasında geçici olarak kuruldu, repoya eklenmedi.
+- Yöntem: repo yerel olarak klonlandı, `python3 -m http.server` ile yerelde sunuldu; @sparticuz/chromium + puppeteer-core (npm registry üzerinden inen, harici bir CDN indirmesi gerektirmeyen Chromium ikili paketi) ile headless Chromium başlatıldı. Not: standart `npx playwright install` bu ortamın ağ izin listesinde olmayan `cdn.playwright.dev`'den indirme yapmaya çalıştığı için başarısız oldu; bu yöntem bunun yerine kullanıldı. Bu araçlar (`@sparticuz/chromium`, `puppeteer-core`, test scriptleri) yalnızca doğrulama sırasında geçici olarak kuruldu, repoya eklenmedi.
 - Kontrol edilenler: ana sayfa yüklenmesi (konsolda gerçek JS hatası yok — font CDN'inin 403 vermesi bu test ortamına özgüdür, gerçek kullanıcıyı etkilemez), ders/seviye seçim akışı, localStorage'a kayıt, modül kartlarının etkin/devre dışı durumu, dört modülün (Yıllık Plan, Ünite Planı, Çalışma Kâğıdı, Değerlendirme) render'ı, sayfa yenilemede seçimin korunması, sidebar aktif link işaretlemesi, seçimsiz doğrudan modül girişi, mobil (390px) görünüm ve yatay taşma, yazdırma medyası (sidebar/menü gizlenmesi).
 - `npm test` da bu oturumda ayrıca çalıştırıldı: tüm modüller ders/seviye kombinasyonlarında hatasız render edildi.
 - Sonuç: yukarıdakilerin tamamı, aşağıdaki tek istisna dışında, beklendiği gibi çalıştı.
@@ -106,8 +115,7 @@ iptleri) yalnızca doğrulama sırasında geçici olarak kuruldu, repoya eklenme
 - `js/module-page.js`: localStorage'da ders seçili ama (birden fazla seviyesi olan bir ders için, örn. Felsefe/Sosyoloji) sınıf/seviye seçili değilken, sayfa sessizce ilk seviyeyi (`seviyeler[0]`) varsayılan gösteriyordu; bu sırada sidebar alt köşesindeki etiket hâlâ "sınıf seçilmedi" yazıyordu — içerik ile etiket birbiriyle çelişiyordu. Tek seviyeli dersler (Psikoloji, Mantık) bu durumdan etkilenmiyordu, çünkü app.js zaten onlar için seviyeyi otomatik atıyor.
 - Düzeltme: `seviyeler.length > 1` iken `seviyeIndex` boşsa artık ana sayfadaki "seçim zorunlu" davranışıyla aynı uyarı ("Önce ana sayfadan sınıf/ders düzeyi seçin.") gösteriliyor; tek seviyeli derslerdeki otomatik seçim davranışı aynen korunuyor.
 - Yerel commit: `5298f7a` — "module-page.js: birden fazla seviyeli derste sınıf seçilmeden sessizce ilk seviyeye düşme; ana sayfadaki seçim-zorunlu davranışıyla tutarlı hale getir". `main`/`6bbbe4b` üzerine. **Bu commit henüz GitHub'a push edilmedi** (push için daha önceki oturumlardaki gibi tek seferlik bir fine-grained personal access token gerekiyor; bu oturumda verilmedi).
-- Regresyon: düzeltmeden önce ve sonra aynı 16 otomatik tarayıcı k
-ontrolü tekrar çalıştırıldı, hepsi geçti; tek seviyeli derslerde (Psikoloji) otomatik davranışın bozulmadığı ayrıca ayrı bir senaryoyla doğrulandı.
+- Regresyon: düzeltmeden önce ve sonra aynı 16 otomatik tarayıcı kontrolü tekrar çalıştırıldı, hepsi geçti; tek seviyeli derslerde (Psikoloji) otomatik davranışın bozulmadığı ayrıca ayrı bir senaryoyla doğrulandı.
 
 ## Kod ve GitHub kayıtlarından görülenler
 
@@ -132,8 +140,7 @@ Sosyoloji 12 için uygulama çerçeve planı mevcut değil olarak işaretliyor; 
 ## Açık işler ve doğrulama ihtiyaçları
 
 - **Öncelikli:** yerel commit `5298f7a` push edilmeli (token bekleniyor) ve push sonrası GitHub Pages'e yansıması kontrol edilmelidir.
-- README hâlâ tek dosya yaklaşımından söz ediyor; çok 
-sayfalı yapı ve yeni ortak dosyalarla eşitlenmeli.
+- README hâlâ tek dosya yaklaşımından söz ediyor; çok sayfalı yapı ve yeni ortak dosyalarla eşitlenmeli.
 - Çalışma kâğıdı ve rubrik içerikleri genel şablon düzeyinde; bu oturumda Değerlendirme/Rubrik ekranı gerçek ekranda tekrar incelendi ve aynı şablon tekrarı (farklı ölçütlerin aynı seviye açıklamasını neredeyse birebir paylaşması) gözlemle yeniden doğrulandı — konuya özgü görev ve başarı ölçütleri hâlâ geliştirilebilir, bu oturumda değiştirilmedi.
 - Sosyoloji/Mantık saatlerinin kaynak karşılaştırması ayrı bir içerik işi olarak bekliyor; bu oturumda dokunulmadı.
 - Günlük plan, sunum ve Word/PowerPoint çıktıları ürün hedefleri arasında; uygulama kapsamı henüz kararlaştırılmadı.

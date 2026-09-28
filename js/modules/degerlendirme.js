@@ -35,8 +35,7 @@ const DegerlendirmeModule = (() => {
     },
     surec: {
       1: "İfadeyi açıklayamaz veya temel düzeyde hata içeren biçimde açıklar.",
-      2: "İfadeyi kısmen d
-oğru ama eksik ya da yüzeysel biçimde açıklar.",
+      2: "İfadeyi kısmen doğru ama eksik ya da yüzeysel biçimde açıklar.",
       3: "İfadeyi doğru ve tutarlı biçimde açıklar, bir örnekle destekler.",
       4: "İfadeyi derinlemesine analiz eder, farklı bakış açılarıyla ilişkilendirir ve özgün örneklerle destekler.",
     },
@@ -93,8 +92,7 @@ oğru ama eksik ya da yüzeysel biçimde açıklar.",
 
     const baslikHucre = document.createElement("th");
     baslikHucre.scope = "row";
-    baslikHucre.className = "dg-
-olcut-baslik";
+    baslikHucre.className = "dg-olcut-baslik";
     baslikHucre.textContent = baslikMetni;
     satir.appendChild(baslikHucre);
 
@@ -148,8 +146,7 @@ olcut-baslik";
     }
 
     if (secenekler.icerik) {
-      (cikti.icerik_cercevesi || []).forEach((madde, idx)
- => {
+      (cikti.icerik_cercevesi || []).forEach((madde, idx) => {
         tbody.appendChild(olcutSatiriOlustur(depo, subjectData, seviye, cikti, "icerik", madde, idx));
         satirVarMi = true;
       });
@@ -208,8 +205,7 @@ olcut-baslik";
     container.innerHTML = "";
     const uniteler = DataLoader.getUniteler(seviye);
     if (!uniteler.length) {
-      const uyari = document.createE
-lement("p");
+      const uyari = document.createElement("p");
       uyari.className = "uyari";
       uyari.textContent = "Bu ders/sınıf düzeyi için tanımlı ünite bulunamadı.";
       container.appendChild(uyari);
@@ -257,8 +253,7 @@ lement("p");
     container.appendChild(seciciAlani);
 
     const fieldset = document.createElement("fieldset");
-    fieldset.className =
- "dg-secenekler";
+    fieldset.className = "dg-secenekler";
     const legend = document.createElement("legend");
     legend.textContent = "Rubriğe eklenecek ölçüt kaynakları";
     fieldset.appendChild(legend);
@@ -306,8 +301,7 @@ lement("p");
         icerik: secenekKutulari.icerik.checked,
         surec: secenekKutulari.surec.checked,
       };
-      onizleme.appendChild(rubrikIcerigiOlustur(sub
-jectData, unite, cikti, secenekler));
+      onizleme.appendChild(rubrikIcerigiOlustur(subjectData, unite, cikti, secenekler));
     }
 
     function ciktiSeciciDoldur() {
