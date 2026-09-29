@@ -1,3 +1,15 @@
+## 29 Eylül 2026 — Yıllık plan: 72 saat ve yatay baskı
+
+- İstek: tüm derslerde yıllık 72 saat; Yıllık Plan baskısı yatay. Kullanıcı okulun uygulanmış Felsefe 10/11 planlarını (PDF) örnek verdi.
+- Kaynak: Felsefe öğretim programı süre tablosu (mufredat.meb.gov.tr) 10 ve 11. sınıf için 68 saat ünite + 4 saat okul temelli planlama = 72 gösteriyor. MEB'in 2026-2027 ortaöğretim taslak çerçeve planı sayfası (tymm.meb.gov.tr/taslak-cerceve-planlari/ortaogretim) 29 Eylül itibarıyla yalnızca Felsefe'yi içeriyor; Sosyoloji, Psikoloji ve Mantık orada listelenmiyor (OGM duyurusu "diğer derslerin planları güncelleniyor" diyor). Bu üç ders için mevcut veri kullanıcının daha önce yüklediği xlsx dosyalarından; yeniden karşılaştırılmadı.
+- Değişiklik: dört dersin çerçeve planı olan tüm seviyelerinde `toplamDersSaatiYillik` = 72; `ozelPlanlamaHaftalari` her birine `dersSaati` aldı (okul temelli planlama 2+2, sosyal etkinlik toplama girmez). Sosyoloji Dersi 1 ve Mantık'a bu haftalar eklendi (varsayım: Felsefe/Psikoloji takvimiyle aynı; kaynak xlsx ile doğrulanmadı). Yıllık plan tablosu okul temelli planlama ve sosyal etkinlik satırlarını hafta sırasında gösteriyor, dipnot ekli; bilgi tablosunda "72 ders saati (68 ünite + 4 okul temelli planlama)". Eski "toplama dahil değildir" notu ve Mantık uyuşmazlık uyarısı kalktı.
+- Yatay baskı: Yıllık Plan modülü `@page { size: A4 landscape }` stilini (yalnızca yazdırmada) sayfaya ekliyor; diğer modüller etkilenmedi. Chromium PDF çıktısı A4 yatay (842×595 pt) doğrulandı; Firefox/Safari sayfa yönünü uygulamazsa sayfada ipucu var.
+- Okulun uygulanmış planıyla karşılaştırma: Felsefe 10 ve 11 için 34 ünite haftasının hepsinde kazanım kodları veriyle eşleşti; PDF'te 4 tatil, 2 okul temelli planlama ve 1 sosyal etkinlik satırı var. Fark: PDF hafta numarası tatilleri de sayıyor (1-41), veride tatil haftaları numarasız (OTP 18/36, SE 37; PDF'te 19/40/41). Yıllık Plan tablosunda okulun formundaki Konu, Ölçme ve Değerlendirme, SDB, Değerler ve Okuryazarlık sütunları yok.
+- Test: `test-run.js` her seviyede 72 toplamı, ünite + OTP = toplam, uyuşmazlık uyarısı yok, özel satırların tabloda olması ve yatay baskı stilini denetliyor; Mantık toplamı 68'e ve stil `screen`'e çevrilerek testin düştüğü görüldü, geri alındı.
+- Doğrulanamayan: canlı site, gerçek yazıcı, Firefox/Safari yön davranışı.
+
+---
+
 ## 29 Eylül 2026 — PR #7–#9 kayıt boşluğu; yerel tarayıcı doğrulaması; yıllık plan/README düzeltmeleri
 
 - Kayıt boşluğu: PR #7 (Günlük plan), #8 (Ünite planı), #9 (Yıllık plan) "belge omurgası" değişiklikleri main'e birleşmişti (son main: `0e03886`) ama DURUM/DEVIR/PROJE'de kaydı yoktu. Bu kayıt onu kapatır. Kapsam: `gunluk-plan.js`, `unite-plani.js`, `yillik-plan.js`, `css/style.css` (+~95 satır), `test-run.js`, `test-daily-plan.js`.
