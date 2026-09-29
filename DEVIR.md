@@ -1,3 +1,21 @@
+## 30 Eylül 2026 — Devir: PR #14 yayını, canlı erişim düzeltmesi, ortam notu
+
+- Devralınan uzak main: `63eebd8` ("docs: PR #12 ve PR #13 kaydı + görsel doğrulama (#14)"). PR #14 squash merge ile birleştirildi, CI ve Pages deployment başarılı (`test`, `build`, `deploy`, `report-build-status` dördü de yeşil).
+- Bu kaydı yazan oturumun iki ek işi: (1) bir önceki kaydın "canlı site doğrulanamayan" ifadesinin düzeltilmesi, (2) aşağıdaki ortam notunun eklenmesi. İkisi de yalnız `DURUM.md` ve `DEVIR.md`.
+- **Düzeltme:** canlı site aslında doğrulanabiliyor. Bu ortam `github.io`'ya erişiyor; 28–29 Eylül tarihli eski kayıtlardaki "ortam `github.io`'ya erişemiyor (`host_not_allowed`)" notu geçersizdir ve artık güvenilmemeli. PR #14 yayını sonrası canlı kontrol yapıldı: `DURUM.md`, `DEVIR.md`, `index.html` doğru içerikle HTTP 200. Yalnız statik dosya sunumu doğrulandı; canlı tarayıcı etkileşimi (ders/seviye seçimi, modül akışı) yapılmadı ve o kapsam açık.
+- **Ortam notu — git için CA (sonraki oturumlarda zaman kazandırır):** bu sandbox'ta `git clone` ve `git push` "server certificate verification failed" ile başarısız oluyor. Sorun eksik CA değil, yanlış CA: `CURL_CA_BUNDLE` ve `SSL_CERT_FILE` `/etc/ssl/certs/agent-identity/sandbox-gateway-ca.crt` dosyasını gösteriyor, ama git bu ortam değişkenlerini okumuyor. Çözüm:
+
+  ```bash
+  GIT_SSL_CAINFO=/etc/ssl/certs/agent-identity/sandbox-gateway-ca.crt git clone https://github.com/aytigin-netizen/felsefe.git
+  ```
+
+  Aynı CA verildiğinde klon, push ve GitHub API çağrıları sorunsuz çalışıyor. (Ayrıca `git` bu ortamda `github.com` dışındaki bazı sunucularda da aynı hatanın çıkabileceği anlamına gelmiyor; yalnız bu yol denenmiş ve işe yaramıştır.)
+- Token: kullanıcı sohbete fine-grained personal access token verdi ve "API sürekli değiştiriyorum, ihtiyacın olunca söyle yenisini veririm" dedi. Push ve API çağrıları `http.extraheader` ile geçici yetkilendirmeyle yapıldı; token `.git/config`'e, remote URL'ye veya commit geçmişine yazılmadı (kontrol edildi: 0 eşleşme). Depoda veya belgelerde gizli anahtar yok. Kullanıcı token'ı düzenli olarak yenilediğini belirtti; ayrı bir iptal gerekçesi yok.
+- Belgelenmemiş ve değiştirilmemiş iki kalem: (a) PR #4 (`feat/daily-plan-week-expansion`) 28 Eylül'den beri açık, main'den 19 commit geride, içeriği PR #5/#6 ile zaten girmiş → birleştirilmemeli, kapatılmalı. (b) Birleşmiş 13 dal silinmemiş.
+- Sıradaki tek somut görev: `js/modules/degerlendirme.js`'teki rubrik tablosunu kaydırma sarmalayıcısına almak + `css/style.css`'e kural eklemek (PR #10'daki `.yillik-tablo-kaydirma` deseniyle aynı, baskıda `overflow: visible`); ardından `js/modules/unite-plani.js:233` öğretmen çıktısındaki "kanonik veri kaynağı" ifadesini düzeltmek. Kullanıcının yeni talebi bu önerilerin önüne geçer.
+
+---
+
 ## 29 Eylül 2026 — Devir: PR #12 ve PR #13 kaydı + görsel doğrulama
 
 - Devralınan uzak main: `8b0eed6` ("style: add FOPOS-inspired visual foundation (#13)", 29 Eylül 2026 13:30 UTC). Önceki kayıt `4473127`'de bitiyordu; aradaki iki birleşme (`354f1c7` = PR #12, `8b0eed6` = PR #13) hiç belgelenmemişti.

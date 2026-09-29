@@ -1,3 +1,14 @@
+## 30 Eylül 2026 — PR #14 yayınlandı; canlı erişim düzeltmesi ve ortam notu
+
+- PR #14 (PR #12/#13 kaydı + görsel doğrulama) squash merge ile `main`'e alındı: `63eebd8`. İki commit: `3999dff` (kayıt) ve `77ca01b` (palet onayının kayda geçirilmesi). CI dördü de yeşil: `test`, `build`, `deploy`, `report-build-status`. GitHub Pages deployment başarılı.
+- Düzeltme: bir önceki kayıtta "canlı site" doğrulanamayanlar arasında sayılmıştı. Bu ortam `github.io`'ya **erişebiliyor**; 28 ve 29 Eylül tarihli eski kayıtlardaki "ortam `github.io`'ya erişemiyor (`host_not_allowed`)" notu artık geçerli değil. Yayın sonrası canlı kontrol yapıldı: `DURUM.md`, `DEVIR.md` ve `index.html` doğru içerikle HTTP 200 döndü. **Yalnız statik dosya sunumu doğrulandı; canlı tarayıcı etkileşimi (ders/seviye seçimi, modül akışı) yapılmadı.** O kapsam hâlâ açıktır.
+- Ortam notu (bu oturumda keşfedildi, sonraki oturumlar için): bu sandbox'ta `git clone`/`push` "server certificate verification failed" hatası veriyor ve `GIT_SSL_CAINFO` **olmadan** çalışmıyor. Çözüm: `GIT_SSL_CAINFO=/etc/ssl/certs/agent-identity/sandbox-gateway-ca.crt`. Bu CA `CURL_CA_BUNDLE` ile `curl`'a zaten veriliyor, yalnız git kendi ortam değişkenini okumuyor. Doğru CA verildiğinde klon, push ve PR/merge API çağrıları sorunsuz çalıştı.
+- Token kullanımı: push ve API çağrıları `http.extraheader` üzerinden geçici yetkilendirmeyle yapıldı; token `.git/config`'e, remote URL'ye veya commit geçmişine yazılmadı (kontrol edildi). Depoda veya belgelerde gizli anahtar yok.
+- Hâlâ açık: PR #4 (`feat/daily-plan-week-expansion`) 28 Eylül'den beri açık, main'den 19 commit geride; içeriği PR #5/#6 ile zaten girmiş olduğu için birleştirilmemeli, kapatılmalı. Ayrıca birleşmiş 13 dal silinmemiş durumda. Bu ikisi henüz belgelenmedi ve değiştirilmedi.
+- Sıradaki iş: `degerlendirme.html` rubrik tablosunun mobil taşması (PR #10'daki `.yillik-tablo-kaydirma` deseni), sonra `js/modules/unite-plani.js:233` metni. Kullanıcının yeni talebi bu önerilerin önüne geçer.
+
+---
+
 ## 29 Eylül 2026 — PR #12 ve PR #13 kayıt boşluğu kapatıldı; görsel doğrulama
 
 - Kayıt boşluğu: PR #12 (72 saat + yatay baskı) ve PR #13 (FOPOS esinli görsel temel) `main`'e birleşmişti ama hiçbiri belgelenmemişti. PR #12 merge commit'i `354f1c7`, PR #13 kod commit'i `8b0eed6` (29 Eylül 2026 13:30 UTC). Bu kayıt ikisini de kapatır; kod değiştirilmemiştir.
@@ -6,7 +17,7 @@
 - Bulgu (PR #13'ün eseri değil, önceden beri var): `degerlendirme.html` mobilde yatay taşıyor. 390px ekranda sayfa 659px'e genişliyor (+269px). Neden `js/modules/degerlendirme.js`'in ürettiği `.dg-rubrik-tablosu` (618px) — sarmalayıcısı `div.rubrik-kagit` (358px) ve `overflow-x: visible`; Yıllık Plan tablosu PR #10'da `.yillik-tablo-kaydirma` sarmalayıcısına alındığı hâlde burada alınmamış. Aynı commit aralığında ölçüldü: `354f1c7` (PR #13 öncesi) ile `8b0eed6` birebir aynı değer. Yani PR #13 taşmayı ne getirmiş ne de fark etmiş.
 - Baskı: `page.emulateMediaType('print')` ile doğrulandı — sidebar tüm modül sayfalarında gizli, Yıllık Plan'da `@page { size: A4 landscape }` etkin, diğer modüllerde yok. Üretilen PDF'lerde Yıllık Plan 842×596 pt (A4 yatay), Günlük Plan ve Ünite Plan 596×842 pt (A4 dikey).
 - Açık gözlem (daha önce de not edilmişti, hâlâ geçerli): Günlük Plan'da "Hafta seçimi" açılır listesi baskıda gizlenmiyor (`#gp-hafta` print medyasında `display: inline-block`); öğretmen çıktısında kontrol listesi basılıyor.
-- Doğrulanamayan: canlı site, gerçek mobil cihaz, gerçek yazıcı, Firefox/Safari. Headless Chromium ortamında Google Fonts CDN'i `ERR_CERT_AUTHORITY_INVALID` verdi (ortamın MITM proxy sertifikası); bu yüzden ekran görüntülerinde Source Serif 4 yerine yedek serif görünüyor. Gerçek kullanıcıyı etkilemesi beklenmiyor ama bu oturumda kanıtlanmadı.
+- Doğrulanamayan: gerçek mobil cihaz, gerçek yazıcı, Firefox/Safari ve canlı tarayıcı etkileşimi. Headless Chromium ortamında Google Fonts CDN'i `ERR_CERT_AUTHORITY_INVALID` verdi (ortamın MITM proxy sertifikası); bu yüzden ekran görüntülerinde Source Serif 4 yerine yedek serif görünüyor. Gerçek kullanıcıyı etkilemesi beklenmiyor ama bu oturumda kanıtlanmadı. (Bu madde ilk yazıldığında "canlı site" de doğrulanamayanlar arasındaydı; 30 Eylül 2026'da düzeltildi, aşağıdaki yeni kayda bak.)
 - Sıradaki iş: `degerlendirme.html` rubrik tablosuna kaydırma sarmalayıcısı (PR #10'daki desenle); ardından `js/modules/unite-plani.js:233` öğretmen çıktısındaki "kanonik veri kaynağı" ifadesi. Kullanıcının yeni talebi bu önerilerin önüne geçer.
 
 ---
