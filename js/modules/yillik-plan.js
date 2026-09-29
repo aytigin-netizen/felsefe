@@ -50,6 +50,18 @@ const YillikPlanModule = (() => {
     return bolum;
   }
 
+  // Yıllık plan geniş bir tablo olduğu için yalnızca bu sayfada yazdırma yönü
+  // yatay (A4) yapılır. Diğer modüllerin baskısı etkilenmez; stil bu modül
+  // render edildiğinde sayfaya bir kez eklenir.
+  function yatayBaskiStiliEkle() {
+    if (document.getElementById("yillik-yatay-baski-stili")) return;
+    const stil = document.createElement("style");
+    stil.id = "yillik-yatay-baski-stili";
+    stil.media = "print";
+    stil.textContent = "@page { size: A4 landscape; margin: 10mm; }";
+    document.head.appendChild(stil);
+  }
+
   function render(container, subjectData, seviye) {
     container.innerHTML = "";
 
@@ -72,12 +84,16 @@ const YillikPlanModule = (() => {
 
     container.appendChild(BelgeBilgisiModule.ustBilgiOlustur(seviye.etiket));
 
-    const hesaplananSaat = satirlar.reduce(
+    const uniteSaati = satirlar.reduce(
       (toplam, s) => toplam + (parseInt(s.dersSaati, 10) || 0),
       0
     );
     const bosSaatliHaftalar = satirlar.filter((s) => !s.dersSaati);
     const ozelHaftalar = DataLoader.getOzelPlanlamaHaftalari(seviye);
+    const otpSaati = DataLoader.ozelPlanlamaSaati(seviye);
+    const otpHaftaSayisi = ozelHaftalar.filter((h) => Number.isFinite(h.dersSaati)).length;
+    const sosyalEtkinlikVarMi = ozelHaftalar.some((h) => !Number.isFinite(h.dersSaati));
+    const hesaplananSaat = uniteSaati + otpSaati;
     const resmiToplamVarMi =
       seviye.toplamDersSaatiYillik !== null && seviye.toplamDersSaatiYillik !== undefined;
 
@@ -85,9 +101,13 @@ const YillikPlanModule = (() => {
       ["Ders", subjectData.dersAdi],
       ["Sınıf", seviye.etiket],
       ["Eğitim öğretim yılı", "2026-2027"],
-      ["Toplam ders saati", resmiToplamVarMi ? `${seviye.toplamDersSaatiYillik} ders saati` : ""],
+      ["Toplam ders saati", resmiToplamVarMi
+        ? `${seviye.toplamDersSaatiYillik} ders saati` +
+          (otpSaati ? ` (${uniteSaati} ünite + ${otpSaati} okul temelli planlama)` : "")
+        : ""],
       ["Öğrenme çıktısı sayısı", String(seviye.toplamOgrenmeCiktisiSayisi || "")],
       ["Planlı hafta sayısı", String(haftaSayisi)],
+      ["Okul temelli planlama", otpSaati ? `${otpHaftaSayisi} hafta, ${otpSaati} ders saati` : ""],
       ["Tabloda görünen satır sayısı", String(satirlar.length)]
     ]));
 
@@ -103,7 +123,8 @@ const YillikPlanModule = (() => {
     const ozet = document.createElement("p");
     ozet.className = "modul-ozet";
     ozet.textContent = resmiToplamVarMi
-      ? `Çerçeve plana göre toplam ${seviye.toplamDersSaatiYillik} ders saati, ` +
+      ? `Çerçeve plana göre toplam ${seviye.toplamDersSaatiYillik} ders saati` +
+        (otpSaati ? ` (${uniteSaati} ünite + ${otpSaati} okul temelli planlama)` : "") + `, ` +
         `${seviye.toplamOgrenmeCiktisiSayisi} öğrenme çıktısı, ${haftaSayisi} planlı hafta ` +
         `(bazı haftalar birden fazla kazanıma bölündüğü için tabloda ${satirlar.length} satır görünür).`
       : `${seviye.toplamOgrenmeCiktisiSayisi} öğrenme çıktısı, ${haftaSayisi} planlı hafta ` +
@@ -134,15 +155,11 @@ const YillikPlanModule = (() => {
       container.appendChild(uyari);
     }
 
-    if (ozelHaftalar.length) {
+    if (sosyalEtkinlikVarMi) {
       const notu = document.createElement("p");
       notu.className = "modul-ozet";
       notu.textContent =
-        `Ayrıca ${ozelHaftalar.length} hafta (Okul Temelli Planlama / Sosyal Etkinlik) çerçeve ` +
-        `planda ayrılmıştır; bu haftaların saati ve içeriği okul/zümre kararıyla belirlenir, ` +
-        `yukarıdaki toplamlara dahil değildir: ` +
-        ozelHaftalar.map((h) => `${h.hafta} (${h.tur})`).join("; ") +
-        ".";
+        "Sosyal etkinlik haftası tabloda gösterilir; yıllık toplam ders saatine eklenmemiştir.";
       container.appendChild(notu);
     }
 
@@ -170,7 +187,31 @@ const YillikPlanModule = (() => {
     table.appendChild(thead);
 
     const tbody = document.createElement("tbody");
-    for (const s of satirlar) {
+    const haftaNo = (metin) => parseInt(String(metin || ""), 10) || 0;
+    const tabloSatirlari = [
+      ...satirlar.map((s) => ({ tip: "kazanim", no: haftaNo(s.hafta), s })),
+      ...ozelHaftalar.map((h) => ({ tip: "ozel", no: haftaNo(h.hafta), h })),
+    ].sort((a, b) => a.no - b.no);
+
+    for (const oge of tabloSatirlari) {
+      if (oge.tip === "ozel") {
+        const h = oge.h;
+        const tr = document.createElement("tr");
+        tr.className = "yillik-ozel-satir";
+        const saatVarMi = Number.isFinite(h.dersSaati);
+        for (const metin of [h.hafta || "", h.ay || "", saatVarMi ? String(h.dersSaati) : "—"]) {
+          const td = document.createElement("td");
+          td.textContent = metin;
+          tr.appendChild(td);
+        }
+        const tdTur = document.createElement("td");
+        tdTur.colSpan = 4;
+        tdTur.textContent = h.tur.toLocaleUpperCase("tr-TR") + (saatVarMi ? "*" : "");
+        tr.appendChild(tdTur);
+        tbody.appendChild(tr);
+        continue;
+      }
+      const s = oge.s;
       const tr = document.createElement("tr");
 
       const hucreler = [
@@ -211,6 +252,19 @@ const YillikPlanModule = (() => {
     tabloKaydirma.appendChild(table);
     container.appendChild(tabloKaydirma);
 
+    if (otpSaati) {
+      const dipnot = document.createElement("p");
+      dipnot.className = "yillik-dipnot";
+      dipnot.textContent =
+        "* Okul temelli planlama: zümre öğretmenler kurulunca ders kapsamında yapılmasına karar " +
+        "verilen çalışmalara (araştırma ve gözlem, sosyal etkinlik, proje, yerel çalışma, okuma " +
+        "çalışması vb.) ayrılan süredir. Çerçeve plandaki haftalar örnektir; zümre kararına göre " +
+        "değiştirilebilir.";
+      container.appendChild(dipnot);
+    }
+
+    yatayBaskiStiliEkle();
+
     container.appendChild(BelgeBilgisiModule.imzaAlaniOlustur(["Öğretmen İmza", "Zümre Başkanı İmza"]));
 
     const yazdirBtn = document.createElement("button");
@@ -219,6 +273,13 @@ const YillikPlanModule = (() => {
     yazdirBtn.textContent = "Yazdır / PDF olarak kaydet";
     yazdirBtn.addEventListener("click", () => window.print());
     container.appendChild(yazdirBtn);
+
+    const baskiIpucu = document.createElement("p");
+    baskiIpucu.className = "baski-ipucu";
+    baskiIpucu.textContent =
+      "Yıllık plan yatay (A4) yazdırılır. Tarayıcınız sayfa yönünü uygulamazsa yazdırma " +
+      "penceresinde Düzen → Yatay seçin.";
+    container.appendChild(baskiIpucu);
   }
 
   return { render };

@@ -656,6 +656,26 @@
             }
           ]
         }
+      ],
+      "ozelPlanlamaHaftalari": [
+        {
+          "ay": "OCAK",
+          "hafta": "18. Hafta: 18-22 Ocak",
+          "tur": "Okul Temelli Planlama",
+          "dersSaati": 2
+        },
+        {
+          "ay": "HAZİRAN",
+          "hafta": "36. Hafta: 14-18 Haziran",
+          "tur": "Okul Temelli Planlama",
+          "dersSaati": 2
+        },
+        {
+          "ay": "HAZİRAN",
+          "hafta": "37. Hafta: 21-25 Haziran",
+          "tur": "Sosyal Etkinlik",
+          "dersSaati": null
+        }
       ]
     }
   ],

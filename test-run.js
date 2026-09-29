@@ -77,6 +77,26 @@ async function run() {
           if (!container.querySelector(".yillik-tablo-kaydirma > .yillik-plan-tablosu")) {
             errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: ana tablo kaydırma sarmalayıcısında değil`);
           }
+          if (seviye.toplamDersSaatiYillik !== 72) {
+            errors.push(`[${ders} / ${seviye.etiket}] yıllık toplam 72 ders saati olmalı, veride ${seviye.toplamDersSaatiYillik}`);
+          }
+          const uniteSaati = window.DataLoader.tumHaftalikSatirlar(seviye)
+            .reduce((toplam, s) => toplam + (parseInt(s.dersSaati, 10) || 0), 0);
+          const otpSaati = window.DataLoader.ozelPlanlamaSaati(seviye);
+          if (uniteSaati + otpSaati !== seviye.toplamDersSaatiYillik) {
+            errors.push(`[${ders} / ${seviye.etiket}] ünite (${uniteSaati}) + okul temelli planlama (${otpSaati}) saati yıllık toplama (${seviye.toplamDersSaatiYillik}) eşit değil`);
+          }
+          if (notMetni.includes("Uyuşmazlık uyarısı")) {
+            errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: ders saati uyuşmazlık uyarısı görünüyor`);
+          }
+          const ozelSatirSayisi = container.querySelectorAll(".yillik-ozel-satir").length;
+          if (ozelSatirSayisi !== window.DataLoader.getOzelPlanlamaHaftalari(seviye).length) {
+            errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: okul temelli planlama/sosyal etkinlik satırları tabloda eksik (${ozelSatirSayisi})`);
+          }
+          const yatayStil = window.document.getElementById("yillik-yatay-baski-stili");
+          if (!yatayStil || yatayStil.media !== "print" || !/landscape/.test(yatayStil.textContent)) {
+            errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: yatay baskı stili eksik`);
+          }
         }
       } catch (e) {
         errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: ${e.stack}`);

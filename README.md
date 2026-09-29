@@ -10,7 +10,7 @@ Canlı site: <https://aytigin-netizen.github.io/felsefe/>
 
 | Modül | Durum | Ne yapar |
 | --- | --- | --- |
-| Yıllık Plan | ✅ | Seçili ders/seviye için haftalık dağılımlı, yazdırılabilir yıllık plan; başta plan bilgileri tablosu ve program/kaynak notu |
+| Yıllık Plan | ✅ | Seçili ders/seviye için haftalık dağılımlı, yazdırılabilir yıllık plan; başta plan bilgileri tablosu ve program/kaynak notu; okul temelli planlama ve sosyal etkinlik haftaları tabloda; yazdırma A4 yatay |
 | Günlük Plan | ✅ (Felsefe, 5 hafta) | Anadolu Lisesi; Felsefe 10. sınıf 1.–2. hafta, 11. sınıf 1.–3. hafta. Hafta seçimli, düzenlenebilir 80 dakikalık akış; ders bilgileri, program bağlantısı ve ölçme yaklaşımı bölümleriyle. Diğer derslerde henüz yok |
 | Ünite Planı | ✅ | Ünite bazlı öğrenme çıktısı kartları + öğretmen notları; başta ünite bilgileri ve program/ölçme notu |
 | Çalışma Kâğıdı | ✅ | Kazanımdan seçmeli bölümlü, yazdırılabilir çalışma kâğıdı |
@@ -91,23 +91,25 @@ etkinlik metinleri. Bunlar ihtiyaç oldukça aynı şemaya eklenecek.
 
 ## Veri doğrulama durumu ve bilinen uyumsuzluklar
 
+- **Yıllık ders saati: 72 (tüm derslerde).** Resmî Felsefe öğretim programının süre
+  tablosu 10. ve 11. sınıfta 68 saat ünite + 4 saat okul temelli planlama = 72 saat
+  gösterir. Sitede de böyle: yıllık toplam 72, ünite haftaları 68, okul temelli
+  planlama 4 (Ocak ve Haziran'daki iki hafta × 2 saat). Sosyal etkinlik haftası
+  (21-25 Haziran) tabloda görünür ama 72'ye eklenmez. `npm test` her ders/seviyede
+  ünite + okul temelli planlama saatinin 72 ettiğini denetler.
 - **Felsefe 10/11 ve Psikoloji:** kaynak taslak planda gerçekten boş olan haftalar,
   Ankara Kız Anadolu İmam Hatip Lisesi'nin 2026-2027 uygulanmış ünitelendirilmiş
   yıllık planlarıyla satır satır karşılaştırılarak **2 ders saati** olarak dolduruldu.
-  Üç seviye de artık net ve tutarlı bir yıllık toplama sahip: **68 ders saati**
-  (34 hafta × 2 saat).
+  Felsefe 10 ve 11 için okulun uygulanmış planı ayrıca hafta hafta yeniden
+  karşılaştırıldı: 34 ünite haftasının hepsinde kazanım kodları eşleşiyor.
 - **Sosyoloji Dersi 2 (12. sınıf):** resmi çerçeve yıllık plan henüz yayımlanmadığından
   `cercevePlanMevcut: false` — Yıllık Plan modülü bu seviyede devre dışı, diğer
   modüller etkilenmez.
-- **⚠️ Mantık — bilinen 72/68 uyumsuzluğu:** `mantik_veri_kaynagi.json` dosyasında
-  `toplamDersSaatiYillik: 72` yazılıdır; ancak ünitelerin `dersSaati` alanları toplamı
-  **68**'dir (10 + 16 + 16 + 26). Kullanıcının 28 Eylül 2026 kararıyla yıllık toplam **72 ders saati** olarak korunacaktır.
-  Ünite toplamındaki 4 saatlik farkın hangi haftalara/etkinliklere ait olduğu
-  kaynak planla doğrulanmalıdır; farkı kapatmak için yıllık toplam 68 saate indirilmez
-  ve ünite saatleri tahminle değiştirilmez. Mantık verisi için de
-  Felsefe/Psikoloji'deki gibi satır satır kaynak karşılaştırması henüz yapılmadı.
-  Yıllık plan modülü bu uyumsuzluk nedeniyle Mantık'ta hafta/saat tutarlılık uyarısı
-  gösterebilir; veri düzeltilene kadar bilinen bir durumdur.
+- **Sosyoloji Dersi 1 ve Mantık — okul temelli planlama haftaları:** bu iki derste
+  Ocak (18-22) ve Haziran (14-18) okul temelli planlama haftaları ile 21-25 Haziran
+  sosyal etkinlik haftası, Felsefe ve Psikoloji'deki takvimle aynı varsayılarak
+  eklendi (dört dersin de haftalık dağılımı aynı boşlukları gösteriyor). Kaynak
+  çerçeve plan dosyasıyla satır satır doğrulanmadı.
 
 ## Veri saklama
 
@@ -143,7 +145,6 @@ pedagojik doğruluğu kanıtlamaz. Bunlar ayrıca gerçek tarayıcıda kontrol e
 - [ ] Word/PowerPoint çıktısı — şu an yalnızca tarayıcı üzerinden yazdır/PDF var
 - [ ] Çalışma kâğıdı ve rubrik içerikleri genel şablon düzeyinde; konuya özgü
       örnek/görev metinleri zamanla eklenecek
-- [ ] Mantık 72/68 ders saati uyumsuzluğunun kaynakla çözülmesi
 - [ ] Sosyoloji ve Mantık verilerinin satır satır kaynak karşılaştırması
 
 ## Lisans

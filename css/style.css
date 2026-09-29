@@ -222,6 +222,47 @@ button:focus-visible {
   }
 }
 
+.yillik-ozel-satir td {
+  background: var(--card-bg);
+  font-weight: 600;
+}
+
+.yillik-dipnot,
+.baski-ipucu {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+@media print {
+  .baski-ipucu {
+    display: none;
+  }
+
+  .yillik-plan-tablosu {
+    font-size: 0.75rem;
+  }
+
+  .yillik-plan-tablosu th,
+  .yillik-plan-tablosu td {
+    border-color: #777;
+    padding: 0.25rem 0.35rem;
+  }
+
+  .yillik-plan-tablosu tr {
+    break-inside: avoid;
+  }
+
+  .yillik-plan-tablosu thead {
+    display: table-header-group;
+    background: #f2f2f2;
+  }
+
+  .yillik-ozel-satir td {
+    background: #f2f2f2;
+  }
+}
+
 .yillik-belge-bolumu {
   margin-block: 1rem;
 }

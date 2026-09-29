@@ -112,11 +112,20 @@ const DataLoader = (() => {
   }
 
   // Bir seviyenin, hiçbir kazanıma bağlı olmayan (Okul Temelli Planlama,
-  // Sosyal Etkinlik gibi) özel haftalarını döner. Bu haftalar çerçeve planda
-  // yer alır ama saatleri okul/zümre kararıyla belirlenir; bu yüzden ders
-  // saati toplamına dahil edilmez.
+  // Sosyal Etkinlik gibi) özel haftalarını döner. Ders saati (dersSaati) sayı
+  // olarak verilen haftalar yıllık toplama girer (okul temelli planlama: 2+2 = 4
+  // saat; yıllık 72 = 68 ünite + 4 okul temelli planlama). dersSaati null olan
+  // hafta (Sosyal Etkinlik) tabloda görünür ama toplama eklenmez.
   function getOzelPlanlamaHaftalari(seviye) {
     return (seviye && seviye.ozelPlanlamaHaftalari) || [];
+  }
+
+  // Özel haftaların yıllık toplama giren ders saati toplamı.
+  function ozelPlanlamaSaati(seviye) {
+    return getOzelPlanlamaHaftalari(seviye).reduce(
+      (toplam, h) => toplam + (Number.isFinite(h.dersSaati) ? h.dersSaati : 0),
+      0
+    );
   }
 
   function clearCache() {
@@ -134,6 +143,7 @@ const DataLoader = (() => {
     getUniteler,
     planliHaftaSayisi,
     getOzelPlanlamaHaftalari,
+    ozelPlanlamaSaati,
     clearCache,
   };
 })();
