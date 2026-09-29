@@ -13,6 +13,69 @@ const UnitePlaniModule = (() => {
     return `${NOT_ANAHTAR_ONEKI}${subjectData.kodPrefix}:${seviye.etiket}:${unite.uniteNo}`;
   }
 
+  function tabloOlustur(baslik, satirlar) {
+    const bolum = document.createElement("section");
+    bolum.className = "unite-belge-bolumu";
+
+    const h3 = document.createElement("h3");
+    h3.textContent = baslik;
+    bolum.appendChild(h3);
+
+    const table = document.createElement("table");
+    table.className = "unite-bilgi-tablosu";
+    const tbody = document.createElement("tbody");
+    satirlar.filter(([, deger]) => deger).forEach(([etiket, deger]) => {
+      const tr = document.createElement("tr");
+      const th = document.createElement("th");
+      th.scope = "row";
+      th.textContent = etiket;
+      const td = document.createElement("td");
+      td.textContent = deger;
+      tr.append(th, td);
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    bolum.appendChild(table);
+    return bolum;
+  }
+
+  function listeBolumuOlustur(baslik, maddeler) {
+    const bolum = document.createElement("section");
+    bolum.className = "unite-belge-bolumu";
+
+    const h3 = document.createElement("h3");
+    h3.textContent = baslik;
+    bolum.appendChild(h3);
+
+    const ul = document.createElement("ul");
+    ul.className = "unite-belge-listesi";
+    maddeler.filter(Boolean).forEach((madde) => {
+      const li = document.createElement("li");
+      li.textContent = madde;
+      ul.appendChild(li);
+    });
+    bolum.appendChild(ul);
+    return bolum;
+  }
+
+  function uniteKapsamOzeti(unite) {
+    const ciktilar = unite.ogrenmeCiktilari || [];
+    const kavramlar = new Set();
+    const icerikler = new Set();
+    const haftalar = [];
+    ciktilar.forEach((cikti) => {
+      (cikti.anahtar_kavramlar || []).forEach((kavram) => kavramlar.add(kavram));
+      (cikti.icerik_cercevesi || []).forEach((icerik) => icerikler.add(icerik));
+      (cikti.haftalikDagilim || []).forEach((hafta) => haftalar.push(hafta.hafta));
+    });
+    return {
+      ciktiSayisi: ciktilar.length,
+      haftalar: haftalar.join("; "),
+      kavramlar: [...kavramlar].join(", "),
+      icerikler: [...icerikler].join(", ")
+    };
+  }
+
   function etiketGrubuOlustur(baslik, degerler, sinifAdi) {
     const bolum = document.createElement("div");
     bolum.className = "etiket-bolumu";
@@ -153,6 +216,27 @@ const UnitePlaniModule = (() => {
     detay.setAttribute("aria-live", "polite");
 
     detay.appendChild(BelgeBilgisiModule.ustBilgiOlustur(seviye.etiket));
+
+    const kapsam = uniteKapsamOzeti(unite);
+    detay.appendChild(tabloOlustur("Ünite Bilgileri", [
+      ["Ders", subjectData.dersAdi],
+      ["Sınıf", seviye.etiket],
+      ["Ünite", `${unite.uniteNo}. ${unite.uniteAdi}`],
+      ["Ders saati", unite.dersSaati ? `${unite.dersSaati} ders saati` : ""],
+      ["Öğrenme çıktısı sayısı", String(kapsam.ciktiSayisi)],
+      ["Haftalık kapsam", kapsam.haftalar]
+    ]));
+
+    detay.appendChild(listeBolumuOlustur("Program Bağlantısı", [
+      kapsam.icerikler ? `İçerik çerçevesi: ${kapsam.icerikler}` : "",
+      kapsam.kavramlar ? `Anahtar kavramlar: ${kapsam.kavramlar}` : "",
+      "Öğrenme çıktıları, süreç bileşenleri ve haftalık dağılım aşağıdaki kartlarda kanonik veri kaynağından okunur."
+    ]));
+
+    detay.appendChild(listeBolumuOlustur("Ölçme ve Değerlendirme Notu", [
+      "Ünite değerlendirmesinde her öğrenme çıktısı için süreç bileşeni, içerik çerçevesi ve öğrencinin ürettiği kanıt birlikte izlenmelidir.",
+      "Kartlardaki haftalık dağılım ders sırası için kılavuzdur; ölçme aracı ve etkinlik ayrıntıları okul/zümre kararına göre uyarlanabilir."
+    ]));
 
     const ozet = document.createElement("p");
     ozet.className = "modul-ozet";

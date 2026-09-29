@@ -66,6 +66,11 @@ async function run() {
       try {
         const c2 = window.document.createElement("div");
         window.UnitePlaniModule.render(c2, subjectData, seviye);
+        if (!c2.textContent.includes("Ünite Bilgileri") ||
+            !c2.textContent.includes("Program Bağlantısı") ||
+            !c2.textContent.includes("Ölçme ve Değerlendirme Notu")) {
+          errors.push(`[${ders} / ${seviye.etiket}] UnitePlaniModule: belge omurgası eksik`);
+        }
       } catch (e) {
         errors.push(`[${ders} / ${seviye.etiket}] UnitePlaniModule: ${e.stack}`);
       }
