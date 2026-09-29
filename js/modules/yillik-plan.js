@@ -91,11 +91,14 @@ const YillikPlanModule = (() => {
       ["Tabloda görünen satır sayısı", String(satirlar.length)]
     ]));
 
-    container.appendChild(listeBolumuOlustur("Program ve Kaynak Notu", [
-      "Haftalık dağılım, uygulamadaki kanonik veri kaynağından ve MEB 2026-2027 çerçeve yıllık plan eşlemesinden okunur.",
-      "Öğrenme çıktısı kodları, başlıkları ve süreç bileşenleri tablo satırlarında görünür tutulur.",
-      "Okul temelli planlama, sosyal etkinlik, tatil ve özel gün/hafta bilgileri ayrı notlarla izlenir."
-    ]));
+    const kaynakNotlari = [
+      "Haftalık dağılım, MEB 2026-2027 taslak çerçeve yıllık planına dayanır; ders saati eksik kalan haftalar varsa aşağıda uyarıyla belirtilir.",
+      "Öğrenme çıktısı kodları, başlıkları ve süreç bileşenleri tablo satırlarında görünür."
+    ];
+    if (ozelHaftalar.length || (seviye.tatiller || []).length) {
+      kaynakNotlari.push("Okul temelli planlama, sosyal etkinlik ve tatil bilgileri bu planda ayrıca gösterilir.");
+    }
+    container.appendChild(listeBolumuOlustur("Program ve Kaynak Notu", kaynakNotlari));
 
     const ozet = document.createElement("p");
     ozet.className = "modul-ozet";
@@ -203,7 +206,10 @@ const YillikPlanModule = (() => {
       tbody.appendChild(tr);
     }
     table.appendChild(tbody);
-    container.appendChild(table);
+    const tabloKaydirma = document.createElement("div");
+    tabloKaydirma.className = "yillik-tablo-kaydirma";
+    tabloKaydirma.appendChild(table);
+    container.appendChild(tabloKaydirma);
 
     container.appendChild(BelgeBilgisiModule.imzaAlaniOlustur(["Öğretmen İmza", "Zümre Başkanı İmza"]));
 

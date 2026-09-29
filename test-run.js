@@ -64,6 +64,20 @@ async function run() {
              !container.textContent.includes("Program ve Kaynak Notu"))) {
           errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: belge omurgası eksik`);
         }
+        if (window.DataLoader.cercevePlanVarMi(seviye)) {
+          const ozelVarMi = window.DataLoader.getOzelPlanlamaHaftalari(seviye).length > 0 ||
+            (seviye.tatiller || []).length > 0;
+          const notMetni = container.textContent;
+          if (notMetni.includes("Okul temelli planlama, sosyal etkinlik ve tatil bilgileri") !== ozelVarMi) {
+            errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: kaynak notundaki okul temelli/tatil maddesi veriyle tutarsız`);
+          }
+          if (notMetni.includes("kanonik")) {
+            errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: belge metninde geliştirici dili var`);
+          }
+          if (!container.querySelector(".yillik-tablo-kaydirma > .yillik-plan-tablosu")) {
+            errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: ana tablo kaydırma sarmalayıcısında değil`);
+          }
+        }
       } catch (e) {
         errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: ${e.stack}`);
       }

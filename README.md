@@ -10,9 +10,9 @@ Canlı site: <https://aytigin-netizen.github.io/felsefe/>
 
 | Modül | Durum | Ne yapar |
 | --- | --- | --- |
-| Yıllık Plan | ✅ | Seçili ders/seviye için haftalık dağılımlı, yazdırılabilir yıllık plan |
-| Günlük Plan | ✅ (ilk örnek) | Felsefe 11. sınıf, Anadolu Lisesi, 3. hafta örneği; düzenlenebilir akış |
-| Ünite Planı | ✅ | Ünite bazlı öğrenme çıktısı kartları + öğretmen notları |
+| Yıllık Plan | ✅ | Seçili ders/seviye için haftalık dağılımlı, yazdırılabilir yıllık plan; başta plan bilgileri tablosu ve program/kaynak notu |
+| Günlük Plan | ✅ (Felsefe, 5 hafta) | Anadolu Lisesi; Felsefe 10. sınıf 1.–2. hafta, 11. sınıf 1.–3. hafta. Hafta seçimli, düzenlenebilir 80 dakikalık akış; ders bilgileri, program bağlantısı ve ölçme yaklaşımı bölümleriyle. Diğer derslerde henüz yok |
+| Ünite Planı | ✅ | Ünite bazlı öğrenme çıktısı kartları + öğretmen notları; başta ünite bilgileri ve program/ölçme notu |
 | Çalışma Kâğıdı | ✅ | Kazanımdan seçmeli bölümlü, yazdırılabilir çalışma kâğıdı |
 | Değerlendirme / Rubrik | ✅ | 4 seviyeli, düzenlenebilir rubrik |
 | Sunum | 🚧 | Geliştirme aşamasında |
@@ -39,11 +39,14 @@ js/app.js                 Ana sayfa: menü/seçim mantığı, modül grid'i, kaz
 js/module-page.js         Modül sayfalarının ortak yükleme mantığı
 js/modules/               Çıktı üreticileri: yillik-plan.js, gunluk-plan.js, unite-plani.js,
                           calisma-kagidi.js, degerlendirme.js
+js/modules/gunluk-plan-verileri.js  Günlük Plan hafta paketleri (içerik verisi, üreticiden ayrı)
 data/*_veri_kaynagi.json  Her ders için kanonik veri (kazanım + haftalık plan birleşik)
 test-selection.js         Ders/seviye seçim davranışı regresyon testi
-test-daily-plan.js        Günlük plan davranış testi
+test-daily-plan.js        Günlük plan davranış testi (10/1, 10/2, 11/1, 11/2, 11/3)
 test-run.js               jsdom ile tüm modülleri her ders/seviye kombinasyonunda render edip
                           hata arayan basit regresyon testi (npm test)
+.github/workflows/ci.yml  Push (main), pull request ve elle çalıştırmada npm test
+package.json, LICENSE     jsdom (yalnız test bağımlılığı) ve ISC lisansı
 ```
 
 ## Veri şeması
@@ -119,16 +122,23 @@ bilgiler görünmez; paylaşılan bir hesap/backend yoktur (proje kararı böyle
 npm install && npm test
 ```
 
-Statik dosyalardır; GitHub Pages ya da Netlify gibi herhangi bir statik yayın
-ortamında ek yapılandırma gerektirmeden çalışır. `index.html` giriş noktasıdır.
-Yayınlamadan önce `npm test` ile regresyon testini çalıştırmak önerilir.
+Statik dosyalardır; canlı site GitHub Pages üzerinden yayınlanır, başka bir statik
+ortamda da ek yapılandırma gerektirmeden çalışır. `index.html` giriş noktasıdır.
+`main`'e giden her değişiklikte ve her pull request'te CI `npm test` çalıştırır.
+
+`npm test` yalnızca modüllerin hatasız render edildiğini ve belirli bölüm/metinlerin
+bulunduğunu denetler; mobil görünümü, sayfalar arası gezinmeyi, yazdırma çıktısını ve
+pedagojik doğruluğu kanıtlamaz. Bunlar ayrıca gerçek tarayıcıda kontrol edilir.
 
 ## Geliştirme durumu
 
 - [x] Veri katmanı: kazanım + yıllık plan verisi birleştirildi, doğrulandı
 - [x] Yıllık Plan, Ünite Planı, Çalışma Kâğıdı, Değerlendirme/Rubrik modülleri
-- [x] Günlük Plan ilk örneği (Felsefe 11 — Anadolu Lisesi, 3. hafta)
+- [x] Günlük Plan: Felsefe 10/1, 10/2, 11/1, 11/2, 11/3 (Anadolu Lisesi)
+- [x] Günlük, Ünite ve Yıllık Plan çıktılarında belge bilgileri bölümleri
 - [x] Temel regresyon testleri (`npm test`)
+- [ ] Günlük Plan: Felsefe'nin kalan haftaları ve diğer dersler; içeriğin pedagojik kalite incelemesi
+- [ ] Günlük Plan bölümlerindeki ortak (her haftada aynı) metinlerin haftaya özgü hâle getirilmesi
 - [ ] Sunum, Zümre Tutanağı modülleri
 - [ ] Word/PowerPoint çıktısı — şu an yalnızca tarayıcı üzerinden yazdır/PDF var
 - [ ] Çalışma kâğıdı ve rubrik içerikleri genel şablon düzeyinde; konuya özgü

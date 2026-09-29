@@ -1,3 +1,17 @@
+## 29 Eylül 2026 — PR #7–#9 kayıt boşluğu; yerel tarayıcı doğrulaması; yıllık plan/README düzeltmeleri
+
+- Kayıt boşluğu: PR #7 (Günlük plan), #8 (Ünite planı), #9 (Yıllık plan) "belge omurgası" değişiklikleri main'e birleşmişti (son main: `0e03886`) ama DURUM/DEVIR/PROJE'de kaydı yoktu. Bu kayıt onu kapatır. Kapsam: `gunluk-plan.js`, `unite-plani.js`, `yillik-plan.js`, `css/style.css` (+~95 satır), `test-run.js`, `test-daily-plan.js`.
+- Doğrulanan (yerel klon, headless Chromium, yerel HTTP sunucusu): masaüstü 1280px ve mobil 390px'de Günlük Plan (Felsefe 10/11), Ünite Planı (Felsefe 11) ve Yıllık Plan (Felsefe, Sosyoloji, Psikoloji, Mantık) açıldı; sayfa/konsol JS hatası yok. Baskı ortamında yan menü gizleniyor; Günlük/Ünite/Yıllık Plan için A4 PDF üretildi ve Günlük Plan ile Yıllık Plan'ın ilk sayfaları görsel incelendi. Ünite Planı PDF'i (2 sayfa) görsel incelenmedi.
+- Bulgu 1 (#9 kaynaklı değil): Yıllık Plan ana tablosu mobilde sayfayı yatay taşırıyordu (Felsefe 11: 663px; Sosyoloji 759, Mantık 787, Psikoloji 718). #7'den önceki `d50d68c`'de de aynıydı. Tablo `.yillik-tablo-kaydirma` sarmalayıcısına alındı; sayfa artık taşmıyor, tablo kendi içinde yatay kaydırılıyor. Baskıda sarmalayıcı `overflow: visible`.
+- Bulgu 2: "Program ve Kaynak Notu" yalnız `cercevePlanMevcut` olan seviyelerde render edilir (modül aksi hâlde uyarıyla erken çıkar); yani Sosyoloji 12'de not görünmüyordu, koşulsuz ekleniyor sanılmıştı — bu çıkarım yanlıştı. Gerçek sorun metindi: "kanonik veri kaynağı" gibi geliştirici dili çıktıda basılıyordu ve üçüncü madde (okul temelli planlama/tatil) veriden bağımsız yazılıyordu. Metin öğretmene dönük yazıldı; üçüncü madde yalnız özel planlama haftası ya da tatil varsa ekleniyor.
+- Test: `test-run.js` yıllık plan için üç kontrol ekledi (koşullu madde veriyle tutarlı, "kanonik" yok, tablo sarmalayıcıda). Sarmalayıcı sınıfı geçici bozularak testin düştüğü görüldü, sonra geri alındı. `npm test` üç aşamasıyla geçiyor (font/CSS yükleme uyarıları ortam kaynaklı).
+- README: Günlük Plan durumu (5 hafta), belge bölümleri, `gunluk-plan-verileri.js`, CI ve Pages, testin sınırı, açık işler eşitlendi.
+- Doğrulanamayan: (1) #7–#9 için GitHub Actions CI ve Pages sonuçları — GitHub API hız sınırına takıldı, bakılmadı. (2) Canlı site — bu ortam `github.io`'ya erişemiyor (`host_not_allowed`); canlıda bu üç PR'ın kabulü ve düzeltmenin canlı etkisi yapılmadı. (3) Gerçek mobil cihaz ve gerçek yazıcı/PDF sayfalaması.
+- Açık gözlemler (değiştirilmedi): Felsefe 10/1 haftasında (14-18 Eylül) veri dosyasında "15 Temmuz Demokrasi ve Millî Birlik Günü" yazıyor; kaynak taslakla karşılaştırılmadı. Günlük Plan'ın "Beceri, Değer ve Okuryazarlık" ve "Ölçme ve Değerlendirme" bölümlerindeki iki sabit cümle her haftada aynı; içerik değil şablon. Günlük Plan yazdırmada "Hafta seçimi" açılır listesi basılıyor. Felsefe 10/11 ve Psikoloji'de boş saatler okulun uygulanmış planından dolduruldu (README); belgede bu kaynak ayrımı görünmüyor.
+- Yerel durum: değişiklikler yerelde `fix/yillik-plan-mobil-kaynak-notu` dalında commit'lendi; uzak depoya aktarılmadı, PR açılmadı, yayın yok.
+
+---
+
 ## 29 Eylül 2026 — PR #6 canlı kabul ve paket kapanışı
 
 - PR #6 squash merge ile ana dala alındı. Main commit: `b910adde19b920536123e691bd419254b8546276`.
