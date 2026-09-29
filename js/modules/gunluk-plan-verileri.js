@@ -31,6 +31,35 @@ const FelsefeGunlukPlanlari = [
     ]
   },
   {
+    id:'fel-10-al-2026-h2', ders:'Felsefe', seviye:'10. Sınıf', kod:'FEL.10.1.1',
+    hafta:'2. Hafta: 21-25 Eylül', kapsam:'2. hafta',
+    alanlar:[
+      ['tarih','Ders tarihi','21.09.2026'],
+      ['sinif','Sınıf / şube','10. Sınıf'],
+      ['konu','Konu','Felsefi düşüncenin özellikleri, ortaya çıkışı ve tarihsel gelişimi'],
+      ['materyal','Materyaller ve yöntemler','Tahta, özellik kartları, kısa düşünce örnekleri ve zaman çizgisi şablonu. Soru-cevap, örnek karşılaştırma, küçük grup çalışması ve tarihsel bağlamlandırma.'],
+      ['kabul','Temel kabuller','Öğrencilerin felsefenin ortak tanımı üzerine ilk sorgulamayı yaptığı; ancak felsefi düşüncenin sistemli, eleştirel ve refleksif yapısını gündelik düşünmeden ayırmakta desteğe ihtiyaç duyabileceği kabul edilir.'],
+      ['on','Ön değerlendirme','“Her soru felsefi midir?” sorusuna verilen cevaplardan hareketle felsefi düşünceyi gündelik merak, bilimsel açıklama ve kişisel kanaatten ayıran işaretler toplanır.'],
+      ['kopru','Köprü kurma','Bir önceki derste yazılan felsefe tanımlarına dönülür. Bu tanımlarda sorgulama, gerekçelendirme, tutarlılık ve bütüncül bakış bulunup bulunmadığı kontrol edilir.'],
+      ['bilesen','Bu derste ilişkilendirilen beceri ve değerler','Eleştirel düşünme, kavramsal ayırt etme, tarihsel bağlam kurma, gerekçe arama, tutarlılık ve merak. Bu liste ders uyarlamasıdır.'],
+      ['kartlar','Özellik ve tarihsel bağlam kartları — öğretmen uyarlaması','A — Felsefi düşünce sorgulayıcıdır: Verilen cevapla yetinmez, cevabın dayandığı kabulü de sorar.\n\nB — Felsefi düşünce refleksiftir: İnsan yalnız nesneleri değil, kendi düşünmesini de konu edinir.\n\nC — Felsefi düşünce tarihsel birikimle gelişir: Aynı temel sorular farklı dönemlerde farklı kavramlarla yeniden ele alınır.\n\nHer kart için: Bu özellik felsefeyi gündelik düşünmeden nasıl ayırır? Bir önceki haftadaki felsefe tanımlarından hangisi bu özelliği içeriyor? Tarihsel gelişim neden yalnız “eski fikirler listesi” değildir?'],
+      ['kanit','Öğrenme kanıtları ve değerlendirme','Ürün: Felsefi düşüncenin en az üç özelliğini kısa açıklama ve her özellik için bir örnek verme.\nÇıkış sorusu: “Felsefi düşünce neden kendi düşünmesini de sorgular?” sorusuna bir örnekle cevap verin.'],
+      ['destek','Destekleme','“Felsefi düşünce … özelliğine sahiptir; çünkü …” cümle başlangıcını verin. Özellik kartlarındaki anahtar sözcükleri işaretletin ve öğrencinin örneğini sözlü ifade etmesine izin verin.'],
+      ['zengin','Zenginleştirme','Erken tamamlayan öğrenciler aynı sorunun iki farklı dönemde neden farklı cevaplanabileceğini kısa bir örnekle açıklasın. Amaç ayrıntılı felsefe tarihi anlatımı değil, tarihsel bağlam fikrini fark ettirmektir.'],
+      ['sonraki','Sonraki derse hazırlık','Günlük hayattan felsefi soru olabilecek bir soru seçin. Bu sorunun hangi felsefi düşünce özelliğini taşıdığını bir cümleyle açıklayın.'],
+      ['not','Ders sonrası öğretmen notu','']
+    ],
+    akis:[
+      [5,'Hatırlama ve odaklanma','Önceki haftanın felsefe tanımlarından iki örnek seçer; “Bu tanım felsefi düşüncenin hangi yönünü gösteriyor?” sorusunu yöneltir.','Tanımlardaki sorgulama ve gerekçe izlerini belirler.','Hatırlama notları'],
+      [10,'Gündelik ve felsefi düşünce ayrımı','Gündelik kanaat, bilimsel açıklama ve felsefi sorgulama örneklerini karşılaştırır.','Örneklerdeki soru türünü ve gerekçe biçimini ayırır.','Karşılaştırma tablosu'],
+      [10,'Özellik kartlarını inceleme','Sorgulayıcı, refleksif ve tarihsel birikime dayalı düşünme kartlarını dağıtır.','Kartların ana fikrini kendi cümlesiyle açıklar.','Kart açıklamaları'],
+      [15,'Örnek eşleştirme','Kısa düşünce örneklerini hangi özelliklerle ilişkili olduklarına göre sınıflandırır.','Örnekleri özelliklerle eşleştirir ve gerekçesini yazar.','Eşleştirme gerekçesi'],
+      [15,'Tarihsel gelişim bağlantısı','İkinci ders başında aynı temel sorunun farklı dönemlerde yeniden sorulabileceğini zaman çizgisiyle gösterir.','Soru, dönem ve kavram ilişkisini işaretler.','Mini zaman çizgisi'],
+      [15,'Özelliklerden tanıma dönüş','Felsefe tanımının bu özelliklerle nasıl zenginleşeceğini tartıştırır.','İlk tanımını en az iki özellik ekleyerek geliştirir.','Geliştirilmiş tanım'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular ve örnek-gerekçe uyumunu kontrol eder.','Refleksif düşünmeyi bir örnekle açıklar.','Çıkış yanıtı']
+    ]
+  },
+  {
     id:'fel-11-al-2026-h1', ders:'Felsefe', seviye:'11. Sınıf', kod:'FEL.11.1.1',
     hafta:'1. Hafta: 14-18 Eylül', kapsam:'1. hafta',
     alanlar:[
@@ -56,6 +85,34 @@ const FelsefeGunlukPlanlari = [
       [15,'Soruları sınama','İkinci ders başında üretilen soruları felsefi soru ölçütleriyle tartıştırır.','Soruları karşılaştırır ve gerekirse yeniden yazar.','Düzeltilmiş sorular'],
       [15,'Problem açıklama','Bir felsefi sorunun arkasındaki değer çatışmasını görünür kılar.','Seçtiği sorunun neden problem oluşturduğunu açıklar.','Problem açıklaması'],
       [10,'Bireysel değerlendirme','Çıkış sorusunu uygular.','Sorunun felsefi niteliğini iki özellikle açıklar.','Çıkış yanıtı']
+    ]
+  },
+  {
+    id:'fel-11-al-2026-h2', ders:'Felsefe', seviye:'11. Sınıf', kod:'FEL.11.1.1',
+    hafta:'2. Hafta: 21-25 Eylül', kapsam:'2. hafta',
+    alanlar:[
+      ['tarih','Ders tarihi','21.09.2026'],['sinif','Sınıf / şube','11. Sınıf'],
+      ['konu','Konu','Çevre ile ilgili felsefi soru ve problemlerin hayatla ilişkilendirilerek değerlendirilmesi'],
+      ['materyal','Materyaller ve yöntemler','Yakın çevre vaka kartları, değerlendirme ölçüt tablosu ve tahta. Örnek olay, küçük grup tartışması, ölçütle değerlendirme ve bireysel yazma.'],
+      ['kabul','Temel kabuller','Öğrencilerin çevreyle ilgili felsefi soru kurma deneyimi edindiği; ancak bu soruları günlük yaşam kararlarıyla ilişkilendirirken olgusal bilgi, değer ve sorumluluk boyutlarını karıştırabileceği kabul edilir.'],
+      ['on','Ön değerlendirme','Öğrencilerden yakın çevrede gözledikleri bir çevre sorununu söylemeleri istenir. Her örnek için “Bu olayda kimin sorumluluğu, hangi değer ve hangi karar tartışılıyor?” soruları yöneltilir.'],
+      ['kopru','Köprü kurma','Bir önceki hafta üretilen felsefi sorulara dönülür. Bu soruların günlük yaşamda alınan kararları nasıl etkileyebileceği tartışmaya açılır.'],
+      ['bilesen','Bu derste ilişkilendirilen beceri ve değerler','Felsefi problemi hayatla ilişkilendirme, değerleri ayırt etme, sorumluluk üzerine düşünme, gerekçeli değerlendirme ve çevreye duyarlılık. Bu liste ders uyarlamasıdır.'],
+      ['kartlar','Yakın çevre vaka kartları — öğretmen uyarlaması','A — Okul kantininde tek kullanımlık plastikler ucuz ve pratiktir; ancak atık miktarını artırmaktadır.\n\nB — Bir parkın otoparka dönüştürülmesi ulaşımı kolaylaştıracak; fakat mahalledeki yeşil alanı azaltacaktır.\n\nC — Evde enerji tasarrufu yapmak bazı alışkanlıkları değiştirmeyi gerektirir; herkesin katkısı küçük görünse de toplam etki büyüyebilir.\n\nHer kart için: Buradaki felsefi problem nedir? Hangi değerler çatışıyor? Günlük yaşamda hangi karar bu problemle ilişkilidir? Değerlendirmeniz hangi gerekçeye dayanıyor?'],
+      ['kanit','Öğrenme kanıtları ve değerlendirme','Ürün: Bir çevre vakasını felsefi problem, değer çatışması, günlük yaşam kararı ve gerekçe bakımından değerlendiren kısa tablo.\nÇıkış sorusu: “Çevre sorunları yalnız uzmanların çözmesi gereken teknik sorunlar mıdır?” sorusunu günlük yaşamdan bir örnekle değerlendirin.'],
+      ['destek','Destekleme','Değerlendirme tablosuna hazır başlıklar verin: olay, felsefi soru, değer, karar, gerekçe. Öğrencinin önce tek bir vaka üzerinde sözlü değerlendirme yapmasına izin verin.'],
+      ['zengin','Zenginleştirme','Erken tamamlayanlar aynı vakayı iki farklı değer önceliğiyle değerlendirsin ve sonuç kararın nasıl değiştiğini açıklasın.'],
+      ['sonraki','Sonraki derse hazırlık','Bir çevre konusunda duyduğunuz bir görüşü not edin. Görüşün iddiasını, gerekçesini ve hangi değeri merkeze aldığını belirlemeye çalışın.'],
+      ['not','Ders sonrası öğretmen notu','']
+    ],
+    akis:[
+      [5,'Yaşamdan örnek toplama','Yakın çevreden çevre sorunu örnekleri ister; örnekleri yargılamadan tahtada toplar.','Gözlediği bir çevre sorununu kısa biçimde söyler.','Örnek havuzu'],
+      [10,'Problem boyutlarını ayırma','Seçilen bir örnekte olgu, değer, sorumluluk ve karar boyutlarını modelleyerek ayırır.','Olayda neyin olgu, neyin değer tartışması olduğunu işaretler.','Boyut ayrımı'],
+      [10,'Vaka kartı inceleme','A kartını sınıfla birlikte çözümler; felsefi problem ile pratik kararı ilişkilendirir.','Karttaki değer çatışmasını ve karar noktasını belirler.','İşaretlenmiş A kartı'],
+      [15,'Grup değerlendirmesi','B ve C kartlarını gruplara verir; değerlendirme tablosunu doldurmalarını ister.','Vaka için felsefi problem, değer ve gerekçe yazar.','Grup değerlendirme tablosu'],
+      [15,'Gerekçeleri karşılaştırma','İkinci ders başında grupların gerekçelerini karşılaştırır; teknik çözüm ile felsefi değerlendirme farkını vurgular.','Farklı gerekçelerin kararları nasıl etkilediğini açıklar.','Karşılaştırma notu'],
+      [15,'Günlük yaşam bağlantısı','Öğrencilerden kendi yaşamlarında uygulanabilir bir karar seçmelerini ve gerekçelendirmelerini ister.','Seçtiği kararın hangi felsefi problemle ilişkili olduğunu yazar.','Gerekçeli karar'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; örnek ve değerlendirme ilişkisini kontrol eder.','Teknik sorun-felsefi problem ayrımını günlük örnekle değerlendirir.','Çıkış yanıtı']
     ]
   },
   {
