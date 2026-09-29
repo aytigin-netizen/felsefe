@@ -59,6 +59,11 @@ async function run() {
 
       try {
         window.YillikPlanModule.render(container, subjectData, seviye);
+        if (window.DataLoader.cercevePlanVarMi(seviye) &&
+            (!container.textContent.includes("Yıllık Plan Bilgileri") ||
+             !container.textContent.includes("Program ve Kaynak Notu"))) {
+          errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: belge omurgası eksik`);
+        }
       } catch (e) {
         errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: ${e.stack}`);
       }
