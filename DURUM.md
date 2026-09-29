@@ -1,3 +1,16 @@
+## 29 Eylül 2026 — PR #12 ve PR #13 kayıt boşluğu kapatıldı; görsel doğrulama
+
+- Kayıt boşluğu: PR #12 (72 saat + yatay baskı) ve PR #13 (FOPOS esinli görsel temel) `main`'e birleşmişti ama hiçbiri belgelenmemişti. PR #12 merge commit'i `354f1c7`, PR #13 kod commit'i `8b0eed6` (29 Eylül 2026 13:30 UTC). Bu kayıt ikisini de kapatır; kod değiştirilmemiştir.
+- PR #13 ne yaptı: yalnız `css/style.css` (+71/−26). Renk paleti mavi-lacivertten yeşil-altına (`--accent` #2e5c9a → #b58a45, `--forest` #294f43, `--sidebar` #15211f), zemin krem (#f7f4ee), köşe yuvarlaklığı 6/8px → 10/14px, kartlara gölge, sidebar 240 → 264px, serif başlıklar, buton gradient'i, baskıda gölge kaldırma.
+- Görsel doğrulama (yerel klon, `python3 -m http.server`, headless Chromium + puppeteer-core, 1280px ve 390px): sekiz sayfanın tamamı masaüstünde yatay taşma olmadan açıldı; konsolda gerçek JS hatası yok. Yeni görsel kimliğin bütün modüllerde tutarlı uygulandığı, seçim alanı, modül kartları, sidebar ve belge başlıklarının okunabilir kaldığı ekran görüntüleriyle doğrulandı.
+- Bulgu (PR #13'ün eseri değil, önceden beri var): `degerlendirme.html` mobilde yatay taşıyor. 390px ekranda sayfa 659px'e genişliyor (+269px). Neden `js/modules/degerlendirme.js`'in ürettiği `.dg-rubrik-tablosu` (618px) — sarmalayıcısı `div.rubrik-kagit` (358px) ve `overflow-x: visible`; Yıllık Plan tablosu PR #10'da `.yillik-tablo-kaydirma` sarmalayıcısına alındığı hâlde burada alınmamış. Aynı commit aralığında ölçüldü: `354f1c7` (PR #13 öncesi) ile `8b0eed6` birebir aynı değer. Yani PR #13 taşmayı ne getirmiş ne de fark etmiş.
+- Baskı: `page.emulateMediaType('print')` ile doğrulandı — sidebar tüm modül sayfalarında gizli, Yıllık Plan'da `@page { size: A4 landscape }` etkin, diğer modüllerde yok. Üretilen PDF'lerde Yıllık Plan 842×596 pt (A4 yatay), Günlük Plan ve Ünite Plan 596×842 pt (A4 dikey).
+- Açık gözlem (daha önce de not edilmişti, hâlâ geçerli): Günlük Plan'da "Hafta seçimi" açılır listesi baskıda gizlenmiyor (`#gp-hafta` print medyasında `display: inline-block`); öğretmen çıktısında kontrol listesi basılıyor.
+- Doğrulanamayan: canlı site, gerçek mobil cihaz, gerçek yazıcı, Firefox/Safari. Headless Chromium ortamında Google Fonts CDN'i `ERR_CERT_AUTHORITY_INVALID` verdi (ortamın MITM proxy sertifikası); bu yüzden ekran görüntülerinde Source Serif 4 yerine yedek serif görünüyor. Gerçek kullanıcıyı etkilemesi beklenmiyor ama bu oturumda kanıtlanmadı.
+- Sıradaki iş: `degerlendirme.html` rubrik tablosuna kaydırma sarmalayıcısı (PR #10'daki desenle); ardından `js/modules/unite-plani.js:233` öğretmen çıktısındaki "kanonik veri kaynağı" ifadesi. Kullanıcının yeni talebi bu önerilerin önüne geçer.
+
+---
+
 ## 29 Eylül 2026 — Yıllık plan: 72 saat ve yatay baskı
 
 - İstek: tüm derslerde yıllık 72 saat; Yıllık Plan baskısı yatay. Kullanıcı okulun uygulanmış Felsefe 10/11 planlarını (PDF) örnek verdi.

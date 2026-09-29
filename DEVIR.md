@@ -1,3 +1,16 @@
+## 29 Eylül 2026 — Devir: PR #12 ve PR #13 kaydı + görsel doğrulama
+
+- Devralınan uzak main: `8b0eed6` ("style: add FOPOS-inspired visual foundation (#13)", 29 Eylül 2026 13:30 UTC). Önceki kayıt `4473127`'de bitiyordu; aradaki iki birleşme (`354f1c7` = PR #12, `8b0eed6` = PR #13) hiç belgelenmemişti.
+- Değişen dosya: yalnız `DURUM.md` ve `DEVIR.md`. **Uygulama koduna dokunulmadı.** Uzak dal değişmedi.
+- Çalıştırılan: `npm test` (3 aşama, exit 0); headless Chromium (`@sparticuz/chromium` + `puppeteer-core`) ile 8 sayfa × 2 ekran (1280px masaüstü, 390px mobil) + print medyası emülasyonu; Chromium PDF çıktısı ve sayfa boyutu ölçümü.
+- Bulgu: `degerlendirme.html` mobilde 269px yatay taşıyor (`.dg-rubrik-tablosu` 618px, sarmalayıcı `div.rubrik-kagit` 358px, `overflow-x: visible`). PR #13 öncesi `354f1c7` ile karşılaştırıldı: birebir aynı, yani önceden beri var olan bir hata; PR #13'ün regresyonu değil. PR #10'da Yıllık Plan tablosu için uygulanan `.yillik-tablo-kaydirma` deseni burada uygulanmamış.
+- Doğrulanan: masaüstü 8/8 sayfa taşmasız; mobil 8/8 (değerlendirme hariç — 7/7 temiz); konsolda yalnız Google Fonts CDN sertifika hatası (ortam kaynaklı); baskıda sidebar gizli, `@page` yatay yalnız Yıllık Plan'da; PDF Yıllık Plan 842×596 pt A4 yatay, Günlük/Ünite Plan 596×842 pt A4 dikey.
+- Yeniden doğrulanan açık gözlem: Günlük Plan'ın "Hafta seçimi" listesi baskıda gizlenmiyor.
+- Bilinmeyen: PR #13'ün tasarım kararının kim tarafından, ne dayanarak alındığına dair kayıt yok. PROJE.md "yeni tasarım fikirleri kullanıcı tarafından kabul edilene kadar öneridir" diyor; kabul kaydı belgelerde bulunamadı. Bu oturumda yalnız uygulamanın doğru çalıştığı doğrulandı, tasarımın kabulü doğrulanmadı.
+- Sıradaki tek somut görev: `js/modules/degerlendirme.js`'teki rubrik tablosunu kaydırma sarmalayıcısına almak ve `css/style.css`'e ilgili kuralı eklemek (PR #10'daki `.yillik-tablo-kaydirma` deseniyle aynı, baskıda `overflow: visible`). Sonra `js/modules/unite-plani.js:233` metnini düzelt. Kullanıcının yeni talebi bu önerilerin önüne geçer.
+
+---
+
 ## 29 Eylül 2026 — Yıllık plan: 72 saat ve yatay baskı
 
 - İstek: tüm derslerde yıllık 72 saat; Yıllık Plan baskısı yatay. Kullanıcı okulun uygulanmış Felsefe 10/11 planlarını (PDF) örnek verdi.
