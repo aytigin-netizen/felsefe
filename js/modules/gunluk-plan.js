@@ -2,6 +2,51 @@
 const GunlukPlanModule = (() => {
   const paketler = typeof FelsefeGunlukPlanlari !== 'undefined' ? FelsefeGunlukPlanlari : [];
 
+  function listeOlustur(document, baslik, maddeler) {
+    const section = document.createElement('section');
+    section.className = 'gp-belge-bolumu';
+    const h = document.createElement('h3');
+    h.textContent = baslik;
+    section.append(h);
+    const ul = document.createElement('ul');
+    maddeler.filter(Boolean).forEach(madde => {
+      const li = document.createElement('li');
+      li.textContent = madde;
+      ul.append(li);
+    });
+    section.append(ul);
+    return section;
+  }
+
+  function tabloOlustur(document, baslik, satirlar) {
+    const section = document.createElement('section');
+    section.className = 'gp-belge-bolumu';
+    const h = document.createElement('h3');
+    h.textContent = baslik;
+    section.append(h);
+    const table = document.createElement('table');
+    table.className = 'gp-bilgi-tablosu';
+    const tbody = document.createElement('tbody');
+    satirlar.filter(([, value]) => value).forEach(([label, value]) => {
+      const tr = document.createElement('tr');
+      const th = document.createElement('th');
+      th.scope = 'row';
+      th.textContent = label;
+      const td = document.createElement('td');
+      td.textContent = value;
+      tr.append(th, td);
+      tbody.append(tr);
+    });
+    table.append(tbody);
+    section.append(table);
+    return section;
+  }
+
+  function alanDegeri(p, id) {
+    const alan = p.alanlar.find(([key]) => key === id);
+    return alan ? alan[2] : '';
+  }
+
   function render(container, subjectData, seviye) {
     container.replaceChildren(); container.classList.add('gp');
     const add=(tag,text,parent=container)=>{const n=document.createElement(tag);n.textContent=text;parent.append(n);return n;};
@@ -31,6 +76,33 @@ const GunlukPlanModule = (() => {
       add('p',`${p.hafta} 2026 • ${hafta.dersSaati} ders saati • 2 × 40 dakika`,plan);
       add('p',`${cikti.kod} — ${cikti.baslik}`,plan);
       add('p','Bu haftanın süreç bileşeni: '+hafta.surecBileseniIsaretlenen,plan);
+      plan.append(tabloOlustur(document, 'Ders Bilgileri', [
+        ['Ders', subjectData.dersAdi],
+        ['Sınıf', seviye.etiket],
+        ['Okul türü', 'Anadolu Lisesi'],
+        ['Eğitim öğretim yılı', '2026-2027'],
+        ['Ünite', unite.uniteAdi],
+        ['Konu', alanDegeri(p, 'konu')],
+        ['Süre', `${hafta.dersSaati} ders saati / 80 dakika`],
+        ['Öğrenme çıktısı', `${cikti.kod} — ${cikti.baslik}`],
+        ['Haftalık süreç bileşeni', hafta.surecBileseniIsaretlenen],
+        ['Belirli gün ve hafta', hafta.belirliGunHafta]
+      ]));
+      plan.append(listeOlustur(document, 'Program Bağlantısı', [
+        `İçerik çerçevesi: ${(cikti.icerik_cercevesi || []).join(', ')}`,
+        `Anahtar kavramlar: ${(cikti.anahtar_kavramlar || []).join(', ')}`,
+        'Süreç bileşenleri: Bu derste haftalık planda işaretlenen bileşen merkeze alınır; öğrenme çıktısının diğer bileşenleri ünite bütünlüğü içinde izlenir.'
+      ]));
+      plan.append(listeOlustur(document, 'Beceri, Değer ve Okuryazarlık İlişkisi', [
+        alanDegeri(p, 'bilesen'),
+        'Öğrencinin felsefi soruyu, kavramı, gerekçeyi ve değer ilişkisini görünür kılması beklenir.',
+        'Bu bölüm öğretmen uyarlamasıdır; resmî programdaki bileşenlerle çelişmeyecek şekilde sınıf düzeyine göre düzenlenebilir.'
+      ]));
+      plan.append(listeOlustur(document, 'Ölçme ve Değerlendirme Yaklaşımı', [
+        alanDegeri(p, 'kanit'),
+        'Değerlendirme odağı: öğrenme çıktısı ile süreç bileşeni arasındaki uyum, gerekçelendirme kalitesi ve öğrencinin kendi düşünmesini gözden geçirmesidir.',
+        'Kanıtlar ders içi ürün, çıkış sorusu ve öğretmen gözlemi birlikte değerlendirilerek yorumlanır.'
+      ]));
       const key='cds-gunluk-plan:v1:'+p.id;let saved={};
       try{const data=JSON.parse(localStorage.getItem(key)||'{}');if(data&&typeof data==='object'&&!Array.isArray(data))saved=data;}catch{}
       const status=add('p','',plan);status.className='gp-yardim';status.setAttribute('role','status');
