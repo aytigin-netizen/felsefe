@@ -1,3 +1,28 @@
+## 29 Eylül 2026 — Felsefe 10/11 Günlük Plan 2. hafta hazırlığı başladı
+
+- Kullanıcı GitHub eklentisiyle yeni dalda Felsefe 10/11 için 2. hafta Günlük Plan kapsamını hazırlamayı istedi.
+- GitHub üzerinde ve yerelde yeni dal açıldı: `feat/daily-plan-week-2`.
+- 10. sınıf 2. hafta paketi eklendi: `fel-10-al-2026-h2`, `FEL.10.1.1`, `2. Hafta: 21-25 Eylül`, süreç bileşeni `b) Felsefi düşüncenin genel özellikleri, ortaya çıkışı ve tarihsel gelişimi üzerine derinlemesine düşünür.`
+- 11. sınıf 2. hafta paketi eklendi: `fel-11-al-2026-h2`, `FEL.11.1.1`, `2. Hafta: 21-25 Eylül`, süreç bileşeni `b) Çevre ile ilgili felsefi soru ve problemleri hayatla ilişkilendirerek değerlendirir.`
+- Her iki yeni plan 80 dakika / 7 aşama düzeninde hazırlandı; 10. sınıfta felsefi düşüncenin özellikleri ve tarihsel bağlam, 11. sınıfta çevre problemlerini günlük yaşam kararlarıyla ilişkilendirme işlendi.
+- `test-daily-plan.js` 10/2 ve 11/2 haftalarını da kontrol edecek şekilde güncellendi.
+- Doğrulama: `npm test` başarılı. Çıktı: seçim regresyonu geçti; Günlük Plan 10/1, 10/2, 11/1, 11/2, 11/3 hafta seçimi, 80 dk, kayıt, güvenli metin, yazdırma ve kapsam kontrolleri geçti; tüm modüller tüm ders/seviye kombinasyonlarında render edildi. Test ortamı yine font ve yerel CSS linklerini yükleyemediğini uyarı olarak yazdı; test çıkış kodu 0.
+- Bu kayıt sırasında canlı yayın yapılmadı; PR açılmadı; canlı tarayıcı doğrulaması henüz yapılmadı.
+
+---
+
+## 29 Eylül 2026 — Günlük Plan genişletmesi canlı kabulü
+
+- Canlı GitHub Pages sürümü gerçek tarayıcıyla açıldı: `https://aytigin-netizen.github.io/felsefe/`.
+- Kapsam yalnız Günlük Plan canlı kullanıcı akışıydı; kod değiştirilmedi, commit/push yapılmadı, PR açılmadı ve yeni test/inceleme katmanı oluşturulmadı.
+- Kontrol 1: Felsefe → 10. Sınıf → Günlük Plan. 1. hafta seçilebiliyor; `FEL.10.1.1 — Felsefenin anlamını, gelişim sürecini ve işlevini sorgulayabilme` görünüyor; plan `Dersin işlenişi — 80 dakika` başlığı altında 7 aşama gösteriyor.
+- Kontrol 2: Felsefe → 11. Sınıf → Günlük Plan. 1. hafta seçilebiliyor; `FEL.11.1.1 — Çevre ile ilgili felsefi soru ve problemleri anlayabilme` görünüyor; plan 80 dakika / 7 aşama.
+- Kontrol 3: Aynı 11. sınıf ekranında 3. haftaya geçildi. `FEL.11.1.2 — Çevre sorunlarıyla ilgili felsefi düşünce ortaya koyabilme` görünüyor; mevcut 3. hafta planı çalışıyor; plan 80 dakika / 7 aşama.
+- Sonuç: **CANLI KABUL BAŞARILI**. Günlük Plan genişletme paketi kapatılabilir.
+- Sıradaki ürün işi için önerilen dar kapsam: Günlük Plan içeriklerini Felsefe dışındaki derslere yaymadan önce Felsefe içinde 2. hafta kapsamını ya da mevcut 1/3. hafta içerik kalitesini kullanıcı örnekleriyle gözden geçirmek. Mantık ders saati kararı **72 saat** olarak korunur.
+
+---
+
 ## 28 Eylül 2026 — PR #3 birleştirme ve canlı yayın tamamlandı
 
 - Kullanıcı ana dala birleştirmeyi ve canlı yayını onayladı. PR #3, doğrulanan `61f4f267b5cd2b3384442ee2767601f3e7f8aae1` başına sabitlenerek squash birleştirildi. main kod commit'i: `f310b392322cb8be3fe47e9046229d30bb279125`.

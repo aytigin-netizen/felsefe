@@ -1,3 +1,33 @@
+## 29 Eylül 2026 — Felsefe 10/11 Günlük Plan 2. hafta dalı
+
+- Kullanıcı GitHub eklentisiyle yeni dalda Felsefe 10/11 için 2. hafta Günlük Plan kapsamını hazırlamayı istedi.
+- Dal: `feat/daily-plan-week-2`. GitHub üzerinde `main` tabanlı olarak oluşturuldu; yerelde aynı dala geçildi.
+- Değişen hedef dosyalar:
+  - `js/modules/gunluk-plan-verileri.js`: `fel-10-al-2026-h2` ve `fel-11-al-2026-h2` paketleri eklendi.
+  - `test-daily-plan.js`: 10/2 ve 11/2 hafta seçenekleri, çıktı kodları, kaynak süreç bileşenleri, 7 aşama ve 80 dakika kontrolleri eklendi.
+  - `DURUM.md` ve `DEVIR.md`: canlı kabul ve yeni dal çalışma kaydı eklendi.
+- Kaynak eşleşmesi:
+  - 10. sınıf 2. hafta: `FEL.10.1.1`, süreç bileşeni `b) Felsefi düşüncenin genel özellikleri, ortaya çıkışı ve tarihsel gelişimi üzerine derinlemesine düşünür.`
+  - 11. sınıf 2. hafta: `FEL.11.1.1`, süreç bileşeni `b) Çevre ile ilgili felsefi soru ve problemleri hayatla ilişkilendirerek değerlendirir.`
+- Doğrulama: `npm test` başarılı. Test uyarıları yalnız font URL'si ve jsdom ortamında yerel CSS linki yüklenememesi; çıkış kodu 0.
+- Henüz PR açılmadı, merge/canlı yayın yapılmadı, canlı tarayıcıda 2. hafta doğrulaması yapılmadı.
+
+---
+
+## 29 Eylül 2026 — Günlük Plan canlı kabul sonrası devir
+
+- Devralınan uzak main commit'i: `da85bd8` — `Günlük Plan: 10/1 ve 11/1 hafta genişletmesi (#5)`.
+- Kullanıcının talebiyle yalnız canlı GitHub Pages üzerindeki Günlük Plan kullanıcı akışı gerçek tarayıcıda doğrulandı. Kod değiştirme, commit/push, PR açma ve yeni test/inceleme katmanı oluşturma yapılmadı.
+- Doğrulanan canlı akışlar:
+  - Felsefe → 10. Sınıf → Günlük Plan → 1. hafta: `FEL.10.1.1` görünür; plan 80 dakika / 7 aşama.
+  - Felsefe → 11. Sınıf → Günlük Plan → 1. hafta: `FEL.11.1.1` görünür; plan 80 dakika / 7 aşama.
+  - Felsefe → 11. Sınıf → Günlük Plan → 3. hafta: `FEL.11.1.2` görünür; mevcut 3. hafta planı çalışır; plan 80 dakika / 7 aşama.
+- Sonuç: **CANLI KABUL BAŞARILI**. Günlük Plan genişletme paketi kapatılabilir.
+- Bu oturumda sonradan yalnız DURUM.md ve DEVIR.md canlı kabul kaydı için yerelde güncellendi. Bu belge güncellemesi henüz commit edilmedi ve uzak depoya aktarılmadı.
+- Sıradaki tek somut görev önerisi: Günlük Plan için yeni bir geliştirme dalında Felsefe 10/11 **2. hafta** kapsamını mı ekleyeceğiz, yoksa önce mevcut 1. ve 3. hafta planlarının pedagojik metin kalitesini mi gözden geçireceğiz? Kullanıcının yeni talebi bu önerinin önüne geçer.
+
+---
+
 ## 28 Eylül 2026 — PR #3 birleştirme ve canlı yayın tamamlandı
 
 - Kullanıcı ana dala birleştirmeyi ve canlı yayını onayladı. PR #3, doğrulanan `61f4f267b5cd2b3384442ee2767601f3e7f8aae1` başına sabitlenerek squash birleştirildi. main kod commit'i: `f310b392322cb8be3fe47e9046229d30bb279125`.
