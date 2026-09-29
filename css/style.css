@@ -1,20 +1,24 @@
 :root {
-  --bg: #f5f7fa;
-  --fg: #16202e;
-  --muted: #667186;
-  --border: #e1e6ed;
-  --accent: #2e5c9a;
+  --bg: #f7f4ee;
+  --fg: #26332f;
+  --muted: #66736d;
+  --border: #ddd6c9;
+  --accent: #b58a45;
   --accent-fg: #ffffff;
-  --card-bg: #ffffff;
+  --card-bg: #fffdf8;
+  --surface-muted: #f1ede4;
+  --forest: #294f43;
+  --sidebar: #15211f;
+  --gold: #b58a45;
   --warn-bg: #fff4e5;
   --warn-fg: #7a4a00;
   --error-bg: #fde8e8;
   --error-fg: #8a1f1f;
-  --header-bg-1: #0f2a4a;
-  --header-bg-2: #0a1930;
-  --header-fg: #eaf0f8;
-  --header-muted: #b9c6da;
-  --header-highlight: #c7dff7;
+  --header-bg-1: #294f43;
+  --header-bg-2: #15211f;
+  --header-fg: #f7f4ee;
+  --header-muted: #aebdb8;
+  --header-highlight: #d2b06f;
   --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   color-scheme: light dark;
 }
@@ -104,10 +108,11 @@ label {
 select {
   padding: 0.5rem 0.6rem;
   border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg);
+  border-radius: 10px;
+  background: var(--card-bg);
   color: var(--fg);
   font-size: 1rem;
+  min-height: 44px;
 }
 
 select:focus-visible,
@@ -146,9 +151,10 @@ button:focus-visible {
   gap: 0.35rem;
   padding: 1rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 14px;
   background: var(--card-bg);
   color: var(--fg);
+  box-shadow: 0 8px 24px rgba(35, 55, 48, 0.05);
   cursor: pointer;
   font-size: 1rem;
   text-align: left;
@@ -162,9 +168,9 @@ button:focus-visible {
 }
 
 .modul-karti:not(:disabled):hover {
-  border-color: var(--accent);
-  box-shadow: 0 4px 18px rgba(15, 40, 74, 0.08);
-  transform: translateY(-1px);
+  border-color: #c9b27f;
+  box-shadow: 0 16px 30px rgba(35, 55, 48, 0.09);
+  transform: translateY(-2px);
 }
 
 .modul-karti:disabled {
@@ -815,12 +821,12 @@ button:focus-visible {
 }
 
 #sidebar {
-  width: 240px;
+  width: 264px;
   flex: none;
-  background: var(--header-bg-2);
+  background: var(--sidebar);
   display: flex;
   flex-direction: column;
-  padding: 20px 14px;
+  padding: 18px 14px;
 }
 
 .sidebar-brand {
@@ -833,8 +839,9 @@ button:focus-visible {
 .sidebar-mark {
   width: 32px;
   height: 32px;
-  border-radius: 8px;
-  background: linear-gradient(160deg, var(--accent), var(--header-bg-1));
+  border-radius: 10px;
+  background: linear-gradient(145deg, #c29a55, #8a6834);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
   color: var(--header-highlight);
   display: flex;
   align-items: center;
@@ -869,7 +876,7 @@ button:focus-visible {
   justify-content: space-between;
   gap: 8px;
   padding: 9px 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   color: var(--header-muted);
   text-decoration: none;
   font-size: 0.87rem;
@@ -888,9 +895,9 @@ button:focus-visible {
 }
 
 .sidebar-link.active {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--header-fg);
-  border-left-color: var(--header-highlight);
+  background: rgba(181, 138, 69, 0.17);
+  color: #fff4df;
+  border-left-color: #c89c54;
 }
 
 .sidebar-link.yakinda {
@@ -1014,4 +1021,42 @@ button:focus-visible {
   .gp h2, .gp h3, .gp strong { break-after: avoid; }
   .gp section { margin-block: .7rem; }
   .gp .imza-alani { break-inside: avoid; }
+}
+
+
+/* FOPOS-inspired visual foundation — presentation layer only. */
+.site-header {
+  background: linear-gradient(125deg, #172925 0%, #294f43 72%, #6d5532 150%);
+}
+.site-header h1,
+.modul-icerik h2,
+.modul-icerik h3,
+.gp h2,
+.gp h3 {
+  color: var(--forest);
+  font-family: var(--font-serif);
+}
+.site-header h1 { color: var(--header-fg); }
+.sayfa-icerik { max-width: 1100px; padding: 2rem clamp(1rem, 3vw, 2.5rem) 4rem; }
+.secim-alani {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 8px 24px rgba(35, 55, 48, 0.04);
+}
+.eylem-buton {
+  border-radius: 10px;
+  background: linear-gradient(135deg, #355d51, #203f37);
+  border-color: #294f43;
+  box-shadow: 0 8px 18px rgba(35, 73, 62, 0.16);
+}
+.cikti-karti,
+.calisma-kagidi-kagit,
+.rubrik-kagit {
+  border-radius: 14px;
+}
+@media print {
+  body { background: #fff; }
+  .cikti-karti, .calisma-kagidi-kagit, .rubrik-kagit { box-shadow: none; }
 }
