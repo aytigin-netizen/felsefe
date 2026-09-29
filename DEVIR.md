@@ -1,3 +1,14 @@
+## 29 Eylül 2026 — Devir: PR #7–#9 sonrası yerel doğrulama ve düzeltme paketi
+
+- Devralınan uzak main: `0e03886` (PR #9 birleşmesi). Dal: `fix/yillik-plan-mobil-kaynak-notu`, yerelde commit'li, **push edilmedi**, PR yok.
+- Değişen dosyalar: `js/modules/yillik-plan.js` (tablo kaydırma sarmalayıcısı, koşullu ve öğretmene dönük kaynak notu), `css/style.css` (`.yillik-tablo-kaydirma`, baskıda `overflow: visible`), `test-run.js` (3 yeni kontrol), `README.md`, `DURUM.md`, `DEVIR.md`.
+- Çalıştırılan: `npm test` (geçti); headless Chromium ile masaüstü/mobil/baskı kontrolü; mobil yatay taşma ölçümü (önce/sonra: `d50d68c` ve main aynı taşmayı gösteriyordu; düzeltmeden sonra sayfa genişliği 390 = ekran genişliği).
+- Yapılmayan: #7–#9 CI/Pages sonuç kontrolü, canlı site kontrolü, gerçek cihaz ve yazıcı kontrolü, Ünite Planı PDF'inin görsel incelemesi.
+- Açık: Felsefe 10/1 "15 Temmuz" satırının kaynakla karşılaştırılması; Günlük Plan ortak şablon cümleleri; Günlük Plan yazdırmada hafta seçim listesinin gizlenmesi; belge içinde kaynak ayrımı (taslak çerçeve / okulun uygulanmış planı / öğretmen uyarlaması).
+- Sıradaki tek somut görev: dalı push edip PR açmak (kullanıcı onayı ve yazma yetkisiyle), birleşince CI + Pages sonucunu ve canlı Yıllık Plan'ı mobilde kontrol etmek. Kullanıcının yeni talebi bu önerinin önüne geçer.
+
+---
+
 ## 29 Eylül 2026 — PR #6 kapanış devri
 
 - PR #6 `Günlük Plan: Felsefe 2. hafta kapsamı` ana dala squash merge edildi.

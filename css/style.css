@@ -211,6 +211,17 @@ button:focus-visible {
   margin: 1rem 0;
 }
 
+.yillik-tablo-kaydirma {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media print {
+  .yillik-tablo-kaydirma {
+    overflow: visible;
+  }
+}
+
 .yillik-belge-bolumu {
   margin-block: 1rem;
 }
