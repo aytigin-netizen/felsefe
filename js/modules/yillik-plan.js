@@ -98,7 +98,7 @@ const YillikPlanModule = (() => {
     doc.append(BelgeBilgisiModule.imzaAlaniOlustur(["Ders Öğretmeni / İmza","Zümre Başkanı / İmza","Okul Müdürü / Onay"]));
     container.append(doc);
     const actions=document.createElement("div");actions.className="yillik-eylemler no-print";
-    const print=document.createElement("button");print.type="button";print.className="eylem-buton";print.textContent="Yazdır / PDF olarak kaydet";print.addEventListener("click",()=>window.print());actions.append(print);
+    const print=document.createElement("button");print.type="button";print.className="eylem-buton";print.textContent="Yazdır / PDF olarak kaydet";print.addEventListener("click",()=>window.print());actions.append(print);\n    const word=document.createElement("button");word.type="button";word.className="eylem-buton secondary";word.textContent="Word (DOCX) indir";word.addEventListener("click",()=>YillikPlanDocx.indir(model));actions.append(word);
     const hint=document.createElement("p");hint.className="baski-ipucu";hint.textContent="Baskı çıktısı A4 yatay sayfa düzenine sabitlenmiştir.";actions.append(hint);container.append(actions);
   }
 
