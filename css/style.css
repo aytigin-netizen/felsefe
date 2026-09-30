@@ -1318,3 +1318,33 @@ button:focus-visible {
   .yillik-resmi-belge *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
 }
 @media(max-width:820px){.yillik-ozet-grid{grid-template-columns:1fr 1fr}.yillik-aciklama-grid article{grid-template-columns:1fr}.yillik-fopos-tablosu{font-size:.7rem}}
+
+
+/* Yıllık Plan — 10 sütunlu FOPOS baskı sayfalama düzeltmesi */
+@media print {
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu tr {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu tbody {
+    break-inside: auto !important;
+  }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu {
+    font-size: 4.9pt !important;
+    line-height: 1.08 !important;
+  }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th,
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu td {
+    padding: .75mm 1mm !important;
+  }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(1) { width: 6% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(2) { width: 6% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(3) { width: 8% !important; white-space: normal !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(4) { width: 12% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(5) { width: 14% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(6) { width: 16% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(7) { width: 10% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(8) { width: 8% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(9) { width: 10% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(10) { width: 10% !important; }
+}
