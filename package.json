@@ -4,7 +4,7 @@
   "private": true,
   "description": "Felsefe, Sosyoloji, Psikoloji ve Mantık öğretmenleri için içerik-üretim araçları. Tek dosya/localStorage mantığıyla çalışan, backend'i olmayan bir statik site — FOPOS'tan bağımsız, ayrı bir proje.",
   "scripts": {
-    "test": "node test-selection.js && node test-daily-plan.js && node test-run.js"
+    "test": "node test-selection.js && node test-daily-plan.js && node test-annual-plan.js && node test-run.js"
   },
   "repository": {
     "type": "git",
