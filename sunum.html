@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="description" content="Sınıf içi sunum aracı — geliştirme aşamasında." />
+  <meta name="description" content="Seçilen öğrenme çıktısından PowerPoint (.pptx) sunusu üretin." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <title>Sunum — Sosyal Bilimler Öğretmen Araçları</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,18 +19,18 @@
   <div class="app-shell">
     <aside id="sidebar" aria-label="Modül gezinmesi"></aside>
     <div class="app-main">
-      <main class="sayfa-icerik">
-        <h1 class="serif">Sunum</h1>
-        <p class="secim-yok">Bu modül henüz hazır değil. Tamamlandığında bu sayfadan açılacak.</p>
-      </main>
+      <main id="sayfa-icerik" class="sayfa-icerik"></main>
     </div>
   </div>
 
   <script src="js/state.js"></script>
   <script src="js/data-loader.js"></script>
   <script src="js/sidebar.js"></script>
+  <script src="js/module-page.js"></script>
+  <script src="js/modules/sunum.js"></script>
   <script>
     Sidebar.init("sunum");
+    ModulePage.baslat(SunumModule.render);
   </script>
 </body>
 </html>

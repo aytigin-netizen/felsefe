@@ -1,0 +1,3 @@
+PptxGenJS 4.0.1 (MIT) — https://github.com/gitbrent/PptxGenJS
+JSZip dahil paketlenmiştir (MIT/GPLv3 çift lisans).
+Kaynak: npm paketi pptxgenjs@4.0.1, dist/pptxgen.bundle.js, değiştirilmeden kopyalandı.

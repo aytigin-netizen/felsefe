@@ -15,7 +15,7 @@ Canlı site: <https://aytigin-netizen.github.io/felsefe/>
 | Ünite Planı | ✅ | Ünite bazlı öğrenme çıktısı kartları + öğretmen notları; başta ünite bilgileri ve program/ölçme notu |
 | Çalışma Kâğıdı | ✅ | Kazanımdan seçmeli bölümlü, yazdırılabilir çalışma kâğıdı |
 | Değerlendirme / Rubrik | ✅ | 4 seviyeli, düzenlenebilir rubrik |
-| Sunum | 🚧 | Geliştirme aşamasında |
+| Sunum | ✅ | Seçilen öğrenme çıktısından PowerPoint (.pptx) sunusu üretir (kapak, kazanım, konu başlıkları, kavramlar, süreç bileşenleri, tartışma ve ders sonu soruları) |
 | Zümre Tutanağı | 🚧 | Geliştirme aşamasında |
 
 ## Dosya yapısı
@@ -27,7 +27,7 @@ gunluk-plan.html          Günlük Plan modülü
 unite-plani.html          Ünite Planı modülü
 calisma-kagidi.html       Çalışma Kâğıdı modülü
 degerlendirme.html        Değerlendirme / Rubrik modülü
-sunum.html                Sunum (yakında)
+sunum.html                Sunum modülü (.pptx indirme)
 zumre-tutanagi.html       Zümre Tutanağı (yakında)
 favicon.svg               Site simgesi
 css/style.css             Tüm stiller (erişilebilirlik, karanlık mod, reduced-motion destekli)
@@ -35,6 +35,7 @@ js/state.js               Ders/seviye seçiminin localStorage tabanlı durumu
 js/data-loader.js         Veri yükleme katmanı: data/*.json dosyalarını fetch eder, önbelleğe alır
 js/sidebar.js             Her sayfada ortak yan menü
 js/belge-bilgisi.js       Okul/Öğretmen/Eğitim Yılı üst bilgisi + imza alanı
+js/vendor/                pptxgen.bundle.js (PptxGenJS 4.0.1, MIT; yalnız Sunum'da, indirme anında yüklenir)
 js/app.js                 Ana sayfa: menü/seçim mantığı, modül grid'i, kazanım önizleme
 js/module-page.js         Modül sayfalarının ortak yükleme mantığı
 js/modules/               Çıktı üreticileri: yillik-plan.js, gunluk-plan.js, unite-plani.js,

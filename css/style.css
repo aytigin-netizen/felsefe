@@ -1270,3 +1270,14 @@ button:focus-visible {
   .modul-bolum-basligi { align-items: flex-start; flex-direction: column; gap: .25rem; }
 }
 @media print { .karsilama, .hero-cta { display: none; } }
+
+/* Sunum modülü: slayt önizleme kartları */
+.sunum-onizleme { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 1rem 0 1.25rem; }
+.sunum-slayt { position: relative; min-width: 0; padding: 14px 16px 16px; border: 1px solid var(--border); border-radius: 14px; background: var(--card-bg); }
+.sunum-slayt.koyu { background: #182120; border-color: #182120; color: #f3f4f8; }
+.sunum-slayt-no { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 8px; border-radius: 50%; background: var(--surface-muted); color: var(--gold-text); font-size: .72rem; font-weight: 700; }
+.sunum-slayt.koyu .sunum-slayt-no { background: #2f3227; color: #d7bd8a; }
+.sunum-slayt strong { font-family: var(--font-serif); font-size: .95rem; }
+.sunum-slayt p { margin: .5rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.sunum-slayt.koyu p { color: #b1bdb9; }
+@media print { .sunum-onizleme { display: none; } }
