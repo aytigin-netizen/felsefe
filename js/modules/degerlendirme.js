@@ -190,7 +190,10 @@ const DegerlendirmeModule = (() => {
       return kagit;
     }
 
-    kagit.appendChild(tablo);
+    const tabloKaydirma = document.createElement("div");
+    tabloKaydirma.className = "dg-tablo-kaydirma";
+    tabloKaydirma.appendChild(tablo);
+    kagit.appendChild(tabloKaydirma);
 
     const not = document.createElement("p");
     not.className = "dg-duzenleme-notu";
