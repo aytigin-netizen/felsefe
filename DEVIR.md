@@ -1,3 +1,13 @@
+## 30 Eylül 2026 — Ana sayfa FOPOS v47 görünümüne yaklaştırıldı (yerel dal)
+
+- Dal: `feat/fopos-ana-sayfa-tasarimi` (başlangıç `main` / `78cbb8a`). Dal uzak depoya aktarıldı ve PR açıldı; birleştirme ve yayın henüz yapılmadı, CI sonucu doğrulanmadı.
+- Kaynak: kullanıcının 27 ve 30 Eylül tarihli FOPOS v47 ekran görüntüleri; renkler piksel örneklemesiyle ölçüldü (kenar çubuğu #182120, zemin #f6f7fb, hero #1b2a25 → #293a34 → #3b4135, altın #bc9c5f, metin altını #816b44, kart kenarı #e1ded9, ikon zemini #eff1ec).
+- Değişiklik: tarih + selamlama satırı (saate göre), geniş hero (büyük serif başlık, altın ikinci satır, yörünge halkaları, altın "Yıllık plan hazırla" düğmesi), "Modüller" başlığı yanında etkin modül sayısı, beyaz/yuvarlak modül kartları (sans başlık, altın-kahve "Başlat →"), kenar çubuğunda pusula simgeli marka, "Çalışma alanı" bölüm etiketi, yuvarlak seçim hapı. `css/style.css` :root renkleri yerinde güncellendi; koyu tema bloğu korundu.
+- Dokunulmayanlar: modül mantığı, veri, yazdırma çıktıları. FOPOS'taki bildirim zili, kenar çubuğu daraltma ve tema/avatar düğmeleri bilerek eklenmedi (işlevleri yok).
+- Doğrulama: `npm test` başarılı; Chromium'da 1190 px açık/koyu tema ve 390 px (yatay taşma yok) ekranları incelendi. Google Fonts sandbox'ta yüklenmedi, yedek yazı tipleriyle bakıldı; gerçek tarayıcıda Source Serif 4 / Public Sans ile kontrol gerekir.
+
+---
+
 ## 30 Eylül 2026 — Yıllık Plan sayfa genişliği ve FOPOS görsel aktarımı
 
 - Başlangıç: `main` / `c0c6e5c` (PR #18 squash merge). PR #18 CI ve Pages yayını başarılı; hafta seçim alanını gizleme kuralı canlı CSS'te doğrulandı.

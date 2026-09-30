@@ -60,12 +60,13 @@ const Sidebar = (() => {
 
     mount.innerHTML =
       '<div class="sidebar-brand">' +
-      '<span class="sidebar-mark" aria-hidden="true">◆</span>' +
+      '<span class="sidebar-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m12 5 2.2 4.8L19 12l-4.8 2.2L12 19l-2.2-4.8L5 12l4.8-2.2z"/></svg></span>' +
       "<div>" +
       '<div class="sidebar-title">Çalışma Masası</div>' +
       '<div class="sidebar-sub">SOSYAL BİLİMLER</div>' +
       "</div>" +
       "</div>" +
+      '<div class="sidebar-bolum">Çalışma alanı</div>' +
       `<nav class="sidebar-nav" aria-label="Modül gezinmesi">${linkler}</nav>` +
       `<a class="sidebar-footer-link" id="sidebar-secim-etiketi" href="index.html">${secimEtiketi()}</a>`;
   }
