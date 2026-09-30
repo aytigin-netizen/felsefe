@@ -230,7 +230,7 @@ const UnitePlaniModule = (() => {
     detay.appendChild(listeBolumuOlustur("Program Bağlantısı", [
       kapsam.icerikler ? `İçerik çerçevesi: ${kapsam.icerikler}` : "",
       kapsam.kavramlar ? `Anahtar kavramlar: ${kapsam.kavramlar}` : "",
-      "Öğrenme çıktıları, süreç bileşenleri ve haftalık dağılım aşağıdaki kartlarda kanonik veri kaynağından okunur."
+      "Öğrenme çıktıları, süreç bileşenleri ve haftalık dağılım aşağıdaki kartlarda program verilerine göre gösterilir."
     ]));
 
     detay.appendChild(listeBolumuOlustur("Ölçme ve Değerlendirme Notu", [
