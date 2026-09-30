@@ -29,7 +29,7 @@ const DataLoader = (() => {
 
     let response;
     try {
-      response = await fetch(meta.file);
+      response = await fetch(meta.file + "?v=20260930b");
     } catch (err) {
       throw new Error(
         `${meta.label} verisi yüklenirken ağ hatası oluştu: ${err.message}`
