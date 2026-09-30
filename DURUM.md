@@ -1,3 +1,15 @@
+## 30 Eylül 2026 — Yıllık Plan sayfa genişliği ve FOPOS görsel aktarımı
+
+- Başlangıç: `main` / `c0c6e5c` (PR #18 squash merge). PR #18 CI ve Pages yayını başarılı; hafta seçim alanını gizleme kuralı canlı CSS'te doğrulandı.
+- Çalışma dalı: `fix/annual-landscape-fopos-visuals`. Kullanıcı 30 Eylül 2026 tarihinde değişikliklerin GitHub’a aktarılmasını istedi; bu kayıt paketle birlikte commit edilir. CI sonucu ve yayın henüz doğrulanmadı.
+- Yıllık Plan: dinamik `@page` ekleme kaldırılıp statik, sayfaya özel `@page yillik-plan` A4 yatay kuralı eklendi. Yalnız Yıllık Plan bu kâğıdı kullanır. Ekran/baskı içerik genişliği sınırı kaldırıldı; baskıda kabuk blok düzenine alınır, içerik kenar boşlukları sıfırlanır. Sütunlar metin uzunluklarına göre paylaştırılır; kâğıt kenar boşluğu 10 mm.
+- Önemli ayrım: önceki sürüm Chrome'da zaten A4 yatay PDF üretebiliyordu; doğrulanan sorun içerikte kalan 1100 px genişlik sınırı ve 32/40/64 px padding. Kullanıcının cihazındaki dikey baskı gözlemi aynı ortamda yeniden üretilemedi; bu cihazda baskı yönü kabul kontrolü gereklidir.
+- Görsel kaynak: `aytigin-netizen/FOPOS` deposunun `app/globals.css`, `Dashboard.tsx` ve gezinme bileşeni. Yeşil-altın karşılama paneli, kitap simgesi, simgeli/açıklamalı modül kartları, görünür Modüller başlığı ve simgeli gezinme aktarıldı. Koyu temada eski mavi palet yerine yeşil-altın kullanılır. Mevcut modüller ve kullanılabilirlik durumları korunur; yeni modül işlevi eklenmedi.
+- Doğrulama: `npm test` başarılı. Eski dinamik style öğesini arayan test kaldırıldı; sayfa yönü gerçek tarayıcı PDF'i üzerinden doğrulandı. Chrome 154 ile açık/koyu tema ekranları ve 390 px genişlikte sekiz sayfa incelendi; yatay sayfa taşması yok. Günlük Plan hafta seçimi ekranda görünür, baskıda gizli; PDF'i dikey kaldı.
+- Yıllık Plan PDF doğrulaması: Felsefe 10/11, Sosyoloji Dersi 1, Psikoloji ve Mantık; bütün sayfalar 841.9 × 595.0 pt (A4 yatay). Metinler baskı kenar boşlukları içinde; tablo sayfaları görsel incelendi. Bu tarayıcı kontrolü gerçek mobil yazdırma penceresini/yazıcıyı doğrulamaz.
+
+---
+
 ## 30 Eylül 2026 — Günlük Plan hafta seçimini baskıda gizleme
 
 - Dal: `fix/daily-plan-print-week-selector`; yerel doğrulama tamamlandı; bu kayıt düzeltmeyle birlikte commit edilir. Uzak dal/PR ve yayın durumu henüz doğrulanmadı.

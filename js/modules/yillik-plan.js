@@ -50,18 +50,6 @@ const YillikPlanModule = (() => {
     return bolum;
   }
 
-  // Yıllık plan geniş bir tablo olduğu için yalnızca bu sayfada yazdırma yönü
-  // yatay (A4) yapılır. Diğer modüllerin baskısı etkilenmez; stil bu modül
-  // render edildiğinde sayfaya bir kez eklenir.
-  function yatayBaskiStiliEkle() {
-    if (document.getElementById("yillik-yatay-baski-stili")) return;
-    const stil = document.createElement("style");
-    stil.id = "yillik-yatay-baski-stili";
-    stil.media = "print";
-    stil.textContent = "@page { size: A4 landscape; margin: 10mm; }";
-    document.head.appendChild(stil);
-  }
-
   function render(container, subjectData, seviye) {
     container.innerHTML = "";
 
@@ -262,8 +250,6 @@ const YillikPlanModule = (() => {
         "değiştirilebilir.";
       container.appendChild(dipnot);
     }
-
-    yatayBaskiStiliEkle();
 
     container.appendChild(BelgeBilgisiModule.imzaAlaniOlustur(["Öğretmen İmza", "Zümre Başkanı İmza"]));
 
