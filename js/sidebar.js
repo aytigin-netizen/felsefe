@@ -27,7 +27,7 @@ const Sidebar = (() => {
     { key: "unite-plani", href: "unite-plani.html", label: "Ünite Planı", hazir: true },
     { key: "calisma-kagidi", href: "calisma-kagidi.html", label: "Çalışma Kâğıdı", hazir: true },
     { key: "degerlendirme", href: "degerlendirme.html", label: "Değerlendirme / Rubrik", hazir: true },
-    { key: "sunum", href: "sunum.html", label: "Sunum", hazir: false },
+    { key: "sunum", href: "sunum.html", label: "Sunum", hazir: true },
     { key: "zumre-tutanagi", href: "zumre-tutanagi.html", label: "Zümre Tutanağı", hazir: false },
   ];
 

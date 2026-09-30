@@ -1,3 +1,14 @@
+## 30 Eylül 2026 — Sunum modülü (PR açıldı)
+
+- Dal: `feat/sunum-modulu` (başlangıç `main` güncel). Sunum artık sidebar'da ve ana sayfada etkin; `sunum.html` diğer modüllerle aynı `ModulePage` kalıbını kullanır.
+- `js/modules/sunum.js`: ünite + öğrenme çıktısı seçilir; bölümler işaretlenir (konu başlıkları, anahtar kavramlar, süreç bileşenleri, tartışma soruları, ders sonu değerlendirme). `slaytlariHazirla()` saf fonksiyondur (kapak + kazanım her zaman; 6/9/3 maddelik sayfalama); `pptxOlustur()` PptxGenJS sınıfını parametre alır. İçerik yalnız veriden gelir. Tartışma soruları veri maddelerine uygulanan kalıplardır, öneri niteliğindedir; kapanış soruları sabit metindir. Öğretmen/okul bilgisi sunuya eklenmedi.
+- Kütüphane: `js/vendor/pptxgen.bundle.js` (PptxGenJS 4.0.1, ~460 KB, MIT; JSZip dahil) değiştirilmeden repoya alındı, CDN bağımlılığı yok; yalnız "indir" tıklanınca yüklenir. Lisans notu `js/vendor/LISANS-NOTU.txt`.
+- Görsel dil: FOPOS renkleri (koyu #182120, altın #BC9C5F, zemin #F6F7FB); 16:9; yazı tipleri Georgia + Calibri (PowerPoint'te hazır bulunur, gömülmez). Ekranda slayt önizlemesi kartlarla; yazdırmada gizli.
+- Doğrulama: `npm test` başarılı (Sunum render + tüm ders/seviye/çıktılar için slayt modeli kontrolü eklendi). Gerçek Chromium'da ders/sınıf seçimi → Sunum → indirme akışı çalıştırıldı; `Sunum_FEL.10.1.1.pptx` indi, 8 slayt, konsol hatası yok. Örnek dosya LibreOffice ile PDF'e çevrilip 8 slayt görsel incelendi. PowerPoint'in kendisinde açılış ve Türkçe karakter/yazı tipi görünümü doğrulanmadı; metin kutuları otomatik sığdırma kullanmaz, en uzun süreç bileşeni (155 karakter) 18 pt'de sığıyor.
+- Açık: Sosyoloji/Psikoloji/Mantık için örnek dosyalar tek tek görsel incelenmedi (yalnız Felsefe 10.1.1). Slayt düzenleme önizlemede yok; düzenleme PowerPoint'te yapılır. Zümre Tutanağı hâlâ "Yakında".
+
+---
+
 ## 30 Eylül 2026 — PR #4 kapatıldı
 
 - `feat/daily-plan-weeks` (PR #4) main'in 30 commit gerisindeydi; birleştirilirse main'deki sonraki işleri silecekti (+776 / −1940). İçeriği PR #5/#6 ile zaten main'de (`js/modules/gunluk-plan-verileri.js`, hafta seçimi). Birleştirilmeden kapatıldı, gerekçe PR'a yorum olarak yazıldı. Bu, 30 Eylül tarihli önceki notlardaki "kapatılmalı" bulgusunu çözer.

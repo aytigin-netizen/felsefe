@@ -30,6 +30,7 @@ async function run() {
     ["js/modules/unite-plani.js", "UnitePlaniModule"],
     ["js/modules/calisma-kagidi.js", "CalismaKagidiModule"],
     ["js/modules/degerlendirme.js", "DegerlendirmeModule"],
+    ["js/modules/sunum.js", "SunumModule"],
   ];
   for (const [s, globalName] of scripts) {
     const code = fs.readFileSync(path.join(__dirname, s), "utf8");
@@ -115,6 +116,29 @@ async function run() {
         window.CalismaKagidiModule.render(c3, subjectData, seviye);
       } catch (e) {
         errors.push(`[${ders} / ${seviye.etiket}] CalismaKagidiModule: ${e.stack}`);
+      }
+
+      try {
+        const c5 = window.document.createElement("div");
+        window.SunumModule.render(c5, subjectData, seviye);
+        if (c5.querySelectorAll(".sunum-slayt").length < 3) {
+          errors.push(`[${ders} / ${seviye.etiket}] SunumModule: slayt önizlemesi boş`);
+        }
+        for (const unite of seviye.uniteler || []) {
+          for (const cikti of unite.ogrenmeCiktilari || []) {
+            const sl = window.SunumModule.slaytlariHazirla(subjectData, seviye, unite, cikti,
+              { icerik: true, kavramlar: true, surec: true, tartisma: true, kapanis: true });
+            const kodlar = sl.filter((s) => s.tip === "kapak" || s.tip === "kazanim");
+            if (kodlar.length !== 2 || sl[0].kod !== cikti.kod) {
+              errors.push(`[${ders} / ${cikti.kod}] SunumModule: kapak/kazanım slaytı eksik`);
+            }
+            for (const s of sl) {
+              if ((s.maddeler || []).length > 9) errors.push(`[${ders} / ${cikti.kod}] SunumModule: tek slaytta ${s.maddeler.length} madde`);
+            }
+          }
+        }
+      } catch (e) {
+        errors.push(`[${ders} / ${seviye.etiket}] SunumModule: ${e.stack}`);
       }
 
       try {

@@ -29,7 +29,7 @@ const App = (() => {
     { id: "unite-plani", label: "Ünite Planı", aciklama: "Öğrenme çıktıları, beceriler ve değerlendirmeyi birlikte planlayın.", hazir: true },
     { id: "calisma-kagidi", label: "Çalışma Kâğıdı", aciklama: "Dersiniz için öğrenci etkinlikleri ve sorular hazırlayın.", hazir: true },
     { id: "degerlendirme", label: "Değerlendirme / Rubrik", aciklama: "Öğrenci çalışmalarını açık ölçütlerle değerlendirin.", hazir: true },
-    { id: "sunum", label: "Sunum", aciklama: "Ders içeriğini sınıfınız için görsel bir akışa dönüştürün.", hazir: false },
+    { id: "sunum", label: "Sunum", aciklama: "Ders içeriğini sınıfınız için görsel bir akışa dönüştürün.", hazir: true },
     { id: "zumre-tutanagi", label: "Zümre Tutanağı", aciklama: "Gündem, görüşme ve kararları belgeleyin.", hazir: false },
   ];
 
