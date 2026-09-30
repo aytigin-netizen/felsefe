@@ -82,7 +82,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB1.2, SDB2.2",
+            "degerler": "D3, D4, D6, D14, D16",
+            "okuryazarlikBecerileri": "OB1, OB2, OB4, OB5"
+          }
         },
         {
           "uniteNo": "2",
@@ -159,7 +164,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB1.2, SDB2.2",
+            "degerler": "D2, D6, D16",
+            "okuryazarlikBecerileri": "OB1, OB5"
+          }
         },
         {
           "uniteNo": "3",
@@ -227,7 +237,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB2.1, SDB2.2",
+            "degerler": "D3, D4, D12, D14, D16",
+            "okuryazarlikBecerileri": "OB1"
+          }
         },
         {
           "uniteNo": "4",
@@ -283,7 +298,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB2.2",
+            "degerler": "D3, D12, D14, D16",
+            "okuryazarlikBecerileri": "OB1, OB2, OB4"
+          }
         },
         {
           "uniteNo": "5",
@@ -344,7 +364,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB1.1, SDB2.2, SDB2.3",
+            "degerler": "D3, D11, D14, D15, D16",
+            "okuryazarlikBecerileri": "OB1, OB5"
+          }
         },
         {
           "uniteNo": "6",
@@ -396,7 +421,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB2.1, SDB2.2",
+            "degerler": "D3, D7, D11, D14, D16",
+            "okuryazarlikBecerileri": "OB4, OB9"
+          }
         },
         {
           "uniteNo": "7",
@@ -458,7 +488,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB2.2",
+            "degerler": "D1, D3, D16, D19",
+            "okuryazarlikBecerileri": "OB1, OB6"
+          }
         },
         {
           "uniteNo": "8",
@@ -513,7 +548,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB2.2",
+            "degerler": "D3, D10, D14, D16, D20",
+            "okuryazarlikBecerileri": "OB1"
+          }
         },
         {
           "uniteNo": "9",
@@ -566,7 +606,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB2.1, SDB2.2",
+            "degerler": "D3, D14, D16",
+            "okuryazarlikBecerileri": "OB1, OB4"
+          }
         }
       ],
       "ozelPlanlamaHaftalari": [
@@ -689,7 +734,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB1.2, SDB2.1, SDB2.2, SDB3.2",
+            "degerler": "D3, D5, D9, D16, D19, D20",
+            "okuryazarlikBecerileri": "OB1, OB4, OB7, OB8"
+          }
         },
         {
           "uniteNo": "2",
@@ -785,7 +835,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB1.1, SDB1.2, SDB2.2",
+            "degerler": "D3, D8, D13, D16, D17, D19",
+            "okuryazarlikBecerileri": "OB1, OB2, OB4"
+          }
         },
         {
           "uniteNo": "3",
@@ -866,7 +921,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB1.2, SDB2.2",
+            "degerler": "D3, D12, D16",
+            "okuryazarlikBecerileri": "OB1"
+          }
         },
         {
           "uniteNo": "4",
@@ -956,7 +1016,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB1.2, SDB2.2",
+            "degerler": "D3, D14, D15, D16",
+            "okuryazarlikBecerileri": "OB1, OB5"
+          }
         },
         {
           "uniteNo": "5",
@@ -1056,7 +1121,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB1.2, SDB2.2",
+            "degerler": "D3, D10, D11, D12, D16",
+            "okuryazarlikBecerileri": "OB1"
+          }
         },
         {
           "uniteNo": "6",
@@ -1143,7 +1213,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "programlarArasiBilesenler": {
+            "sosyalDuygusalOgrenme": "SDB1.2, SDB2.2",
+            "degerler": "D1, D3, D16",
+            "okuryazarlikBecerileri": "OB1, OB6"
+          }
         }
       ],
       "ozelPlanlamaHaftalari": [

@@ -32,9 +32,9 @@ const YillikPlanModule = (() => {
       konu: icerikCercevesi(s),
       cikti: [s.kazanimKodu, s.kazanimBaslik].filter(Boolean).join(" — "),
       surec: s.surecBileseniIsaretlenen || "",
-      sosyal: s.sosyalDuygusalOgrenme || "Program/öğretmen planlamasına göre",
-      deger: s.degerler || "Program/öğretmen planlamasına göre",
-      okuryazarlik: s.okuryazarlikBecerileri || "Program/öğretmen planlamasına göre",
+      sosyal: s.sosyalDuygusalOgrenme || "—",
+      deger: s.degerler || "—",
+      okuryazarlik: s.okuryazarlikBecerileri || "—",
       ozelGun: s.belirliGunHafta || ""
     }));
     for (const h of ozel) {
