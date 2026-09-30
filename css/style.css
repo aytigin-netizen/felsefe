@@ -1281,3 +1281,40 @@ button:focus-visible {
 .sunum-slayt p { margin: .5rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 .sunum-slayt.koyu p { color: #b1bdb9; }
 @media print { .sunum-onizleme { display: none; } }
+
+
+/* Yıllık Plan — FOPOS belge paritesi */
+.yillik-resmi-belge{background:#fff;color:#17211f;border:1px solid #d7ddd9;border-radius:18px;padding:clamp(1rem,2vw,2rem);box-shadow:0 18px 50px rgba(20,38,33,.08)}
+.yillik-kicker{margin:0 0 .35rem;color:#8a6834;font:700 .76rem/1.2 "Public Sans",sans-serif;letter-spacing:.12em}
+.yillik-resmi-belge>h2{margin:.1rem 0;color:#173c34;font-size:clamp(1.45rem,2.4vw,2.15rem)}
+.yillik-altbaslik{margin:.25rem 0 1.25rem;color:#66736f}
+.yillik-ozet-kart{border:1px solid #d9e2de;border-radius:12px;overflow:hidden;margin:1rem 0}
+.yillik-ozet-kart>h3{margin:0;padding:.7rem 1rem;background:#e9f0ed;color:#173c34;font-size:.95rem}
+.yillik-ozet-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.yillik-ozet-hucre{padding:.7rem 1rem;border-right:1px solid #e1e6e3;border-top:1px solid #e1e6e3}
+.yillik-ozet-hucre span,.yillik-ozet-hucre strong{display:block}.yillik-ozet-hucre span{color:#66736f;font-size:.76rem}.yillik-ozet-hucre strong{margin-top:.2rem;color:#17211f}
+.yillik-fopos-tablosu{width:100%;min-width:1500px;border-collapse:collapse;font-size:.72rem;line-height:1.35;background:#fff}
+.yillik-fopos-tablosu th,.yillik-fopos-tablosu td{border:1px solid #94a3b8;padding:.42rem .45rem;vertical-align:top;text-align:left;white-space:pre-line}
+.yillik-fopos-tablosu thead th{background:#dce6f1;color:#0b2545;font-weight:700}
+.yillik-fopos-tablosu th:nth-child(1){width:7%}.yillik-fopos-tablosu th:nth-child(2){width:6%}.yillik-fopos-tablosu th:nth-child(3){width:9%}.yillik-fopos-tablosu th:nth-child(4){width:11%}.yillik-fopos-tablosu th:nth-child(5){width:14%}.yillik-fopos-tablosu th:nth-child(6){width:17%}
+.yillik-ozel-satir td{background:#f6f2e8;font-weight:600}
+.yillik-aciklama-grid{display:grid;grid-template-columns:1fr;gap:.65rem;margin:1rem 0}
+.yillik-aciklama-grid article{display:grid;grid-template-columns:220px 1fr;border:1px solid #cbd5e1}
+.yillik-aciklama-grid h3,.yillik-aciklama-grid p{margin:0;padding:.65rem .75rem}.yillik-aciklama-grid h3{background:#dce6f1;color:#0b2545;font-size:.8rem}.yillik-aciklama-grid p{font-size:.84rem}
+.yillik-eylemler{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin:1rem 0}.yillik-eylemler .baski-ipucu{margin:0}
+@page{size:A4 landscape;margin:8mm}
+@media print{
+  html,body{width:auto!important;min-width:0!important;background:#fff!important}
+  body.yillik-plan-sayfasi .app-shell,body.yillik-plan-sayfasi .app-main,body.yillik-plan-sayfasi .sayfa-icerik{display:block!important;width:auto!important;max-width:none!important;margin:0!important;padding:0!important}
+  body.yillik-plan-sayfasi #sidebar,.no-print{display:none!important}
+  .yillik-resmi-belge{border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;width:100%!important;max-width:none!important}
+  .yillik-resmi-belge .belge-ust-bilgi{break-inside:avoid}
+  .yillik-tablo-kaydirma{overflow:visible!important;width:100%!important}
+  .yillik-fopos-tablosu{min-width:0!important;width:100%!important;table-layout:fixed!important;font-size:5.9pt!important;line-height:1.18!important}
+  .yillik-fopos-tablosu th,.yillik-fopos-tablosu td{padding:1.5mm!important;overflow-wrap:anywhere!important}
+  .yillik-fopos-tablosu thead{display:table-header-group}
+  .yillik-aciklama-grid article,.yillik-resmi-belge .imza-alani{break-inside:avoid}
+  .yillik-aciklama-grid article{grid-template-columns:42mm 1fr}
+  .yillik-resmi-belge *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
+@media(max-width:820px){.yillik-ozet-grid{grid-template-columns:1fr 1fr}.yillik-aciklama-grid article{grid-template-columns:1fr}.yillik-fopos-tablosu{font-size:.7rem}}
