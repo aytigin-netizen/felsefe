@@ -12,8 +12,7 @@ const YillikPlanModule = (() => {
   };
 
   function ayHafta(s) {
-    return [s.ay || "", s.hafta || ""].filter(Boolean).join("
-");
+    return [s.ay || "", s.hafta || ""].filter(Boolean).join("\n");
   }
 
   function icerikCercevesi(s) {
