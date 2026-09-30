@@ -494,6 +494,11 @@ button:focus-visible {
   color: var(--muted);
 }
 
+.dg-tablo-kaydirma {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .dg-rubrik-tablosu {
   width: 100%;
   border-collapse: collapse;
@@ -511,6 +516,12 @@ button:focus-visible {
 
 .dg-rubrik-tablosu tr:first-child {
   background: var(--card-bg);
+}
+
+@media print {
+  .dg-tablo-kaydirma {
+    overflow: visible;
+  }
 }
 
 .dg-olcut-baslik {
