@@ -1,3 +1,14 @@
+## 30 Eylül 2026 — Yıllık Plan PDF: ekran görüntüsünden vektör PDF'e geçiş
+
+- Sorun: "PDF indir" 0 bayt iniyordu; ayrıca eski yöntem (html2canvas → JPEG → jsPDF) ekranın 1500 px'lik tablosunu görüntüye çevirip A4'e dilimliyordu (10 sütun yerine yalnız sol kısım, 24 sayfa). html2canvas `@media print` kurallarını uygulamaz.
+- Değişiklik: `js/modules/yillik-plan-pdf.js` artık `model.rows` verisinden jsPDF + autoTable ile gerçek vektör PDF çizer (A4 yatay, DOCX ile aynı 10 sütun oranı, her sayfada tekrar eden başlık, sayfa numarası, imza alanı). Türkçe karakterler için DejaVu Sans Condensed alt kümesi gömülür. Kütüphaneler `js/vendor/` altına alındı; CDN bağımlılığı kalmadı. Nesne URL'si 1 sn yerine 120 sn açık tutulur.
+- `yillik-plan.html`: script etiketleri arasındaki kaçak `\n` metinleri temizlendi.
+- Dokunulmadı: DOCX üreticisi, ortak belge modeli, Yazdır düğmesi ve baskı CSS'i (katman sadeleştirmesi ayrı iş).
+- Doğrulama: `npm test` başarılı (yeni `test-annual-pdf.js`). Node/jsdom'da 5 ders/seviye için PDF üretildi; Felsefe 10 → 3 sayfa, ~31 KB, pdftotext ile 10 sütun ve Türkçe karakterler, görsel olarak 1. sayfa incelendi.
+- Açık: 0 bayt hatası gerçek Android cihazında yeniden üretilemedi; nedeni kesin ayrılamadı (olası: çok büyük canvas veya eşzamansız indirme). Yeni yol canvas kullanmadığı ve indirme eşzamanlı olduğu için bu iki riski kaldırıyor, ama cihazda kabul kontrolü gerekir.
+
+---
+
 ## 30 Eylül 2026 — Sunum modülü (PR açıldı)
 
 - Dal: `feat/sunum-modulu` (başlangıç `main` güncel). Sunum artık sidebar'da ve ana sayfada etkin; `sunum.html` diğer modüllerle aynı `ModulePage` kalıbını kullanır.

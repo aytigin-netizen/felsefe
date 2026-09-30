@@ -1,3 +1,7 @@
 PptxGenJS 4.0.1 (MIT) — https://github.com/gitbrent/PptxGenJS
 JSZip dahil paketlenmiştir (MIT/GPLv3 çift lisans).
 Kaynak: npm paketi pptxgenjs@4.0.1, dist/pptxgen.bundle.js, değiştirilmeden kopyalandı.
+
+jsPDF 2.5.2 (MIT) — npm paketi jspdf, dist/jspdf.umd.min.js, değiştirilmeden kopyalandı.
+jspdf-autotable 3.8.4 (MIT) — dist/jspdf.plugin.autotable.min.js, değiştirilmeden kopyalandı.
+pdf-yazi-tipi.js: DejaVu Sans Condensed (normal + kalın) yazı tipinin Latin + Türkçe alt kümesi (base64). DejaVu/Bitstream Vera lisansı: serbest kullanım ve dağıtım.
