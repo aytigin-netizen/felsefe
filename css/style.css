@@ -1025,7 +1025,7 @@ button:focus-visible {
 .gp-print { padding: .8rem 1.2rem; margin-block: 1rem; }
 @media print {
   .gp { max-width: none; font-size: 10pt; }
-  .gp-yardim, .gp-print { display: none !important; }
+  .gp-hafta-secim, .gp-yardim, .gp-print { display: none !important; }
   .gp-edit { border: none; padding: 0; min-height: 1em; color: #000; }
   .gp-bilgi-tablosu th, .gp-bilgi-tablosu td { border-color: #777; padding: .35rem .45rem; }
   .gp-bilgi-tablosu th { background: #f2f2f2; }

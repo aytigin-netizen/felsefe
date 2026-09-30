@@ -1,3 +1,12 @@
+## 30 Eylül 2026 — Günlük Plan hafta seçimini baskıda gizleme
+
+- Dal: `fix/daily-plan-print-week-selector`; yerel doğrulama tamamlandı; bu kayıt düzeltmeyle birlikte commit edilir. Uzak dal/PR ve yayın durumu henüz doğrulanmadı.
+- `css/style.css`: mevcut Günlük Plan `@media print` gizleme kuralına `.gp-hafta-secim` eklendi. Etiket ve açılır liste birlikte gizlenir; ekran stilleri ve seçilen haftanın belge içeriği değişmez. Tarayıcının yazdır/PDF kaydet akışı aynı baskı kuralını kullanır.
+- Doğrulama: `npm test` başarılı (seçim, Günlük Plan ve tüm ders/seviye render kontrolleri); `git diff --check` başarılı. Bu testler baskı görünümünü kanıtlamaz. Yerel Playwright baskı kontrolü tarayıcı yürütülebilir dosyası bulunmadığı için çalıştırılamadı; görsel baskı/PDF doğrulaması yapılmadı.
+- Önceki “Hafta seçimi baskıda görünüyor” gözlemi canlı sürüm için geçerlidir; yerel düzeltme yayınlanana kadar kapanmış sayılmaz.
+
+---
+
 ## 30 Eylül 2026 — Devir: PR #14 yayını, canlı erişim düzeltmesi, ortam notu
 
 - Devralınan uzak main: `63eebd8` ("docs: PR #12 ve PR #13 kaydı + görsel doğrulama (#14)"). PR #14 squash merge ile birleştirildi, CI ve Pages deployment başarılı (`test`, `build`, `deploy`, `report-build-status` dördü de yeşil).
