@@ -39,8 +39,7 @@ const YillikPlanModule = (() => {
     }));
     for (const h of ozel) {
       rows.push({
-        tip: "ozel", no: haftaNo(h.hafta), ayHafta: [h.ay || "", h.hafta || ""].filter(Boolean).join("
-"),
+        tip: "ozel", no: haftaNo(h.hafta), ayHafta: [h.ay || "", h.hafta || ""].filter(Boolean).join("\n"),
         tarihSaat: Number.isFinite(h.dersSaati) ? h.dersSaati + " ders saati" : "—",
         unite: String(h.tur || "Özel planlama").toLocaleUpperCase("tr-TR"),
         konu: h.aciklama || h.tur || "", cikti: h.aciklama || h.tur || "", surec: "—",
