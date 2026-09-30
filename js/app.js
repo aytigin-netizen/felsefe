@@ -105,8 +105,18 @@ const App = (() => {
     }
   }
 
+  function renderKarsilama() {
+    const simdi = new Date();
+    const saat = simdi.getHours();
+    const selam = saat < 5 ? "İyi geceler" : saat < 12 ? "Günaydın" : saat < 18 ? "İyi günler" : "İyi akşamlar";
+    const tarih = simdi.toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
+    el("karsilama-tarih").textContent = tarih.toLocaleUpperCase("tr-TR");
+    el("karsilama-selam").textContent = selam + ".";
+  }
+
   function renderModuller() {
     const grid = el("modul-grid");
+    el("modul-sayisi").textContent = `${MODULES.filter((m) => m.hazir).length} etkin modül`;
     grid.innerHTML = "";
     const yillikPlanEngelli = state.seviye && !DataLoader.cercevePlanVarMi(state.seviye);
 
@@ -238,6 +248,7 @@ const App = (() => {
 
   function init() {
     Sidebar.init("home");
+    renderKarsilama();
     populateDersMenu();
     el("ders-secim").addEventListener("change", onDersDegisti);
     el("seviye-secim").addEventListener("change", onSeviyeDegisti);
