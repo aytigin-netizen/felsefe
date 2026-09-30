@@ -93,8 +93,15 @@ const YillikPlanModule = (() => {
     const eyebrow=document.createElement("p");eyebrow.className="yillik-kicker";eyebrow.textContent="TÜRKİYE YÜZYILI MAARİF MODELİ";
     const h=document.createElement("h2");h.textContent=model.ders+" — "+model.sinif+" Yıllık Planı";
     const sub=document.createElement("p");sub.className="yillik-altbaslik";sub.textContent=model.yil+" Eğitim Öğretim Yılı";
-    doc.append(eyebrow,h,sub,BelgeBilgisiModule.ustBilgiOlustur(model.sinif),bilgiBolumu(model),anaTablo(model),aciklamaBolumleri());
-    const note=document.createElement("p");note.className="yillik-dipnot";note.textContent="Müfredat dağılımı kanonik MEB/TYMM veri kaynağından üretilmiştir. Belge, okul ve zümre kararları ile öğretmen kontrolü sonrasında resmî kullanım için tamamlanır.";doc.append(note);
+    doc.append(eyebrow,h,sub,BelgeBilgisiModule.ustBilgiOlustur(model.sinif),bilgiBolumu(model));
+    const kaynak=document.createElement("section");kaynak.className="yillik-belge-bolumu yillik-kaynak-notu";
+    const kh=document.createElement("h3");kh.textContent="Program ve Kaynak Notu";kaynak.append(kh);
+    const kul=document.createElement("ul");kul.className="yillik-belge-listesi";
+    ["Haftalık dağılım, MEB 2026-2027 çerçeve yıllık planı ve Türkiye Yüzyılı Maarif Modeli verilerine dayanır.",
+     "Öğrenme çıktıları, içerik çerçevesi ve süreç bileşenleri ilgili program verilerinden yıllık plana aktarılır."].forEach(t=>{const li=document.createElement("li");li.textContent=t;kul.append(li)});
+    if(DataLoader.getOzelPlanlamaHaftalari(seviye).length || (seviye.tatiller||[]).length){const li=document.createElement("li");li.textContent="Okul temelli planlama, sosyal etkinlik ve tatil bilgileri bu planda ayrıca gösterilir.";kul.append(li)}
+    kaynak.append(kul);doc.append(kaynak,anaTablo(model),aciklamaBolumleri());
+    const note=document.createElement("p");note.className="yillik-dipnot";note.textContent="Müfredat dağılımı MEB/TYMM program ve çerçeve plan verilerinden üretilmiştir. Belge, okul ve zümre kararları ile öğretmen kontrolü sonrasında resmî kullanım için tamamlanır.";doc.append(note);
     doc.append(BelgeBilgisiModule.imzaAlaniOlustur(["Ders Öğretmeni / İmza","Zümre Başkanı / İmza","Okul Müdürü / Onay"]));
     container.append(doc);
     const actions=document.createElement("div");actions.className="yillik-eylemler no-print";
