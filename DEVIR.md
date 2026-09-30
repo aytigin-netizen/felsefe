@@ -1,6 +1,13 @@
-## 30 Eylül 2026 — Ana sayfa FOPOS v47 görünümüne yaklaştırıldı (yerel dal)
+## 30 Eylül 2026 — PR #4 kapatıldı
 
-- Dal: `feat/fopos-ana-sayfa-tasarimi` (başlangıç `main` / `78cbb8a`). Dal uzak depoya aktarıldı ve PR açıldı; birleştirme ve yayın henüz yapılmadı, CI sonucu doğrulanmadı.
+- `feat/daily-plan-weeks` (PR #4) main'in 30 commit gerisindeydi; birleştirilirse main'deki sonraki işleri silecekti (+776 / −1940). İçeriği PR #5/#6 ile zaten main'de (`js/modules/gunluk-plan-verileri.js`, hafta seçimi). Birleştirilmeden kapatıldı, gerekçe PR'a yorum olarak yazıldı. Bu, 30 Eylül tarihli önceki notlardaki "kapatılmalı" bulgusunu çözer.
+- Hâlâ açık: birleşmiş dallar silinmedi (uzak depoda 21 dal). Silme ayrı bir karar; bu oturumda yapılmadı.
+
+---
+
+## 30 Eylül 2026 — Ana sayfa FOPOS v47 görünümüne yaklaştırıldı (PR #20, yayında)
+
+- Dal: `feat/fopos-ana-sayfa-tasarimi` (başlangıç `main` / `78cbb8a`). PR #20 kullanıcı tarafından 30 Eylül 2026 07:43 UTC'de birleştirildi (`43dfadd`); CI (`test`, `build`, `deploy`, `report-build-status`) ve Pages yayını başarılı. Kullanıcı canlı sitede tasarımın düzeldiğini kendi tarayıcısında doğruladı; yazı tipleri de o kontrolle görüldü.
 - Kaynak: kullanıcının 27 ve 30 Eylül tarihli FOPOS v47 ekran görüntüleri; renkler piksel örneklemesiyle ölçüldü (kenar çubuğu #182120, zemin #f6f7fb, hero #1b2a25 → #293a34 → #3b4135, altın #bc9c5f, metin altını #816b44, kart kenarı #e1ded9, ikon zemini #eff1ec).
 - Değişiklik: tarih + selamlama satırı (saate göre), geniş hero (büyük serif başlık, altın ikinci satır, yörünge halkaları, altın "Yıllık plan hazırla" düğmesi), "Modüller" başlığı yanında etkin modül sayısı, beyaz/yuvarlak modül kartları (sans başlık, altın-kahve "Başlat →"), kenar çubuğunda pusula simgeli marka, "Çalışma alanı" bölüm etiketi, yuvarlak seçim hapı. `css/style.css` :root renkleri yerinde güncellendi; koyu tema bloğu korundu.
 - Dokunulmayanlar: modül mantığı, veri, yazdırma çıktıları. FOPOS'taki bildirim zili, kenar çubuğu daraltma ve tema/avatar düğmeleri bilerek eklenmedi (işlevleri yok).
