@@ -1348,3 +1348,92 @@ button:focus-visible {
   body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(9) { width: 10% !important; }
   body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(10) { width: 10% !important; }
 }
+
+
+/* Yıllık Plan — FOPOS DOCX ile uyumlu sıkı baskı profili */
+@page { size: A4 landscape; margin: 5.9mm; }
+@media print {
+  body.yillik-plan-sayfasi .yillik-kicker,
+  body.yillik-plan-sayfasi .yillik-altbaslik,
+  body.yillik-plan-sayfasi .yillik-ozet-kart,
+  body.yillik-plan-sayfasi .yillik-kaynak-notu {
+    display: none !important;
+  }
+
+  body.yillik-plan-sayfasi .yillik-resmi-belge > h2 {
+    margin: 0 0 1mm !important;
+    font: 700 8pt/1.05 Arial, sans-serif !important;
+    text-align: center !important;
+  }
+
+  body.yillik-plan-sayfasi .yillik-resmi-belge > .belge-ust-bilgi {
+    margin: 0 0 1mm !important;
+    font: 6pt/1 Arial, sans-serif !important;
+  }
+
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    font: 6pt/1 Arial, sans-serif !important;
+  }
+
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu thead {
+    display: table-header-group !important;
+  }
+
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu tr,
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu td,
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th {
+    font-size: 7pt !important;
+    line-height: 1 !important;
+  }
+
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th,
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu td {
+    padding: .45mm .65mm !important;
+    vertical-align: top !important;
+    overflow-wrap: anywhere !important;
+    white-space: normal !important;
+  }
+
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(1) { width: 6% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(2) { width: 7% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(3) { width: 10% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(4) { width: 12% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(5) { width: 13% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(6) { width: 18% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(7) { width: 9% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(8) { width: 8% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(9) { width: 9% !important; }
+  body.yillik-plan-sayfasi .yillik-fopos-tablosu th:nth-child(10) { width: 8% !important; }
+
+  body.yillik-plan-sayfasi .yillik-aciklama-grid {
+    margin: 1.5mm 0 0 !important;
+    gap: 0 !important;
+  }
+
+  body.yillik-plan-sayfasi .yillik-aciklama-grid article {
+    grid-template-columns: 34mm 1fr !important;
+    break-inside: avoid !important;
+  }
+
+  body.yillik-plan-sayfasi .yillik-aciklama-grid h3,
+  body.yillik-plan-sayfasi .yillik-aciklama-grid p,
+  body.yillik-plan-sayfasi .yillik-dipnot {
+    padding: .7mm 1mm !important;
+    margin: 0 !important;
+    font: 6pt/1.05 Arial, sans-serif !important;
+  }
+
+  body.yillik-plan-sayfasi .imza-alani {
+    margin-top: 1.5mm !important;
+    font: 7pt/1.1 Arial, sans-serif !important;
+  }
+}
