@@ -17,6 +17,7 @@ const { JSDOM } = require("jsdom"); const fs = require("fs"); const assert = req
       const model = Object.assign(w.YillikPlanModule.ortakBelgeModeli(data, s), { okul: "Test Lisesi", ogretmen: "Ada Yılmaz" });
       for (const r of model.rows) {
         assert(!/Yöne-|-\d?[A-ZÇĞİÖŞÜa-zçğıöşü]*Ocak/.test(JSON.stringify(r)) && !/\d(Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Eylül|Ekim|Kasım|Aralık)/.test(r.ayHafta), `${d}: bozuk metin ${r.ayHafta}`);
+        assert(!/[A-Za-zÇĞİÖŞÜçğıöşü]-;\s/.test(r.konu) && !/(Ahlaki|Varoluş|Fel-|Kay-);/.test(r.konu), `${d}: konu metninde satır sonu kırığı`);
         assert(!/edebil$/.test(r.cikti), `${d}: kesik öğrenme çıktısı ${r.cikti}`);
         if (r.tip === "ders") assert(/^[^\n]+\n/.test(r.ayHafta), `${d}: ay etiketi eksik (${r.ayHafta})`);
       }

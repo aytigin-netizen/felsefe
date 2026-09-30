@@ -1,3 +1,12 @@
+## 30 Eylül 2026 — Felsefe 11 içerik çerçevesi satır sonu kırıkları
+
+- PR #29 birleşti; kullanıcı yeni PDF/DOCX/Yazdır çıktılarını (Felsefe 10 ve 11) kontrol etti, sorunsuz buldu. PDF 3 sayfa, üst bilgi ve 10 sütun tamam.
+- Çıktılarda kalan kaynak kaynaklı bozukluklar giderildi (yalnız `felsefe_veri_kaynagi.json`, 11. sınıf): `Fel-` / `sefe Yapma` → `Felsefe Yapma`; `Kay-` / `nağı` → `Kaynağı`; `Varoluş` / `ve Kendi Olma` → `Varoluş ve Kendi Olma`; `Ahlaki` / `Eylemin İmkânı` → `Ahlaki Eylemin İmkânı`. Hepsi PDF'ten metin çıkarırken satır sonunda bölünmüş öğelerdi (birleştirilirken araya yanlış `;` giriyordu). Resmî kaynakla yeniden karşılaştırılmadı.
+- Test: PDF testine bu kırık örüntüsü için kontrol eklendi.
+- Not: "Çevre sorunlarıyla ile ilgili" (Felsefe 11.1.2.a) bir yazım hatası gibi görünüyor ama resmî program metni olabileceğinden dokunulmadı.
+
+---
+
 ## 30 Eylül 2026 — Yıllık Plan: önbellek, üst bilgi paritesi ve veri düzeltmeleri
 
 - Gözlem: kullanıcının indirdiği PDF (jsPDF, 14 sayfa JPEG) ve Yazdır çıktısındaki kaçak `\n` metinleri PR #28 öncesi koddan geliyordu. GitHub Pages dosyaları ~10 dk önbelleğe aldığından tarayıcı eski sürümü çalıştırdı. Yeni PDF yolu bu yüzden cihazda henüz doğrulanamadı.
