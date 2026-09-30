@@ -195,7 +195,7 @@
               ],
               "haftalikDagilim": [
                 {
-                  "ay": "",
+                  "ay": "KASIM",
                   "hafta": "8. Hafta: 2-6 Kasım",
                   "dersSaati": "2",
                   "surecBileseniIsaretlenen": "a) Önermelerin nitelik ve niceliklerini belirler.",
@@ -318,7 +318,7 @@
               "haftalikDagilim": [
                 {
                   "ay": "ARALIK",
-                  "hafta": "15. Hafta: 28 Aralık -1Ocak",
+                  "hafta": "15. Hafta: 28 Aralık-1 Ocak",
                   "dersSaati": "2",
                   "surecBileseniIsaretlenen": "a) Doğruluk değerleri tablosunun temel unsurlarını belirler. b) Önermelerin doğruluk değerlerini doğruluk değeri tablosuyla belirler.",
                   "belirliGunHafta": ""

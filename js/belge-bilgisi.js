@@ -98,5 +98,8 @@ const BelgeBilgisiModule = (() => {
     return satir;
   }
 
-  return { ustBilgiOlustur, imzaAlaniOlustur };
+  // İndirilen belgeler (PDF/DOCX) için güncel okul/öğretmen/eğitim yılı değerleri.
+  function bilgiOku() { return depoyuOku(); }
+
+  return { ustBilgiOlustur, imzaAlaniOlustur, bilgiOku };
 })();

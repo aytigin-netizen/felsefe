@@ -14,7 +14,7 @@ const tick = () => new Promise(resolve => setImmediate(resolve));
   w.App.init();
   const select = w.document.getElementById('ders-secim');
   const choose = code => { select.value = code; select.dispatchEvent(new w.Event('change')); };
-  const finish = async request => { request.resolve({ok:true,json:async()=>JSON.parse(fs.readFileSync(request.file,'utf8'))}); await tick(); };
+  const finish = async request => { request.resolve({ok:true,json:async()=>JSON.parse(fs.readFileSync(request.file.split('?')[0],'utf8'))}); await tick(); };
   const disabled = () => [...w.document.querySelectorAll('#modul-grid button')].every(b=>b.disabled);
   choose('psikoloji'); await finish(requests.at(-1));
   assert.equal(w.State.get().dersKodu,'psikoloji');

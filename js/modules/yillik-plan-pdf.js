@@ -50,6 +50,8 @@ const YillikPlanPdf = (() => {
       model.ciktiSayisi ? model.ciktiSayisi + " öğrenme çıktısı" : ""].filter(Boolean).join("   •   ");
     pdf.text(bilgi, SAYFA.en / 2, y, { align: "center" });
     y += 3;
+    const kurum = [model.okul ? "Okul: " + model.okul : "", model.ogretmen ? "Öğretmen: " + model.ogretmen : ""].filter(Boolean).join("   •   ");
+    if (kurum) { pdf.text(kurum, SAYFA.en / 2, y + 1.5, { align: "center" }); y += 4.5; }
 
     const toplam = ORANLAR.reduce((a, b) => a + b, 0);
     const sutunlar = {};

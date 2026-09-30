@@ -1,3 +1,14 @@
+## 30 Eylül 2026 — Yıllık Plan: önbellek, üst bilgi paritesi ve veri düzeltmeleri
+
+- Gözlem: kullanıcının indirdiği PDF (jsPDF, 14 sayfa JPEG) ve Yazdır çıktısındaki kaçak `\n` metinleri PR #28 öncesi koddan geliyordu. GitHub Pages dosyaları ~10 dk önbelleğe aldığından tarayıcı eski sürümü çalıştırdı. Yeni PDF yolu bu yüzden cihazda henüz doğrulanamadı.
+- Önlem: `yillik-plan.html` script etiketlerine ve `data-loader.js` veri isteğine `?v=20260930b` eklendi. Sonraki değişikliklerde bu sürüm etiketi değiştirilmeli.
+- Parite: Okul/Öğretmen üst bilgisi yalnız Yazdır çıktısında vardı; PDF ve DOCX'e de eklendi (indirme anındaki değer `BelgeBilgisiModule.bilgiOku()` ile okunur).
+- Veri (4 ders dosyası): `28 Aralık -1Ocak` → `28 Aralık-1 Ocak`; 8. hafta (Kasım 2-6) ve Sosyoloji 1'in 34. haftası için boş `ay` dolduruldu; Felsefe 10.8.1 kesik öğrenme çıktısı başlığı `muhakeme edebil` → `muhakeme edebilme`; Din Felsefesi içerik çerçevesindeki satır sonu tire kırığı (`Yöne-` / `lik argüman`) tek öğede `Yönelik argüman` olarak birleştirildi. Resmî kaynakla karşılaştırılmadı; yalnız açık kesme/bozulma düzeltildi.
+- Bilerek dokunulmadı: 1. hafta satırındaki "15 Temmuz Demokrasi ve Millî Birlik Günü" (mevcut test bunu bekliyor; kaynaktan doğrulanmış kabul edildi).
+- Doğrulama: `npm test` başarılı (PDF testine bozuk metin, eksik ay etiketi ve kesik çıktı kontrolleri eklendi); PDF pdftotext ile, DOCX LibreOffice ile açılıp üst bilgi doğrulandı.
+
+---
+
 ## 30 Eylül 2026 — Yıllık Plan PDF: ekran görüntüsünden vektör PDF'e geçiş
 
 - Sorun: "PDF indir" 0 bayt iniyordu; ayrıca eski yöntem (html2canvas → JPEG → jsPDF) ekranın 1500 px'lik tablosunu görüntüye çevirip A4'e dilimliyordu (10 sütun yerine yalnız sol kısım, 24 sayfa). html2canvas `@media print` kurallarını uygulamaz.

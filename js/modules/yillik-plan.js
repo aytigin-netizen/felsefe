@@ -54,6 +54,12 @@ const YillikPlanModule = (() => {
     };
   }
 
+  // Üst bilgi alanları (okul/öğretmen) ekranda düzenlenebilir; indirme anındaki değeri al.
+  function guncelModel(model) {
+    const b=(typeof BelgeBilgisiModule!=="undefined"&&BelgeBilgisiModule.bilgiOku)?BelgeBilgisiModule.bilgiOku():{};
+    return Object.assign({},model,{okul:b.okul||"",ogretmen:b.ogretmen||""});
+  }
+
   function bilgiBolumu(model) {
     const section=document.createElement("section"); section.className="yillik-belge-bolumu yillik-ozet-kart";
     const h=document.createElement("h3"); h.textContent="Yıllık Plan Bilgileri"; section.append(h);
@@ -108,9 +114,9 @@ const YillikPlanModule = (() => {
     const print=document.createElement("button");print.type="button";print.className="eylem-buton secondary";print.textContent="Yazdır";print.addEventListener("click",()=>window.print());actions.append(print);
     const pdf=document.createElement("button");pdf.type="button";pdf.className="eylem-buton";pdf.textContent="PDF indir";pdf.addEventListener("click",async()=>{
       const onceki=pdf.textContent;pdf.disabled=true;pdf.textContent="PDF hazırlanıyor…";
-      try{await YillikPlanPdf.indir(model)}catch(err){window.alert("PDF oluşturulamadı: "+err.message)}finally{pdf.disabled=false;pdf.textContent=onceki}
+      try{await YillikPlanPdf.indir(guncelModel(model))}catch(err){window.alert("PDF oluşturulamadı: "+err.message)}finally{pdf.disabled=false;pdf.textContent=onceki}
     });actions.append(pdf);
-    const word=document.createElement("button");word.type="button";word.className="eylem-buton secondary";word.textContent="Word (DOCX) indir";word.addEventListener("click",()=>YillikPlanDocx.indir(model));actions.append(word);
+    const word=document.createElement("button");word.type="button";word.className="eylem-buton secondary";word.textContent="Word (DOCX) indir";word.addEventListener("click",()=>YillikPlanDocx.indir(guncelModel(model)));actions.append(word);
     const hint=document.createElement("p");hint.className="baski-ipucu";hint.textContent="Baskı çıktısı A4 yatay sayfa düzenine sabitlenmiştir.";actions.append(hint);container.append(actions);
   }
 

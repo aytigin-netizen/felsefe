@@ -14,7 +14,12 @@ const { JSDOM } = require("jsdom"); const fs = require("fs"); const assert = req
     const data = JSON.parse(fs.readFileSync(`data/${d}_veri_kaynagi.json`, "utf8"));
     for (const s of data.seviyeler) {
       if (!w.DataLoader.cercevePlanVarMi(s)) continue;
-      const model = w.YillikPlanModule.ortakBelgeModeli(data, s);
+      const model = Object.assign(w.YillikPlanModule.ortakBelgeModeli(data, s), { okul: "Test Lisesi", ogretmen: "Ada Yılmaz" });
+      for (const r of model.rows) {
+        assert(!/Yöne-|-\d?[A-ZÇĞİÖŞÜa-zçğıöşü]*Ocak/.test(JSON.stringify(r)) && !/\d(Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Eylül|Ekim|Kasım|Aralık)/.test(r.ayHafta), `${d}: bozuk metin ${r.ayHafta}`);
+        assert(!/edebil$/.test(r.cikti), `${d}: kesik öğrenme çıktısı ${r.cikti}`);
+        if (r.tip === "ders") assert(/^[^\n]+\n/.test(r.ayHafta), `${d}: ay etiketi eksik (${r.ayHafta})`);
+      }
       const { blob, sayfa } = w.YillikPlanPdf.blobOlustur(model);
       assert(blob.size > 5000, `${d}/${s.etiket}: PDF boş/çok küçük (${blob.size})`);
       assert(sayfa >= 1 && sayfa <= 8, `${d}/${s.etiket}: beklenmeyen sayfa sayısı ${sayfa}`);

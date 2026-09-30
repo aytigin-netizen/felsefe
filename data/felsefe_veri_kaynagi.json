@@ -156,7 +156,7 @@
                   "belirliGunHafta": "Cumhuriyet Bayramı (29 Ekim)"
                 },
                 {
-                  "ay": "",
+                  "ay": "KASIM",
                   "hafta": "8. Hafta: 2-6 Kasım",
                   "dersSaati": "2",
                   "surecBileseniIsaretlenen": "c) İfadeleri anlamını değiştirmeden, kendi cümleleriyle nesnel ve doğru biçimde yeniden ifade eder.",
@@ -277,7 +277,7 @@
                 },
                 {
                   "ay": "ARALIK",
-                  "hafta": "15. Hafta: 28 Aralık -1Ocak",
+                  "hafta": "15. Hafta: 28 Aralık-1 Ocak",
                   "dersSaati": "2",
                   "surecBileseniIsaretlenen": "b) Bilgi felsefesinin temel problemlerini açıklar.",
                   "belirliGunHafta": ""
@@ -502,7 +502,7 @@
           "ogrenmeCiktilari": [
             {
               "kod": "FEL.10.8.1",
-              "baslik": "Din felsefesinin konusunu, kavramlarını ve problemlerini muhakeme edebil",
+              "baslik": "Din felsefesinin konusunu, kavramlarını ve problemlerini muhakeme edebilme",
               "surec_bilesenleri": [
                 "Din felsefesinin konusunu ve temel kavramlarını açıklar.",
                 "Din felsefesinin temel problemlerini açıklar.",
@@ -511,8 +511,7 @@
               ],
               "icerik_cercevesi": [
                 "Din Felsefesinin Konusu ve Temel Kavramları",
-                "Din Felsefesinin Temel Problemleri (Tanrı’nın Varlığına İlişkin Görüşler, Tanrı’nın Varlığına Yöne-",
-                "lik argüman, Evrenin Sonluluğu ve Sonsuzluğu, Ruhun Ölümsüzlüğü)"
+                "Din Felsefesinin Temel Problemleri (Tanrı’nın Varlığına İlişkin Görüşler, Tanrı’nın Varlığına Yönelik argüman, Evrenin Sonluluğu ve Sonsuzluğu, Ruhun Ölümsüzlüğü)"
               ],
               "anahtar_kavramlar": [
                 "din",
@@ -775,7 +774,7 @@
                   "belirliGunHafta": "Cumhuriyet Bayramı (29 Ekim)"
                 },
                 {
-                  "ay": "",
+                  "ay": "KASIM",
                   "hafta": "8. Hafta: 2-6 Kasım",
                   "dersSaati": "2",
                   "surecBileseniIsaretlenen": "b) Teknoloji ile ilgili felsefi soru ve problemleri hayatla ilişkilendirerek değerlendirir.",
@@ -900,7 +899,7 @@
               "haftalikDagilim": [
                 {
                   "ay": "ARALIK",
-                  "hafta": "15. Hafta: 28 Aralık -1Ocak",
+                  "hafta": "15. Hafta: 28 Aralık-1 Ocak",
                   "dersSaati": "2",
                   "surecBileseniIsaretlenen": "a) Akıl-inanç ilişkisiyle ilgili felsefi argümanları çözümler.",
                   "belirliGunHafta": ""
