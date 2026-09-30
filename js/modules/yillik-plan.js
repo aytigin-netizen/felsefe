@@ -105,7 +105,8 @@ const YillikPlanModule = (() => {
     doc.append(BelgeBilgisiModule.imzaAlaniOlustur(["Ders Öğretmeni / İmza","Zümre Başkanı / İmza","Okul Müdürü / Onay"]));
     container.append(doc);
     const actions=document.createElement("div");actions.className="yillik-eylemler no-print";
-    const print=document.createElement("button");print.type="button";print.className="eylem-buton";print.textContent="Yazdır / PDF olarak kaydet";print.addEventListener("click",()=>window.print());actions.append(print);
+    const print=document.createElement("button");print.type="button";print.className="eylem-buton secondary";print.textContent="Yazdır";print.addEventListener("click",()=>window.print());actions.append(print);
+    const pdf=document.createElement("button");pdf.type="button";pdf.className="eylem-buton";pdf.textContent="PDF indir";pdf.addEventListener("click",async()=>{\n      const onceki=pdf.textContent;pdf.disabled=true;pdf.textContent="PDF hazırlanıyor…";\n      try{await YillikPlanPdf.indir(doc,model)}catch(err){window.alert("PDF oluşturulamadı: "+err.message)}finally{pdf.disabled=false;pdf.textContent=onceki}\n    });actions.append(pdf);
     const word=document.createElement("button");word.type="button";word.className="eylem-buton secondary";word.textContent="Word (DOCX) indir";word.addEventListener("click",()=>YillikPlanDocx.indir(model));actions.append(word);
     const hint=document.createElement("p");hint.className="baski-ipucu";hint.textContent="Baskı çıktısı A4 yatay sayfa düzenine sabitlenmiştir.";actions.append(hint);container.append(actions);
   }
