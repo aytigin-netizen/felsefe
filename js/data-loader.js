@@ -80,6 +80,10 @@ const DataLoader = (() => {
             ...hafta,
             kazanimKodu: cikti.kod,
             kazanimBaslik: cikti.baslik,
+            icerikCercevesi: (cikti.icerik_cercevesi || []).join("; "),
+            sosyalDuygusalOgrenme: (cikti.sosyal_duygusal_ogrenme || cikti.sosyalDuygusalOgrenme || []).join ? (cikti.sosyal_duygusal_ogrenme || cikti.sosyalDuygusalOgrenme || []).join("; ") : (cikti.sosyal_duygusal_ogrenme || cikti.sosyalDuygusalOgrenme || ""),
+            degerler: (cikti.degerler || []).join ? (cikti.degerler || []).join("; ") : (cikti.degerler || ""),
+            okuryazarlikBecerileri: (cikti.okuryazarlik_becerileri || cikti.okuryazarlikBecerileri || []).join ? (cikti.okuryazarlik_becerileri || cikti.okuryazarlikBecerileri || []).join("; ") : (cikti.okuryazarlik_becerileri || cikti.okuryazarlikBecerileri || ""),
             uniteNo: unite.uniteNo,
             uniteAdi: unite.uniteAdi,
           });
