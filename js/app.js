@@ -24,13 +24,13 @@ const App = (() => {
 
   // Sidebar'daki NAV listesiyle aynı sırada tutulur.
   const MODULES = [
-    { id: "yillik-plan", label: "Yıllık Plan", hazir: true },
-    { id: "gunluk-plan", label: "Günlük Plan", hazir: true },
-    { id: "unite-plani", label: "Ünite Planı", hazir: true },
-    { id: "calisma-kagidi", label: "Çalışma Kâğıdı", hazir: true },
-    { id: "degerlendirme", label: "Değerlendirme / Rubrik", hazir: true },
-    { id: "sunum", label: "Sunum", hazir: false },
-    { id: "zumre-tutanagi", label: "Zümre Tutanağı", hazir: false },
+    { id: "yillik-plan", label: "Yıllık Plan", aciklama: "Üniteleri, öğrenme çıktılarını ve haftaları öğretim yılına dağıtın.", hazir: true },
+    { id: "gunluk-plan", label: "Günlük Plan", aciklama: "Haftanızı seçin; ders akışını sınıfınıza göre düzenleyip yazdırın.", hazir: true },
+    { id: "unite-plani", label: "Ünite Planı", aciklama: "Öğrenme çıktıları, beceriler ve değerlendirmeyi birlikte planlayın.", hazir: true },
+    { id: "calisma-kagidi", label: "Çalışma Kâğıdı", aciklama: "Dersiniz için öğrenci etkinlikleri ve sorular hazırlayın.", hazir: true },
+    { id: "degerlendirme", label: "Değerlendirme / Rubrik", aciklama: "Öğrenci çalışmalarını açık ölçütlerle değerlendirin.", hazir: true },
+    { id: "sunum", label: "Sunum", aciklama: "Ders içeriğini sınıfınız için görsel bir akışa dönüştürün.", hazir: false },
+    { id: "zumre-tutanagi", label: "Zümre Tutanağı", aciklama: "Gündem, görüşme ve kararları belgeleyin.", hazir: false },
   ];
 
   function el(id) {
@@ -118,6 +118,10 @@ const App = (() => {
         !state.seviye || !mod.hazir || (mod.id === "yillik-plan" && yillikPlanEngelli);
       card.disabled = engelli;
       card.setAttribute("aria-disabled", String(engelli));
+      const ikon = document.createElement("span");
+      ikon.className = "modul-ikon";
+      ikon.innerHTML = Sidebar.ikon(mod.id);
+      card.appendChild(ikon);
       if (!engelli) {
         card.addEventListener("click", () => {
           window.location.href = PAGE_HREF[mod.id];
@@ -129,14 +133,19 @@ const App = (() => {
       baslik.textContent = mod.label;
       card.appendChild(baslik);
 
+      const aciklama = document.createElement("span");
+      aciklama.className = "modul-aciklama";
+      aciklama.textContent = mod.aciklama;
+      card.appendChild(aciklama);
+
       const durum = document.createElement("span");
       durum.className = "modul-durum";
       durum.textContent = !mod.hazir
         ? "Yakında"
         : mod.id === "yillik-plan" && yillikPlanEngelli
         ? "Çerçeve plan yok"
-        : "";
-      if (durum.textContent) card.appendChild(durum);
+        : !state.seviye ? "Önce ders ve sınıf seçin" : "Başlat →";
+      card.appendChild(durum);
 
       grid.appendChild(card);
     }

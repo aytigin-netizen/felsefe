@@ -25,13 +25,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0b0f16;
-    --fg: #e7ecf3;
-    --muted: #93a0b4;
-    --border: #232b38;
-    --accent: #6f9bd6;
-    --accent-fg: #0a1930;
-    --card-bg: #131a24;
+    --bg: #101714;
+    --fg: #e8eee9;
+    --muted: #a5b3ac;
+    --border: #33413c;
+    --accent: #dbbc83;
+    --accent-fg: #18231f;
+    --card-bg: #18211e;
+    --surface-muted: #202e27;
+    --forest: #b9d6c9;
     --warn-bg: #3a2c10;
     --warn-fg: #ffcf87;
     --error-bg: #3a1414;
@@ -1070,4 +1072,81 @@ button:focus-visible {
 @media print {
   body { background: #fff; }
   .cikti-karti, .calisma-kagidi-kagit, .rubrik-kagit { box-shadow: none; }
+}
+
+/* FOPOS Dashboard: yeşil-altın karşılama, simgeli modül kartları. */
+.site-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem clamp(1rem, 3vw, 2.5rem) 0;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: 24px;
+  background: linear-gradient(125deg, #172925, #253d36 66%, #5c4931 150%);
+  box-shadow: 0 24px 55px rgba(28, 48, 42, .17);
+}
+.site-header h1 { margin: 1rem 0; font-size: clamp(2rem, 3.5vw, 3.4rem); line-height: 1.1; }
+.site-header h1 em { color: #dbbc83; font-style: normal; }
+.hero-etiket, .modul-bolum-basligi > span { font-size: .7rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+.hero-etiket { color: #d4bd94; }
+.site-alt { color: #bbcac4; }
+.hero-simge { width: 160px; height: 160px; display: grid; place-items: center; position: relative; border: 1px solid rgba(219,188,131,.24); border-radius: 50%; color: #d7ba83; }
+.hero-simge svg { width: 66px; height: 66px; }
+.hero-simge span { position: absolute; top: 12px; right: 22px; font-family: var(--font-serif); font-size: 1.8rem; }
+.modul-bolum-basligi { margin: 2rem 0 1rem; }
+.modul-bolum-basligi > span { color: var(--accent); }
+.modul-bolum-basligi h2 { margin: .25rem 0 0; color: var(--forest); font-family: var(--font-serif); font-size: 1.8rem; font-weight: 600; }
+.modul-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.modul-karti { min-width: 0; min-height: 230px; padding: 23px; border-radius: 17px; gap: .75rem; }
+.modul-karti:disabled { opacity: 1; }
+.modul-karti:disabled .modul-durum { color: var(--muted); }
+.modul-karti:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.modul-ikon { width: 41px; height: 41px; display: grid; place-items: center; border-radius: 11px; color: var(--forest); background: var(--surface-muted); }
+.modul-ikon svg { width: 23px; height: 23px; }
+.modul-baslik { margin-top: .3rem; color: var(--forest); font-size: 1.1rem; }
+.modul-aciklama { color: var(--muted); font-size: .83rem; line-height: 1.6; }
+.modul-durum { margin-top: auto; color: var(--accent); font-weight: 700; }
+.sidebar-ikon { flex: none; width: 20px; height: 20px; }
+.sidebar-ikon svg { display: block; width: 100%; height: 100%; }
+.sidebar-link-baslik { flex: 1; }
+@media (min-width: 821px) {
+  #sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+}
+@media (max-width: 1100px) { .modul-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero-simge { width: 110px; height: 110px; } }
+@media (max-width: 600px) {
+  .site-header { grid-template-columns: 1fr; gap: 0; }
+  .hero-simge { display: none; }
+  .modul-grid { grid-template-columns: 1fr; }
+  .secim-satiri { min-width: 0; width: 100%; }
+  .secim-satiri select { width: 100%; }
+}
+
+/* Adlandırılmış kâğıt: yön yalnız Yıllık Plan'a aittir. */
+@page yillik-plan { size: A4 landscape; margin: 10mm; }
+.yillik-plan-sayfasi .sayfa-icerik { max-width: none; width: 100%; }
+@media print {
+  :root {
+    color-scheme: light;
+    --bg: #fff; --fg: #000; --muted: #444; --border: #777;
+    --card-bg: #fff; --surface-muted: #f2f2f2; --forest: #000; --accent: #000;
+  }
+  .site-header, .modul-bolum-basligi, .modul-grid { display: none; }
+  .yillik-plan-sayfasi { page: yillik-plan; }
+  .yillik-plan-sayfasi .app-shell,
+  .yillik-plan-sayfasi .app-main { display: block; min-height: 0; width: 100%; }
+  .yillik-plan-sayfasi .sayfa-icerik { width: 100%; max-width: none; margin: 0; padding: 0; }
+  .yillik-plan-sayfasi { font-size: 10pt; }
+  .yillik-plan-sayfasi h2 { font-size: 15pt; }
+  .yillik-plan-sayfasi h3 { font-size: 11pt; }
+  .yillik-plan-sayfasi .yillik-bilgi-tablosu { font-size: 10pt; }
+  .yillik-plan-sayfasi .yillik-tablo-kaydirma { width: 100%; overflow: visible; }
+  .yillik-plan-sayfasi .yillik-plan-tablosu { width: 100%; table-layout: fixed; overflow-wrap: anywhere; font-size: 9pt; }
+  .yillik-plan-sayfasi .yillik-plan-tablosu th:nth-child(1) { width: 12%; }
+  .yillik-plan-sayfasi .yillik-plan-tablosu th:nth-child(2) { width: 7%; }
+  .yillik-plan-sayfasi .yillik-plan-tablosu th:nth-child(3) { width: 5%; white-space: nowrap; }
+  .yillik-plan-sayfasi .yillik-plan-tablosu th:nth-child(4) { width: 15%; }
+  .yillik-plan-sayfasi .yillik-plan-tablosu th:nth-child(5) { width: 22%; }
+  .yillik-plan-sayfasi .yillik-plan-tablosu th:nth-child(6) { width: 26%; }
+  .yillik-plan-sayfasi .yillik-plan-tablosu th:nth-child(7) { width: 13%; }
 }

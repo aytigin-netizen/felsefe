@@ -93,10 +93,6 @@ async function run() {
           if (ozelSatirSayisi !== window.DataLoader.getOzelPlanlamaHaftalari(seviye).length) {
             errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: okul temelli planlama/sosyal etkinlik satırları tabloda eksik (${ozelSatirSayisi})`);
           }
-          const yatayStil = window.document.getElementById("yillik-yatay-baski-stili");
-          if (!yatayStil || yatayStil.media !== "print" || !/landscape/.test(yatayStil.textContent)) {
-            errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: yatay baskı stili eksik`);
-          }
         }
       } catch (e) {
         errors.push(`[${ders} / ${seviye.etiket}] YillikPlanModule: ${e.stack}`);
