@@ -81,9 +81,9 @@ const DataLoader = (() => {
             kazanimKodu: cikti.kod,
             kazanimBaslik: cikti.baslik,
             icerikCercevesi: (cikti.icerik_cercevesi || []).join("; "),
-            sosyalDuygusalOgrenme: (cikti.sosyal_duygusal_ogrenme || cikti.sosyalDuygusalOgrenme || []).join ? (cikti.sosyal_duygusal_ogrenme || cikti.sosyalDuygusalOgrenme || []).join("; ") : (cikti.sosyal_duygusal_ogrenme || cikti.sosyalDuygusalOgrenme || ""),
-            degerler: (cikti.degerler || []).join ? (cikti.degerler || []).join("; ") : (cikti.degerler || ""),
-            okuryazarlikBecerileri: (cikti.okuryazarlik_becerileri || cikti.okuryazarlikBecerileri || []).join ? (cikti.okuryazarlik_becerileri || cikti.okuryazarlikBecerileri || []).join("; ") : (cikti.okuryazarlik_becerileri || cikti.okuryazarlikBecerileri || ""),
+            sosyalDuygusalOgrenme: (cikti.sosyal_duygusal_ogrenme || cikti.sosyalDuygusalOgrenme || unite.programlarArasiBilesenler?.sosyalDuygusalOgrenme || []).join ? (cikti.sosyal_duygusal_ogrenme || cikti.sosyalDuygusalOgrenme || unite.programlarArasiBilesenler?.sosyalDuygusalOgrenme || []).join("; ") : (cikti.sosyal_duygusal_ogrenme || cikti.sosyalDuygusalOgrenme || unite.programlarArasiBilesenler?.sosyalDuygusalOgrenme || ""),
+            degerler: (cikti.degerler || unite.programlarArasiBilesenler?.degerler || []).join ? (cikti.degerler || unite.programlarArasiBilesenler?.degerler || []).join("; ") : (cikti.degerler || unite.programlarArasiBilesenler?.degerler || ""),
+            okuryazarlikBecerileri: (cikti.okuryazarlik_becerileri || cikti.okuryazarlikBecerileri || unite.programlarArasiBilesenler?.okuryazarlikBecerileri || []).join ? (cikti.okuryazarlik_becerileri || cikti.okuryazarlikBecerileri || unite.programlarArasiBilesenler?.okuryazarlikBecerileri || []).join("; ") : (cikti.okuryazarlik_becerileri || cikti.okuryazarlikBecerileri || unite.programlarArasiBilesenler?.okuryazarlikBecerileri || ""),
             uniteNo: unite.uniteNo,
             uniteAdi: unite.uniteAdi,
           });
