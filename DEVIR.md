@@ -1,3 +1,20 @@
+## 1 Ekim 2026 — Devir/durum eşitlemesi (yalnız belge)
+
+- Başlangıç: `main` / `01510bb` (PR #30). Uygulama koduna dokunulmadı. `npm test` bu oturumda çalıştırıldı, başarılı (çıkış kodu 0; jsdom canvas uyarısı ortam kaynaklı).
+- Kayıt boşlukları (git geçmişinden geri kurulmuştur; o oturumların kendi notları yoktur, ayrıntılar commit mesajlarına dayanır):
+  - PR #22 (`8c61d8a`, 30 Eylül): Sunum modülü main'e birleşti. Aşağıdaki "Sunum modülü (PR açıldı)" kaydı bu birleşmenin öncesidir.
+  - PR #23 (`a822e4e`): Yıllık Plan FOPOS belge paritesi — ortak belge modeli, A4 yatay baskı/PDF, DOCX, TYMM sütunları, tamamlayıcı bölümler.
+  - PR #24 (`10b2877`): 10 sütunlu tabloda gereksiz sayfa kırılmaları ve baskı yoğunluğu.
+  - PR #25 (`ef533bb`): baskı yoğunluğunun FOPOS belgesiyle eşitlenmesi.
+  - PR #26 (`ade0536`): Yıllık Plan FOPOS belge ve veri paritesi — kanonik TYMM çapraz program kodları, ünite TYMM bileşenlerinin yıllık satırlara aktarılması, yer tutucu metinlerin kaldırılması, DOCX yoğunluğu; `felsefe_veri_kaynagi.json` +105/−25; `test-annual-plan.js` TYMM veri paritesi kontrolü.
+  - PR #27: main geçmişinde birleşme commit'i bulunamadı; durumu bilinmiyor.
+- Eskimiş "sıradaki iş" notları kapanmıştır: `degerlendirme.html` rubrik tablosu mobil taşması PR #16'da (`dg-tablo-kaydirma`), `unite-plani.js` öğretmen dili PR #17'de düzeltildi. "Kanonik" sözcüğü artık yalnız kod yorumlarında geçiyor, belge çıktısında yok. Önceki kayıtlardaki bu iki önerinin önüne bakılmamalı.
+- Önbellek etiketi: `?v=20260930b` yalnız `yillik-plan.html` ve `js/data-loader.js` içinde. PR #30 veri JSON'unu değiştirdi ama etiket artırılmadı; sonraki veri/JS değişikliğinde artırılmalı.
+- Açık: (1) Android'de "PDF indir" 0 bayt hatası için yeni vektör PDF'in cihaz kabulü; hangi cihazda denendiği kayıtlı değil. (2) Sunum PowerPoint'in kendisinde açılmadı; Sosyoloji/Psikoloji/Mantık örnekleri görsel incelenmedi. (3) Sosyoloji/Mantık saatlerinin kaynak karşılaştırması. (4) Günlük Plan yalnız Felsefe (5 hafta); sabit şablon cümleler her haftada aynı. (5) Zümre Tutanağı "Yakında". (6) Uzak depoda main dahil 32 dal; birleşmişlerin silinmesi ayrı karar, yapılmadı. (7) "Çevre sorunlarıyla ile ilgili" ve "15 Temmuz" satırlarına bilerek dokunulmadı.
+- Sıradaki iş: Günlük Plan'ın sonraki haftası (Felsefe 10/11, 3. hafta). Kullanıcının yeni talebi bu önerinin önüne geçer.
+
+---
+
 ## 30 Eylül 2026 — Sunum modülü (PR açıldı)
 
 - Dal: `feat/sunum-modulu` (başlangıç `main` güncel). Sunum artık sidebar'da ve ana sayfada etkin; `sunum.html` diğer modüllerle aynı `ModulePage` kalıbını kullanır.
