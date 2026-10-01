@@ -1,3 +1,14 @@
+## 1 Ekim 2026 — Modül sayfalarında ders/sınıf seçici (dal: `fix/modul-sayfasi-sinif-secici`)
+
+- Sorun (kullanıcı bildirdi): Günlük Plan sayfasında sınıf seviyesi değiştirilemiyordu; değiştirmek için ana sayfaya dönmek gerekiyordu. Neden: `js/module-page.js` yalnız `State`'teki kayıtlı seçimi okuyordu, modül sayfalarında seçici yoktu. Sorun Günlük Plan'a özgü değil; aynı ortak dosyayı kullanan Yıllık Plan, Ünite Planı, Çalışma Kâğıdı, Değerlendirme ve Sunum sayfalarında da vardı.
+- Değişiklik: `module-page.js` her sayfada içeriğin üstüne Ders + Sınıf/Ders Düzeyi seçicisi ekler (`#sayfa-secim`, mevcut `.secim-alani` stilleri). Seçim değişince `State` güncellenir, sidebar etiketi yenilenir ve modül yeniden render edilir. Tek seviyeli derste (Psikoloji, Mantık) seviye otomatik atanır ve `State`'e yazılır; sınıf menüsü gizli kalır. Geç dönen eski yanıtlar istek sayacıyla yok sayılır. Ders temizlenirse seçim silinir. Seçim mesajı "Yukarıdan ders ve sınıf/ders düzeyi seçin." oldu. Modül dosyalarına dokunulmadı. `css/style.css` sonuna `.sayfa-secim` kuralları ve baskıda gizleme eklendi.
+- Test: yeni `test-module-page.js` (npm test'e eklendi): ders/sınıf değişimi, hafta sayısının seviyeyle değişmesi (10. sınıf 3, 11. sınıf 4), tek seviyeli otomatik atama, temizleme, kayıtlı seçimin geri yüklenmesi. `npm test` başarılı.
+- Gerçek Chromium (headless, yerel sunucu): Günlük Plan'da sınıf 10 → 11 değişince plan ve hafta listesi değişti (3 → 4 hafta), sidebar etiketi güncellendi, konsol hatası yok, 1280 ve 390 px'te yatay taşma yok, baskı medyasında seçici gizli. Mobil ekran görüntüsü incelendi. Gerçek telefon, yazıcı ve Safari/Firefox denenmedi. Diğer beş modül sayfası tarayıcıda tek tek açılmadı (ortak kod ve jsdom render testi var).
+- Not: sayfalar sürüm etiketi kullanmadığından yayından sonra tarayıcı eski `module-page.js`'i ~10 dk önbellekte tutabilir.
+- Sıradaki iş: Günlük Plan 10/4 (5-9 Ekim) ve 11/5 (felsefi metin yazma). Kullanıcının yeni talebi bu önerinin önüne geçer.
+
+---
+
 ## 1 Ekim 2026 — Günlük Plan: Felsefe 10. sınıf 3. hafta ve 11. sınıf 4. hafta (yerel, push edilmedi)
 
 - Dal: `feat/daily-plan-week-3-4` (başlangıç `main` / `01510bb`; üstünde `docs/devir-durum-esitleme` eşitleme commit'i var). Yerel commit; uzak depoya aktarılmadı (bu oturumda push yetkisi/token yok), PR açılmadı, yayınlanmadı.

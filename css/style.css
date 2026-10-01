@@ -1437,3 +1437,9 @@ button:focus-visible {
     font: 7pt/1.1 Arial, sans-serif !important;
   }
 }
+
+/* Modül sayfalarındaki ders / sınıf seçici (js/module-page.js) */
+.sayfa-secim { max-width: 1100px; padding: 2rem clamp(1rem, 3vw, 2.5rem) 0; }
+.sayfa-secim .secim-alani { margin-bottom: 0; }
+.sayfa-secim + .sayfa-icerik { padding-top: 1.25rem; }
+@media print { .sayfa-secim { display: none !important; } }
