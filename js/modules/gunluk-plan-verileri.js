@@ -140,13 +140,13 @@ const FelsefeGunlukPlanlari = [
       ['not','Ders sonrası öğretmen notu','']
     ],
     akis:[
-      [5,'Ön değerlendirme','Akarsuyu koruma sorusunu yöneltir; iddia ve gerekçeyi ayırt etmeyi yoklar.','Kısa cevap verir; gerekçesini belirtir.','Başlangıç cevapları'],
-      [5,'Köprü kurma','Aynı çevre kararının farklı değer kabullerine dayanabileceğini örnekler.','İnsan, canlı ve ekosistem odağını ayırır.','Üç odaklı tahta notu'],
-      [10,'Model çözümleme','A kartında sonuç, gerekçe ve örtük varsayımı sesli düşünerek gösterir.','İddia ve gerekçeyi farklı işaretlerle ayırır.','İşaretlenmiş A kartı'],
-      [20,'Eşli çözümleme','B ve C kartlarını dağıtır; doğrudan cevap vermeden yönlendirici sorular sorar.','Kartların sonucunu, gerekçesini ve değer odağını eşli belirler.','İki argüman çözümlemesi'],
-      [15,'Karşılaştırma','İkinci ders başında üç yaklaşımı karşılaştıracak tabloyu kurar.','Üç kartı karşılaştırır; bir güçlü yan ve bir sınırlılık yazar.','Karşılaştırma tablosu'],
-      [15,'Paylaşım ve geri bildirim','Etik yaklaşımı yalnız sonuca bakarak belirleme yanılgısını tartışmaya açar.','Çözümlemesini açıklar; arkadaşının gerekçesine göre tablosunu düzeltir.','Düzeltilmiş tablo'],
-      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; dört ölçütle öğrenme kanıtını inceler.','Argümanı bağımsız çözümler ve ihtiyaç duyduğu desteği belirtir.','Çıkış yanıtı']
+      [5,'Ön değerlendirme','Akarsuyu koruma sorusunu yöneltir; iddia ve gerekçeyi ayırt etmeyi yoklar.','Kısa cevap verir; gerekçesini belirtir.','Başlangıç yanıtında iddia–gerekçe ayrımı'],
+      [5,'Köprü kurma','Aynı çevre kararının farklı değer kabullerine dayanabileceğini örnekler.','İnsan, canlı ve ekosistem odağını ayırır.','Üç değer odağını ayıran tahta kaydı'],
+      [10,'Model çözümleme','A kartında sonuç, gerekçe ve örtük varsayımı sesli düşünerek gösterir.','İddia ve gerekçeyi farklı işaretlerle ayırır.','A kartında sonuç–gerekçe–örtük varsayım işaretlemesi'],
+      [20,'Eşli çözümleme','B ve C kartlarını dağıtır; doğrudan cevap vermeden yönlendirici sorular sorar.','Kartların sonucunu, gerekçesini ve değer odağını eşli belirler.','B ve C kartlarında sonuç–gerekçe–değer odağı çözümlemesi'],
+      [15,'Karşılaştırma','İkinci ders başında üç yaklaşımı karşılaştıracak tabloyu kurar.','Üç kartı karşılaştırır; bir güçlü yan ve bir sınırlılık yazar.','Üç yaklaşımın gerekçe, değer odağı, güçlü yan ve sınırlılığını gösteren karşılaştırma tablosu'],
+      [15,'Paylaşım ve geri bildirim','Etik yaklaşımı yalnız sonuca bakarak belirleme yanılgısını tartışmaya açar; akran gerekçesine dayalı düzeltme için kısa geri bildirim verir.','Çözümlemesini açıklar; akran ve öğretmen geri bildirimine göre gerekçe, değer odağı veya sınırlılık açıklamasından en az birini görünür biçimde düzeltir.','İlk tablo ile geri bildirim sonrası düzeltilmiş tablo arasındaki görünür revizyon'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; dört ölçütle öğrenme kanıtını inceler ve öğrencinin hangi ölçütte desteğe ihtiyaç duyduğunu belirlemesini ister.','Argümanı bağımsız çözümler; dört ölçüte göre yanıtını gözden geçirir ve ihtiyaç duyduğu desteği belirtir.','Dört ölçüte göre bağımsız çıkış yanıtı ve öğrencinin destek ihtiyacı kaydı']
     ]
   },
   {
