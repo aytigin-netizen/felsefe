@@ -1,3 +1,11 @@
+## 1 Ekim 2026 — Günlük Plan: Felsefe 10. sınıf 3. hafta ve 11. sınıf 4. hafta (yerel, push edilmedi)
+
+- Dal: `feat/daily-plan-week-3-4` (başlangıç `main` / `01510bb`; üstünde `docs/devir-durum-esitleme` eşitleme commit'i var). Yerel commit; uzak depoya aktarılmadı (bu oturumda push yetkisi/token yok), PR açılmadı, yayınlanmadı.
+- Eklenen: `fel-10-al-2026-h3` (FEL.10.1.1, 28 Eylül-2 Ekim, süreç bileşeni c: felsefi soruların temel özellikleri ve felsefi soru sorma) ve `fel-11-al-2026-h4` (FEL.11.1.2, 5-9 Ekim, süreç bileşeni b: görüş ve argüman oluşturma). Hafta, kod ve süreç bileşeni `data/felsefe_veri_kaynagi.json` haftalık dağılımından alındı; MEB çalışma kitabıyla ayrıca karşılaştırılmadı. İkisi de 80 dakika / 7 aşama, mevcut düzenle aynı. Ders akışı, kartlar ve kontrol ölçütleri öğretmen uyarlamasıdır; ders tarihleri hafta başı (28.09 / 05.10.2026).
+- Bilerek yapılmayan: 11/4'te önceki haftadaki gibi SBAB/KB/SDB/OB/D/E kodları yazılmadı (kaynakla doğrulanmadığı için); düz anlatımla ve "ders uyarlamasıdır" notuyla verildi. 10/3'te de kod yok. Felsefe metin yazma (11.1.2.c) sonraki haftaya bırakıldı.
+- Test: `test-daily-plan.js` 10. sınıfta 3, 11. sınıfta 4 hafta seçeneğini, yeni haftaların kodunu, süreç bileşenini, kart başlığını, 7 aşamayı ve 80 dakikayı kontrol ediyor. `npm test` başarılı. Ekran, mobil ve baskı görünümü bu oturumda incelenmedi.
+- Not: `gunluk-plan.html` sürüm etiketi kullanmıyor; yayından sonra tarayıcı eski JS'i ~10 dk önbellekte tutabilir.
+- Sıradaki iş: 10/4 (5-9 Ekim, felsefenin bilim/din/sanatla ilişkisi) ve 11/5 (felsefi metin yazma). Kullanıcının yeni talebi bu önerinin önüne geçer.
 ## 1 Ekim 2026 — Devir/durum eşitlemesi (yalnız belge)
 
 - Başlangıç: `main` / `01510bb` (PR #30). Uygulama koduna dokunulmadı. `npm test` bu oturumda çalıştırıldı, başarılı (çıkış kodu 0; jsdom canvas uyarısı ortam kaynaklı).
