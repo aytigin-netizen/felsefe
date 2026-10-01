@@ -118,6 +118,12 @@ const FelsefeGunlukPlanlari = [
   {
     id:'fel-11-al-2026-h3', ders:'Felsefe', seviye:'11. Sınıf', kod:'FEL.11.1.2',
     hafta:'3. Hafta: 28 Eylül-2 Ekim', kapsam:'3. hafta',
+    dersHedefi:'Öğrenci, çevre etiğine ilişkin insan merkezci, canlı merkezci ve çevre merkezci argümanları; sonuç, gerekçe, değer odağı ve örtük varsayımları bakımından çözümler ve karşılaştırır.',
+    pedagojikBaglantilar:{
+      akis:[0,1,2,3,4,5,6],
+      kanit:'kanit',
+      farklilastirma:['destek','zengin']
+    },
     alanlar:[
       ['tarih','Ders tarihi','28.09.2026'],['sinif','Sınıf / şube','11. Sınıf'],
       ['konu','Konu','Çevre etiğinde insan, canlı ve çevre merkezli argümanların çözümlenmesi'],

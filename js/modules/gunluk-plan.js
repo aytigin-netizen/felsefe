@@ -86,6 +86,7 @@ const GunlukPlanModule = (() => {
         ['Süre', `${hafta.dersSaati} ders saati / 80 dakika`],
         ['Öğrenme çıktısı', `${cikti.kod} — ${cikti.baslik}`],
         ['Haftalık süreç bileşeni', hafta.surecBileseniIsaretlenen],
+        ...(p.dersHedefi ? [['Ders hedefi', p.dersHedefi]] : []),
         ['Belirli gün ve hafta', hafta.belirliGunHafta]
       ]));
       plan.append(listeOlustur(document, 'Program Bağlantısı', [
@@ -93,6 +94,24 @@ const GunlukPlanModule = (() => {
         `Anahtar kavramlar: ${(cikti.anahtar_kavramlar || []).join(', ')}`,
         'Süreç bileşenleri: Bu derste haftalık planda işaretlenen bileşen merkeze alınır; öğrenme çıktısının diğer bileşenleri ünite bütünlüğü içinde izlenir.'
       ]));
+      if(p.dersHedefi && p.pedagojikBaglantilar){
+        const bag=p.pedagojikBaglantilar;
+        const akisBaglantisi=Array.isArray(bag.akis) && bag.akis.length===p.akis.length
+          ? `7 aşamalı öğrenme yaşantısı: ${bag.akis.map(i=>p.akis[i]?.[1]).filter(Boolean).join(' → ')}.`
+          : 'Öğrenme yaşantısı bağlantısı eksik veya geçersiz.';
+        const farklilastirma=(bag.farklilastirma||[]).map(id=>{
+          const alan=p.alanlar.find(a=>a[0]===id);
+          return alan ? alan[1] : id;
+        }).join(' + ');
+        plan.append(listeOlustur(document, 'Pedagojik Karar Zinciri', [
+          `Öğrenme çıktısı: ${cikti.kod} — ${cikti.baslik}`,
+          `Süreç bileşeni: ${hafta.surecBileseniIsaretlenen}`,
+          `Ders hedefi: ${p.dersHedefi}`,
+          akisBaglantisi,
+          `Ölçme / kanıt: ${bag.kanit==='kanit' ? alanDegeri(p,'kanit') : 'Bağlantı tanımlanmadı.'}`,
+          `Farklılaştırma: ${farklilastirma || 'Bağlantı tanımlanmadı.'}`
+        ]));
+      }
       plan.append(listeOlustur(document, 'Beceri, Değer ve Okuryazarlık İlişkisi', [
         alanDegeri(p, 'bilesen'),
         'Öğrencinin felsefi soruyu, kavramı, gerekçeyi ve değer ilişkisini görünür kılması beklenir.',
