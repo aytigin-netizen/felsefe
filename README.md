@@ -43,6 +43,7 @@ js/modules/               Çıktı üreticileri: yillik-plan.js, gunluk-plan.js,
 js/modules/gunluk-plan-verileri.js  Günlük Plan hafta paketleri (içerik verisi, üreticiden ayrı)
 data/*_veri_kaynagi.json  Her ders için kanonik veri (kazanım + haftalık plan birleşik)
 test-selection.js         Ders/seviye seçim davranışı regresyon testi
+test-module-page.js       Modül sayfası ders/sınıf seçici testi
 test-daily-plan.js        Günlük plan davranış testi (10/1, 10/2, 10/3, 11/1, 11/2, 11/3, 11/4)
 test-run.js               jsdom ile tüm modülleri her ders/seviye kombinasyonunda render edip
                           hata arayan basit regresyon testi (npm test)
