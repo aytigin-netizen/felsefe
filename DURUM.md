@@ -1,3 +1,28 @@
+## 1 Ekim 2026 — Günlük Plan: Felsefe 10. sınıf 3. hafta ve 11. sınıf 4. hafta (yerel, push edilmedi)
+
+- Dal: `feat/daily-plan-week-3-4` (başlangıç `main` / `01510bb`; üstünde `docs/devir-durum-esitleme` eşitleme commit'i var). Yerel commit; uzak depoya aktarılmadı (bu oturumda push yetkisi/token yok), PR açılmadı, yayınlanmadı.
+- Eklenen: `fel-10-al-2026-h3` (FEL.10.1.1, 28 Eylül-2 Ekim, süreç bileşeni c: felsefi soruların temel özellikleri ve felsefi soru sorma) ve `fel-11-al-2026-h4` (FEL.11.1.2, 5-9 Ekim, süreç bileşeni b: görüş ve argüman oluşturma). Hafta, kod ve süreç bileşeni `data/felsefe_veri_kaynagi.json` haftalık dağılımından alındı; MEB çalışma kitabıyla ayrıca karşılaştırılmadı. İkisi de 80 dakika / 7 aşama, mevcut düzenle aynı. Ders akışı, kartlar ve kontrol ölçütleri öğretmen uyarlamasıdır; ders tarihleri hafta başı (28.09 / 05.10.2026).
+- Bilerek yapılmayan: 11/4'te önceki haftadaki gibi SBAB/KB/SDB/OB/D/E kodları yazılmadı (kaynakla doğrulanmadığı için); düz anlatımla ve "ders uyarlamasıdır" notuyla verildi. 10/3'te de kod yok. Felsefe metin yazma (11.1.2.c) sonraki haftaya bırakıldı.
+- Test: `test-daily-plan.js` 10. sınıfta 3, 11. sınıfta 4 hafta seçeneğini, yeni haftaların kodunu, süreç bileşenini, kart başlığını, 7 aşamayı ve 80 dakikayı kontrol ediyor. `npm test` başarılı. Ekran, mobil ve baskı görünümü bu oturumda incelenmedi.
+- Not: `gunluk-plan.html` sürüm etiketi kullanmıyor; yayından sonra tarayıcı eski JS'i ~10 dk önbellekte tutabilir.
+- Sıradaki iş: 10/4 (5-9 Ekim, felsefenin bilim/din/sanatla ilişkisi) ve 11/5 (felsefi metin yazma). Kullanıcının yeni talebi bu önerinin önüne geçer.
+## 1 Ekim 2026 — Devir/durum eşitlemesi (yalnız belge)
+
+- Başlangıç: `main` / `01510bb` (PR #30). Uygulama koduna dokunulmadı. `npm test` bu oturumda çalıştırıldı, başarılı (çıkış kodu 0; jsdom canvas uyarısı ortam kaynaklı).
+- Kayıt boşlukları (git geçmişinden geri kurulmuştur; o oturumların kendi notları yoktur, ayrıntılar commit mesajlarına dayanır):
+  - PR #22 (`8c61d8a`, 30 Eylül): Sunum modülü main'e birleşti. Aşağıdaki "Sunum modülü (PR açıldı)" kaydı bu birleşmenin öncesidir.
+  - PR #23 (`a822e4e`): Yıllık Plan FOPOS belge paritesi — ortak belge modeli, A4 yatay baskı/PDF, DOCX, TYMM sütunları, tamamlayıcı bölümler.
+  - PR #24 (`10b2877`): 10 sütunlu tabloda gereksiz sayfa kırılmaları ve baskı yoğunluğu.
+  - PR #25 (`ef533bb`): baskı yoğunluğunun FOPOS belgesiyle eşitlenmesi.
+  - PR #26 (`ade0536`): Yıllık Plan FOPOS belge ve veri paritesi — kanonik TYMM çapraz program kodları, ünite TYMM bileşenlerinin yıllık satırlara aktarılması, yer tutucu metinlerin kaldırılması, DOCX yoğunluğu; `felsefe_veri_kaynagi.json` +105/−25; `test-annual-plan.js` TYMM veri paritesi kontrolü.
+  - PR #27: main geçmişinde birleşme commit'i bulunamadı; durumu bilinmiyor.
+- Eskimiş "sıradaki iş" notları kapanmıştır: `degerlendirme.html` rubrik tablosu mobil taşması PR #16'da (`dg-tablo-kaydirma`), `unite-plani.js` öğretmen dili PR #17'de düzeltildi. "Kanonik" sözcüğü artık yalnız kod yorumlarında geçiyor, belge çıktısında yok. Önceki kayıtlardaki bu iki önerinin önüne bakılmamalı.
+- Önbellek etiketi: `?v=20260930b` yalnız `yillik-plan.html` ve `js/data-loader.js` içinde. PR #30 veri JSON'unu değiştirdi ama etiket artırılmadı; sonraki veri/JS değişikliğinde artırılmalı.
+- Açık: (1) Android'de "PDF indir" 0 bayt hatası için yeni vektör PDF'in cihaz kabulü; hangi cihazda denendiği kayıtlı değil. (2) Sunum PowerPoint'in kendisinde açılmadı; Sosyoloji/Psikoloji/Mantık örnekleri görsel incelenmedi. (3) Sosyoloji/Mantık saatlerinin kaynak karşılaştırması. (4) Günlük Plan yalnız Felsefe (5 hafta); sabit şablon cümleler her haftada aynı. (5) Zümre Tutanağı "Yakında". (6) Uzak depoda main dahil 32 dal; birleşmişlerin silinmesi ayrı karar, yapılmadı. (7) "Çevre sorunlarıyla ile ilgili" ve "15 Temmuz" satırlarına bilerek dokunulmadı.
+- Sıradaki iş: Günlük Plan'ın sonraki haftası (Felsefe 10/11, 3. hafta). Kullanıcının yeni talebi bu önerinin önüne geçer.
+
+---
+
 ## 30 Eylül 2026 — Felsefe 11 içerik çerçevesi satır sonu kırıkları
 
 - PR #29 birleşti; kullanıcı yeni PDF/DOCX/Yazdır çıktılarını (Felsefe 10 ve 11) kontrol etti, sorunsuz buldu. PDF 3 sayfa, üst bilgi ve 10 sütun tamam.

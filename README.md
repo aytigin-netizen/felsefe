@@ -11,7 +11,7 @@ Canlı site: <https://aytigin-netizen.github.io/felsefe/>
 | Modül | Durum | Ne yapar |
 | --- | --- | --- |
 | Yıllık Plan | ✅ | Seçili ders/seviye için haftalık dağılımlı, yazdırılabilir yıllık plan; başta plan bilgileri tablosu ve program/kaynak notu; okul temelli planlama ve sosyal etkinlik haftaları tabloda; yazdırma A4 yatay |
-| Günlük Plan | ✅ (Felsefe, 5 hafta) | Anadolu Lisesi; Felsefe 10. sınıf 1.–2. hafta, 11. sınıf 1.–3. hafta. Hafta seçimli, düzenlenebilir 80 dakikalık akış; ders bilgileri, program bağlantısı ve ölçme yaklaşımı bölümleriyle. Diğer derslerde henüz yok |
+| Günlük Plan | ✅ (Felsefe, 7 hafta) | Anadolu Lisesi; Felsefe 10. sınıf 1.–3. hafta, 11. sınıf 1.–4. hafta. Hafta seçimli, düzenlenebilir 80 dakikalık akış; ders bilgileri, program bağlantısı ve ölçme yaklaşımı bölümleriyle. Diğer derslerde henüz yok |
 | Ünite Planı | ✅ | Ünite bazlı öğrenme çıktısı kartları + öğretmen notları; başta ünite bilgileri ve program/ölçme notu |
 | Çalışma Kâğıdı | ✅ | Kazanımdan seçmeli bölümlü, yazdırılabilir çalışma kâğıdı |
 | Değerlendirme / Rubrik | ✅ | 4 seviyeli, düzenlenebilir rubrik |
@@ -43,7 +43,7 @@ js/modules/               Çıktı üreticileri: yillik-plan.js, gunluk-plan.js,
 js/modules/gunluk-plan-verileri.js  Günlük Plan hafta paketleri (içerik verisi, üreticiden ayrı)
 data/*_veri_kaynagi.json  Her ders için kanonik veri (kazanım + haftalık plan birleşik)
 test-selection.js         Ders/seviye seçim davranışı regresyon testi
-test-daily-plan.js        Günlük plan davranış testi (10/1, 10/2, 11/1, 11/2, 11/3)
+test-daily-plan.js        Günlük plan davranış testi (10/1, 10/2, 10/3, 11/1, 11/2, 11/3, 11/4)
 test-run.js               jsdom ile tüm modülleri her ders/seviye kombinasyonunda render edip
                           hata arayan basit regresyon testi (npm test)
 .github/workflows/ci.yml  Push (main), pull request ve elle çalıştırmada npm test
@@ -137,7 +137,7 @@ pedagojik doğruluğu kanıtlamaz. Bunlar ayrıca gerçek tarayıcıda kontrol e
 
 - [x] Veri katmanı: kazanım + yıllık plan verisi birleştirildi, doğrulandı
 - [x] Yıllık Plan, Ünite Planı, Çalışma Kâğıdı, Değerlendirme/Rubrik modülleri
-- [x] Günlük Plan: Felsefe 10/1, 10/2, 11/1, 11/2, 11/3 (Anadolu Lisesi)
+- [x] Günlük Plan: Felsefe 10/1, 10/2, 10/3, 11/1, 11/2, 11/3, 11/4 (Anadolu Lisesi)
 - [x] Günlük, Ünite ve Yıllık Plan çıktılarında belge bilgileri bölümleri
 - [x] Temel regresyon testleri (`npm test`)
 - [ ] Günlük Plan: Felsefe'nin kalan haftaları ve diğer dersler; içeriğin pedagojik kalite incelemesi

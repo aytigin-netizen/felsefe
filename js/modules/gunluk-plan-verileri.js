@@ -142,5 +142,62 @@ const FelsefeGunlukPlanlari = [
       [15,'Paylaşım ve geri bildirim','Etik yaklaşımı yalnız sonuca bakarak belirleme yanılgısını tartışmaya açar.','Çözümlemesini açıklar; arkadaşının gerekçesine göre tablosunu düzeltir.','Düzeltilmiş tablo'],
       [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; dört ölçütle öğrenme kanıtını inceler.','Argümanı bağımsız çözümler ve ihtiyaç duyduğu desteği belirtir.','Çıkış yanıtı']
     ]
+  },
+  {
+    id:'fel-10-al-2026-h3', ders:'Felsefe', seviye:'10. Sınıf', kod:'FEL.10.1.1',
+    hafta:'3. Hafta: 28 Eylül-2 Ekim', kapsam:'3. hafta',
+    alanlar:[
+      ['tarih','Ders tarihi','28.09.2026'],
+      ['sinif','Sınıf / şube','10. Sınıf'],
+      ['konu','Konu','Felsefi sorunun temel özellikleri ve felsefi soru sorma'],
+      ['materyal','Materyaller ve yöntemler','Tahta, soru kartları ve soru dönüştürme tablosu. Soru-cevap, sınıflandırma, küçük grup çalışması ve soru üretme.'],
+      ['kabul','Temel kabuller','Öğrencilerin gündelik, bilimsel ve felsefi nitelikte sorular sorabildiği varsayılır; felsefi soruyu diğerlerinden ayıran ölçütleri henüz açıkça ifade edemeyebilecekleri kabul edilir.'],
+      ['on','Ön değerlendirme','“Bugün kaçta çıkıyoruz?”, “Su kaç derecede kaynar?” ve “İyi bir yaşam nedir?” soruları tahtaya yazılır. Öğrencilerden bu üç sorunun neden aynı türden olmadığını tek cümleyle belirtmesi istenir.'],
+      ['kopru','Köprü kurma','Önceki derste felsefi düşüncenin özellikleri ve tarihsel gelişimi ele alındı. Bu düşünce, kendine özgü hangi tür sorularla işler?'],
+      ['bilesen','Bu derste ilişkilendirilen beceri ve değerler','Soru sorma, kavramları ayırt etme, gerekçe isteme ve farklı görüşleri dinleme. Bu liste ders uyarlamasıdır.'],
+      ['kartlar','Soru kartları — öğretmen uyarlaması','A — Su kaç derecede kaynar?\n\nB — Bir eylemi doğru yapan nedir?\n\nC — Okul kaçta başlıyor?\n\nD — Özgür olmak ne demektir?\n\nHer kart için: Bu soru tek bir doğru cevapla kapanıyor mu? Cevap için gözlem veya ölçüm yeterli mi? Sorunun içindeki hangi kavram tartışmaya açık? Aynı soru farklı gerekçelerle farklı cevaplanabilir mi?'],
+      ['kanit','Öğrenme kanıtları ve değerlendirme','Ürün: Bir gündelik sorunun felsefi soruya dönüştürülmüş hâli ve bu sorunun felsefi sayılma gerekçesi.\nÇıkış sorusu: “Bir sorunun felsefi sayılmasını sağlayan özelliklerden birini kendi sorunuzla açıklayın.”\nKontrol: (1) Soruyu açıkça yazar. (2) Bir özelliği belirtir. (3) Özelliği kendi sorusuyla ilişkilendirir. Her ölçüt: bağımsız yaptı / destekle yaptı / henüz yapamadı.'],
+      ['destek','Destekleme','“Bu soru felsefidir; çünkü …” ve “Bu soru felsefi değildir; çünkü …” cümle başlangıçlarını verin. Kartları eşli okutun; gerekçeyi önce sözlü aldırın.'],
+      ['zengin','Zenginleştirme','Erken tamamlayanlar felsefi olmadığını düşündükleri bir soruyu, içindeki bir kavramı tartışmaya açarak felsefi soruya dönüştürsün ve dönüşümün neyi değiştirdiğini açıklasın.'],
+      ['sonraki','Sonraki derse hazırlık','Bir hafta içinde karşılaştığınız bir soruyu seçin; felsefenin bilim, din ve sanatla ilişkisi bakımından hangi alana daha yakın durduğunu düşünün. Bu ilişki sonraki haftanın konusudur.'],
+      ['not','Ders sonrası öğretmen notu','']
+    ],
+    akis:[
+      [5,'Merak uyandırma','Üç soruyu tahtaya yazar; aralarındaki farkı sezdirmeden cevapları toplar.','Sorular arasındaki farkı tek cümleyle yazar.','Başlangıç cümlesi'],
+      [10,'Soruları ayırma','Cevap türlerini (bilgi, ölçüm, gerekçelendirme) tahtada görünür kılar.','Soruları cevap türüne göre gruplar.','Gruplama notu'],
+      [15,'Soru kartlarını inceleme','Kartları dağıtır; yönlendirici sorularla özellikleri buldurur.','Kartları ölçütlerle inceler.','Kart notları'],
+      [15,'Özellikleri ifade etme','Öğrencilerin bulduğu ölçütleri toplar; kavramsal netlik, gerekçelendirme ve tek cevapla kapanmama özelliklerine dikkat çeker.','Felsefi sorunun özelliklerini kendi cümleleriyle yazar.','Özellik listesi'],
+      [15,'Soru dönüştürme','İkinci ders başında gündelik bir soruyu felsefi soruya dönüştürmeyi ister.','Gündelik bir soruyu felsefi soruya dönüştürür.','Dönüştürülmüş soru'],
+      [10,'Paylaşım ve geri bildirim','Birkaç dönüşümü sınıfta tartıştırır; ölçütleri sorular üzerinde sınatır.','Arkadaşının sorusunu ölçütlerle değerlendirir; kendi sorusunu düzeltir.','Düzeltilmiş soru'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; üç ölçütle öğrenme kanıtını inceler.','Bir özelliği kendi sorusuyla açıklar.','Çıkış yanıtı']
+    ]
+  },
+  {
+    id:'fel-11-al-2026-h4', ders:'Felsefe', seviye:'11. Sınıf', kod:'FEL.11.1.2',
+    hafta:'4. Hafta: 5-9 Ekim', kapsam:'4. hafta',
+    alanlar:[
+      ['tarih','Ders tarihi','05.10.2026'],['sinif','Sınıf / şube','11. Sınıf'],
+      ['konu','Konu','Çevre sorunlarında görüş ve argüman oluşturma'],
+      ['materyal','Materyaller ve yöntemler','Tahta, durum kartları ve argüman iskeleti şablonu. Soru-cevap, eşli çalışma, argüman kurma ve karşılıklı eleştiri.'],
+      ['kabul','Temel kabuller','Önceki derste argümanları çözümlediği, ancak kendi görüşünü gerekçelendirerek kurmakta ve karşı görüşü hesaba katmakta desteğe ihtiyaç duyabileceği kabul edilir.'],
+      ['on','Ön değerlendirme','“Şehir içindeki bir yeşil alanın yerine otopark yapılmalı mı?” sorusuna birer görüş alınır. Görüşün yanında bir gerekçe belirtilip belirtilmediği yoklanır.'],
+      ['kopru','Köprü kurma','Önceki derste verilmiş argümanların sonucunu, gerekçesini ve değer odağını ayırdık. Şimdi aynı parçalarla kendi görüşünüzü kuracaksınız.'],
+      ['bilesen','Bu derste ilişkilendirilen beceri ve değerler','Gerekçelendirme, argüman kurma, karşı görüşü değerlendirme, iş birliği ve duyarlılık. Bu liste ders uyarlamasıdır; ünitenin bütün bileşenlerinin her derste işlendiği anlamına gelmez.'],
+      ['kartlar','Durum kartları ve argüman iskeleti — öğretmen uyarlaması','A — Şehir merkezindeki yeşil alanın yerine otopark yapılması öneriliyor.\n\nB — Bir derenin kenarına fabrika kurulması öneriliyor.\n\nC — Okul bahçesindeki ağaçların kesilip yerine spor alanı yapılması öneriliyor.\n\nİskelet: Görüşüm … Çünkü … Bu gerekçe … değere dayanıyor (insan, canlı veya ekosistem odaklı). Karşı görüş … diyebilir; buna şöyle cevap veririm: …'],
+      ['kanit','Öğrenme kanıtları ve değerlendirme','Ürün: Seçilen durum kartı için iskelete uygun yazılmış kısa argüman.\nÇıkış sorusu: “Seçtiğiniz durumda görüşünüzü, gerekçenizi ve gerekçenin dayandığı değeri yazın; olası bir karşı görüşe cevap verin.”\nKontrol: (1) Görüşü açıkça belirtir. (2) Gerekçe verir. (3) Gerekçenin dayandığı değer odağını belirtir. (4) Bir karşı görüşü ele alır. Her ölçüt: bağımsız yaptı / destekle yaptı / henüz yapamadı.'],
+      ['destek','Destekleme','İskeletin cümle başlangıçlarını verin. Önce görüşü ve gerekçeyi sözlü aldırın; karşı görüş bölümünü eşli hazırlatın.'],
+      ['zengin','Zenginleştirme','Erken tamamlayanlar aynı durum için farklı bir değer odağına dayanan ikinci bir argüman kursun ve iki argümanın hangi noktada ayrıştığını açıklasın. Bu etkinlik, öğrencinin ihtiyacına göre kullanılabilecek bir öğretmen uyarlamasıdır.'],
+      ['sonraki','Sonraki derse hazırlık','Bir çevre sorunu seçin ve bu soruna dair kendi görüşünüzü bir iki cümleyle yazın. Felsefi metin yazmak sonraki haftanın süreç bileşenidir; bu hafta yalnız görüş ve argüman kurulur.'],
+      ['not','Ders sonrası öğretmen notu','']
+    ],
+    akis:[
+      [5,'Ön değerlendirme','Otopark sorusunu yöneltir; görüşün yanında gerekçe verilip verilmediğini yoklar.','Görüşünü ve bir gerekçe söyler.','Başlangıç cevapları'],
+      [5,'Köprü kurma','Önceki dersteki çözümleme parçalarını (sonuç, gerekçe, değer odağı) hatırlatır.','Parçaları kendi görüşüne uygulayacağını fark eder.','Tahtadaki parça listesi'],
+      [10,'Model argüman','A kartı için iskeleti sesli düşünerek doldurur.','İskeletin bölümlerini izler; model argümanı işaretler.','İşaretli model argüman'],
+      [20,'Eşli argüman kurma','B ve C kartlarından birini seçtirir; doğrudan cevap vermeden yönlendirici sorular sorar.','Seçtiği durum için iskelete uygun argüman yazar.','Taslak argüman'],
+      [15,'Karşılıklı eleştiri','İkinci ders başında eşlerin argümanlarını değiş tokuş ettirir.','Arkadaşının argümanında gerekçeyi ve değer odağını belirler; bir karşı görüş önerir.','Eleştiri notu'],
+      [15,'Gözden geçirme ve paylaşım','Birkaç argümanı sınıfta paylaştırır; gerekçenin görüşü gerçekten destekleyip desteklemediğini tartışmaya açar.','Karşı görüşü ve eleştiriyi dikkate alarak argümanını düzeltir.','Düzeltilmiş argüman'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; dört ölçütle öğrenme kanıtını inceler.','Görüş, gerekçe, değer odağı ve karşı görüşü yazar.','Çıkış yanıtı']
+    ]
   }
 ];
