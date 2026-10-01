@@ -4,6 +4,12 @@ const FelsefeGunlukPlanlari = [
   {
     id:'fel-10-al-2026-h1', ders:'Felsefe', seviye:'10. Sınıf', kod:'FEL.10.1.1',
     hafta:'1. Hafta: 14-18 Eylül', kapsam:'1. hafta',
+    dersHedefi:'Öğrenci, felsefenin anlamına ilişkin farklı tanımları karşılaştırır; ortak bir felsefe tanımının imkânını gerekçeleriyle sorgular ve ilk tanımını bu sorgulama doğrultusunda gözden geçirir.',
+    pedagojikBaglantilar:{
+      akis:[0,1,2,3,4,5,6],
+      kanit:'kanit',
+      farklilastirma:['destek','zengin']
+    },
     alanlar:[
       ['tarih','Ders tarihi','14.09.2026'],
       ['sinif','Sınıf / şube','10. Sınıf'],
@@ -26,13 +32,19 @@ const FelsefeGunlukPlanlari = [
       [10,'Kavram kartlarını inceleme','Üç kartı dağıtır; her birinin vurgusunu buldurur.','Kartların öne çıkardığı felsefe yönünü belirler.','Kart notları'],
       [15,'Ortak tanım problemi','“Tek tanım mümkün mü?” sorusunu küçük gruplara verir.','Bir görüş ve en az bir gerekçe oluşturur.','Grup gerekçesi'],
       [15,'Görüşleri karşılaştırma','İkinci ders başında gerekçeleri sınıflandırır; tanım ile gerekçeyi ayırır.','Grupların gerekçelerini karşılaştırır.','Karşılaştırma notu'],
-      [15,'Tanımı yeniden kurma','İlk tanıma dönülmesini ve gerekçeyle geliştirilmesini ister.','İlk cevabını gözden geçirip yeniden yazar.','Gözden geçirilmiş tanım'],
-      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular ve gerekçenin açıklığını kontrol eder.','Tek tanım güçlüğünü bir gerekçeyle açıklar.','Çıkış yanıtı']
+      [15,'Tanımı yeniden kurma','İlk tanıma dönülmesini ve gerekçeyle geliştirilmesini ister.','Akran ve öğretmen geri bildirimini dikkate alarak ilk cevabını gerekçesiyle yeniden yazar.','İlk tanım ile geri bildirim sonrası gözden geçirilmiş tanım arasındaki görünür revizyon'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular ve gerekçenin açıklığını kontrol eder.','Tek tanım güçlüğünü bir gerekçeyle açıklar; yanıtını ders hedefi bakımından kısaca kontrol eder.','Gerekçeli bağımsız çıkış yanıtı ve öz-kontrol kaydı']
     ]
   },
   {
     id:'fel-10-al-2026-h2', ders:'Felsefe', seviye:'10. Sınıf', kod:'FEL.10.1.1',
     hafta:'2. Hafta: 21-25 Eylül', kapsam:'2. hafta',
+    dersHedefi:'Öğrenci, felsefi düşüncenin sorgulayıcı, refleksif ve tarihsel birikime dayalı özelliklerini örneklerle açıklar; bu özellikleri gündelik düşünmeden ayırarak felsefe tanımını geliştirir.',
+    pedagojikBaglantilar:{
+      akis:[0,1,2,3,4,5,6],
+      kanit:'kanit',
+      farklilastirma:['destek','zengin']
+    },
     alanlar:[
       ['tarih','Ders tarihi','21.09.2026'],
       ['sinif','Sınıf / şube','10. Sınıf'],
@@ -55,13 +67,19 @@ const FelsefeGunlukPlanlari = [
       [10,'Özellik kartlarını inceleme','Sorgulayıcı, refleksif ve tarihsel birikime dayalı düşünme kartlarını dağıtır.','Kartların ana fikrini kendi cümlesiyle açıklar.','Kart açıklamaları'],
       [15,'Örnek eşleştirme','Kısa düşünce örneklerini hangi özelliklerle ilişkili olduklarına göre sınıflandırır.','Örnekleri özelliklerle eşleştirir ve gerekçesini yazar.','Eşleştirme gerekçesi'],
       [15,'Tarihsel gelişim bağlantısı','İkinci ders başında aynı temel sorunun farklı dönemlerde yeniden sorulabileceğini zaman çizgisiyle gösterir.','Soru, dönem ve kavram ilişkisini işaretler.','Mini zaman çizgisi'],
-      [15,'Özelliklerden tanıma dönüş','Felsefe tanımının bu özelliklerle nasıl zenginleşeceğini tartıştırır.','İlk tanımını en az iki özellik ekleyerek geliştirir.','Geliştirilmiş tanım'],
-      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular ve örnek-gerekçe uyumunu kontrol eder.','Refleksif düşünmeyi bir örnekle açıklar.','Çıkış yanıtı']
+      [15,'Özelliklerden tanıma dönüş','Felsefe tanımının bu özelliklerle nasıl zenginleşeceğini tartıştırır.','Akran ve öğretmen geri bildirimini kullanarak ilk tanımını en az iki felsefi düşünce özelliğiyle geliştirir.','İlk tanım ile geri bildirim sonrası geliştirilmiş tanım arasındaki görünür revizyon'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular ve örnek-gerekçe uyumunu kontrol eder.','Refleksif düşünmeyi bir örnekle açıklar; örnek-gerekçe uyumunu kısaca kontrol eder.','Örnekle gerekçelendirilmiş bağımsız çıkış yanıtı ve öz-kontrol kaydı']
     ]
   },
   {
     id:'fel-11-al-2026-h1', ders:'Felsefe', seviye:'11. Sınıf', kod:'FEL.11.1.1',
     hafta:'1. Hafta: 14-18 Eylül', kapsam:'1. hafta',
+    dersHedefi:'Öğrenci, bir çevre durumundaki olgusal ve değer boyutlarını ayırır; durumdan felsefi bir soru üretir ve sorunun neden felsefi olduğunu gerekçelendirir.',
+    pedagojikBaglantilar:{
+      akis:[0,1,2,3,4,5,6],
+      kanit:'kanit',
+      farklilastirma:['destek','zengin']
+    },
     alanlar:[
       ['tarih','Ders tarihi','14.09.2026'],['sinif','Sınıf / şube','11. Sınıf'],
       ['konu','Konu','Çevre ile ilgili felsefi soru ve problemlerin açıklanması'],
@@ -83,13 +101,19 @@ const FelsefeGunlukPlanlari = [
       [10,'Durum kartı inceleme','A kartında olgu, değer ve karar boyutlarını modelleyerek gösterir.','Karttaki farklı soru alanlarını işaretler.','İşaretlenmiş A kartı'],
       [15,'Grup çalışması','B ve C kartlarından felsefi sorular üretmeleri için grupları yönlendirir.','En az bir felsefi soru ve gerekçe oluşturur.','Grup soruları'],
       [15,'Soruları sınama','İkinci ders başında üretilen soruları felsefi soru ölçütleriyle tartıştırır.','Soruları karşılaştırır ve gerekirse yeniden yazar.','Düzeltilmiş sorular'],
-      [15,'Problem açıklama','Bir felsefi sorunun arkasındaki değer çatışmasını görünür kılar.','Seçtiği sorunun neden problem oluşturduğunu açıklar.','Problem açıklaması'],
-      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular.','Sorunun felsefi niteliğini iki özellikle açıklar.','Çıkış yanıtı']
+      [15,'Problem açıklama','Bir felsefi sorunun arkasındaki değer çatışmasını görünür kılar.','Akran ve öğretmen geri bildirimini dikkate alarak seçtiği sorunun neden felsefi problem oluşturduğunu açıklar ve açıklamasını geliştirir.','İlk problem açıklaması ile geri bildirim sonrası geliştirilmiş açıklama arasındaki görünür revizyon'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular.','Sorunun felsefi niteliğini iki özellikle açıklar; açıklamasını ders hedefi bakımından kontrol eder.','İki ölçütle gerekçelendirilmiş bağımsız çıkış yanıtı ve öz-kontrol kaydı']
     ]
   },
   {
     id:'fel-11-al-2026-h2', ders:'Felsefe', seviye:'11. Sınıf', kod:'FEL.11.1.1',
     hafta:'2. Hafta: 21-25 Eylül', kapsam:'2. hafta',
+    dersHedefi:'Öğrenci, bir çevre vakasını felsefi problem, değer çatışması, sorumluluk ve günlük yaşam kararı bakımından değerlendirir; değerlendirmesini gerekçeyle açıklar.',
+    pedagojikBaglantilar:{
+      akis:[0,1,2,3,4,5,6],
+      kanit:'kanit',
+      farklilastirma:['destek','zengin']
+    },
     alanlar:[
       ['tarih','Ders tarihi','21.09.2026'],['sinif','Sınıf / şube','11. Sınıf'],
       ['konu','Konu','Çevre ile ilgili felsefi soru ve problemlerin hayatla ilişkilendirilerek değerlendirilmesi'],
@@ -111,8 +135,8 @@ const FelsefeGunlukPlanlari = [
       [10,'Vaka kartı inceleme','A kartını sınıfla birlikte çözümler; felsefi problem ile pratik kararı ilişkilendirir.','Karttaki değer çatışmasını ve karar noktasını belirler.','İşaretlenmiş A kartı'],
       [15,'Grup değerlendirmesi','B ve C kartlarını gruplara verir; değerlendirme tablosunu doldurmalarını ister.','Vaka için felsefi problem, değer ve gerekçe yazar.','Grup değerlendirme tablosu'],
       [15,'Gerekçeleri karşılaştırma','İkinci ders başında grupların gerekçelerini karşılaştırır; teknik çözüm ile felsefi değerlendirme farkını vurgular.','Farklı gerekçelerin kararları nasıl etkilediğini açıklar.','Karşılaştırma notu'],
-      [15,'Günlük yaşam bağlantısı','Öğrencilerden kendi yaşamlarında uygulanabilir bir karar seçmelerini ve gerekçelendirmelerini ister.','Seçtiği kararın hangi felsefi problemle ilişkili olduğunu yazar.','Gerekçeli karar'],
-      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; örnek ve değerlendirme ilişkisini kontrol eder.','Teknik sorun-felsefi problem ayrımını günlük örnekle değerlendirir.','Çıkış yanıtı']
+      [15,'Günlük yaşam bağlantısı','Öğrencilerden kendi yaşamlarında uygulanabilir bir karar seçmelerini ve gerekçelendirmelerini ister.','Akran ve öğretmen geri bildirimine göre seçtiği kararın felsefi problem, değer ve gerekçe bağlantısından en az birini geliştirir.','İlk değerlendirme ile geri bildirim sonrası gerekçeli karar arasındaki görünür revizyon'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; örnek ve değerlendirme ilişkisini kontrol eder.','Teknik sorun-felsefi problem ayrımını günlük örnekle değerlendirir; yanıtını problem-değer-gerekçe ilişkisi bakımından kontrol eder.','Günlük örnekle gerekçelendirilmiş bağımsız çıkış yanıtı ve öz-kontrol kaydı']
     ]
   },
   {
@@ -152,6 +176,12 @@ const FelsefeGunlukPlanlari = [
   {
     id:'fel-10-al-2026-h3', ders:'Felsefe', seviye:'10. Sınıf', kod:'FEL.10.1.1',
     hafta:'3. Hafta: 28 Eylül-2 Ekim', kapsam:'3. hafta',
+    dersHedefi:'Öğrenci, felsefi soruyu diğer soru türlerinden ayıran özellikleri belirler; gündelik bir soruyu bu ölçütlere göre felsefi soruya dönüştürür ve dönüşümünü gerekçelendirir.',
+    pedagojikBaglantilar:{
+      akis:[0,1,2,3,4,5,6],
+      kanit:'kanit',
+      farklilastirma:['destek','zengin']
+    },
     alanlar:[
       ['tarih','Ders tarihi','28.09.2026'],
       ['sinif','Sınıf / şube','10. Sınıf'],
@@ -174,13 +204,19 @@ const FelsefeGunlukPlanlari = [
       [15,'Soru kartlarını inceleme','Kartları dağıtır; yönlendirici sorularla özellikleri buldurur.','Kartları ölçütlerle inceler.','Kart notları'],
       [15,'Özellikleri ifade etme','Öğrencilerin bulduğu ölçütleri toplar; kavramsal netlik, gerekçelendirme ve tek cevapla kapanmama özelliklerine dikkat çeker.','Felsefi sorunun özelliklerini kendi cümleleriyle yazar.','Özellik listesi'],
       [15,'Soru dönüştürme','İkinci ders başında gündelik bir soruyu felsefi soruya dönüştürmeyi ister.','Gündelik bir soruyu felsefi soruya dönüştürür.','Dönüştürülmüş soru'],
-      [10,'Paylaşım ve geri bildirim','Birkaç dönüşümü sınıfta tartıştırır; ölçütleri sorular üzerinde sınatır.','Arkadaşının sorusunu ölçütlerle değerlendirir; kendi sorusunu düzeltir.','Düzeltilmiş soru'],
-      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; üç ölçütle öğrenme kanıtını inceler.','Bir özelliği kendi sorusuyla açıklar.','Çıkış yanıtı']
+      [10,'Paylaşım ve geri bildirim','Birkaç dönüşümü sınıfta tartıştırır; ölçütleri sorular üzerinde sınatır.','Arkadaşının sorusunu ölçütlerle değerlendirir; aldığı geri bildirime göre kendi sorusunun en az bir bölümünü görünür biçimde düzeltir.','İlk soru ile geri bildirim sonrası düzeltilmiş soru arasındaki görünür revizyon'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; üç ölçütle öğrenme kanıtını inceler.','Bir özelliği kendi sorusuyla açıklar; üç ölçüte göre yanıtını kontrol eder ve ihtiyaç duyduğu desteği belirtir.','Üç ölçüte göre bağımsız çıkış yanıtı ve destek ihtiyacı kaydı']
     ]
   },
   {
     id:'fel-11-al-2026-h4', ders:'Felsefe', seviye:'11. Sınıf', kod:'FEL.11.1.2',
     hafta:'4. Hafta: 5-9 Ekim', kapsam:'4. hafta',
+    dersHedefi:'Öğrenci, bir çevre sorunu hakkında açık bir görüş, gerekçe ve değer odağı içeren argüman kurar; karşı görüş ve geri bildirim doğrultusunda argümanını gözden geçirir.',
+    pedagojikBaglantilar:{
+      akis:[0,1,2,3,4,5,6],
+      kanit:'kanit',
+      farklilastirma:['destek','zengin']
+    },
     alanlar:[
       ['tarih','Ders tarihi','05.10.2026'],['sinif','Sınıf / şube','11. Sınıf'],
       ['konu','Konu','Çevre sorunlarında görüş ve argüman oluşturma'],
@@ -202,8 +238,8 @@ const FelsefeGunlukPlanlari = [
       [10,'Model argüman','A kartı için iskeleti sesli düşünerek doldurur.','İskeletin bölümlerini izler; model argümanı işaretler.','İşaretli model argüman'],
       [20,'Eşli argüman kurma','B ve C kartlarından birini seçtirir; doğrudan cevap vermeden yönlendirici sorular sorar.','Seçtiği durum için iskelete uygun argüman yazar.','Taslak argüman'],
       [15,'Karşılıklı eleştiri','İkinci ders başında eşlerin argümanlarını değiş tokuş ettirir.','Arkadaşının argümanında gerekçeyi ve değer odağını belirler; bir karşı görüş önerir.','Eleştiri notu'],
-      [15,'Gözden geçirme ve paylaşım','Birkaç argümanı sınıfta paylaştırır; gerekçenin görüşü gerçekten destekleyip desteklemediğini tartışmaya açar.','Karşı görüşü ve eleştiriyi dikkate alarak argümanını düzeltir.','Düzeltilmiş argüman'],
-      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; dört ölçütle öğrenme kanıtını inceler.','Görüş, gerekçe, değer odağı ve karşı görüşü yazar.','Çıkış yanıtı']
+      [15,'Gözden geçirme ve paylaşım','Birkaç argümanı sınıfta paylaştırır; gerekçenin görüşü gerçekten destekleyip desteklemediğini tartışmaya açar.','Akran ve öğretmen geri bildirimini dikkate alarak görüş, gerekçe, değer odağı veya karşı görüşten en az birini görünür biçimde düzeltir.','Taslak argüman ile geri bildirim sonrası düzeltilmiş argüman arasındaki görünür revizyon'],
+      [10,'Bireysel değerlendirme','Çıkış sorusunu uygular; dört ölçütle öğrenme kanıtını inceler.','Görüş, gerekçe, değer odağı ve karşı görüşü yazar; dört ölçüte göre yanıtını kontrol eder ve ihtiyaç duyduğu desteği belirtir.','Dört ölçüte göre bağımsız çıkış yanıtı ve destek ihtiyacı kaydı']
     ]
   }
 ];
